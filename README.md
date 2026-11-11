@@ -1,20 +1,17 @@
 # OpenAstralis
 
-Static reverse engineering of **DrCrypter v2.11** — the crack/loader for the
-**Astralis** Minecraft cheat client (Fabric, Minecraft 1.21).
+Static reverse engineering of the **Astralis** Minecraft cheat client
+(**Fabric 26.3**), extracted from the **DrCrypter Astralis 2.11** crack.
 
 Everything here was produced **without executing the target**. The launcher was
-parsed as a PE file, its payload was decompressed offline, the inner jar was
-parsed byte by byte, the encrypted constants were recovered in Python, the
-bytecode was rewritten with ASM, and the native methods were translated with
-IDA Pro. No class was loaded, no DLL was mapped, no packet was sent.
+parsed as a PE file, its payload was decompressed offline, the encrypted
+constants were recovered in Python, the bytecode was rewritten with ASM, and the
+native methods were translated with IDA Pro. No class was loaded, no DLL was
+mapped, no packet was sent.
 
 ```
 artifact      astralis.exe          1,325,867,008 bytes
 sha256        20d030efebc8a73e50c8ab0fe60a5aba487fd11c617c8b68521a76dc584cbf4f
-
-inner jar     astralis.jar             55,300,085 bytes, 518 classes
-sha256        a39253d43097012e07fa864745a1789bb1bf671d825cdb00f99a353a38f0a849
 ```
 
 ---
@@ -37,7 +34,7 @@ sha256        a39253d43097012e07fa864745a1789bb1bf671d825cdb00f99a353a38f0a849
 
 ---
 
-## How DrCrypter v2.11 is built
+## How DrCrypter Astralis 2.11 is built
 
 The `.exe` is not a plain Java launcher. It is a Nuitka onefile bootstrap with a
 complete portable Minecraft environment embedded in its `.rdata` section:
@@ -49,7 +46,7 @@ astralis.exe
 │       └─ Nuitka-compiled CPython 3 launcher
 └─ embedded ZIP payload at 0xD4E20D        5,930 entries
     ├─ Runtime/        200 files            portable JRE (java.exe, jvm.dll, libs)
-    ├─ Assets/       5,715 files            Minecraft 1.21 assets, skins, icons
+    ├─ Assets/       5,715 files            Minecraft assets, skins, icons
     ├─ Game/            14 files            options.txt, servers.dat, viafabricplus,
     │                                       sodium config, usercache.json
     ├─ Python/libsodium.dll                  crypto used by the loader
@@ -72,9 +69,9 @@ Facts established from the file itself:
 - The decompressed DLL carries `.vmp0` plus two `.svm_*` sections. That is a
   VMProtect-protected binary, not something a Java decompiler can read.
 
-The ZIP is the distribution: a portable JRE, the 1.21 asset set and the game
-instance. The outer launcher supplies the runtime and the environment; the cheat
-classes analyzed in this repository come from the companion `astralis.jar`.
+The ZIP is the distribution: a portable JRE, the bundled asset set and the game
+instance. The outer launcher supplies the runtime and the environment for the
+client.
 
 ---
 
@@ -101,8 +98,7 @@ The output is `mapping/offsets.json`:
 ```json
 {
   "counts": { "(IJ)I": 1999, "(IJ)J": 159, "(IJ)Ljava/lang/String;": 1641 },
-  "classes": 226,
-  "jar_sha256": "a39253d4...f0a849"
+  "classes": 226
 }
 ```
 
@@ -143,7 +139,7 @@ That compiles `tools/*.java` against the vendored ASM jars in `tools/lib`,
 produces `build/openastralis-tools.jar`, runs a smoke test and byte-compiles the
 Python tools. No network access is needed to build.
 
-Then, with the original jar extracted into `work/extract`:
+Then, with the client classes extracted into `work/extract`:
 
 ```bash
 # 1. recover keys, per-field constant tables, string blobs and the indy salts
@@ -163,38 +159,33 @@ obfuscator variant before touching the rewriter.
 
 The 518 files under `src/` are the **result** of that pipeline. They reference
 Minecraft through Fabric intermediary names (`net.minecraft.class_310`), so they
-only compile inside a Fabric 1.21 workspace with intermediary mappings; they are
+only compile inside a Fabric 26.3 workspace with intermediary mappings; they are
 not part of this project's build.
 
 ---
 
 ## What this is not
 
-The original `.exe` and `.jar` are not redistributed here. This repository
-contains the analysis, the recovered source and the tooling — not a runnable
-client, not a license bypass, and not a C2 endpoint. The reports in
-`docs/analysis/` document the remote-control surface that was found (WebSocket,
-Discord bot, Pastebin config, HWID DTO) and the sanitized builds that were made
-from it.
+The original `astralis.exe` is not redistributed here. This repository contains
+the analysis, the recovered source and the tooling — not a runnable client, not a
+license bypass, and not a C2 endpoint. The reports in `docs/analysis/` document
+the remote-control surface that was found (WebSocket, Discord bot, Pastebin
+config, HWID DTO) and the sanitized builds that were made from it.
 
 ---
 
 ## Español
 
-Ingeniería inversa estática de **DrCrypter v2.11**, el crack/cargador del cliente
-de trampas **Astralis** para Minecraft (Fabric, Minecraft 1.21).
+Ingeniería inversa estática del cliente de trampas **Astralis** para Minecraft
+(**Fabric 26.3**), extraído del crack **DrCrypter Astralis 2.11**.
 
 Nada se ejecutó. El lanzador se analizó como fichero PE, su payload se descomprimió
-sin conexión, el jar interno se leyó byte a byte, las constantes cifradas se
-recuperaron con Python, el bytecode se reescribió con ASM y los métodos nativos se
-tradujeron con IDA Pro.
+sin conexión, las constantes cifradas se recuperaron con Python, el bytecode se
+reescribió con ASM y los métodos nativos se tradujeron con IDA Pro.
 
 ```
 artefacto     astralis.exe          1.325.867.008 bytes
 sha256        20d030ef...dc584cbf4f
-
-jar interno   astralis.jar             55.300.085 bytes, 518 clases
-sha256        a39253d4...38f0a849
 ```
 
 ### Cómo está construido
@@ -203,14 +194,13 @@ El `.exe` no es un lanzador Java normal: es un bootstrap de **Nuitka onefile** c
 un entorno de Minecraft completo incrustado en `.rdata`.
 
 - Cabecera `KAX` en `0xEA50`, con `compiled_launcher.dll` (6.786.048 bytes), un
-  lanzador de CPython ofuscado.
-- Un ZIP en `0xD4E20D` con **5.930 entradas**: 5.715 assets de Minecraft 1.21,
+  lanzador de CPython.
+- Un ZIP en `0xD4E20D` con **5.930 entradas**: 5.715 assets de Minecraft,
   200 ficheros del JRE portátil, 14 ficheros de configuración de la instancia
   (`options.txt`, `servers.dat`, `viafabricplus`, `sodium`) y `Python/libsodium.dll`.
 - `Runtime/astralis.dll.zst` (685.406.607 bytes) se descomprime a un PE de
   **1.933.113.344 bytes** con secciones `.svm_int`, `.svm_hea` (1,58 GB) y `.vmp0`:
-  binario protegido con VMProtect. El análisis de este repositorio empieza en el
-  jar que carga ese lanzador, no en el DLL virtualizado.
+  binario protegido con VMProtect.
 
 ### Las cinco capas
 
@@ -248,12 +238,12 @@ byte-compila los scripts de Python. No usa red.
 
 Los 518 ficheros de `src/` son el resultado del pipeline. Usan nombres
 intermediarios de Fabric (`net.minecraft.class_310`), así que solo compilan dentro
-de un workspace de Fabric 1.21; no forman parte del build de este proyecto.
+de un workspace de Fabric 26.3; no forman parte del build de este proyecto.
 
 ### Qué no hay aquí
 
-No se redistribuyen el `.exe` ni el `.jar` originales. Hay análisis, código
-recuperado y herramientas; no hay un cliente ejecutable, ni un bypass de licencia,
-ni un C2 que responda. Los informes de `docs/analysis/` documentan la superficie de
-control remoto encontrada (WebSocket, bot de Discord, configuración por Pastebin,
-DTO de HWID) y las versiones saneadas que se generaron a partir de ella.
+No se redistribuye el `astralis.exe` original. Hay análisis, código recuperado y
+herramientas; no hay un cliente ejecutable, ni un bypass de licencia, ni un C2 que
+responda. Los informes de `docs/analysis/` documentan la superficie de control
+remoto encontrada (WebSocket, bot de Discord, configuración por Pastebin, DTO de
+HWID) y las versiones saneadas que se generaron a partir de ella.
