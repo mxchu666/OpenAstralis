@@ -46,7 +46,7 @@ complete portable Minecraft environment embedded in its `.rdata` section:
 astralis.exe
 ├─ PE bootstrap (Nuitka onefile, "KAX" payload header at 0xEA50)
 │   └─ compiled_launcher.dll                 6,786,048 bytes
-│       └─ CPython 3 launcher, obfuscated at the Python bytecode level
+│       └─ Nuitka-compiled CPython 3 launcher
 └─ embedded ZIP payload at 0xD4E20D        5,930 entries
     ├─ Runtime/        200 files            portable JRE (java.exe, jvm.dll, libs)
     ├─ Assets/       5,715 files            Minecraft 1.21 assets, skins, icons
