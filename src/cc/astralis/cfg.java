@@ -1,0 +1,416 @@
+package cc.astralis;
+
+import java.lang.invoke.CallSite;
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.MethodType;
+import java.lang.invoke.MutableCallSite;
+import java.lang.invoke.MethodHandles.Lookup;
+import java.util.HashMap;
+import java.util.Map;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+
+public enum cfg {
+   ASTRALIS;
+
+   private final String btr;
+   private static int[] csj;
+   private static final String[] a;
+   private static final long b = 81179695202399L;
+   private static final long[] c;
+   private static final Integer[] d;
+   private static final Map e;
+   private static final long f;
+
+   private cfg() {
+      a.btr = czs(a.name());
+   }
+
+   private static String czs(String a) {
+      return a.substring(0, 1).toUpperCase() + a.substring(1).toLowerCase();
+   }
+
+   // $VF: Irreducible bytecode was duplicated to produce valid code
+   public static cfg fxk(String name) {
+      long ax = b ^ 79640051694327L;
+      int[] var10000 = dar.abu();
+      long axx = f;
+      int[] axxx = var10000;
+      var10000 = eqj();
+      cfg[] var7 = values();
+      int var8 = var7.length;
+      int var9 = 0;
+      int[] axxxx = var10000;
+
+      while (var9 < var8) {
+         cfg axxxxx = var7[var9];
+         if (axxx != null) {
+            if (axxxxx.btr.equalsIgnoreCase(a)) {
+               return axxxxx;
+            }
+
+            var9++;
+         }
+
+         while (axxxx == null) {
+            if (axxx != null) {
+               cdr.apm(new String[5]);
+               throw new IllegalArgumentException(cfg.a[0] + a);
+            }
+
+            if (5 != 0) {
+               return axxxxx;
+            }
+
+            var9++;
+         }
+      }
+
+      throw new IllegalArgumentException(cfg.a[0] + a);
+   }
+
+   public String gib() {
+      return a.btr;
+   }
+
+   // $VF: Failed to inline enum fields
+   // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   static {
+      long var20 = b ^ 128258093576999L;
+      Cipher var17;
+      Cipher var10000 = var17 = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      SecretKeyFactory var10002 = SecretKeyFactory.getInstance("DES");
+      byte[] var10003 = new byte[]{(byte)(var20 >>> 56), 0, 0, 0, 0, 0, 0, 0};
+
+      for (int var18 = 1; var18 < 8; var18++) {
+         var10003[var18] = (byte)(var20 << var18 * 8 >>> 56);
+      }
+
+      var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
+      byte[] var19 = var17.doFinal("7B@E\u0098ñwø_\u0099W¹æ§a\u0098\fB\u000bÓmî!\u0090%æ×è2¢\u001c©".getBytes("ISO-8859-1"));
+      String var43 = a(var19).intern();
+      int var10001 = -1;
+      String var16 = var43;
+      e = new HashMap(13);
+      Cipher var5;
+      var10000 = var5 = Cipher.getInstance("DES/CBC/NoPadding");
+      var10002 = SecretKeyFactory.getInstance("DES");
+      var10003 = new byte[]{(byte)(var20 >>> 56), 0, 0, 0, 0, 0, 0, 0};
+
+      for (int var6 = 1; var6 < 8; var6++) {
+         var10003[var6] = (byte)(var20 << var6 * 8 >>> 56);
+      }
+
+      var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
+      long[] var11 = new long[11];
+      int var8 = 0;
+      String var9 = "öÜ¡l\u0004\u001c¿c©ë?U\u0097\u0086\u00184ü\u009d´/%Úáû&\u0080ï\\è¡7eÄÁ\u0081Ð\u0016¡\u0004Í\u0013R\u001f1ÏP½+½\u0091\t®±-{Exüe\u0090î\u0084»\u0090\u001c\u009cx¼Ý\u0083j|";
+      int var10 = "öÜ¡l\u0004\u001c¿c©ë?U\u0097\u0086\u00184ü\u009d´/%Úáû&\u0080ï\\è¡7eÄÁ\u0081Ð\u0016¡\u0004Í\u0013R\u001f1ÏP½+½\u0091\t®±-{Exüe\u0090î\u0084»\u0090\u001c\u009cx¼Ý\u0083j|"
+         .length();
+      byte var7 = 0;
+
+      label52:
+      while (true) {
+         var10001 = var7;
+         var7 += 8;
+         byte[] var12 = var9.substring(var10001, var7).getBytes("ISO-8859-1");
+         long[] var31 = var11;
+         var10001 = var8++;
+         long var45 = (var12[0] & 255L) << 56
+            | (var12[1] & 255L) << 48
+            | (var12[2] & 255L) << 40
+            | (var12[3] & 255L) << 32
+            | (var12[4] & 255L) << 24
+            | (var12[5] & 255L) << 16
+            | (var12[6] & 255L) << 8
+            | var12[7] & 255L;
+         byte var53 = -1;
+
+         while (true) {
+            long var13 = var45;
+            byte[] var15 = var5.doFinal(
+               new byte[]{
+                  (byte)(var13 >>> 56),
+                  (byte)(var13 >>> 48),
+                  (byte)(var13 >>> 40),
+                  (byte)(var13 >>> 32),
+                  (byte)(var13 >>> 24),
+                  (byte)(var13 >>> 16),
+                  (byte)(var13 >>> 8),
+                  (byte)var13
+               }
+            );
+            long var56 = (var15[0] & 255L) << 56
+               | (var15[1] & 255L) << 48
+               | (var15[2] & 255L) << 40
+               | (var15[3] & 255L) << 32
+               | (var15[4] & 255L) << 24
+               | (var15[5] & 255L) << 16
+               | (var15[6] & 255L) << 8
+               | var15[7] & 255L;
+            switch (var53) {
+               case 0:
+                  var31[var10001] = var56;
+                  if (var7 >= var10) {
+                     c = var11;
+                     d = new Integer[11];
+                     Cipher var0;
+                     var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
+                     var10002 = SecretKeyFactory.getInstance("DES");
+                     var10003 = new byte[]{(byte)(var20 >>> 56), 0, 0, 0, 0, 0, 0, 0};
+
+                     for (int var1 = 1; var1 < 8; var1++) {
+                        var10003[var1] = (byte)(var20 << var1 * 8 >>> 56);
+                     }
+
+                     var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
+                     long var2 = -2644882913286081693L;
+                     byte[] var4 = var0.doFinal(
+                        new byte[]{
+                           (byte)(var2 >>> 56),
+                           (byte)(var2 >>> 48),
+                           (byte)(var2 >>> 40),
+                           (byte)(var2 >>> 32),
+                           (byte)(var2 >>> 24),
+                           (byte)(var2 >>> 16),
+                           (byte)(var2 >>> 8),
+                           (byte)var2
+                        }
+                     );
+                     long var48 = (var4[0] & 255L) << 56
+                        | (var4[1] & 255L) << 48
+                        | (var4[2] & 255L) << 40
+                        | (var4[3] & 255L) << 32
+                        | (var4[4] & 255L) << 24
+                        | (var4[5] & 255L) << 16
+                        | (var4[6] & 255L) << 8
+                        | var4[7] & 255L;
+                     byte var38 = -1;
+                     f = var48;
+                     String[] var27 = new String[2];
+                     short var33 = 6132;
+                     int var25 = 0;
+                     long var39 = 3489288711104186260L ^ var20;
+                     int[] var49 = new int[5];
+                     String var24 = var16;
+                     int var26 = var16.length();
+                     bhk(var49);
+                     char var23 = 21;
+                     int var22 = -1;
+
+                     while (true) {
+                        short var34 = 12392;
+                        long var40 = 6400587531921481743L ^ var20;
+                        String var50 = a(687261480, a(var24.substring(++var22, var22 + var23)));
+                        var38 = -1;
+                        var27[var25++] = var50;
+                        if ((var22 += var23) >= var26) {
+                           a = var27;
+                           ASTRALIS = new cfg();
+                           return;
+                        }
+
+                        var23 = var24.charAt(var22);
+                     }
+                  }
+                  break;
+               default:
+                  var31[var10001] = var56;
+                  if (var7 < var10) {
+                     continue label52;
+                  }
+
+                  var9 = "\u0096ÃH»Z×3«Ã\u0099¹3®C\u0081,";
+                  var10 = "\u0096ÃH»Z×3«Ã\u0099¹3®C\u0081,".length();
+                  var7 = 0;
+            }
+
+            byte var37 = var7;
+            var7 += 8;
+            var12 = var9.substring(var37, var7).getBytes("ISO-8859-1");
+            var31 = var11;
+            var10001 = var8++;
+            var45 = (var12[0] & 255L) << 56
+               | (var12[1] & 255L) << 48
+               | (var12[2] & 255L) << 40
+               | (var12[3] & 255L) << 32
+               | (var12[4] & 255L) << 24
+               | (var12[5] & 255L) << 16
+               | (var12[6] & 255L) << 8
+               | var12[7] & 255L;
+            var53 = 0;
+         }
+      }
+   }
+
+   public static void bhk(int[] var0) {
+      csj = var0;
+   }
+
+   public static int[] eqj() {
+      return csj;
+   }
+
+   private static char[] a(String var0) {
+      long var1 = b ^ 88178797799499L;
+      char[] var10000 = var0.toCharArray();
+      if (var10000.length < 2) {
+         char var10003 = var10000[0];
+         short var10004 = 31767;
+         long var10005 = 8639592207148267294L ^ var1;
+         var10000[0] = (char)(var10003 ^ 948404332);
+      }
+
+      return var10000;
+   }
+
+   private static String a(int var0, char[] var1) {
+      long var2 = b ^ 103459633798030L;
+      int var10003 = var1.length;
+      int var10002 = var0;
+      char[] var10001 = var1;
+      int var10000 = var10003;
+
+      for (int var4 = 0; var10000 > var4; var4++) {
+         char var10005 = var10001[var4];
+         short var10008 = 12978;
+         long var10009 = 5478481308983724661L ^ var2;
+         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
+            case 0 -> a<"k">(11597, 4217626868104992139L ^ var2);
+            case 1 -> {
+               short var14 = 26553;
+               long var19 = 1177126824176443252L ^ var2;
+               yield 736914202;
+            }
+            case 2 -> {
+               short var13 = 3473;
+               long var18 = 8773215490636133723L ^ var2;
+               yield 66;
+            }
+            case 3 -> {
+               short var12 = 29816;
+               long var17 = 987260915417107639L ^ var2;
+               yield -1778051061;
+            }
+            case 4 -> {
+               short var11 = 15825;
+               long var16 = 4371738985074689306L ^ var2;
+               yield 34;
+            }
+            case 5 -> {
+               short var10 = 9980;
+               long var15 = 7589692151907262004L ^ var2;
+               yield 22;
+            }
+            default -> a<"k">(31141, 8221877394622038368L ^ var2);
+         });
+      }
+
+      return new String(var10001).intern();
+   }
+
+   private static String a(byte[] var0) {
+      int var1 = 0;
+      int var2;
+      char[] var3 = new char[var2 = var0.length];
+
+      for (int var4 = 0; var4 < var2; var4++) {
+         int var5;
+         if ((var5 = 255 & var0[var4]) < 192) {
+            var3[var1++] = (char)var5;
+         } else if (var5 < 224) {
+            char var6 = (char)((char)(var5 & 31) << 6);
+            byte var8 = var0[++var4];
+            var6 = (char)(var6 | (char)(var8 & 63));
+            var3[var1++] = var6;
+         } else if (var4 < var2 - 2) {
+            char var12 = (char)((char)(var5 & 15) << '\f');
+            byte var9 = var0[++var4];
+            var12 = (char)(var12 | (char)(var9 & 63) << 6);
+            var9 = var0[++var4];
+            var12 = (char)(var12 | (char)(var9 & 63));
+            var3[var1++] = var12;
+         }
+      }
+
+      return new String(var3, 0, var1);
+   }
+
+   private static int a(int var0, long var1) {
+      int var3 = var0 ^ (int)(var1 & 32767L) ^ 25374;
+      if (d[var3] == null) {
+         byte[] var4 = new byte[]{
+            (byte)(var1 >>> 56),
+            (byte)(var1 >>> 48),
+            (byte)(var1 >>> 40),
+            (byte)(var1 >>> 32),
+            (byte)(var1 >>> 24),
+            (byte)(var1 >>> 16),
+            (byte)(var1 >>> 8),
+            (byte)var1
+         };
+         long var5 = c[var3];
+         byte[] var7 = new byte[]{
+            (byte)(var5 >>> 56),
+            (byte)(var5 >>> 48),
+            (byte)(var5 >>> 40),
+            (byte)(var5 >>> 32),
+            (byte)(var5 >>> 24),
+            (byte)(var5 >>> 16),
+            (byte)(var5 >>> 8),
+            (byte)var5
+         };
+         Long var8 = Thread.currentThread().threadId();
+         Object[] var9 = (Object[])e.get(var8);
+
+         byte[] var10;
+         try {
+            if (var9 == null) {
+               var9 = new Object[]{Cipher.getInstance("DES/CBC/NoPadding"), SecretKeyFactory.getInstance("DES"), new IvParameterSpec(new byte[8])};
+               e.put(var8, var9);
+            }
+
+            DESKeySpec var11 = new DESKeySpec(var4);
+            SecretKey var12 = ((SecretKeyFactory)var9[1]).generateSecret(var11);
+            Cipher var13 = (Cipher)var9[0];
+            var13.init(2, var12, (IvParameterSpec)var9[2]);
+            var10 = var13.doFinal(var7);
+         } catch (Exception var14) {
+            throw new RuntimeException("cc/astralis/cfg", var14);
+         }
+
+         int var15 = (var10[4] & 255) << 24 | (var10[5] & 255) << 16 | (var10[6] & 255) << 8 | var10[7] & 255;
+         d[var3] = var15;
+      }
+
+      return d[var3];
+   }
+
+   private static int a(Lookup var0, MutableCallSite var1, String var2, Object[] var3) {
+      int var4 = (Integer)var3[0];
+      long var5 = (Long)var3[1];
+      int var7 = a(var4, var5);
+      MethodHandle var8 = MethodHandles.constant(int.class, var7);
+      var1.setTarget(MethodHandles.dropArguments(var8, 0, int.class, long.class));
+      return var7;
+   }
+
+   private static CallSite a(Lookup var0, String var1, MethodType var2) {
+      MutableCallSite var3 = new MutableCallSite(var2);
+
+      try {
+         var3.setTarget(
+            MethodHandles.explicitCastArguments(
+               MethodHandles.insertArguments("a".asCollector(Object[].class, var2.parameterCount()), 0, var0, var3, var1), var2
+            )
+         );
+         return var3;
+      } catch (Exception var5) {
+         throw new RuntimeException("cc/astralis/cfg" + " : " + var1 + " : " + var2.toString(), var5);
+      }
+   }
+}
