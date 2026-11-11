@@ -1,0 +1,2 @@
+# Python dependencies for tools/*.py
+cryptography>=42

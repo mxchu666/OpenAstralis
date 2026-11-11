@@ -42,6 +42,11 @@ public final class AstralisDeobf {
     static int nStrings, nIndy, nClasses, nFail, nAnalyzed;
 
     public static void main(String[] args) throws Exception {
+        if (args.length == 0 || args[0].equals("-h") || args[0].equals("--help")) {
+            System.out.println("usage: AstralisDeobf <inDir> <outDir> <map>");
+            System.out.println("  folds invokedynamic string/int/long constants recovered from <map>");
+            return;
+        }
         if (args.length < 3) {
             System.err.println("usage: AstralisDeobf <inDir> <outDir> <map>");
             System.exit(2);

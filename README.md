@@ -26,6 +26,9 @@ sha256       a39253d43097012e07fa864745a1789bb1bf671d825cdb00f99a353a38f0a849
 | `native/bodies/` | 16 devirtualized native bodies + annotated variants (C pseudocode) |
 | `native/registry/` | native method registry, symbol tables, lazy slots |
 | `tools/` | the whole pipeline: Python key recovery, ASM rewriter, IDA dumper |
+| `tools/lib/` | vendored ASM 9 jars so the build is offline |
+| `build.sh`, `build.ps1` | one-command build of the tooling (JDK 21+, no network) |
+| `.github/workflows/build.yml` | CI: builds on Linux and Windows |
 | `docs/analysis/` | original analysis reports (Spanish) |
 | `docs/en/`, `docs/es/` | plain-language explanations, both languages |
 
@@ -70,25 +73,38 @@ fields back through JNI.
 
 ## Rebuilding
 
-Requires JDK 21+, Python 3.10+, and the original jar (not distributed here).
+Requires **JDK 21+** and **Python 3.10+** (`pip install -r requirements.txt`).
 
-```powershell
-$env:PYTHONIOENCODING = 'utf-8'
-
-# 1. recover keys, constant tables and string blobs
-python tools\astralis_deobf.py work\extract work\deobf.map work\deobf_report.txt
-
-# 2. compile the ASM rewriter
-javac -cp "tools\asm.jar;tools\asm-tree.jar;tools\asm-util.jar;tools\asm-analysis.jar" `
-      -d tools\classes tools\AstralisDeobf.java
-
-# 3. fold invokedynamic sites -> LDC
-java -cp "tools\classes;tools\asm.jar;tools\asm-tree.jar;tools\asm-util.jar;tools\asm-analysis.jar" `
-     AstralisDeobf work\extract work\deobf work\deobf.map
-
-# 4. decompile
-java -jar tools\vineflower.jar -dgs=1 -hdc=0 -asc=1 -jrt=1 work\deobf work\src
+```bash
+./build.sh          # or: ./build.ps1  on Windows
 ```
+
+That compiles `tools/*.java` against the vendored ASM jars in `tools/lib`,
+produces `build/openastralis-tools.jar`, runs a smoke test and byte-compiles the
+Python tools. No network access is needed to build.
+
+Then, with the original jar extracted into `work/extract`:
+
+```bash
+# 1. recover keys, per-field constant tables, string blobs and the indy salts
+python tools/astralis_deobf.py work/extract work/deobf.map work/deobf_report.txt
+
+# 2. fold every invokedynamic site -> LDC
+java -cp "build/openastralis-tools.jar:tools/lib/*" AstralisDeobf \
+     work/extract work/deobf work/deobf.map
+
+# 3. decompile
+java -jar tools/vineflower.jar -dgs=1 -hdc=0 -asc=1 -jrt=1 work/deobf work/src
+```
+
+`tools/indy_scan.py <classes-dir>` reports every invokedynamic descriptor in a
+tree and which bootstrap method serves it — the fastest way to confirm a new
+obfuscator variant before touching the rewriter.
+
+The 518 files under `src/` are the **result** of that pipeline. They reference
+Minecraft through Fabric intermediary names (`net.minecraft.class_310`), so they
+only compile inside a Fabric 1.21 workspace with intermediary mappings; they are
+not part of this project's build.
 
 ---
 
