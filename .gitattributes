@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.java text
+*.c text
+*.h text
+*.py text
+*.md text
+*.tsv text
+*.json text

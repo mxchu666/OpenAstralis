@@ -1,0 +1,17 @@
+work/
+out/
+scratch/
+*.exe
+*.dll
+*.so
+*.dylib
+*.i64
+*.idb
+*.bin
+*.zst
+*.class
+tools/classes/
+__pycache__/
+node_modules/
+.vs/
+.idea/
