@@ -1,0 +1,12 @@
+section .vmp0 rva 0x71e12000 size 23191552
+leading u32 (record count) 294735
+record size 6 bytes {u32 rva, u16 length}
+table end rva 0x71fc1bde, code after it 21423138 bytes
+record targets: min 0x728715c1 max 0x72eb96a2
+length histogram 8:127293, 16:84540, 24:44384, 32:21526, 40:9859, 48:3958, 56:1679, 64:689, 72:258, 80:154, 88:93, 96:79, 104:64, 112:44, 120:33, 128:24
+chunk kinds insn:277882, prologue:16853
+chunk-start mnemonics xor:58657, mov:47694, lea:38535, prologue:16853, not:15414, neg:14551, rol:13223, adc:12180, ror:11741, add:10174, movsxd:10158, movzx:8477, inc:8198, dec:7157, bswap:6817, sbb:5448, sub:4728, or:1910
+pure-branch chunks resolved 0
+unresolved targets by section .text>.data:11, .text>.pdata:7398, .text>.rdata:9790, .text>.reloc:10, .text>.rodata:285, .text>.svm_hea:1067389, .text>.svm_int:32, .text>.text:3127661, .text>.vmp0:2882, .text>out:934182
+.pdata entries inside .vmp0 103 (unwind rva points into .vmp0: decoys)
+capstone present

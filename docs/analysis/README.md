@@ -1,9 +1,10 @@
 # Astralis — paquete de análisis
 
-Informes detallados de la **capa Java** del cliente (**Fabric 26.3**, build
-**DrCrypter Astralis 2.11**). El `.exe` no contiene bytecode: la parte nativa
-(imagen GraalVM SubstrateVM dentro de VMProtect) se documenta en el `README.md`
-principal y en `mapping/image_inventory.json`.
+Informes detallados de las dos capas del cliente (**`astralis-recode 2.2`**
+sobre Minecraft 26.2, crack **DrCrypter Astralis 2.11**). El `.exe` no contiene
+bytecode salvo el jar de scripting: la parte nativa (imagen GraalVM SubstrateVM
+dentro de VMProtect) se documenta en el `README.md` principal,
+`mapping/image_inventory.json` y `NATIVE_DUMP.md`.
 
 Todo se generó sin ejecutar el objetivo en el host: deobfuscación en Python +
 ASM, nativo en IDA headless.
@@ -18,6 +19,7 @@ ASM, nativo en IDA headless.
 | [`COMO_FUNCIONA_EL_JAR.md`](COMO_FUNCIONA_EL_JAR.md) | Ingeniería inversa: 4 capas de ofuscación, arranque, VM nativa |
 | [`DEOBFUSCATION.md`](DEOBFUSCATION.md) | Pipeline de bytecode: las 5 capas, el fallo del blob, resultado por clase |
 | [`IMAGE_26_2.md`](IMAGE_26_2.md) | La imagen 26.2: manifiesto del mod, tipos, 87 hooks de Mixin, el jar de scripting |
+| [`NATIVE_DUMP.md`](NATIVE_DUMP.md) | El plano nativo: 342.822 funciones, grafo de llamadas, `.vmp0` decodificado, nombres y descriptores |
 | [`DEVIRTUALIZATION.md`](DEVIRTUALIZATION.md) | Cuerpos nativos recuperados de la DLL |
 | [`GLS_BLOCKER.md`](GLS_BLOCKER.md) | Lo que bloquea el arranque del cliente sin la DLL |
 | [`RECAF.md`](RECAF.md) | Cómo abrir el árbol de clases en Recaf e importar el mapa de módulos |

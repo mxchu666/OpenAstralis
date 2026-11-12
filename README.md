@@ -255,6 +255,37 @@ and lives in `reconstruct/26.2/scripting/`; the bodies throw
 `UnsupportedOperationException` because it is the GraalVM substitution jar, so
 the signatures are the deliverable, not the bodies.
 
+`tools/dump_heap_members.py` adds the member surface: 202,366 name records and
+105,012 descriptors, each accepted only when its length prefix and array hub
+both validate. Binding a name to its descriptor and to a class is not
+recoverable locally — the run experiment that can be scored against the
+scripting jar fails outright (0 of 55 known classes) — which is why
+`member_names.tsv` is a flat offset list and not a per-class table.
+
+### The code, and the section around it
+
+`tools/dump_native.py` parses the PE by hand: 9 sections, 534 named exports
+(433 JNI, 55 libjava, 14 CEntryPoint, 7 GraalVM, and two of the client's own —
+`serenity_client_bind` and `serenity_client_start`), 404 imports from 22 DLLs,
+and **342,822 `RUNTIME_FUNCTION` entries** covering 324.6 MB of `.text`. The
+import set is worth a look: `ncrypt` (11 functions), `CRYPT32` (15) and
+`Secur32` (5) sit next to `WS2_32` and `WINHTTP` — the native layer does CNG
+crypto and certificate work of its own.
+
+`tools/devirt_native.py` turns the function table into a labelled call graph:
+4,850,262 `E8` sites in `.text`, 3,279,735 of them landing on a known function
+start, and 1,684,622 distinct caller→callee edges. Only 1,628 call sites reach a
+Windows API directly; `native/devirt/import_calls.tsv` ranks all 404 of them.
+
+`.vmp0` is the part that gets misread. It is not a bytecode VM: it opens with
+`u32 294,735` and a 1.77 MB table of `{u32 rva, u16 length}` records describing a
+6.6 MB band of code, and the code there is *mutated in place* — `xor`/`not`/
+`rol`/`adc` pairs, fake return addresses written into `[rsp+0x10]`, branches into
+the middle of instructions. Its 103 `.pdata` entries are decoys whose unwind RVA
+points back into `.vmp0`. There is no dispatch table to undo, so the repository
+ships the decoded table, the mnemonic histogram and the resolved edges, not an
+invented listing. The numbers are in `docs/analysis/NATIVE_DUMP.md`.
+
 ---
 
 ## The Java layer
@@ -329,13 +360,18 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/devirt_dump.py` | turn IDA output into annotated C bodies |
 | `tools/dump_image_symbols.py` | dump types, Mixin handlers, mod manifests and resource paths from `.svm_hea` |
 | `tools/carve_dll_archives.py` | carve the 92 ZIP archives embedded in the image, JDK modules and the scripting jar |
+| `tools/dump_native.py` | PE headers, 534 named exports, 404 imports, 342,822 function ranges |
+| `tools/devirt_native.py` | decode `.vmp0`, resolve direct calls and IAT edges into a call graph |
+| `tools/dump_heap_members.py` | member names and descriptors from `.svm_hea`, with the failed-binding check |
 | `mapping/offsets.json` | 3,897 folded constants |
 | `mapping/modules.tsv` | 91 module classes: category, settings, inferred feature |
 | `mapping/modules.proguard.txt` | the 74 identified renames, importable into Recaf |
 | `tools/module_scan.py` | emits the evidence the module names were read from |
 | `mapping/deobf.map` | per-class keys, constant tables, string blobs |
 | `mapping/image_inventory.json` | type and resource inventory of `astralis.dll` |
-| `mapping/image26/` | 26.2 dump: 16,263 MC types, 1,483 client types, 593 hooks, 85 mod manifests |
+| `mapping/image26/` | 26.2 dump: 16,263 MC types, 1,483 client types, 593 hooks, 85 mod manifests, 202,366 member names, 105,012 descriptors |
+| `native/dump/` | `pe.txt`, `exports.tsv`, `imports.tsv`, function counts |
+| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, the decoded `.vmp0` table |
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
 | `src/` | 518 decompiled classes |
 | `reconstruct/26.2/scripting/` | 55 files of the 2.2.6 scripting API, the only bytecode in the image |
@@ -593,6 +629,39 @@ jar.
 `reconstruct/26.2/scripting/`; los cuerpos lanzan `UnsupportedOperationException`
 porque es el jar de substitución de GraalVM, así que lo entregable son las firmas.
 
+`tools/dump_heap_members.py` añade la superficie de miembros: 202.366 nombres y
+105.012 descriptores, aceptados solo cuando coinciden el prefijo de longitud y el
+hub de array. Atar un nombre a su descriptor y a su clase no es recuperable de
+forma local: el experimento de runs, que sí se puede puntuar contra el jar de
+scripting, falla sin ambigüedad (0 de 55 clases conocidas), y por eso
+`member_names.tsv` es una lista plana con offset y no una tabla por clase.
+
+### El código, y la sección que lo envuelve
+
+`tools/dump_native.py` parsea el PE a mano: 9 secciones, 534 exportaciones con
+nombre (433 JNI, 55 libjava, 14 CEntryPoint, 7 de GraalVM y dos propias del
+cliente — `serenity_client_bind` y `serenity_client_start`), 404 importaciones de
+22 DLLs y **342.822 entradas `RUNTIME_FUNCTION`** que cubren 324,6 MB de `.text`.
+El conjunto de importaciones merece un párrafo: `ncrypt` (11 funciones),
+`CRYPT32` (15) y `Secur32` (5) conviven con `WS2_32` y `WINHTTP`, así que la capa
+nativa hace criptografía CNG y validación de certificados por su cuenta.
+
+`tools/devirt_native.py` convierte esa tabla en un grafo de llamadas etiquetado:
+4.850.262 sitios `E8` en `.text`, 3.279.735 de ellos sobre un inicio de función
+conocido, y 1.684.622 aristas distintas llamante→llamado. Solo 1.628 sitios
+llaman directamente a una API de Windows; `native/devirt/import_calls.tsv` ordena
+las 404.
+
+`.vmp0` es la parte que se malinterpreta. No es una VM de bytecode: empieza con
+`u32 294.735` y una tabla de 1,77 MB de registros `{u32 rva, u16 length}` que
+describen un cinturón de 6,6 MB de código, y el código de ahí está *mutado en
+sitio* — parejas `xor`/`not`/`rol`/`adc`, direcciones de retorno falsas escritas
+en `[rsp+0x10]`, saltos a mitad de instrucción. Sus 103 entradas de `.pdata` son
+señuelos cuyo `unwind RVA` apunta de vuelta a `.vmp0`. No hay tabla de despacho
+que deshacer, así que el repositorio entrega la tabla decodificada, el histograma
+de mnemónicos y las aristas resueltas, no un listado inventado. Los números están
+en `docs/analysis/NATIVE_DUMP.md`.
+
 ## La capa Java
 
 `src/` contiene 518 ficheros `.java` del mismo cliente (`cc/astralis/**` y
@@ -647,8 +716,13 @@ identificados en Recaf.
 | `tools/module_scan.py` | genera la evidencia con la que se leyeron los nombres |
 | `tools/dump_image_symbols.py` | vuelca tipos, handlers de Mixin, manifiestos y rutas de recurso de `.svm_hea` |
 | `tools/carve_dll_archives.py` | extrae los 92 ZIP embebidos, módulos del JDK y el jar de scripting |
+| `tools/dump_native.py` | cabeceras PE, 534 exportaciones, 404 importaciones, 342.822 rangos de función |
+| `tools/devirt_native.py` | decodifica `.vmp0` y resuelve llamadas directas e IAT en un grafo |
+| `tools/dump_heap_members.py` | nombres de miembro y descriptores de `.svm_hea`, con la comprobación de binding |
 | `mapping/image_inventory.json` | inventario de tipos y recursos de `astralis.dll` |
-| `mapping/image26/` | volcado 26.2: 16.263 tipos de MC, 1.483 del cliente, 593 hooks, 85 manifiestos |
+| `mapping/image26/` | volcado 26.2: 16.263 tipos de MC, 1.483 del cliente, 593 hooks, 85 manifiestos, 202.366 nombres, 105.012 descriptores |
+| `native/dump/` | `pe.txt`, `exports.tsv`, `imports.tsv`, recuentos de funciones |
+| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, la tabla de `.vmp0` decodificada |
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
 | `src/` | 518 clases descompiladas |
 | `reconstruct/26.2/scripting/` | 55 ficheros de la API de scripting 2.2.6, el único bytecode de la imagen |

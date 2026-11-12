@@ -37,7 +37,13 @@ for the older intermediary build to see what the scripting layer gained.
 | `../mapping/image26/mixin_hooks.tsv` | 593 Mixin handlers; 87 belong to `astralis-recode` |
 | `../mapping/image26/mods.jsonl` | 85 `fabric.mod.json`, parsed and sorted |
 | `../mapping/image26/resources.txt` | 43,324 asset/data/META-INF paths |
+| `../mapping/image26/member_names.tsv` | 202,366 member-name records with heap offsets |
+| `../mapping/image26/descriptors.tsv` | 105,008 distinct method descriptors with occurrence counts |
+| `../mapping/image26/member_summary.txt` | counts plus the negative result that scoring runs against the jar gives |
 | `../mapping/image26/summary.txt` | counts, so you can see the size before opening anything |
+
+The code side of the image — 342,822 functions, the call graph and the decoded
+`.vmp0` table — is in `../native/` and `../docs/analysis/NATIVE_DUMP.md`.
 
 The report that ties it together is `../docs/analysis/IMAGE_26_2.md`.
 

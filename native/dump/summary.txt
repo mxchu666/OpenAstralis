@@ -1,0 +1,7 @@
+image          ..\work\exe\Runtime\astralis.dll
+size           1933864960
+entry          0x132c9114
+sections       9
+exports        534 (jni 433, libjava 55, other 23, centrypoint 14, graal 7, astralis 2)
+imports        404 functions from 22 dlls
+functions      342822 (324.6 MB covered)

@@ -1,0 +1,42 @@
+file                 ..\work\exe\Runtime\astralis.dll
+size                 1933864960
+machine              0x8664
+timestamp            1794009199
+image base           0x180000000
+entry point          0x132c9114 (.text)
+section alignment    0x1000
+size of image        0x73447000
+subsystem            2
+
+data directories
+  export         rva 0x13582b90  size 29644
+  import         rva 0x13589f5c  size 460
+  exception      rva 0x73043450  size 4113864
+  reloc          rva 0x73430000  size 93240
+  debug          rva 0x132e3130  size 28
+  config         rva 0x132e2ff0  size 320
+  iat            rva 0x132d3000  size 3408
+
+sections
+  name             rva      vsize    raw off   raw size  entropy  characteristics
+  .text     0x00001000  321690019 0x00001000  321691648     6.62  0x60000020
+  .svm_int  0x132cb000      32736 0x132cb000      32768     4.51  0x60000020
+  .rdata    0x132d3000    2858166 0x132d3000    2859008     2.69  0x40000040
+  .data     0x1358d000      20392 0x1358d000      20480     4.20  0xc0000040
+  .pdata    0x13592000    4112628 0x13592000    4116480     7.96  0x40000040
+  .rodata   0x1397f000     272472 0x1397f000     274432     4.34  0x40000040
+  .svm_hea  0x139c2000 1581580288 0x139c2000 1581580288     4.40  0xc0000040
+  .vmp0     0x71e12000   23190040 0x71e12000   23191552     7.76  0x68000020
+  .reloc    0x73430000      93240 0x73430000      94208     5.46  0x42000040
+
+exports by kind
+  jni          433
+  libjava      55
+  other        23
+  centrypoint  14
+  graal        7
+  astralis     2
+
+functions by section
+  .text        342719
+  .vmp0        103

@@ -1,0 +1,10 @@
+name records          202366
+descriptor records    105012 (105008 distinct)
+runs                  110538 (51754 with two or more members)
+names inside runs     143582
+longest sorted run    347
+runs are slices of one interned table, not class boundaries:
+  the check below scores that claim against known member sets.
+lambda members        9825
+accessor members      27280
+class-member-set match: 0 of 55 scripting classes exact, 0 contained, over 51754 runs
