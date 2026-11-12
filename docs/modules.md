@@ -6,8 +6,11 @@ holds the name/description pair (`fse bdg`), the setting list
 extends it and calls `super(bfm.<CATEGORY>)`; `cc/astralis/bfm` is the enum
 that defines the seven categories.
 
-`cc/astralis/dfw` is the manager. Its registration array instantiates 78 of
-the 91; the remaining 13 (the HUD and the GUI pieces) are created elsewhere.
+`cc/astralis/dfw` is the manager. It constructs 84 of the 91 — 78 in its
+`guu[]` registry array and 6 more in a second list (`ekb`, `exz`, `ejt`,
+`gzv`, `dvw`, `dqk`). The other 7 (`gya`, `efx`, `fjf`, `cfn`, `edy`, `gks`,
+`dfz`) have no `new` site anywhere in the 518 classes: either dead in this
+build or built by name, and the decompiled code cannot tell which.
 
 ## Why the names are inferred, not read
 

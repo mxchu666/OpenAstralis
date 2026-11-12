@@ -267,8 +267,8 @@ against.
 
 `mapping/modules.tsv` organises the cheat layer: the 91 classes that extend the
 module base `guu`, the category each one registers under (`bfm`), its recovered
-setting names, and the feature the settings and call surface identify. 78 of
-them are instantiated by the module manager `dfw`. Names are marked `high`,
+setting names, and the feature the settings and call surface identify. 84 of
+them are constructed by the module manager `dfw`. Names are marked `high`,
 `medium` or `low` confidence; `?` means the class carries no name of its own and
 the settings alone do not pin it down. They come from the setting names, the
 mode options and the Minecraft types each class touches - never from a string
@@ -559,7 +559,7 @@ byte que no existe como tabla estática en el class file.
 `mapping/modules.tsv` organiza la capa de módulos: las 91 clases que heredan de
 `guu`, la categoría con la que se registran (`bfm`), los nombres de sus ajustes
 recuperados y la función que identifican esos ajustes y su superficie de llamadas.
-78 las instancia el gestor `dfw`. La confianza va marcada como `high`, `medium` o
+84 las construye el gestor `dfw`. La confianza va marcada como `high`, `medium` o
 `low`; `?` significa que la clase no lleva nombre propio y los ajustes no bastan.
 El nombre sale de los ajustes, de las opciones de modo y de los tipos de Minecraft
 que toca cada clase, nunca de una cadena que diga `KillAura`: el nombre del módulo

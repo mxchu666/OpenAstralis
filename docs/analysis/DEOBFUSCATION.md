@@ -134,11 +134,11 @@ las cadenas ya plegadas, así que `src/` no tiene ningún fichero stub.
 | `evidence` | qué ajustes o llamadas sostienen la deducción |
 | `settings` | nombres de ajuste recuperados, ya descifrados |
 
-91 clases heredan de la base `guu`; 78 las instancia el gestor `dfw` en su array
-de registro. Los nombres de módulo del cliente no viajan como literales: se arman
-en `<clinit>` desde las mismas tablas cifradas, así que la identificación se hace
-por evidencia (ajustes + tipos de Minecraft que toca cada clase), no por una
-cadena que diga "KillAura".
+91 clases heredan de la base `guu`; 84 las construye el gestor `dfw` (78 en su
+array de registro y 6 en una segunda lista). Los nombres de módulo del cliente no
+viajan como literales: se arman en `<clinit>` desde las mismas tablas cifradas,
+así que la identificación se hace por evidencia (ajustes + tipos de Minecraft que
+toca cada clase), no por una cadena que diga "KillAura".
 
 De las 91, 74 quedan identificadas (52 `high`, 20 `medium`, 2 `low`); las 17
 restantes no declaran ajustes propios ni tocan ningún tipo de Minecraft, así que
