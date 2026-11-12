@@ -268,14 +268,25 @@ scripting jar fails outright (0 of 55 known classes) — which is why
 (433 JNI, 55 libjava, 14 CEntryPoint, 7 GraalVM, and two of the client's own —
 `serenity_client_bind` and `serenity_client_start`), 404 imports from 22 DLLs,
 and **342,822 `RUNTIME_FUNCTION` entries** covering 324.6 MB of `.text`. The
-import set is worth a look: `ncrypt` (11 functions), `CRYPT32` (15) and
-`Secur32` (5) sit next to `WS2_32` and `WINHTTP` — the native layer does CNG
-crypto and certificate work of its own.
+import set looks like crypto of the client's own — `ncrypt` (11), `CRYPT32` (15),
+`Secur32` (5) — and it is not: every call site in that family lands inside a
+`Java_sun_security_mscapi_*` entry point, so it is the JDK's SunMSCAPI provider
+compiled into the image. `native/devirt/iat_sites.tsv` has the caller for all
+1,628 import call sites.
 
 `tools/devirt_native.py` turns the function table into a labelled call graph:
 4,850,262 `E8` sites in `.text`, 3,279,735 of them landing on a known function
 start, and 1,684,622 distinct caller→callee edges. Only 1,628 call sites reach a
 Windows API directly; `native/devirt/import_calls.tsv` ranks all 404 of them.
+
+`tools/carve_window.py` cuts windows out of `.text` and loads them as flat
+binaries at `0x180000000 + rva`, so a decompiler sees the file's own addresses;
+every `.pdata` start in the window is created as a function and run through
+Hex-Rays. 4,463 distinct functions came out, 415,287 lines, 420 of them with an
+export name. `native/decompiled/` ships 328: the two client entry points, 264 JDK
+JNI functions (the whole `sun.security.mscapi` family among them), the 30
+highest in-degree functions, 24 unnamed `.text` samples, and 8 `.vmp0` chunks
+that all decompile to a `JUMPOUT` five bytes into themselves.
 
 `.vmp0` is the part that gets misread. It is not a bytecode VM: it opens with
 `u32 294,735` and a 1.77 MB table of `{u32 rva, u16 length}` records describing a
@@ -283,8 +294,9 @@ Windows API directly; `native/devirt/import_calls.tsv` ranks all 404 of them.
 `rol`/`adc` pairs, fake return addresses written into `[rsp+0x10]`, branches into
 the middle of instructions. Its 103 `.pdata` entries are decoys whose unwind RVA
 points back into `.vmp0`. There is no dispatch table to undo, so the repository
-ships the decoded table, the mnemonic histogram and the resolved edges, not an
-invented listing. The numbers are in `docs/analysis/NATIVE_DUMP.md`.
+ships the decoded table, the mnemonic histogram, the resolved edges and the
+`JUMPOUT` bodies, not an invented listing. The numbers are in
+`docs/analysis/NATIVE_DUMP.md`.
 
 ---
 
@@ -363,6 +375,8 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/dump_native.py` | PE headers, 534 named exports, 404 imports, 342,822 function ranges |
 | `tools/devirt_native.py` | decode `.vmp0`, resolve direct calls and IAT edges into a call graph |
 | `tools/dump_heap_members.py` | member names and descriptors from `.svm_hea`, with the failed-binding check |
+| `tools/carve_window.py` | cut `.text`/`.vmp0` windows as flat binaries for a decompiler, with per-window `.pdata` starts |
+| `tools/decompile_native.py` | sort Hex-Rays output into `entry/`, `jdk/`, `runtime/`, `samples/`, `vmp0/` |
 | `mapping/offsets.json` | 3,897 folded constants |
 | `mapping/modules.tsv` | 91 module classes: category, settings, inferred feature |
 | `mapping/modules.proguard.txt` | the 74 identified renames, importable into Recaf |
@@ -371,7 +385,8 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `mapping/image_inventory.json` | type and resource inventory of `astralis.dll` |
 | `mapping/image26/` | 26.2 dump: 16,263 MC types, 1,483 client types, 593 hooks, 85 mod manifests, 202,366 member names, 105,012 descriptors |
 | `native/dump/` | `pe.txt`, `exports.tsv`, `imports.tsv`, function counts |
-| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, the decoded `.vmp0` table |
+| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, `iat_sites.tsv`, the decoded `.vmp0` table |
+| `native/decompiled/` | 328 Hex-Rays functions: client entry points, JDK JNI, hot runtime, samples, `.vmp0` chunks |
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
 | `src/` | 518 decompiled classes |
 | `reconstruct/26.2/scripting/` | 55 files of the 2.2.6 scripting API, the only bytecode in the image |
@@ -642,15 +657,26 @@ scripting, falla sin ambigüedad (0 de 55 clases conocidas), y por eso
 nombre (433 JNI, 55 libjava, 14 CEntryPoint, 7 de GraalVM y dos propias del
 cliente — `serenity_client_bind` y `serenity_client_start`), 404 importaciones de
 22 DLLs y **342.822 entradas `RUNTIME_FUNCTION`** que cubren 324,6 MB de `.text`.
-El conjunto de importaciones merece un párrafo: `ncrypt` (11 funciones),
-`CRYPT32` (15) y `Secur32` (5) conviven con `WS2_32` y `WINHTTP`, así que la capa
-nativa hace criptografía CNG y validación de certificados por su cuenta.
+El conjunto de importaciones parece criptografía propia — `ncrypt` (11),
+`CRYPT32` (15), `Secur32` (5) — y no lo es: todos los sitios de llamada de esa
+familia caen dentro de una entrada `Java_sun_security_mscapi_*`, así que es el
+proveedor SunMSCAPI del JDK compilado en la imagen.
+`native/devirt/iat_sites.tsv` da el llamante de los 1.628 sitios de import.
 
 `tools/devirt_native.py` convierte esa tabla en un grafo de llamadas etiquetado:
 4.850.262 sitios `E8` en `.text`, 3.279.735 de ellos sobre un inicio de función
 conocido, y 1.684.622 aristas distintas llamante→llamado. Solo 1.628 sitios
 llaman directamente a una API de Windows; `native/devirt/import_calls.tsv` ordena
 las 404.
+
+`tools/carve_window.py` corta ventanas de `.text` y las carga como binario plano
+en `0x180000000 + rva`, así que el descompilador ve las direcciones del fichero;
+cada inicio de `.pdata` de la ventana se crea como función y pasa por Hex-Rays.
+Salieron 4.463 funciones distintas, 415.287 líneas, 420 con nombre de
+exportación. `native/decompiled/` publica 328: los dos puntos de entrada del
+cliente, 264 funciones JNI del JDK (toda la familia `sun.security.mscapi`
+incluida), las 30 de más in-degree, 24 muestras de `.text` sin nombre y 8
+fragmentos de `.vmp0` que descompilan a un `JUMPOUT` a cinco bytes de su inicio.
 
 `.vmp0` es la parte que se malinterpreta. No es una VM de bytecode: empieza con
 `u32 294.735` y una tabla de 1,77 MB de registros `{u32 rva, u16 length}` que
@@ -659,8 +685,8 @@ sitio* — parejas `xor`/`not`/`rol`/`adc`, direcciones de retorno falsas escrit
 en `[rsp+0x10]`, saltos a mitad de instrucción. Sus 103 entradas de `.pdata` son
 señuelos cuyo `unwind RVA` apunta de vuelta a `.vmp0`. No hay tabla de despacho
 que deshacer, así que el repositorio entrega la tabla decodificada, el histograma
-de mnemónicos y las aristas resueltas, no un listado inventado. Los números están
-en `docs/analysis/NATIVE_DUMP.md`.
+de mnemónicos, las aristas resueltas y los cuerpos `JUMPOUT`, no un listado
+inventado. Los números están en `docs/analysis/NATIVE_DUMP.md`.
 
 ## La capa Java
 
@@ -719,10 +745,13 @@ identificados en Recaf.
 | `tools/dump_native.py` | cabeceras PE, 534 exportaciones, 404 importaciones, 342.822 rangos de función |
 | `tools/devirt_native.py` | decodifica `.vmp0` y resuelve llamadas directas e IAT en un grafo |
 | `tools/dump_heap_members.py` | nombres de miembro y descriptores de `.svm_hea`, con la comprobación de binding |
+| `tools/carve_window.py` | corta ventanas de `.text`/`.vmp0` como binario plano, con los inicios de `.pdata` de cada ventana |
+| `tools/decompile_native.py` | ordena la salida de Hex-Rays en `entry/`, `jdk/`, `runtime/`, `samples/`, `vmp0/` |
 | `mapping/image_inventory.json` | inventario de tipos y recursos de `astralis.dll` |
 | `mapping/image26/` | volcado 26.2: 16.263 tipos de MC, 1.483 del cliente, 593 hooks, 85 manifiestos, 202.366 nombres, 105.012 descriptores |
 | `native/dump/` | `pe.txt`, `exports.tsv`, `imports.tsv`, recuentos de funciones |
-| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, la tabla de `.vmp0` decodificada |
+| `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, `iat_sites.tsv`, la tabla de `.vmp0` decodificada |
+| `native/decompiled/` | 328 funciones de Hex-Rays: entradas del cliente, JNI del JDK, runtime caliente, muestras y fragmentos de `.vmp0` |
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
 | `src/` | 518 clases descompiladas |
 | `reconstruct/26.2/scripting/` | 55 ficheros de la API de scripting 2.2.6, el único bytecode de la imagen |

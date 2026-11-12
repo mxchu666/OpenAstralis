@@ -135,7 +135,7 @@ def main(argv):
     starts = sorted(f["start"] for f in functions)
     start_set = set(starts)
     names = {e["rva"]: e["name"] for e in exports}
-    iat = {i["iat"]: i["function"] for i in imports}
+    iat = {i["iat"]: i for i in imports}
 
     def owner(site):
         i = bisect.bisect_right(starts, site) - 1
@@ -146,6 +146,7 @@ def main(argv):
     per_section = collections.Counter()
     site_owner = collections.Counter()
     iat_calls = collections.Counter()
+    iat_sites = []
     samples = collections.defaultdict(list)
     unresolved_where = collections.Counter()
     bad_owner = 0
@@ -165,10 +166,11 @@ def main(argv):
             per_kind[kind] += 1
             per_section[sec + ":" + kind] += 1
             if kind == "iat":
-                fn = iat.get(target)
-                if fn:
-                    iat_calls[fn] += 1
-                    edges[("iat", fn, caller)] += 1
+                rec = iat.get(target)
+                if rec:
+                    iat_calls[rec["function"]] += 1
+                    edges[("iat", rec["function"], caller)] += 1
+                    iat_sites.append((rec["dll"], rec["function"], caller, site))
             elif target in start_set:
                 edges[(kind, "0x%08x" % target, caller)] += 1
             else:
@@ -250,6 +252,12 @@ def main(argv):
         g.write("function\tcallsites\n")
         for fn, c in iat_calls.most_common():
             g.write("%s\t%d\n" % (fn, c))
+
+    with open(os.path.join(outdir, "iat_sites.tsv"), "w", encoding="utf-8", newline="\n") as g:
+        g.write("dll\tfunction\tcaller\tcaller_name\tsite\n")
+        for dll, fn, caller, site in sorted(iat_sites, key=lambda r: (r[1], r[2])):
+            g.write("%s\t%s\t0x%08x\t%s\t0x%08x\n"
+                    % (dll, fn, caller, names.get(caller, ""), site))
 
     top = [(c, names.get(s, ""), s) for s, c in indeg.most_common(60)]
     with open(os.path.join(outdir, "hot_functions.tsv"), "w", encoding="utf-8", newline="\n") as g:

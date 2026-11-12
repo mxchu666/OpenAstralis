@@ -19,7 +19,7 @@ ASM, nativo en IDA headless.
 | [`COMO_FUNCIONA_EL_JAR.md`](COMO_FUNCIONA_EL_JAR.md) | Ingeniería inversa: 4 capas de ofuscación, arranque, VM nativa |
 | [`DEOBFUSCATION.md`](DEOBFUSCATION.md) | Pipeline de bytecode: las 5 capas, el fallo del blob, resultado por clase |
 | [`IMAGE_26_2.md`](IMAGE_26_2.md) | La imagen 26.2: manifiesto del mod, tipos, 87 hooks de Mixin, el jar de scripting |
-| [`NATIVE_DUMP.md`](NATIVE_DUMP.md) | El plano nativo: 342.822 funciones, grafo de llamadas, `.vmp0` decodificado, nombres y descriptores |
+| [`NATIVE_DUMP.md`](NATIVE_DUMP.md) | El plano nativo: 342.822 funciones, grafo de llamadas, `.vmp0` decodificado, decompilación Hex-Rays, nombres y descriptores |
 | [`DEVIRTUALIZATION.md`](DEVIRTUALIZATION.md) | Cuerpos nativos recuperados de la DLL |
 | [`GLS_BLOCKER.md`](GLS_BLOCKER.md) | Lo que bloquea el arranque del cliente sin la DLL |
 | [`RECAF.md`](RECAF.md) | Cómo abrir el árbol de clases en Recaf e importar el mapa de módulos |

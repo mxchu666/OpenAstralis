@@ -1,0 +1,8 @@
+entry 2
+jdk 264
+runtime 30
+samples 24
+vmp0 8
+total 328 functions, 25328 lines of pseudocode
+fragments dropped (body was one JUMPOUT) 45
+named by export 268, unnamed 60

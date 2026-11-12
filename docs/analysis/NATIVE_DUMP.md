@@ -66,10 +66,18 @@ propios puntos de entrada en la imagen y los dejó con nombre legible. Es la
 | `WINHTTP` | 3 | `WinHttpOpen`, `WinHttpGetProxyForUrl` |
 | `VERSION` | 3 | lectura de versión de fichero |
 
-`ncrypt` + `CRYPT32` + `Secur32` juntos en un cliente de Minecraft es la parte
-interesante: la capa nativa hace criptografía con la CNG de Windows (no con
-BouncyCastle) y valida certificados de la máquina, además de abrir HTTP propio
-por WinHTTP en paralelo a Netty.
+`ncrypt` + `CRYPT32` + `Secur32` parecen criptografía propia del cliente. No lo
+son: `native/devirt/iat_sites.tsv` resuelve los 1.628 sitios de llamada a import,
+y todos los de esa familia caen dentro de entradas JNI del JDK —
+`Java_sun_security_mscapi_CKeyStore_loadKeysOrCertificateChains` (36 KB de
+pseudocódigo), `storeCertificate`, `removeCertificate`,
+`CRSACipher_encryptDecrypt` — más un puñado de helpers sin nombre del mismo
+bloque (`0x132b…`–`0x132c…`). Igual con `IPHLPAPI`
+(`Java_java_net_NetworkInterface_*`) y `WINHTTP`
+(`Java_sun_net_spi_DefaultProxySelector_*`). Es el proveedor SunMSCAPI y la capa
+de red del JDK compilados AOT dentro de la imagen, no una CNG propia del cliente.
+La corrección importa porque cambia la lectura: el binario no trae criptografía
+propia; trae la del JDK, y la del cliente está en el heap (§8).
 
 ## 4. El dump de funciones
 
@@ -176,7 +184,59 @@ apunta a valores como `0x52250` o `0x112980`, que caen dentro de `.vmp0` y no en
 `.pdata` (que empieza en `0x13592000`). Windows no las usa; un desensamblador
 que confíe en ellas produce basura.
 
-## 7. Nombres y descriptores del heap
+## 7. Decompilación
+
+`tools/carve_window.py` corta ventanas de `.text` alrededor de las funciones que
+interesan y las carga como binario plano en `0x180000000 + rva`, así que las
+direcciones del descompilador son las del fichero. En cada ventana se crea una
+función por cada inicio de la tabla `.pdata` y se pasa por Hex-Rays.
+
+| | |
+|---|---|
+| funciones descompiladas | 4.463 distintas (4.957 ficheros, 415.287 líneas) |
+| con nombre de exportación | 420 |
+| fragmentos que Hex-Rays no puede unir (`JUMPOUT`) | 652 |
+| publicadas en `native/decompiled/` | 328 |
+
+Lo publicado se reparte en 2 puntos de entrada del cliente, 264 funciones JNI del
+JDK (`Java_*`, incluida toda la familia `sun.security.mscapi`), 30 funciones del
+grafo de llamadas con más in-degree, 24 muestras de `.text` sin símbolo y 8
+fragmentos de `.vmp0`.
+
+`serenity_client_bind` (`0x1e43d00`, 992 bytes) es el ejemplo corto: comprueba
+`a4` (el `Isolate`), hace un CAS de 3 a 1 sobre `[a4+0x14]` y llama a tres
+helpers de `.text` (`0x1eb6ce0`, `0x1eb6d20`, `0x277f4a0`) antes de devolver un
+`u32`. Los helpers salen como `MEMORY[0x...]()` porque viven fuera de la ventana
+cargada: el descompilador no tiene su código, no es una llamada indirecta.
+
+`.vmp0`: los 8 fragmentos elegidos entre los 181 que empiezan con prólogo y
+tienen 96 bytes o más dan todos la misma forma al descompilar:
+
+```c
+void sub_1F289FD7A() { JUMPOUT(0x1F289FD7FLL); }
+```
+
+El salto cae 5 bytes dentro del propio fragmento. Eso es la mutación vista desde
+Hex-Rays: el flujo no se reconstruye leyendo, y por eso el repositorio no publica
+un listado de `.vmp0` como si fuera código normal.
+
+### Lo que la decompilación no arregla
+
+Los 342.288 inicios sin exportación siguen siendo `sub_<rva>`. Se probaron dos
+vías para ponerles nombre, y las dos se midieron:
+
+- **referencias directas al heap**: 4.588 `lea r64,[rip+disp]` y 14.358 `movabs`
+  en `.text`; **cero** apuntan a `.svm_hea`. Las constantes de la imagen se
+  alcanzan por tabla o por registro base, no por dirección absoluta.
+- **punteros a código dentro del heap**: 9.914 valores de 8 bytes apuntan a un
+  inicio de función, pero ninguno tiene un registro de `member_names.tsv` a
+  menos de 80 bytes. Sin la estructura del `Method`, el puntero no dice a qué
+  método pertenece.
+
+Las dos pruebas están en el historial del repositorio como resultados negativos,
+no como pendientes.
+
+## 8. Nombres y descriptores del heap
 
 `tools/dump_heap_members.py` recorre `.svm_hea` y acepta un registro solo si el
 `u32` de longitud está justo antes del texto y el hub de array (`0x02080e42`,
@@ -209,7 +269,7 @@ exactamente con una run (`member_summary.txt`). El resultado negativo está
 versionado y es la razón por la que `member_names.tsv` es una lista plana con
 offset y no una tabla por clase.
 
-## 8. Lo que no se puede sacar
+## 9. Lo que no se puede sacar
 
 - **Cuerpos Java.** El código es x86 AOT; no hay bytecode salvo el jar de
   scripting ya documentado en `IMAGE_26_2.md`.
@@ -222,15 +282,24 @@ offset y no una tabla por clase.
   números.
 - **Nombres de las 342.288 funciones restantes.** No hay tabla de símbolos.
 
-## 9. Reproducir
+## 10. Reproducir
 
 ```bash
 python tools/dump_native.py    work/exe/Runtime/astralis.dll native
 python tools/devirt_native.py  work/exe/Runtime/astralis.dll native
 python tools/dump_heap_members.py work/exe/Runtime/astralis.dll mapping/image26 \
        --check reconstruct/26.2/scripting
+
+# decompilación: ventana -> IDA -> curación
+python tools/carve_window.py work/exe/Runtime/astralis.dll work/carve \
+       --target 0x1e43d00 0x132ba928 0x276fc00 --pad 0x20000
+python tools/decompile_native.py --raw work/decompiled/raw \
+       --raw work/decompiled/vmp0raw --out native/decompiled \
+       --image work/exe/Runtime/astralis.dll --hot work/native/hot_functions.tsv
 ```
 
-`dump_native.py` y `dump_heap_members.py` son stdlib puro. `devirt_native.py`
-usa capstone si está instalado y, si no, escribe firmas de bytes en lugar de
-mnemónicos: los recuentos no cambian.
+Las dos primeras mitades son stdlib puro. `devirt_native.py` usa capstone si está
+instalado y, si no, escribe firmas de bytes en lugar de mnemónicos: los recuentos
+no cambian. `carve_window.py` también es stdlib; la descompilación necesita IDA
+(`idalib` o la GUI) porque Hex-Rays no es reemplazable por un script, y
+`decompile_native.py` solo ordena y filtra la salida.
