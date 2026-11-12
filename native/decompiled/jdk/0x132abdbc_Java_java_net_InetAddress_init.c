@@ -1,6 +1,7 @@
 // Java_java_net_InetAddress_init
 // rva 0x132abdbc  size 416  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932abdbc: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 void __fastcall Java_java_net_InetAddress_init(__int64 a1, __int64 a2, __int64 a3, __int64 a4)
 {
   __int64 v5; // rax

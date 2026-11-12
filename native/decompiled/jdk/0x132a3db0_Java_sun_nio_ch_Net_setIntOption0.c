@@ -1,6 +1,7 @@
 // Java_sun_nio_ch_Net_setIntOption0
 // rva 0x132a3db0  size 209  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a3db0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 _UNKNOWN **__fastcall Java_sun_nio_ch_Net_setIntOption0(
         __int64 a1,
         __int64 a2,

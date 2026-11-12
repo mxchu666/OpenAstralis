@@ -1,6 +1,7 @@
 // Java_sun_security_mscapi_CKeyPairGenerator_00024RSA_generateCKeyPair
 // rva 0x132ba664  size 421  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932ba664: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_security_mscapi_CKeyPairGenerator_00024RSA_generateCKeyPair(
         __int64 a1,
         __int64 a2,

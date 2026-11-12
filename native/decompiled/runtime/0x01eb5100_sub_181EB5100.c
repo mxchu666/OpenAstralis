@@ -1,6 +1,7 @@
 // sub_181EB5100
 // rva 0x01eb5100  size 5040  section .text  group runtime
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x181eb5100: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall sub_181EB5100(__int64 a1, __int64 a2, _DWORD *a3, __int64 a4, int a5, int a6, char a7)
 {
   unsigned __int64 v7; // rbp

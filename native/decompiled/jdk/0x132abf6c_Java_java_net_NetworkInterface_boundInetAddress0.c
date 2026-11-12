@@ -1,6 +1,7 @@
 // Java_java_net_NetworkInterface_boundInetAddress0
 // rva 0x132abf6c  size 220  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932abf6c: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 char __fastcall Java_java_net_NetworkInterface_boundInetAddress0(
         int a1,
         int a2,

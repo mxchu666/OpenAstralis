@@ -1,6 +1,7 @@
 // Java_sun_security_mscapi_CSignature_signCngHash
 // rva 0x132bcdf4  size 843  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932bcdf4: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_security_mscapi_CSignature_signCngHash(
         __int64 a1,
         __int64 a2,

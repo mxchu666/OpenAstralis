@@ -1,6 +1,7 @@
 // Java_java_io_WinNTFileSystem_getLastModifiedTime0
 // rva 0x132b3308  size 183  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b3308: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_java_io_WinNTFileSystem_getLastModifiedTime0(
         __int64 a1,
         __int64 a2,

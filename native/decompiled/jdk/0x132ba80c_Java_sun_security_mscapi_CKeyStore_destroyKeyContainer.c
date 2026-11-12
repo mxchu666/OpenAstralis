@@ -1,6 +1,7 @@
 // Java_sun_security_mscapi_CKeyStore_destroyKeyContainer
 // rva 0x132ba80c  size 174  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932ba80c: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_security_mscapi_CKeyStore_destroyKeyContainer(
         __int64 a1,
         __int64 a2,

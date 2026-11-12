@@ -1,6 +1,7 @@
 // sub_182769900
 // rva 0x02769900  size 262  section .text  group runtime
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x182769900: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __m128i __fastcall sub_182769900(
         __int64 a1,
         __int64 a2,

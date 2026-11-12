@@ -1,6 +1,7 @@
 // Java_sun_nio_ch_SocketDispatcher_close0
 // rva 0x132a41e8  size 44  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a41e8: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_nio_ch_SocketDispatcher_close0(__int64 a1, __int64 a2, __int64 a3, __int64 a4, int a5)
 {
   __int64 result; // rax

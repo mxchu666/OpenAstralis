@@ -147,10 +147,16 @@ def main(argv):
         dest = os.path.join(args.out, group)
         os.makedirs(dest, exist_ok=True)
         size = sizes.get(rva, 0)
-        header = ("// %s\n// rva 0x%08x  size %d  section %s  group %s\n// from "
-                  "Hex-Rays over a carved window; addresses are image addresses\n"
+        base = 0
+        with open(path, encoding="utf-8", errors="replace") as f:
+            m = re.search(r"base (0x[0-9a-fA-F]+)", f.readline())
+        if m:
+            base = int(m.group(1), 16)
+        header = ("// %s\n// rva 0x%08x  size %d  section %s  group %s\n"
+                  "// window base 0x%x: Hex-Rays prints an operand at or above the\n"
+                  "// base as base-relative, and one below it as absolute\n"
                   % (label, rva, size,
-                     ".vmp0" if group == "vmp0" else ".text", group))
+                     ".vmp0" if group == "vmp0" else ".text", group, base))
         name = "0x%08x_%s.c" % (rva, re.sub(r"[^A-Za-z0-9_.-]", "_", label))
         with open(os.path.join(dest, name), "w", encoding="utf-8", newline="\n") as g:
             g.write(header + body.rstrip() + "\n")

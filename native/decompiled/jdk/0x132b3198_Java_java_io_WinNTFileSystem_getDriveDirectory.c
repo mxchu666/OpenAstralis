@@ -1,6 +1,7 @@
 // Java_java_io_WinNTFileSystem_getDriveDirectory
 // rva 0x132b3198  size 138  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b3198: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 unsigned __int16 *__fastcall Java_java_io_WinNTFileSystem_getDriveDirectory(
         __int64 a1,
         __int64 a2,

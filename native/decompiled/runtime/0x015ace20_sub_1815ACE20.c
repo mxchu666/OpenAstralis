@@ -1,6 +1,7 @@
 // sub_1815ACE20
 // rva 0x015ace20  size 597  section .text  group runtime
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1815ace20: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall sub_1815ACE20(
         __int64 a1,
         __int64 a2,

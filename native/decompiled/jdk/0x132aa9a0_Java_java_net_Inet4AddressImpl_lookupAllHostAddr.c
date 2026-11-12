@@ -1,6 +1,7 @@
 // Java_java_net_Inet4AddressImpl_lookupAllHostAddr
 // rva 0x132aa9a0  size 690  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932aa9a0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_java_net_Inet4AddressImpl_lookupAllHostAddr(
         __int64 a1,
         __int64 a2,

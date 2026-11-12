@@ -1,6 +1,7 @@
 // Java_java_net_NetworkInterface_getByInetAddress0
 // rva 0x132ac1f0  size 335  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932ac1f0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_java_net_NetworkInterface_getByInetAddress0(__int64 a1, __int64 a2, __int64 a3, int a4, int a5)
 {
   int v7; // edi

@@ -1,6 +1,7 @@
 // Java_sun_security_provider_NativeSeedGenerator_nativeGenerateSeed
 // rva 0x132b6128  size 231  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b6128: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 char __fastcall Java_sun_security_provider_NativeSeedGenerator_nativeGenerateSeed(
         __int64 a1,
         __int64 a2,

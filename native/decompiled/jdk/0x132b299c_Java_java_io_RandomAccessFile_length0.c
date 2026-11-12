@@ -1,6 +1,7 @@
 // Java_java_io_RandomAccessFile_length0
 // rva 0x132b299c  size 98  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b299c: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_java_io_RandomAccessFile_length0(__int64 a1, __int64 a2, __int64 a3, __int64 a4)
 {
   __int64 v4; // rax

@@ -1,6 +1,7 @@
 // Java_sun_security_mscapi_CRSACipher_encryptDecrypt
 // rva 0x132bc7e0  size 635  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932bc7e0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_security_mscapi_CRSACipher_encryptDecrypt(
         __int64 a1,
         __int64 a2,

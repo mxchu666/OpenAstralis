@@ -280,10 +280,11 @@ start, and 1,684,622 distinct caller→callee edges. Only 1,628 call sites reach
 Windows API directly; `native/devirt/import_calls.tsv` ranks all 404 of them.
 
 `tools/carve_window.py` cuts windows out of `.text` and loads them as flat
-binaries at `0x180000000 + rva`, so a decompiler sees the file's own addresses;
-every `.pdata` start in the window is created as a function and run through
-Hex-Rays. 4,463 distinct functions came out, 415,287 lines, 420 of them with an
-export name. `native/decompiled/` ships 328: the two client entry points, 264 JDK
+binaries at `0x180000000 + rva`, so a decompiler works in the file's own address
+space; each file records its window base, because Hex-Rays prints operands above
+that base relative to it and operands below it absolute. Every `.pdata` start in
+the window is created as a function and run through Hex-Rays. 4,463 distinct
+functions came out, 415,287 lines, 420 of them with an export name. `native/decompiled/` ships 328: the two client entry points, 264 JDK
 JNI functions (the whole `sun.security.mscapi` family among them), the 30
 highest in-degree functions, 24 unnamed `.text` samples, and 8 `.vmp0` chunks
 that all decompile to a `JUMPOUT` five bytes into themselves.
@@ -670,9 +671,11 @@ llaman directamente a una API de Windows; `native/devirt/import_calls.tsv` orden
 las 404.
 
 `tools/carve_window.py` corta ventanas de `.text` y las carga como binario plano
-en `0x180000000 + rva`, así que el descompilador ve las direcciones del fichero;
-cada inicio de `.pdata` de la ventana se crea como función y pasa por Hex-Rays.
-Salieron 4.463 funciones distintas, 415.287 líneas, 420 con nombre de
+en `0x180000000 + rva`, así que el descompilador trabaja en el espacio de
+direcciones del fichero; cada fichero guarda la base de su ventana, porque
+Hex-Rays imprime relativo a ella lo que cae por encima y absoluto lo que cae por
+debajo. Cada inicio de `.pdata` de la ventana se crea como función y pasa por
+Hex-Rays. Salieron 4.463 funciones distintas, 415.287 líneas, 420 con nombre de
 exportación. `native/decompiled/` publica 328: los dos puntos de entrada del
 cliente, 264 funciones JNI del JDK (toda la familia `sun.security.mscapi`
 incluida), las 30 de más in-degree, 24 muestras de `.text` sin nombre y 8

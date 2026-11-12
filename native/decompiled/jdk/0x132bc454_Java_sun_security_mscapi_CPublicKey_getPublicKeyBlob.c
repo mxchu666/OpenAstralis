@@ -1,6 +1,7 @@
 // Java_sun_security_mscapi_CPublicKey_getPublicKeyBlob
 // rva 0x132bc454  size 480  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932bc454: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_security_mscapi_CPublicKey_getPublicKeyBlob(
         __int64 a1,
         __int64 a2,

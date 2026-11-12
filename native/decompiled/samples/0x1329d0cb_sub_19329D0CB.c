@@ -1,6 +1,7 @@
 // sub_19329D0CB
 // rva 0x1329d0cb  size 140  section .text  group samples
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x19329d0cb: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 void __fastcall sub_19329D0CB(
         __int64 a1,
         __int64 a2,

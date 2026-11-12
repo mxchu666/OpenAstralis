@@ -1,6 +1,7 @@
 // Java_java_io_WinNTFileSystem_createFileExclusively0
 // rva 0x132b300c  size 214  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b300c: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 char __fastcall Java_java_io_WinNTFileSystem_createFileExclusively0(
         int a1,
         __int64 a2,

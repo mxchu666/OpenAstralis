@@ -1,6 +1,7 @@
 // Java_sun_nio_ch_WindowsAsynchronousServerSocketChannelImpl_accept0
 // rva 0x132a7358  size 172  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a7358: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_nio_ch_WindowsAsynchronousServerSocketChannelImpl_accept0(
         __int64 a1,
         __int64 a2,

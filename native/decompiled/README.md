@@ -24,8 +24,14 @@ fichero original. Dentro de la ventana se crea una función por cada inicio de l
 tabla `.pdata` (342.822 entradas, la única fuente de límites que sobrevive al
 AOT) y se descompila una a una.
 
-Las llamadas que salen de la ventana aparecen como `MEMORY[0x...]()`: el
-descompilador no tiene ese código cargado, no son llamadas indirectas.
+Las llamadas que salen de la ventana aparecen como `MEMORY[0x...]()`. El valor
+no siempre es una dirección de imagen: Hex-Rays imprime relativo a la base de la
+ventana todo operando que cae por encima de ella, y absoluto el que cae por
+debajo. Cada fichero lleva su `window base` en la cabecera, así que sumar la base
+a un valor mayor la convierte en dirección de imagen. Ejemplo: en
+`loadKeysOrCertificateChains`, `MEMORY[0x79BF8]` + `0x19325a000` = `0x1932d3bf8`,
+que es `rva 0x132d3bf8`, el slot de `__acrt_iob_func`. `native/dump/imports.tsv`
+tiene el nombre de cada slot.
 
 ## Lo que no está
 

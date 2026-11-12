@@ -1,6 +1,7 @@
 // Java_sun_nio_ch_WEPoll_ctl
 // rva 0x132a4e90  size 59  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a4e90: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_nio_ch_WEPoll_ctl(
         int a1,
         int a2,

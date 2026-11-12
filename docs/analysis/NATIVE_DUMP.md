@@ -209,6 +209,12 @@ helpers de `.text` (`0x1eb6ce0`, `0x1eb6d20`, `0x277f4a0`) antes de devolver un
 `u32`. Los helpers salen como `MEMORY[0x...]()` porque viven fuera de la ventana
 cargada: el descompilador no tiene su código, no es una llamada indirecta.
 
+Un detalle que hay que leer bien: Hex-Rays imprime relativo a la base de la
+ventana todo operando por encima de ella y absoluto el que queda por debajo. La
+cabecera de cada fichero publica su `window base`, así que `MEMORY[0x79BF8]` en
+`loadKeysOrCertificateChains` es `0x19325a000 + 0x79BF8 = 0x1932d3bf8`, o sea
+`rva 0x132d3bf8` en `native/dump/imports.tsv` (`__acrt_iob_func`).
+
 `.vmp0`: los 8 fragmentos elegidos entre los 181 que empiezan con prólogo y
 tienen 96 bytes o más dan todos la misma forma al descompilar:
 

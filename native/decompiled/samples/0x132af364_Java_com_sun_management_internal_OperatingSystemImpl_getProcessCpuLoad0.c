@@ -1,6 +1,7 @@
 // Java_com_sun_management_internal_OperatingSystemImpl_getProcessCpuLoad0
 // rva 0x132af364  size 111  section .text  group samples
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932af364: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 double __fastcall Java_com_sun_management_internal_OperatingSystemImpl_getProcessCpuLoad0(
         int a1,
         int a2,

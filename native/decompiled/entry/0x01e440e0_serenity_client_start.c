@@ -1,6 +1,7 @@
 // serenity_client_start
 // rva 0x01e440e0  size 992  section .text  group entry
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x181e440e0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall serenity_client_start(
         __int64 a1,
         __int64 a2,

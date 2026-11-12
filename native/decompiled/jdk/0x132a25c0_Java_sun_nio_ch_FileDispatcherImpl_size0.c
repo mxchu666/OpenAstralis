@@ -1,6 +1,7 @@
 // Java_sun_nio_ch_FileDispatcherImpl_size0
 // rva 0x132a25c0  size 70  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a25c0: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_sun_nio_ch_FileDispatcherImpl_size0(
         __int64 a1,
         __int64 a2,

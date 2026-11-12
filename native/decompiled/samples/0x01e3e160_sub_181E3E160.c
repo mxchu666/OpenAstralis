@@ -1,6 +1,7 @@
 // sub_181E3E160
 // rva 0x01e3e160  size 1838  section .text  group samples
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x181e3e160: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall sub_181E3E160(
         __int64 a1,
         __int64 a2,

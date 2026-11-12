@@ -1,6 +1,7 @@
 // sub_18502B700
 // rva 0x0502b700  size 182  section .text  group samples
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x18502b700: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall sub_18502B700(
         unsigned int a1,
         __int64 a2,

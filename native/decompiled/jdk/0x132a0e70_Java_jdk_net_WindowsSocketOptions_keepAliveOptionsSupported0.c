@@ -1,6 +1,7 @@
 // Java_jdk_net_WindowsSocketOptions_keepAliveOptionsSupported0
 // rva 0x132a0e70  size 65  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932a0e70: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 bool __fastcall Java_jdk_net_WindowsSocketOptions_keepAliveOptionsSupported0(
         int a1,
         int a2,

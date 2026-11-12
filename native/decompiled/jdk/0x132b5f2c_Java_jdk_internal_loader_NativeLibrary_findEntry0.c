@@ -1,6 +1,7 @@
 // Java_jdk_internal_loader_NativeLibrary_findEntry0
 // rva 0x132b5f2c  size 116  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b5f2c: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 __int64 __fastcall Java_jdk_internal_loader_NativeLibrary_findEntry0(
         __int64 a1,
         __int64 a2,

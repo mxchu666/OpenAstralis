@@ -1,6 +1,7 @@
 // Java_java_io_WinNTFileSystem_rename0
 // rva 0x132b3a94  size 145  section .text  group jdk
-// from Hex-Rays over a carved window; addresses are image addresses
+// window base 0x1932b3a94: Hex-Rays prints an operand at or above the
+// base as base-relative, and one below it as absolute
 char __fastcall Java_java_io_WinNTFileSystem_rename0(
         __int64 a1,
         __int64 a2,
