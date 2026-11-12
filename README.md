@@ -89,6 +89,13 @@ offline_profile.py      the offline account packet (uuid, name, avatar)
 offline_configs.py      emulator settings
 ```
 
+Those names, and everything else in this stage, were read out of the module's
+constant blob, not from code xrefs: the Nuitka build stores every string in one
+tagged/length-prefixed region and decodes it at import time, so IDA shows the
+literal at, say, `0x3ae8f6a72` with no pointer and no reference from `.text`.
+The 6.78 MB module is 1,529 functions; the blob is what ties them to their
+purpose.
+
 What it does, in order:
 
 1. Reads `launcher-settings.json` and `resources.json`, resolves `Runtime/` and
@@ -158,6 +165,26 @@ It loads `astralis.dll`, resolves `serenity_client_bind` and
 `serenity_client_start`, builds the JVM argument list above and enters the image.
 This is the Fabric **Serenity** native-client host: the JVM is not a separate
 `java.exe`, it is the image.
+
+The import table is deliberately tiny — 13 symbols, of which only
+`AddDllDirectory` and `CryptAcquireContextA` are Win32 calls. Everything else is
+resolved at runtime by walking the target module's export directory
+(`sub_1400071E0`, 453 bytes: reads the PE headers, the export name array and the
+ordinal table, then returns the function pointer). In IDA the whole bootstrap is
+one 4,267-byte function, `sub_140001BA0`, at image base `0x140000000`:
+
+```
+0x1400024d6  sub_1400071E0(..., "serenity_client_bind",  ...)   export lookup
+0x1400024e8  sub_1400071E0(..., "serenity_client_start", ...)   export lookup
+MultiByteToWideChar(CP_UTF8, Runtime)  ->  SetDefaultDllDirectories(0xC00)
+                                       ->  AddDllDirectory(<wide Runtime path>)
+swprintf(..., "-Djava.home=%s", Runtime)
+```
+
+`sub_140001BA0` calls the resolver four times; two of the names are the two
+`serenity_client*` exports above. `LoadLibraryW` and `GetProcAddress` are not in
+the import table, so the image is not brought in through the imported loader
+entry — the directory is registered and the two exports are called directly.
 
 ---
 
@@ -295,7 +322,10 @@ tools. No network access is required.
 | image is SubstrateVM | `.svm_int` + `.svm_hea` sections, 534 CEntryPoint exports, `JNI_CreateJavaVM` |
 | image is VMProtect-wrapped | `.vmp0` section, entry stub outside `NT` `.text` start |
 | launcher is CPython | import of `python312.dll`, 1,529 functions, CPython string table |
+| launcher strings have no code xrefs | every constant sits in one tagged blob (`0x3ae8bd000` onwards); IDA reports zero references to `ipc.seed`, `LAB_TOKEN_GATE`, `--accessToken` |
 | offline auth | `LAB_TOKEN_GATE`, `offline-lab-token`, `--accessToken`, `LAB_SYNTHETIC_USER_INFO` strings in `compiled_launcher.dll` |
+| host resolves exports itself | `sub_1400071E0` decompiled: PE headers, export name array, ordinal table; called four times from `sub_140001BA0` |
+| host does not import the loader | 13 imports enumerated in IDA, `LoadLibraryW` and `GetProcAddress` absent |
 | client type inventory | `tools/image_inventory.py`, deterministic scan, refuses to finish if the marker `com/astralis/scripting/Script` is missing |
 
 ---
@@ -389,6 +419,13 @@ offline_profile.py      la cuenta offline (uuid, nombre, avatar)
 offline_configs.py      ajustes del emulador
 ```
 
+Esos nombres, y todo lo demás de esta etapa, se leyeron del blob de constantes del
+módulo, no de referencias de código: la build de Nuitka guarda todas las cadenas
+en una única región con etiqueta y longitud, y las decodifica al importar, así que
+IDA muestra el literal (por ejemplo en `0x3ae8f6a72`) sin puntero ni referencia
+desde `.text`. El módulo de 6,78 MB tiene 1.529 funciones; el blob es lo que las
+ata a su propósito.
+
 En orden: lee `launcher-settings.json`, descomprime la imagen, carga
 `Python/libsodium.dll` y usa **ChaCha20-Poly1305 IETF** con las etiquetas
 `serenity-ipc-frame`, `serenity-ipc-v1`, `ipc-encryption`, `session-encryption`,
@@ -420,6 +457,17 @@ cadenas nombran el contrato: `serenity-native-artifact-v2`,
 `-Djava.home=%s`. Carga `astralis.dll`, resuelve esos dos símbolos y entra en la
 imagen. Es el anfitrión del cliente nativo **Serenity** de Fabric: la JVM no es un
 `java.exe` aparte, es la imagen.
+
+Su tabla de importes es mínima: 13 símbolos, y de Win32 solo `AddDllDirectory` y
+`CryptAcquireContextA`. El resto se resuelve en ejecución recorriendo el directorio
+de exportes del módulo destino (`sub_1400071E0`, 453 bytes, lee cabeceras PE y las
+tablas de nombres y ordinales). En IDA todo el arranque es una única función de
+4.267 bytes, `sub_140001BA0`, sobre la base `0x140000000`: resuelve
+`serenity_client_bind` y `serenity_client_start` en `0x1400024d6` y `0x1400024e8`,
+monta la ruta con `MultiByteToWideChar(CP_UTF8)` →
+`SetDefaultDllDirectories(0xC00)` → `AddDllDirectory`, y formatea
+`-Djava.home=%s`. Ni `LoadLibraryW` ni `GetProcAddress` están en la tabla de
+importes: la imagen no entra por la vía documentada del cargador.
 
 ## Qué se puede recuperar y qué no
 
