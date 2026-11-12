@@ -1,0 +1,92 @@
+class	category	confidence	module	evidence	settings
+avx	COMBAT	high	OldCombat	settings: removes attack cooldown / allow block hit / allow air hit	Removes Attack Cooldown; Removes your attack on miss; Weapon Only; Allow Block Hit; Allow Air Hit
+cuu	COMBAT	high	AutoCrystal	class_7422 EndCrystalEntity + min/max range + ignore teammates + esp	Scout Range; Min Range; Max Range; Duration; Ignore Teammates; ESP
+czm	COMBAT	medium	HitSelect	settings: wait for crit / percentage / reaction time / miss chance	Wait for Crit; Percentage; Reaction Time; Miss Chance; Weapon Only; Ignore Teammates
+dqk	COMBAT	low	?		
+dur	COMBAT	high	AutoClicker	setting 'ground only' + class_746.method_24828 isOnGround	
+dvw	COMBAT	high	Backtrack	settings: ms min / ms max / tracking timing / pause on hurt time	Range; MS Min; MS Max; Tracking Timing; Chance; Pause On HurtTime; Hurt Time; Target Mode; Last Attack Time To Work
+dxd	COMBAT	high	Reach	settings: reach / modify block reach / block reach	Reach; Modify Block Reach; Block Reach
+ejt	COMBAT	high	AntiBot	settings: in tablist / valid name / name starts with / age / latency	Is In Tablist; Valid Name; Name Starts With; Age; Latency
+ekb	COMBAT	high	KillAura	aura mode single/switch/vanilla, attack range, auto block, switch delay	Aura Mode; Ray Cast; Switch Delay; Scout Range; Attack Range; Auto Block; Block Range; Auto Block Mode; Blink; Packet Auto Block; Interact When Blocking; Force Block Hit Animation; Rotations; Noise Mode; Noise Yaw Multiplier; Noise Pitch Multiplier; Max Yaw Noise; Max Pitch Noise; GCD Fix; Rotation Range; Min Yaw Speed; Max Yaw Speed; Min Pitch Speed; Max Pitch Speed; 1.9+ CPS; 1.8 Swing Order; Min CPS; Max CPS; Wait for Crit; Critical Sprint; Through Walls; Ignore Teammates; Monsters; Animals; Invisible; ESP; Esp Width
+exz	COMBAT	medium	AimAssist	settings: min/max rotation speed, hit cool down, 1.8 swing order, range	Range; 1.8 Swing Order; Hit Cool Down; Min Rotation Speed; Max Rotation Speed
+ezw	COMBAT	medium	SilentAim	mode silent/flex, fov, use sensitivity, only while clicking	Mode; Range; FOV; Use Sensitivity; Only While Clicking; Weapon Only; Ignore Teammates; Though Walls; Stop Aiming on Target; Slow Aim if Close; Slow Aim Threshold; Slow Aim Factor; Take Curved Way; Curve Amplitude; Curve Frequency; Min Speed; Max Speed; Random Amount; Random Frequency
+gey	COMBAT	high	Velocity	mode w-tap/s-tap/packet, packets, max hurt time	Mode; Packets; Max Hurt Time
+gya	COMBAT	low	?		
+gzv	COMBAT	high	Criticals	mode watchdog 2/legit/vanilla, critical on ticks, isOnGround/isSprinting	Mode; Critical On Ticks
+ab	MOVEMENT	low	?		Blocks only; Pitch check; Backwards Only
+avq	MOVEMENT	low	?		
+avv	MOVEMENT	low	?		
+bni	MOVEMENT	low	?		Stop on Disable
+cdo	MOVEMENT	high	NoSlow	settings: sword/food/potion/bow slow down, sword/food/potion/bow method	Sword Slow Down; Food Slow Down; Potion Slow Down; Bow Slow Down; Sword Method; Food Method; Potion Method; Bow Method
+cqw	MOVEMENT	high	LongJump	settings: range / only with space	Range; Only with Space
+doc	MOVEMENT	high	ElytraFly	settings: speed / vertical speed / only with elytra	Speed; Vertical Speed; Only With Elytra
+dtd	MOVEMENT	medium	Timer	movement module with no settings or surface of its own	
+efx	MOVEMENT	high	Scaffold	settings: scaffold mode / place mode / safewalk / telly / snap	Scaffold Mode; Place Mode; Start Placing After; Swing Hand; Alternated Scaffold Order; SafeWalk; Same Y; Anal Boob; Don't place in same tick; Jump; Don't jump diagonally; Jump Every; Place Delay; Sprint On Jump; Sprint; Change FOV; Tower; No Off Hand check; Block Counter; Block Counter Mode; Block ESP; Block ESP Mode; Sneak; Sneak Every; Autoswap to next stack; Rotations; 180 on jump key; Ray Cast Mode; Min Yaw Speed; Max Yaw Speed; Min Pitch Speed; Max Pitch Speed; Rotation Mode; Brute Force Yaw; Brute Force Pitch; Spoof Ray Cast; Stable; Yaw Value; Pitch Value
+eky	MOVEMENT	high	Speed	settings: speed modes watchdog / vulcan low; class_304 input patch	
+fhd	MOVEMENT	high	GodBridge	settings: god bridge yaw / rotation mode / raycast mode	Modern Watchdog; Search Range; Rotation Mode; Raycast Mode; God Bridge Yaw; Rotation Speed; Bypass Mode; Tower Jump Timing; Spin; Spin Speed; Rotation Speed Yaw; Rotation Speed Pitch; KeepY; Jump; Don't jump diagonally; Jump Every; Block Counter; Block Counter Mode; Block ESP; Block ESP Alpha; Spoof Item; Swing
+fjf	MOVEMENT	medium	InventoryMove	movement module, no settings; gui move keyboard path	
+giw	MOVEMENT	medium	SafeWalk	movement module with no settings; edge guard	
+gli	MOVEMENT	high	Sprint	class_315 PlayerInput / class_304 Input patch, no settings	
+bqo	WORLD	low	NoteBlock	block-state reads + 'note block at ... has note value'	
+cfn	WORLD	low	?		
+ehh	WORLD	high	Nuker	settings: break range / rotate / break block surrounding / keep rotation	Break Range; Rotate; Break Block surrounding; Keep Rotation
+fei	WORLD	high	AutoPlace	settings: place delay / swing hand / rotations	Place Delay; Swing Hand; Rotations
+fpv	WORLD	high	SpeedMine	mode packet/timer, speed, mining cooldown	Mode; Speed; Mining Cooldown; Cooldown
+gdj	WORLD	medium	BedAura	place/break aura over class_2338 + class_238 with a range setting	
+hii	WORLD	low	?		
+aac	PLAYER	medium	AutoWeapon	settings: sword slot / first tool slot / action delay (ticks)	Action Delay (ticks); Sword Slot; First Tool Slot
+alk	PLAYER	high	AutoQueue	settings: auto set language / auto play / auto play mode (skywars, bedwars)	Auto Set Language; Auto Play; Auto Play Mode
+avy	PLAYER	low	?		Mode
+axo	PLAYER	high	AutoShield	settings: counter shield with axe / only while sneaking / switch back	Counter Shield with Axe; Only While Sneaking; Switch Back
+azi	PLAYER	low	?		
+cnr	PLAYER	medium	Spammer	settings: flush automatically / flush interval (ms)	Flush Automatically; Flush Interval (ms)
+dke	PLAYER	high	GuiMove	settings: inventory / chest / clickgui / allow jumping / sneaking / sprinting	Inventory; Chest; ClickGui; Allow Jumping; Allow Sneaking; Allow Sprinting
+dts	PLAYER	medium	Blink	mode blink/stop, class_2828 move packet, 'saved from void!'	Mode
+edr	PLAYER	high	NoPush	settings: player no push / water no push	Player No Push; Water No Push
+fgu	PLAYER	high	FastPlace	settings: delay / not while scaffold	Delay; Not while Scaffold
+fli	PLAYER	high	AutoTool	settings: auto swap / swap amount / blocks only	Delay; Blocks only; Auto Swap; Swap Amount
+fnq	PLAYER	low	?		
+fpn	PLAYER	high	NoFall	mode cancel/stop/stop 2 + class_2828 PlayerMoveC2SPacket	Mode
+gih	PLAYER	low	?		
+hdw	PLAYER	high	ChestStealer	settings: delay / auto close / check title / title to check for	Delay; Auto Close; Check title
+hia	PLAYER	high	Fly	settings: mode normal/custom, timer, ground timer, air timer	Mode; Timer; Ground Timer; Air Timer
+adv	VISUAL	medium	PlayerList	iterates class_640 tab entries (profile/latency/display name); colour-code regex	
+asl	VISUAL	high	HoleESP	boxes built from class_2338 BlockPos + class_238 Box, no entity refs	
+awt	VISUAL	low	?		
+ayd	VISUAL	medium	ReloadShader	setting 'reload shader'; class_310.method_1521 resource manager	Reload Shader
+bef	VISUAL	medium	Tracers	visual module, no settings; line render against entities	
+bma	VISUAL	high	Animations	settings: 1.7 / exhibition / slide / swank / block x/y/z / swing offset	Speed; Animation Mode; Block X; Block Y; Block Z; Disable Item Swing Offset
+bnn	VISUAL	high	ClickGui	settings: font size / hidden categories / background / side line; category list	Font Size; Hidden Categories; Animation Speed; Color Speed; Back Ground; Side Line; Full Outline
+cc	VISUAL	high	ESP	settings: main box / fill / health bar / fill image; entity render	Main Box; Main box Shadow; Fill Image; Speed; Fill; Health Bar; Health Bar Shadow
+cem	VISUAL	high	Trails	settings: min distance / curve resolution / rainbow; class_4587 matrices	Min Distance; Curve Resolution
+ckv	VISUAL	high	TargetHud	setting 'target hud'; mode modern/legacy; class_746 target	Mode
+dad	VISUAL	high	PotionStatus	settings: potion indicator / active potion effects	
+daw	VISUAL	medium	ClickGuiStyle	mode imgui/dropdown/astralis; class_310.method_1507 setScreen	Mode; Imgui Alpha; Blur; Only Blur Imgui; Blur Radius; Gradient; Only Gradient With Imgui; Gradient Alpha
+der	VISUAL	high	Nametags	settings: font / text shadow / background / show health / padding; font names	Font; Text Shadow; Background; Show Health; Corner Radius; Padding
+di	VISUAL	high	NoRender	settings: no fire / water / blindness / fog / weather / clouds	No Fire; No Water; No Blindness; No Fog; No Weather; No Clouds
+dk	VISUAL	high	Ambience	settings: time changer / fog modifier / sky modifier / custom gradient	Time Changer; Time; Fog Modifier; Sky Modifier; Custom Gradient; Fog Start; Fog End; Environmental Start; Environmental End; Top Alpha; Bottom Alpha; Custom Blur; Blur Strength
+dtc	VISUAL	high	Notifications	settings: notification on toggle / mode / pop sound	Notification on Toggle; Mode; Pop Sound
+edy	VISUAL	low	Font	only recovered string is a font name (Product Sans Regular)	
+enu	VISUAL	high	HitSound	setting 'hit sound'; sound events skeet / never lose / dark loves them	Hit Sound
+eny	VISUAL	high	HitMarker	settings: circle duration / max radius	Circle Duration; Max Radius
+evm	VISUAL	high	Freecam	class_1041 Window + class_315 camera path, no settings	
+ezv	VISUAL	high	Glow	settings: bloom / bloom radius / blur / blur radius / water mark mode	Bloom; Bloom Radius; Blur; Blur Radius; Font Mode; Color Mode; Water Mark Mode; Alternative Color; Speed; Background Alpha
+fds	VISUAL	low	?		
+fhc	VISUAL	high	Watermark	mode modern/legacy, media info, rainbow; class_2561 text render	Mode
+foz	VISUAL	high	Scoreboard	settings: no score board / no score / change color / head color / body color	No Score Board; No Score; Change Color
+fun	VISUAL	medium	ItemPhysics	visual module with no settings; item entity render path	
+gks	VISUAL	medium	Chams	visual module with no settings; entity shading	
+gsn	VISUAL	medium	Fullbright	visual module with no settings; gamma	
+gty	VISUAL	medium	AntiVoid	visual module with no settings; void guard	
+hin	VISUAL	high	Camera	settings: aspect ratio / zoom / third person / camera no clip	Change Aspect Ratio; Zoom; Modify Third Person; Camera No Clip; X Item; Y Item; Z Item; Rot X; Rot Y; Rot Z
+clc	EXPLOIT	high	PacketMine	class_2720 PlayerActionC2SPacket + class_2856$class_2857 action enum	
+dvp	EXPLOIT	high	Session	strings accessToken / selectedProfile / serverId / POST	
+dzu	EXPLOIT	high	Disabler	setting 'disabler mode'	
+fhx	EXPLOIT	low	?		
+fno	EXPLOIT	low	?		Delay In Between Checks
+hba	EXPLOIT	medium	PayloadExploit	class_2658 CustomPayloadC2SPacket + class_2960 Identifier; 'bloxd' / 'resyncphysics'	
+a	CLIENT	high	SuspiciousName	settings: send chat message / notification / alert if suspicious name; nickname regex	Send Chat message; Send Notification; Alert if Suspicious Name
+bdh	CLIENT	medium	MovementFix	settings: movement correction / old hit box offset / modern hit vec	Movement Correction; Old Hit Box Offset; Modern Hit Vec
+coi	CLIENT	high	IRC	literal 'IRC' and '» ' chat prefix; client-category chat link	
+dfz	CLIENT	high	Config	settings: auto save config / auto save config delay	Auto Save Config; Auto Save Config Delay
+dxc	CLIENT	low	?		

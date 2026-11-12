@@ -250,8 +250,33 @@ The obfuscator used five layers, all folded offline:
 5. **`invokedynamic (IJ)J`** — the same scheme returning the raw `long`: the
    memory offsets the cheat feeds to `sun.misc.Unsafe`.
 
-`mapping/offsets.json` holds 3,799 folded constants from 226 classes: 1,999
-ints, 1,641 strings, 159 offsets. The native component
+`mapping/offsets.json` holds 3,897 folded constants from 229 classes: 2,012
+ints, 1,726 strings, 159 offsets. Every `(IJ)Ljava/lang/String;` site in the
+tree folds — the 80 `range` skips the first pass left were a table-walk bug: the
+obfuscator walks the blob with `String.substring`, so the chunk cursor is a
+**char** count, not a byte count, and a CESU-8 literal carries more bytes than
+chars. With the walk in the char domain, `cc/astralis/ehy` yields the full 59
+entries its `bipush 59 / anewarray` declares.
+
+Two classes Vineflower cannot finish (`ehy`, `hcu`) are decompiled with CFR, so
+`src/` is 518/518 readable files with no `$VF: Couldn't be decompiled` stub.
+The 55 sites that stay unfolded are all `(IJ)J` in `cc/astralis/brc`/`cvn`; their
+bootstrap method builds the call site at runtime from a bytewise-composed
+`long[]` that has no static table in the class file, so there is nothing to fold
+against.
+
+`mapping/modules.tsv` organises the cheat layer: the 91 classes that extend the
+module base `guu`, the category each one registers under (`bfm`), its recovered
+setting names, and the feature the settings and call surface identify. 78 of
+them are instantiated by the module manager `dfw`. Names are marked `high`,
+`medium` or `low` confidence; `?` means the class carries no name of its own and
+the settings alone do not pin it down. They come from the setting names, the
+mode options and the Minecraft types each class touches - never from a string
+that says `KillAura`, because the module name lives in the user config, not in
+the class file. `docs/modules.md` is the readable version and
+`mapping/modules.proguard.txt` imports the 74 identified renames into Recaf.
+
+The native component
 (`dev/opalV2/x64-windows.dll`, 1,148,928 bytes) is a small JVM bytecode
 interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 16 recovered bodies are in `native/bodies/`.
@@ -272,11 +297,15 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/jarscan.py`, `tools/rebuild_jar.py` | archive-level inventory and rebuild |
 | `tools/Sanitize.java` | neutralise hardcoded endpoints and `halt` calls |
 | `tools/devirt_dump.py` | turn IDA output into annotated C bodies |
-| `mapping/offsets.json` | 3,799 folded constants |
+| `mapping/offsets.json` | 3,897 folded constants |
+| `mapping/modules.tsv` | 91 module classes: category, settings, inferred feature |
+| `mapping/modules.proguard.txt` | the 74 identified renames, importable into Recaf |
+| `tools/module_scan.py` | emits the evidence the module names were read from |
 | `mapping/deobf.map` | per-class keys, constant tables, string blobs |
 | `mapping/image_inventory.json` | type and resource inventory of `astralis.dll` |
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
 | `src/` | 518 decompiled classes |
+| `docs/modules.md` | the module map, category by category |
 | `docs/analysis/` | detailed reports (Spanish) |
 | `build.sh`, `build.ps1` | offline build of the tooling |
 
@@ -513,8 +542,30 @@ El ofuscador usaba cinco capas, todas plegadas sin conexión: strings cifrados e
 `<clinit>` (clave DES por clase, texto plano en **CESU-8**), tablas `long[]`
 cifradas (DES/CBC/NoPadding, IV = 0), y tres sitios `invokedynamic` — `(IJ)I`,
 `(IJ)Ljava/lang/String;` y `(IJ)J` — que devuelven enteros, cadenas y los offsets
-crudos que el cheat pasa a `sun.misc.Unsafe`. `mapping/offsets.json` guarda 3.799
-constantes de 226 clases (1.999 enteros, 1.641 cadenas, 159 offsets).
+crudos que el cheat pasa a `sun.misc.Unsafe`. `mapping/offsets.json` guarda 3.897 constantes de 229 clases (2.012 enteros,
+1.726 cadenas, 159 offsets). Todos los sitios `(IJ)Ljava/lang/String;` se pliegan:
+los 80 saltos `range` del primer pase eran un fallo del recorrido de tablas. El
+ofuscador parte el blob con `String.substring`, así que el cursor avanza en
+**caracteres**, no en bytes, y un literal CESU-8 ocupa más bytes que caracteres.
+Con el recorrido en dominio de caracteres, `cc/astralis/ehy` devuelve las 59
+entradas que declara su `bipush 59 / anewarray`.
+
+Dos clases que Vineflower no termina (`ehy`, `hcu`) se decompilan con CFR: `src/`
+queda en 518/518 ficheros legibles, sin el stub `$VF: Couldn't be decompiled`.
+Los 55 sitios sin plegar son todos `(IJ)J` en `cc/astralis/brc`/`cvn`: su
+bootstrap construye el call site en ejecución desde un `long[]` compuesto byte a
+byte que no existe como tabla estática en el class file.
+
+`mapping/modules.tsv` organiza la capa de módulos: las 91 clases que heredan de
+`guu`, la categoría con la que se registran (`bfm`), los nombres de sus ajustes
+recuperados y la función que identifican esos ajustes y su superficie de llamadas.
+78 las instancia el gestor `dfw`. La confianza va marcada como `high`, `medium` o
+`low`; `?` significa que la clase no lleva nombre propio y los ajustes no bastan.
+El nombre sale de los ajustes, de las opciones de modo y de los tipos de Minecraft
+que toca cada clase, nunca de una cadena que diga `KillAura`: el nombre del módulo
+vive en la config del usuario, no en el class file. `docs/modules.md` es la
+versión legible y `mapping/modules.proguard.txt` importa los 74 renombrados
+identificados en Recaf.
 
 ## Estructura
 
@@ -527,10 +578,14 @@ constantes de 226 clases (1.999 enteros, 1.641 cadenas, 159 offsets).
 | `tools/AstralisDeobf.java` | reescritor ASM que pliega cada `invokedynamic` a `LDC` |
 | `tools/vineflower.jar` | Vineflower incluido, último paso del pipeline de la capa Java |
 | `tools/indy_scan.py` | lista descriptores `invokedynamic` y su bootstrap |
-| `mapping/offsets.json` | 3.799 constantes plegadas |
+| `mapping/offsets.json` | 3.897 constantes plegadas |
+| `mapping/modules.tsv` | 91 clases de módulo: categoría, ajustes, función inferida |
+| `mapping/modules.proguard.txt` | los 74 renombrados identificados, importables en Recaf |
+| `tools/module_scan.py` | genera la evidencia con la que se leyeron los nombres |
 | `mapping/image_inventory.json` | inventario de tipos y recursos de `astralis.dll` |
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
 | `src/` | 518 clases descompiladas |
+| `docs/modules.md` | el mapa de módulos, categoría por categoría |
 | `docs/analysis/` | informes detallados |
 | `build.sh`, `build.ps1` | build sin red |
 

@@ -9,19 +9,20 @@ Aquí está lo mínimo para arrancarlo, abrir el cliente y no perderse.
 
 - **JDK 21** — el jar usa `class file version 65`, y Recaf 0.8.x necesita 21
   para leerlo sin quejas.
-  En esta máquina: `F:\JDKS\JDK 21 AZUL`
-- `F:\Astralis\recaf\recaf-launcher-gui-0.8.8.jar`
+- `recaf/recaf-launcher-gui-0.8.8.jar` (1.467.676 bytes)
 
 No hace falta instalar nada: el launcher se descarga la versión de Recaf que
-elijas la primera vez y la cachea.
+elijas la primera vez y la cachea. Ese launcher es solo el bootstrap — contiene
+`software/coley/recaf/launcher/**` y ninguna clase del editor, así que la
+primera ejecución necesita red.
 
 ---
 
 ## 2. Arrancar
 
 ```powershell
-$env:JAVA_HOME = "F:\JDKS\JDK 21 AZUL"
-& "F:\JDKS\JDK 21 AZUL\bin\java.exe" -jar "F:\Astralis\recaf\recaf-launcher-gui-0.8.8.jar"
+$env:JAVA_HOME = "<ruta al JDK 21>"
+& "$env:JAVA_HOME\bin\java.exe" -jar "recaf\recaf-launcher-gui-0.8.8.jar"
 ```
 
 En el launcher:
@@ -43,13 +44,13 @@ directo.
 
 `File → Load` y elegir:
 
-- **`F:\Astralis\work\deobf`** ← recomendado. Es el jar **ya deobfuscado**:
+- **`work/java_fold7`** ← recomendado. Es el árbol de `.class` **ya deobfuscado**:
   los strings están en claro y los `invokedynamic` están plegados. Es lo que se
-  quiere leer.
-- `F:\Astralis\astralis (Fabric 26.3).jar` ← el original. Solo para
-  comparar o si quieres ver el estado antes del pipeline.
-- `F:\Astralis\out\astralis-clean.jar` ← para verificar el resultado de la
-  sanitización.
+  quiere leer. En este repo los ficheros están en
+  `work/java_fold7/cc/astralis/*.class`.
+- `work/java` ← las clases originales del cliente. Solo para comparar o si
+  quieres ver el estado antes del pipeline.
+- `work/clean` ← si quieres verificar la sanitización.
 
 Recaf indexa las clases al cargar (unos segundos con 518 clases).
 
@@ -98,7 +99,26 @@ Atajos útiles para este jar:
 
 ---
 
-## 6. Editar y recompilar (si hace falta)
+## 6. Importar el mapa de módulos
+
+`mapping/modules.proguard.txt` trae los 74 módulos identificados con el formato
+que Recaf importa:
+
+```
+cc.astralis.ekb -> cc.astralis.KillAura:
+cc.astralis.efx -> cc.astralis.Scaffold:
+cc.astralis.cc  -> cc.astralis.ESP:
+```
+
+`File → Import → Mappings` (o `Mappings → Import`) y elegir el `.txt`. Recaf
+aplica los nombres al árbol, al decompilador y a las referencias; el nombre
+original queda guardado en el mapa, así que nada se pierde.
+
+Los 17 que no están en el fichero se quedan con su nombre ofuscado a propósito:
+`mapping/modules.tsv` marca por qué (`?`, sin ajustes ni superficie propia) y
+`docs/modules.md` los lista con lo único que se sabe de ellos.
+
+## 7. Editar y recompilar (si hace falta)
 
 Recaf puede editar bytecode y guardar el jar, pero para este proyecto **no se
 usa**: la sanitización se hace con ASM (`tools/Sanitize.java`) porque necesita
@@ -117,31 +137,33 @@ marcas la opción; si no, el jar revienta con `VerifyError`.
 
 ---
 
-## 7. Limitaciones con este jar
+## 8. Limitaciones con este árbol
 
 - **Clases virtualizadas**: `dqq`, `evd`, `fz`, `hdl` tienen métodos `native` y
   un `<clinit>` de dos líneas. En Recaf se ven vacíos porque el cuerpo está en
   la DLL. No es un fallo de Recaf.
-- **`cc/astralis/fhd`**: Vineflower no lo decompila del todo. Recaf usa otro
-  decompilador y puede que sí; si no, la pestaña **Bytecode** siempre funciona.
+- **`cc/astralis/ehy` y `hcu`**: Vineflower revienta en las dos
+  (`Statement.getVarDefinitions()` sobre un `stat` nulo). En `src/` están
+  decompiladas con CFR 0.152; si Recaf usa su propio decompilador, la pestaña
+  **Bytecode** siempre funciona.
 - **Assets**: los 15 jars anidados no se abren solos. Hay que extraerlos y
   cargarlos como recursos aparte si se quieren inspeccionar.
 
 ---
 
-## 8. Alternativa sin GUI
+## 9. Alternativa sin GUI
 
 Si en algún momento Recaf no arranca, el mismo trabajo se hace con:
 
 ```powershell
 # listar clases
-jar tf work\deobf | Select-String '\.class$'
+Get-ChildItem work\java_fold7\cc\astralis -Filter *.class | Select-Object Name
 
 # bytecode de una clase
-& "F:\JDKS\JDK 21 AZUL\bin\javap.exe" -p -c -constants work\deobf\cc\astralis\dle.class
+javap -p -c -cp work\java_fold7 cc.astralis.ekb
 
 # decompilar todo
-& "F:\JDKS\JDK 21 AZUL\bin\java.exe" -Xmx4G -jar tools\vineflower.jar -dgs=1 -rsy=1 work\deobf work\src2
+java -jar tools\vineflower.jar work\java_fold7 work\src_new
 ```
 
 `work/src2` ya está generado: para lectura rápida es más cómodo que la GUI.
