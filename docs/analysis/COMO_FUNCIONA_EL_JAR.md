@@ -1,7 +1,7 @@
 # Cómo funciona el jar de Astralis (por dentro)
 
 Documento técnico. Explica qué hay dentro de
-`Astralis 08.10.25 (1.21) (Fabric).jar`, cómo está ofuscado y cómo se
+`astralis (Fabric 26.3).jar`, cómo está ofuscado y cómo se
 reconstruyó todo sin ejecutarlo.
 
 ---
@@ -9,7 +9,7 @@ reconstruyó todo sin ejecutarlo.
 ## 1. Estructura del archivo
 
 ```
-Astralis 08.10.25 (1.21) (Fabric).jar      55.300.085 bytes, 639 entradas
+astralis (Fabric 26.3).jar      55.300.085 bytes, 639 entradas
 ├── fabric.mod.json                        manifiesto de Fabric
 ├── astralis.mixins.json                   config de mixins
 ├── META-INF/                              firma, manifest, services

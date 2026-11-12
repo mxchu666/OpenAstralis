@@ -32,28 +32,65 @@ public final class AstralisDeobf {
         long key;
         int xor = 19379;
         int xorStr = -1;
+        int xorLong = -1;
+        String intField;
+        String longField;
         final List<byte[]> table = new ArrayList<>();
-        final List<long[]> arrays = new ArrayList<>();
+        final Map<String, List<Long>> chunks = new LinkedHashMap<>();
+        final Map<String, long[]> tables = new HashMap<>();
         final Map<String, String> strings = new HashMap<>();
+
+        /** concatenated long[] table for one field, built on first use */
+        long[] tableFor(String f) {
+            if (f == null) return null;
+            long[] hit = tables.get(f);
+            if (hit != null) return hit;
+            List<Long> c = chunks.get(f);
+            if (c == null) return null;
+            long[] arr = new long[c.size()];
+            for (int i = 0; i < arr.length; i++) arr[i] = c.get(i);
+            tables.put(f, arr);
+            return arr;
+        }
     }
 
     static final Map<String, Info> DB = new HashMap<>();
     static final boolean DBG = System.getProperty("dbg") != null;
+    static PrintWriter SITES;
     static int nStrings, nIndy, nClasses, nFail, nAnalyzed;
+
+    static void sites(String cls, String method, String desc, long a0, long a1, Object value) {
+        if (SITES == null) return;
+        SITES.printf("%s\t%s\t%s\t%d\t%d\t%s%n", cls, method, desc, a0, a1, value);
+    }
+
+    /** diagnostic: obfuscated indy site the data-flow pass could not fold */
+    static PrintWriter SKIPS;
+
+    static void skip(String cls, String method, String desc, String why) {
+        if (SKIPS == null) return;
+        SKIPS.printf("%s\t%s\t%s\t%s%n", cls, method, desc, why);
+    }
 
     public static void main(String[] args) throws Exception {
         if (args.length == 0 || args[0].equals("-h") || args[0].equals("--help")) {
-            System.out.println("usage: AstralisDeobf <inDir> <outDir> <map>");
+            System.out.println("usage: AstralisDeobf <inDir> <outDir> <map> [sites.tsv]");
             System.out.println("  folds invokedynamic string/int/long constants recovered from <map>");
+            System.out.println("  sites.tsv: optional log of every folded site (class, method, desc, args, value)");
             return;
         }
         if (args.length < 3) {
-            System.err.println("usage: AstralisDeobf <inDir> <outDir> <map>");
+            System.err.println("usage: AstralisDeobf <inDir> <outDir> <map> [sites.tsv]");
             System.exit(2);
         }
         Path in = Paths.get(args[0]);
         Path out = Paths.get(args[1]);
         loadMap(Paths.get(args[2]));
+        if (args.length > 3) SITES = new PrintWriter(Files.newBufferedWriter(Paths.get(args[3]),
+                StandardCharsets.UTF_8));
+        String skipPath = System.getProperty("skips");
+        if (skipPath != null) SKIPS = new PrintWriter(Files.newBufferedWriter(Paths.get(skipPath),
+                StandardCharsets.UTF_8));
 
         List<Path> files = new ArrayList<>();
         try (var stream = Files.walk(in)) {
@@ -87,6 +124,8 @@ public final class AstralisDeobf {
         }
         System.out.printf("classes=%d analyzed=%d strings=%d indy=%d failures=%d%n",
                 nClasses, nAnalyzed, nStrings, nIndy, nFail);
+        if (SITES != null) SITES.close();
+        if (SKIPS != null) SKIPS.close();
     }
 
     static void loadMap(Path file) throws IOException {
@@ -99,17 +138,24 @@ public final class AstralisDeobf {
                 case "F" -> cur.field = f[1];
                 case "A" -> cur.a = Long.parseUnsignedLong(f[1], 16);
                 case "K" -> cur.key = Long.parseUnsignedLong(f[1], 16);
-                case "X" -> cur.xor = Integer.parseInt(f[1]);
+                case "X" -> {
+                    cur.xor = Integer.parseInt(f[1]);
+                    if (f.length > 2) cur.intField = f[2];
+                }
                 case "Y" -> cur.xorStr = Integer.parseInt(f[1]);
+                case "Z" -> {
+                    cur.xorLong = Integer.parseInt(f[1]);
+                    if (f.length > 2) cur.longField = f[2];
+                }
                 case "T" -> {
                     for (String part : f[1].split("\\|"))
                         cur.table.add(Base64.getDecoder().decode(part));
                 }
                 case "B" -> {
-                    String[] parts = f[1].split(",");
-                    long[] arr = new long[parts.length];
-                    for (int i = 0; i < parts.length; i++) arr[i] = Long.parseUnsignedLong(parts[i], 16);
-                    cur.arrays.add(arr);
+                    String field = f.length > 2 ? f[1] : "";
+                    String[] parts = (f.length > 2 ? f[2] : f[1]).split(",");
+                    List<Long> dst = cur.chunks.computeIfAbsent(field, k -> new ArrayList<>());
+                    for (String p : parts) dst.add(Long.parseUnsignedLong(p, 16));
                 }
                 case "S" -> {
                     String enc = new String(Base64.getDecoder().decode(f[1]), StandardCharsets.UTF_8);
@@ -137,7 +183,7 @@ public final class AstralisDeobf {
                     }
                 }
             }
-            if (info.arrays.isEmpty() && info.table.isEmpty()) continue;
+            if (info.chunks.isEmpty() && info.table.isEmpty()) continue;
 
             // pass 2: invokedynamic constants via data flow
             Frame<Const>[] frames;
@@ -155,28 +201,39 @@ public final class AstralisDeobf {
                 AbstractInsnNode insn = arr[i];
                 if (!(insn instanceof InvokeDynamicInsnNode indy)) continue;
                 boolean isInt = indy.desc.equals("(IJ)I");
+                boolean isLong = indy.desc.equals("(IJ)J") && info.xorLong >= 0
+                        && info.longField != null;
                 boolean isStr = indy.desc.equals("(IJ)Ljava/lang/String;")
                         && !info.table.isEmpty() && info.xorStr >= 0;
-                if (!isInt && !isStr) continue;
+                if (!isInt && !isStr && !isLong) continue;
                 Frame<Const> fr = frames[i];
-                if (fr == null) continue;
+                if (fr == null) { skip(cn.name, mn.name, indy.desc, "noframe"); continue; }
                 int n = fr.getStackSize();
-                if (n < 2) continue;
+                if (n < 2) { skip(cn.name, mn.name, indy.desc, "stack"); continue; }
                 Const v0 = fr.getStack(n - 2);
                 Const v1 = fr.getStack(n - 1);
                 if (DBG) System.err.printf("indy@%d %s: v0=%s v1=%s%n", i, indy.desc,
                         v0.known ? Long.toString(v0.value) : "?", v1.known ? Long.toString(v1.value) : "?");
-                if (!v0.known || !v1.known) continue;
+                if (!v0.known || !v1.known) { skip(cn.name, mn.name, indy.desc, "unknown"); continue; }
                 if (isInt) {
-                    Integer val = eval(info, v0.value, v1.value);
-                    if (val == null) continue;
+                    Long val = eval(info, v0.value, v1.value, info.intField, info.xor, false);
+                    if (val == null) { skip(cn.name, mn.name, indy.desc, "eval"); continue; }
+                    sites(cn.name, mn.name, indy.desc, v0.value, v1.value, (int) (long) val);
+                    kill.add(indy);
+                    vals.add((int) (long) val);
+                } else if (isLong) {
+                    Long val = eval(info, v0.value, v1.value, info.longField, info.xorLong, true);
+                    if (val == null) { skip(cn.name, mn.name, indy.desc, "eval"); continue; }
+                    sites(cn.name, mn.name, indy.desc, v0.value, v1.value, val);
                     kill.add(indy);
                     vals.add(val);
                 } else {
                     int idx = (int) ((v0.value ^ (v1.value & 0x7FFF) ^ info.xorStr) & 0x7FFFFFFF);
-                    if (idx >= info.table.size()) continue;
+                    if (idx >= info.table.size()) { skip(cn.name, mn.name, indy.desc, "range"); continue; }
                     String s = decryptString(info.table.get(idx), v1.value);
-                    if (s == null) continue;
+                    if (s == null) { skip(cn.name, mn.name, indy.desc, "des"); continue; }
+                    sites(cn.name, mn.name, indy.desc, v0.value, v1.value,
+                            s.replace("\\", "\\\\").replace("\n", "\\n").replace("\t", "\\t"));
                     kill.add(indy);
                     vals.add(s);
                 }
@@ -227,29 +284,33 @@ public final class AstralisDeobf {
         return sb.toString();
     }
 
-    static Integer eval(Info info, long arg0, long arg1) {
-        int idx = (int) ((arg0 ^ (arg1 & 0x7FFF) ^ info.xor) & 0x7FFFFFFF);
-        for (long[] array : info.arrays) {
-            if (idx >= array.length) continue;
-            byte[] ct = new byte[8];
-            byte[] kb = new byte[8];
-            for (int k = 0; k < 8; k++) {
-                ct[k] = (byte) (array[idx] >>> (56 - 8 * k));
-                kb[k] = (byte) (arg1 >>> (56 - 8 * k));
-            }
-            try {
-                Cipher c = Cipher.getInstance("DES/CBC/NoPadding");
-                c.init(Cipher.DECRYPT_MODE,
-                        SecretKeyFactory.getInstance("DES").generateSecret(new DESKeySpec(kb)),
-                        new IvParameterSpec(new byte[8]));
-                byte[] pt = c.doFinal(ct);
-                return ((pt[4] & 0xFF) << 24) | ((pt[5] & 0xFF) << 16)
-                        | ((pt[6] & 0xFF) << 8) | (pt[7] & 0xFF);
-            } catch (Exception e) {
-                return null;
-            }
+    static Long eval(Info info, long arg0, long arg1, String field, int xor, boolean full) {
+        int idx = (int) ((arg0 ^ (arg1 & 0x7FFF) ^ xor) & 0x7FFFFFFF);
+        long[] arr = info.tableFor(field);
+        if (arr == null || idx >= arr.length) return null;
+        byte[] ct = new byte[8];
+        byte[] kb = new byte[8];
+        for (int k = 0; k < 8; k++) {
+            ct[k] = (byte) (arr[idx] >>> (56 - 8 * k));
+            kb[k] = (byte) (arg1 >>> (56 - 8 * k));
         }
-        return null;
+        try {
+            Cipher c = Cipher.getInstance("DES/CBC/NoPadding");
+            c.init(Cipher.DECRYPT_MODE,
+                    SecretKeyFactory.getInstance("DES").generateSecret(new DESKeySpec(kb)),
+                    new IvParameterSpec(new byte[8]));
+            byte[] pt = c.doFinal(ct);
+            if (full) {
+                long v = 0;
+                for (int k = 0; k < 8; k++) v = (v << 8) | (pt[k] & 0xFFL);
+                return v;
+            }
+            int v = ((pt[4] & 0xFF) << 24) | ((pt[5] & 0xFF) << 16)
+                    | ((pt[6] & 0xFF) << 8) | (pt[7] & 0xFF);
+            return (long) v;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /** int/long constant, everything else unknown */

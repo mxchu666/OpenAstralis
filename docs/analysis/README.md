@@ -1,8 +1,12 @@
-# Astralis — paquete de análisis y desinfección
+# Astralis — paquete de análisis
 
-Todo lo generado a partir de
-`Astralis 08.10.25 (1.21) (Fabric).jar`. Nada del jar original se ejecutó en el
-host: deobfuscación en Python + ASM, nativo en IDA headless.
+Informes detallados de la **capa Java** del cliente (**Fabric 26.3**, build
+**DrCrypter Astralis 2.11**). El `.exe` no contiene bytecode: la parte nativa
+(imagen GraalVM SubstrateVM dentro de VMProtect) se documenta en el `README.md`
+principal y en `mapping/image_inventory.json`.
+
+Todo se generó sin ejecutar el objetivo en el host: deobfuscación en Python +
+ASM, nativo en IDA headless.
 
 ---
 
@@ -23,10 +27,10 @@ host: deobfuscación en Python + ASM, nativo en IDA headless.
 | `out/astralis-clean.jar` | 55.316.922 | `efdeb6641c8327f6deed53cad7b93022fe912cb3116fdbb3bc81338328c2758c` | **Build usable**: C2 muerto, `halt` neutralizado, natives presentes |
 | `out/astralis-inert.jar` | 53.908.409 | `7580260a72a3618b8ce7a198809db7bbf38842d31a0a57bf8164fe1cc04d4cb5` | Sin `dev/opalV2/`, sin métodos `native`. **No funciona como cliente**, es para auditar |
 
-Original, para referencia:
+Original de la capa Java, para referencia:
 
 ```
-Astralis 08.10.25 (1.21) (Fabric).jar   55.300.085
+astralis (Fabric 26.3).jar   55.300.085
 a39253d43097012e07fa864745a1789bb1bf671d825cdb00f99a353a38f0a849
 ```
 
@@ -69,8 +73,8 @@ python -W ignore tools\astralis_deobf.py work\extract work\deobf.map work\deobf_
 & $J -cp $CP Sanitize work\deobf work\clean_nonative --nonative
 
 # 5. reensamblar
-python tools\rebuild_jar.py "Astralis 08.10.25 (1.21) (Fabric).jar" work\clean out\astralis-clean.jar --drop "natives/hardware_info_dll.dll"
-python tools\rebuild_jar.py "Astralis 08.10.25 (1.21) (Fabric).jar" work\clean_nonative out\astralis-inert.jar --drop "dev/opalV2/" --drop "natives/hardware_info_dll.dll"
+python tools\rebuild_jar.py "astralis (Fabric 26.3).jar" work\clean out\astralis-clean.jar --drop "natives/hardware_info_dll.dll"
+python tools\rebuild_jar.py "astralis (Fabric 26.3).jar" work\clean_nonative out\astralis-inert.jar --drop "dev/opalV2/" --drop "natives/hardware_info_dll.dll"
 ```
 
 ---

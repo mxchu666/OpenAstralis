@@ -144,6 +144,31 @@ def class_attrs(data, cp):
     return name, boot
 
 
+def call_sites(data, cp):
+    """count real `invokedynamic` instructions, grouped by call-site descriptor.
+
+    A folded site keeps its InvokeDynamic constant-pool entry but loses the
+    instruction, so counting pool entries overstates what is left. The opcode
+    is 0xBA followed by a u2 index and two zero bytes, which makes a byte scan
+    reliable here.
+    """
+    out = {}
+    for i in range(len(data) - 4):
+        if data[i] != 0xBA:
+            continue
+        idx = (data[i + 1] << 8) | data[i + 2]
+        if data[i + 3] or data[i + 4]:
+            continue
+        if not (0 < idx < len(cp.items)) or not cp.items[idx]:
+            continue
+        it = cp.items[idx]
+        if it[0] != 'InvokeDynamic':
+            continue
+        nt = cp.items[it[2]]
+        out[cp.utf(nt[2])] = out.get(cp.utf(nt[2]), 0) + 1
+    return out
+
+
 def scan(path):
     data = open(path, 'rb').read()
     if data[:4] != b'\xca\xfe\xba\xbe':
@@ -156,13 +181,14 @@ def scan(path):
             bsm = boot[it[1]] if it[1] < len(boot) else None
             nt = cp.items[it[2]]
             sites.append((cp.utf(nt[2]), cp.describe(bsm) if bsm else '?'))
-    return name, sites
+    return name, sites, call_sites(data, cp)
 
 
 def main():
     root = sys.argv[1]
     needle = sys.argv[2] if len(sys.argv) > 2 else None
     agg = {}
+    instr = {}
     files = 0
     for dp, _, fns in os.walk(root):
         for fn in fns:
@@ -172,13 +198,16 @@ def main():
             if not r:
                 continue
             files += 1
-            name, sites = r
+            name, sites, calls = r
+            for desc, n in calls.items():
+                instr[desc] = instr.get(desc, 0) + n
             for desc, bsm in sites:
                 agg.setdefault(desc, {}).setdefault(bsm, []).append(name)
-    print('classes=%d descriptors=%d' % (files, len(agg)))
-    for desc in sorted(agg, key=lambda d: (-sum(len(v) for v in agg[d].values()), d)):
+    print('classes=%d descriptors=%d instructions=%d'
+          % (files, len(agg), sum(instr.values())))
+    for desc in sorted(agg, key=lambda d: (-instr.get(d, 0), d)):
         total = sum(len(v) for v in agg[desc].values())
-        print('\n%-40s sites=%d' % (desc, total))
+        print('\n%-40s pool=%d instructions=%d' % (desc, total, instr.get(desc, 0)))
         for bsm, owners in sorted(agg[desc].items(), key=lambda kv: -len(kv[1])):
             print('    %-70s classes=%d' % (bsm, len(owners)))
             if needle:

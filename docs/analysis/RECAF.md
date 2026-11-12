@@ -46,7 +46,7 @@ directo.
 - **`F:\Astralis\work\deobf`** ← recomendado. Es el jar **ya deobfuscado**:
   los strings están en claro y los `invokedynamic` están plegados. Es lo que se
   quiere leer.
-- `F:\Astralis\Astralis 08.10.25 (1.21) (Fabric).jar` ← el original. Solo para
+- `F:\Astralis\astralis (Fabric 26.3).jar` ← el original. Solo para
   comparar o si quieres ver el estado antes del pipeline.
 - `F:\Astralis\out\astralis-clean.jar` ← para verificar el resultado de la
   sanitización.
