@@ -1,0 +1,7 @@
+image ..\work\exe\Runtime\astralis.dll
+section .svm_hea offset=328998912 size=1581580288
+mc types       16263
+client types   1483
+mixin hooks    593
+resource paths 43324
+mod manifests  85

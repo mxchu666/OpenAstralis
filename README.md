@@ -1,7 +1,8 @@
 # OpenAstralis
 
 Static reverse engineering of **`astralis.exe`** — the **DrCrypter Astralis 2.11**
-build of the **Astralis** Minecraft cheat client (**Fabric 26.3**).
+build of the **Astralis** Minecraft cheat client (**`astralis-recode 2.2`**, its
+own manifest declares `minecraft ~26.2`).
 
 Nothing in this repository was produced by running the target. The launcher was
 parsed as a PE file, its payload was extracted and decompressed offline, the
@@ -226,6 +227,34 @@ Two limits are real and are stated once:
   VMProtect. The naming layer (`pub/astralis/client/*`, `event/*`) is recovered;
   the bodies are native code and are analysed as such.
 
+### What the heap hands over
+
+`tools/dump_image_symbols.py` walks `.svm_hea` as text and writes the parts that
+are readable without a decompiler:
+
+| output | contents |
+|---|---|
+| `16,263` Minecraft types | Mojang official names, zero intermediary ids |
+| `1,483` client types | `pub/astralis/client/**`, `com/astralis/scripting/**` |
+| `593` Mixin handlers | `redirect$…$astralis-recode$hookKillAuraAutoBlock` and friends |
+| `85` mod manifests | every `fabric.mod.json`, with versions and dependencies |
+| `43,324` resource paths | `assets/**`, `data/**`, `META-INF/**` |
+
+The manifest is the part that settles the version question, because it is the
+client's own text: `"id": "astralis-recode"`, `"version": "2.2"`,
+`"minecraft": "~26.2"`, licence CC0, authors listed. 87 of the 593 hooks belong
+to `astralis-recode`; they are the 26.2 feature map, and three of them
+(`trackBeds`, `renderEmote`/`streamEmote`,
+`preserveVulkanPreferenceAfterUncleanExit`) have no counterpart in the jar build.
+
+`tools/carve_dll_archives.py` finds 92 ZIP archives embedded in the image,
+193.8 MB total. 91 are JDK modules. The 92nd is `arc_040.zip`, 57 KB,
+`Implementation-Version: 2.2.6`, 85 class files of `com/astralis/scripting/**` —
+the only real bytecode in the file. It decompiles to 55 files with no failures
+and lives in `reconstruct/26.2/scripting/`; the bodies throw
+`UnsupportedOperationException` because it is the GraalVM substitution jar, so
+the signatures are the deliverable, not the bodies.
+
 ---
 
 ## The Java layer
@@ -233,8 +262,9 @@ Two limits are real and are stated once:
 `src/` holds 518 decompiled `.java` files of the same client — `cc/astralis/**`
 and `astralis/mixin/**`. They are the result of the bytecode pipeline below, not
 of the native image, and they reference Minecraft through Fabric intermediary
-names (`net.minecraft.class_310`), so they only compile inside a Fabric 26.3
-workspace.
+names (`net.minecraft.class_310`), so they only compile inside a Fabric workspace
+for the version they were built against; the intermediary ids carry no version
+themselves.
 
 The obfuscator used five layers, all folded offline:
 
@@ -297,14 +327,18 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/jarscan.py`, `tools/rebuild_jar.py` | archive-level inventory and rebuild |
 | `tools/Sanitize.java` | neutralise hardcoded endpoints and `halt` calls |
 | `tools/devirt_dump.py` | turn IDA output into annotated C bodies |
+| `tools/dump_image_symbols.py` | dump types, Mixin handlers, mod manifests and resource paths from `.svm_hea` |
+| `tools/carve_dll_archives.py` | carve the 92 ZIP archives embedded in the image, JDK modules and the scripting jar |
 | `mapping/offsets.json` | 3,897 folded constants |
 | `mapping/modules.tsv` | 91 module classes: category, settings, inferred feature |
 | `mapping/modules.proguard.txt` | the 74 identified renames, importable into Recaf |
 | `tools/module_scan.py` | emits the evidence the module names were read from |
 | `mapping/deobf.map` | per-class keys, constant tables, string blobs |
 | `mapping/image_inventory.json` | type and resource inventory of `astralis.dll` |
+| `mapping/image26/` | 26.2 dump: 16,263 MC types, 1,483 client types, 593 hooks, 85 mod manifests |
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
 | `src/` | 518 decompiled classes |
+| `reconstruct/26.2/scripting/` | 55 files of the 2.2.6 scripting API, the only bytecode in the image |
 | `docs/modules.md` | the module map, category by category |
 | `docs/analysis/` | detailed reports (Spanish) |
 | `build.sh`, `build.ps1` | offline build of the tooling |
@@ -370,7 +404,8 @@ bypass, not a C2 endpoint.
 # Español
 
 Ingeniería inversa estática de **`astralis.exe`**, la build **DrCrypter Astralis
-2.11** del cliente de trampas **Astralis** para Minecraft (**Fabric 26.3**).
+2.11** del cliente de trampas **Astralis** para Minecraft (**`astralis-recode 2.2`**, su
+propio manifiesto declara `minecraft ~26.2`).
 
 Nada de este repositorio se produjo ejecutando el objetivo. El lanzador se
 analizó como fichero PE, su payload se extrajo y descomprimió sin conexión, la
@@ -531,12 +566,40 @@ en ningún sitio, y recuperar cuerpos de `.text` significa descompilar 322 MB de
 código AOT dentro de VMProtect. La capa de nombres está recuperada; los cuerpos
 son código nativo y se analizan como tal.
 
+### Lo que el heap entrega
+
+`tools/dump_image_symbols.py` recorre `.svm_hea` como texto y escribe lo que se
+puede leer sin decompilador:
+
+| salida | contenido |
+|---|---|
+| `16.263` tipos de Minecraft | mappings oficiales de Mojang, cero ids intermediarios |
+| `1.483` tipos del cliente | `pub/astralis/client/**`, `com/astralis/scripting/**` |
+| `593` handlers de Mixin | `redirect$…$astralis-recode$hookKillAuraAutoBlock` y compañía |
+| `85` manifiestos de mod | cada `fabric.mod.json`, con versión y dependencias |
+| `43.324` rutas de recurso | `assets/**`, `data/**`, `META-INF/**` |
+
+El manifiesto es lo que cierra la duda de la versión, porque es texto del propio
+cliente: `"id": "astralis-recode"`, `"version": "2.2"`, `"minecraft": "~26.2"`,
+licencia CC0 y autores. 87 de los 593 hooks son de `astralis-recode`; son el mapa
+de features de 26.2, y tres (`trackBeds`, `renderEmote`/`streamEmote`,
+`preserveVulkanPreferenceAfterUncleanExit`) no tienen equivalente en la build del
+jar.
+
+`tools/carve_dll_archives.py` localiza 92 archivos ZIP embebidos en la imagen,
+193,8 MB en total. 91 son módulos del JDK. El 92 es `arc_040.zip`, 57 KB,
+`Implementation-Version: 2.2.6`, 85 clases de `com/astralis/scripting/**`: el
+único bytecode real del fichero. Descompila a 55 ficheros sin fallos y está en
+`reconstruct/26.2/scripting/`; los cuerpos lanzan `UnsupportedOperationException`
+porque es el jar de substitución de GraalVM, así que lo entregable son las firmas.
+
 ## La capa Java
 
 `src/` contiene 518 ficheros `.java` del mismo cliente (`cc/astralis/**` y
 `astralis/mixin/**`). Son el resultado del pipeline de bytecode, no de la imagen
 nativa, y usan nombres intermediarios de Fabric (`net.minecraft.class_310`), así
-que solo compilan dentro de un workspace de Fabric 26.3.
+que solo compilan dentro de un workspace de Fabric de la versión contra la que se
+construyeron; los ids intermediarios no llevan versión.
 
 El ofuscador usaba cinco capas, todas plegadas sin conexión: strings cifrados en
 `<clinit>` (clave DES por clase, texto plano en **CESU-8**), tablas `long[]`
@@ -582,9 +645,13 @@ identificados en Recaf.
 | `mapping/modules.tsv` | 91 clases de módulo: categoría, ajustes, función inferida |
 | `mapping/modules.proguard.txt` | los 74 renombrados identificados, importables en Recaf |
 | `tools/module_scan.py` | genera la evidencia con la que se leyeron los nombres |
+| `tools/dump_image_symbols.py` | vuelca tipos, handlers de Mixin, manifiestos y rutas de recurso de `.svm_hea` |
+| `tools/carve_dll_archives.py` | extrae los 92 ZIP embebidos, módulos del JDK y el jar de scripting |
 | `mapping/image_inventory.json` | inventario de tipos y recursos de `astralis.dll` |
+| `mapping/image26/` | volcado 26.2: 16.263 tipos de MC, 1.483 del cliente, 593 hooks, 85 manifiestos |
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
 | `src/` | 518 clases descompiladas |
+| `reconstruct/26.2/scripting/` | 55 ficheros de la API de scripting 2.2.6, el único bytecode de la imagen |
 | `docs/modules.md` | el mapa de módulos, categoría por categoría |
 | `docs/analysis/` | informes detallados |
 | `build.sh`, `build.ps1` | build sin red |
