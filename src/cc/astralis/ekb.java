@@ -114,16 +114,16 @@ public class ekb extends guu {
       super(bfm.COMBAT);
       short var10003 = 25365;
       long var10004 = 4652226120011216875L ^ a;
-      short var55 = 30800;
+      short var57 = 30800;
       long var10005 = 2258949485895576714L ^ a;
-      String[] var124 = new String[2];
+      String[] var128 = new String[2];
       short var10008 = 12938;
       long var10009 = 9005550021069612637L ^ a;
-      var124[0] = "Single";
+      var128[0] = "Single";
       var10008 = 22779;
       var10009 = 3770980025177230388L ^ a;
-      var124[1] = "Switch";
-      a.asa = new adu("Aura Mode", "Single", var124);
+      var128[1] = "Switch";
+      a.asa = new adu("Aura Mode", "Single", var128);
       var10003 = 26501;
       var10004 = 5088547177930781515L ^ a;
       a.bt = new gbp("Ray Cast", false);
@@ -137,69 +137,69 @@ public class ekb extends guu {
       var10004 = 6320906664041075938L ^ a;
       a.ejq = new bes("Attack Range", 3.0F, 0.0F, 6.0F, 0.1F);
       dar.abu();
-      short var60 = 5618;
+      short var62 = 5618;
       var10005 = 5404390794833232149L ^ a;
       a.boi = new gbp("Auto Block", false);
-      short var61 = 2730;
+      short var63 = 2730;
       var10005 = 1727639222781943364L ^ a;
       a.bjd = new bes("Block Range", 3.0F, 0.0F, 6.0F, 0.1F);
-      short var62 = 27197;
+      short var64 = 27197;
       var10005 = 1332895692805406414L ^ a;
-      short var128 = 6312;
+      short var132 = 6312;
       long var10006 = 4578261339189808223L ^ a;
-      short var146 = 25424;
+      short var150 = 25424;
       long var10007 = 5999558878932895298L ^ a;
-      String[] var147 = new String[6];
-      short var155 = 15871;
+      String[] var151 = new String[6];
+      short var159 = 15871;
       long var10010 = 2257836482564172092L ^ a;
-      var147[0] = "Vanilla";
-      short var156 = 23548;
+      var151[0] = "Vanilla";
+      short var160 = 23548;
       var10010 = 7926161528625418005L ^ a;
-      var147[1] = "None";
-      short var157 = 23894;
+      var151[1] = "None";
+      short var161 = 23894;
       var10010 = 8491481706981214607L ^ a;
-      var147[2] = "Blink";
-      short var158 = 21404;
+      var151[2] = "Blink";
+      short var162 = 21404;
       var10010 = 6416859919247427418L ^ a;
-      var147[3] = "Modern Watchdog";
-      short var159 = 1666;
+      var151[3] = "Modern Watchdog";
+      short var163 = 1666;
       var10010 = 2311008395379970631L ^ a;
-      var147[4] = "Modern Watchdog Post";
-      short var160 = 14755;
+      var151[4] = "Modern Watchdog Post";
+      short var164 = 14755;
       var10010 = 1621947160891075959L ^ a;
-      var147[5] = "Old Watchdog";
-      a.dhq = new adu("Auto Block Mode", "Vanilla", var147);
-      short var63 = 32538;
+      var151[5] = "Old Watchdog";
+      a.dhq = new adu("Auto Block Mode", "Vanilla", var151);
+      short var65 = 32538;
       var10005 = 5681337048352812010L ^ a;
       a.djf = new gbp("Blink", false);
-      short var64 = 30944;
+      short var66 = 30944;
       var10005 = 827455539398896676L ^ a;
       a.esi = new gbp("Packet Auto Block", false);
-      short var65 = 17598;
+      short var67 = 17598;
       var10005 = 5525274859486007379L ^ a;
       a.can = new gbp("Interact When Blocking", false);
-      short var66 = 17505;
+      short var68 = 17505;
       var10005 = 3868445741157109891L ^ a;
       a.cel = new gbp("Force Block Hit Animation", false);
-      short var67 = 23180;
+      short var69 = 23180;
       var10005 = 9036381496512532046L ^ a;
       a.bdd = new gbp("Rotations", true);
-      short var68 = 26704;
+      short var70 = 26704;
       var10005 = 3589517832581840005L ^ a;
-      short var135 = 30266;
+      short var139 = 30266;
       var10006 = 1374079942142845693L ^ a;
-      String[] var149 = new String[3];
-      short var161 = 8776;
+      String[] var153 = new String[3];
+      short var165 = 8776;
       var10010 = 8048591478283974332L ^ a;
-      var149[0] = "Off";
-      short var162 = 4213;
+      var153[0] = "Off";
+      short var166 = 4213;
       var10010 = 8431903297889076392L ^ a;
-      var149[1] = "Snap";
-      short var163 = 23048;
+      var153[1] = "Snap";
+      short var167 = 23048;
       var10010 = 2247997639380618964L ^ a;
-      var149[2] = "MouseSim";
-      a.bcj = (adu)new adu("Noise Mode", "Off", var149).bih(a.bdd::dnp);
-      short var69 = 12263;
+      var153[2] = "MouseSim";
+      a.bcj = (adu)new adu("Noise Mode", "Off", var153).bih(a.bdd::dnp);
+      short var71 = 12263;
       var10005 = 615368200922774332L ^ a;
       a.gfr = (bes)new bes("Noise Yaw Multiplier", 0.08F, 0.01F, 0.5F, 0.01F).bih(() -> {
          long ax = ekb.a ^ 2236471153753L;
@@ -226,7 +226,7 @@ public class ekb extends guu {
 
          return var10000;
       });
-      short var70 = 18435;
+      short var72 = 18435;
       var10005 = 4918784399747439753L ^ a;
       a.cbe = (bes)new bes("Noise Pitch Multiplier", 0.02F, 0.01F, 0.3F, 0.01F).bih(() -> {
          long ax = ekb.a ^ 22961665098100L;
@@ -253,7 +253,7 @@ public class ekb extends guu {
 
          return var10000;
       });
-      short var71 = 18226;
+      short var73 = 18226;
       var10005 = 6811129819030442989L ^ a;
       a.dbv = (bes)new bes("Max Yaw Noise", 1.2F, 0.1F, 5.0F, 0.1F).bih(() -> {
          long ax = ekb.a ^ 104919077273976L;
@@ -280,7 +280,7 @@ public class ekb extends guu {
 
          return var10000;
       });
-      short var72 = 13345;
+      short var74 = 13345;
       var10005 = 8114773129526616288L ^ a;
       a.aud = (bes)new bes("Max Pitch Noise", 0.75F, 0.1F, 5.0F, 0.1F).bih(() -> {
          long ax = ekb.a ^ 122487083565523L;
@@ -307,16 +307,16 @@ public class ekb extends guu {
 
          return var10000;
       });
-      short var73 = 2213;
+      short var75 = 2213;
       var10005 = 463750085469674580L ^ a;
       a.bsp = new gbp("GCD Fix", false);
-      short var74 = 24137;
+      short var76 = 24137;
       var10005 = 7837494242079296170L ^ a;
       a.gbw = new ale("Rotation Target", bgi.HEAD);
-      short var75 = 28681;
+      short var77 = 28681;
       var10005 = 6381813968257279206L ^ a;
       a.esx = new bes("Rotation Range", 3.0F, 0.0F, 6.0F, 0.1F);
-      short var76 = 5300;
+      short var78 = 5300;
       var10005 = 6812972072036728952L ^ a;
       a.fuf = new bes("Min Yaw Speed", 120.0F, 1.0F, 180.0F, 1.0F);
       var10003 = 15468;
@@ -342,19 +342,19 @@ public class ekb extends guu {
       a.cun = new bes("Max CPS", 20.0F, 0.0F, 20.0F, 1.0F);
       var10003 = 21073;
       var10004 = 5172106939856307868L ^ a;
-      short var85 = 8776;
+      short var87 = 8776;
       var10005 = 8048591478283974332L ^ a;
-      String[] var145 = new String[3];
+      String[] var149 = new String[3];
       var10008 = 8776;
       var10009 = 8048591478283974332L ^ a;
-      var145[0] = "Off";
+      var149[0] = "Off";
       var10008 = 24324;
       var10009 = 6812718354373561316L ^ a;
-      var145[1] = "Normal";
+      var149[1] = "Normal";
       var10008 = 8881;
       var10009 = 7343145208807765602L ^ a;
-      var145[2] = "Force";
-      a.cdm = new adu("Wait for Crit", "Off", var145);
+      var149[2] = "Force";
+      a.cdm = new adu("Wait for Crit", "Off", var149);
       var10003 = 6967;
       var10004 = 7466616952640245714L ^ a;
       a.exp = new gbp("Critical Sprint", false);
@@ -654,7 +654,9 @@ public class ekb extends guu {
       var21 = 831;
       var10004 = 6578682993112704570L ^ a;
       var4[31] = a.fjt;
-      var4[e<"u">(17215, 9005640626043561481L ^ a)] = a.fzp;
+      var21 = 17215;
+      var10004 = 9005640626043561481L ^ a;
+      var4[32] = a.fzp;
       var21 = 29583;
       var10004 = 376269544556271237L ^ a;
       var4[33] = a.dv;
@@ -667,7 +669,9 @@ public class ekb extends guu {
       var21 = 27918;
       var10004 = 7309988060905703441L ^ a;
       var4[36] = a.fwx;
-      var4[e<"u">(6142, 2197031402323931849L ^ a)] = a.dfg.bih(a.fwx::dnp);
+      var21 = 6142;
+      var10004 = 2197031402323931849L ^ a;
+      var4[37] = a.dfg.bih(a.fwx::dnp);
       a.bfi(var4);
       if (!ffn.gsn()) {
          dar.aow(new int[5]);
@@ -760,7 +764,7 @@ public class ekb extends guu {
             }
 
             short var10 = 12938;
-            long var11 = 9005623697657660164L ^ ax;
+            long var12 = 9005623697657660164L ^ ax;
             var10000 = a.asa.emb("Single");
          }
 
@@ -788,7 +792,9 @@ public class ekb extends guu {
                      break label135;
                   }
 
-                  var10000 = a.acr.fsc(g<"h">(7059, 4456349392173625312L ^ ax));
+                  short var11 = 7059;
+                  long var13 = 4456349392173625312L ^ ax;
+                  var10000 = a.acr.fsc(200L);
                }
 
                if (var10000 != 0) {
@@ -824,8 +830,8 @@ public class ekb extends guu {
       int[] var10000 = dar.abu();
       float axx = (float)dgq.flj(a.gvw);
       ax = var10000;
-      float var58;
-      var23 = (var58 = axx - a.esx.dnp().floatValue()) == 0.0F ? 0 : (var58 < 0.0F ? -1 : 1);
+      float var62;
+      var23 = (var62 = axx - a.esx.dnp().floatValue()) == 0.0F ? 0 : (var62 < 0.0F ? -1 : 1);
       label492:
       if (ax != null) {
          if (var23 <= 0) {
@@ -839,15 +845,15 @@ public class ekb extends guu {
                double axxxx = a.bgu.dnp().doubleValue() / 2.0;
                double axxxxx = a.ghi.dnp().doubleValue() / 2.0;
                double axxxxxx = a.ffp.dnp().doubleValue() / 2.0;
-               double var59;
-               var23 = (var59 = axxx - axxxx) == 0.0 ? 0 : (var59 < 0.0 ? -1 : 1);
+               double var63;
+               var23 = (var63 = axxx - axxxx) == 0.0 ? 0 : (var63 < 0.0 ? -1 : 1);
                if (ax != null) {
                   if (var23 > 0) {
                      axxx = axxxx;
                   }
 
-                  double var60;
-                  var23 = (var60 = axxxx - axxx) == 0.0 ? 0 : (var60 < 0.0 ? -1 : 1);
+                  double var64;
+                  var23 = (var64 = axxxx - axxx) == 0.0 ? 0 : (var64 < 0.0 ? -1 : 1);
                }
 
                if (ax != null) {
@@ -855,8 +861,8 @@ public class ekb extends guu {
                      axxxx = axxx;
                   }
 
-                  double var61;
-                  var23 = (var61 = axxxxx - axxxxxx) == 0.0 ? 0 : (var61 < 0.0 ? -1 : 1);
+                  double var65;
+                  var23 = (var65 = axxxxx - axxxxxx) == 0.0 ? 0 : (var65 < 0.0 ? -1 : 1);
                }
 
                if (ax != null) {
@@ -864,8 +870,8 @@ public class ekb extends guu {
                      axxxxx = axxxxxx;
                   }
 
-                  double var62;
-                  var23 = (var62 = axxxxxx - axxxxx) == 0.0 ? 0 : (var62 < 0.0 ? -1 : 1);
+                  double var66;
+                  var23 = (var66 = axxxxxx - axxxxx) == 0.0 ? 0 : (var66 < 0.0 ? -1 : 1);
                }
 
                label496: {
@@ -879,7 +885,9 @@ public class ekb extends guu {
                         break label496;
                      }
 
-                     var23 = a.atx.fsc(g<"h">(7374, 585562561062061483L ^ a));
+                     short var10001 = 7374;
+                     long var10002 = 585562561062061483L ^ a;
+                     var23 = a.atx.fsc(150L);
                   }
 
                   if (var23 != 0) {
@@ -899,8 +907,8 @@ public class ekb extends guu {
                if (ax != null) {
                   switch (var23) {
                      case 2581482:
-                        short var10001 = 4213;
-                        long var10002 = 8431925581969657061L ^ a;
+                        short var41 = 4213;
+                        long var52 = 8431925581969657061L ^ a;
                         var23 = var14.equals("Snap");
                         if (ax == null) {
                            break label466;
@@ -915,8 +923,8 @@ public class ekb extends guu {
                            break;
                         }
                      case -54989294:
-                        short var41 = 23048;
-                        long var50 = 2247974840935499417L ^ a;
+                        short var42 = 23048;
+                        long var53 = 2247974840935499417L ^ a;
                         var23 = var14.equals("MouseSim");
                         if (ax == null) {
                            break label466;
@@ -973,7 +981,9 @@ public class ekb extends guu {
 
                      ekb var28 = a;
                      if (ax != null) {
-                        if (a.aap.fsc(g<"h">(25547, 8549296403068500648L ^ a))) {
+                        short var43 = 25547;
+                        long var54 = 8549296403068500648L ^ a;
+                        if (a.aap.fsc(350L)) {
                            a.arn = a.gfi();
                            a.gha = a.hgc();
                            a.aap.glr();
@@ -1012,8 +1022,8 @@ public class ekb extends guu {
             }
          }
 
-         float var63;
-         var23 = (var63 = axx - a.bjd.dnp().floatValue()) == 0.0F ? 0 : (var63 < 0.0F ? -1 : 1);
+         float var67;
+         var23 = (var67 = axx - a.bjd.dnp().floatValue()) == 0.0F ? 0 : (var67 < 0.0F ? -1 : 1);
       }
 
       label438: {
@@ -1100,8 +1110,8 @@ public class ekb extends guu {
                   }
 
                   String var33 = a.cdm.dnp();
-                  short var42 = 10196;
-                  long var51 = 2066482092537002823L ^ a;
+                  short var44 = 10196;
+                  long var55 = 2066482092537002823L ^ a;
                   var32 = var33.equals("Normal");
                }
 
@@ -1119,16 +1129,16 @@ public class ekb extends guu {
                   }
 
                   String var34 = a.cdm.dnp();
-                  short var43 = 10196;
-                  long var52 = 2066482092537002823L ^ a;
+                  short var45 = 10196;
+                  long var56 = 2066482092537002823L ^ a;
                   var32 = var34.equals("Normal");
                }
 
                if (ax != null) {
                   if (var32 == 0) {
                      String var35 = a.cdm.dnp();
-                     short var44 = 17297;
-                     long var53 = 2048681594821828385L ^ a;
+                     short var46 = 17297;
+                     long var57 = 2048681594821828385L ^ a;
                      var32 = var35.equals("Force");
                      if (ax == null) {
                         break label413;
@@ -1163,12 +1173,12 @@ public class ekb extends guu {
          label375: {
             axxxxxxxxxxxx = (boolean)var32;
             ekb var36 = a;
-            short var45 = a.cel.dnp();
+            short var47 = a.cel.dnp();
             if (ax != null) {
-               a.exv = (boolean)var45;
+               a.exv = (boolean)var47;
                if (axxxxxxxx != 0) {
-                  var45 = 24240;
-                  long var54 = 2551410835741622827L ^ a;
+                  var47 = 24240;
+                  long var58 = 2551410835741622827L ^ a;
                   var23 = a.dhq.emb("Modern Watchdog");
                   if (ax == null) {
                      break label376;
@@ -1185,10 +1195,10 @@ public class ekb extends guu {
                }
 
                var36 = a;
-               var45 = 0;
+               var47 = 0;
             }
 
-            var36.epe((boolean)var45);
+            var36.epe((boolean)var47);
          }
 
          var23 = axxxxxxxxxx;
@@ -1203,8 +1213,8 @@ public class ekb extends guu {
             }
 
             if (axxxxxxxx != 0) {
-               short var47 = 24240;
-               long var55 = 2551410835741622827L ^ a;
+               short var49 = 24240;
+               long var59 = 2551410835741622827L ^ a;
                var23 = a.dhq.emb("Modern Watchdog");
                if (ax == null) {
                   break label363;
@@ -1245,16 +1255,16 @@ public class ekb extends guu {
       if (ax != null) {
          if (var23 != 0) {
             String var39 = a.dhq.dnp().toLowerCase();
-            short var48 = 2344;
-            long var56 = 710829668127184269L ^ a;
+            short var50 = 2344;
+            long var60 = 710829668127184269L ^ a;
             var23 = var39.contains("watchdog");
             if (ax == null) {
                break label343;
             }
 
             if (var23 != 0) {
-               var48 = 28323;
-               var56 = 6536745780389081646L ^ a;
+               var50 = 28323;
+               var60 = 6536745780389081646L ^ a;
                var23 = a.dhq.emb("Modern Watchdog Post");
                if (ax == null) {
                   break label343;
@@ -1291,8 +1301,8 @@ public class ekb extends guu {
                   return;
                }
 
-               double var64;
-               var23 = (var64 = chi.field_1724.method_7261(0.0F) - 0.95) == 0.0 ? 0 : (var64 < 0.0 ? -1 : 1);
+               double var68;
+               var23 = (var68 = chi.field_1724.method_7261(0.0F) - 0.95) == 0.0 ? 0 : (var68 < 0.0 ? -1 : 1);
             }
 
             if (ax == null) {
@@ -2003,18 +2013,20 @@ public class ekb extends guu {
 
    private float gfi() {
       long a = ekb.a ^ 65975195564891L;
-      return (float)(
-         crg.gj(-a.dbv.dnp().floatValue(), a.dbv.dnp().floatValue())
-            + Math.sin(System.currentTimeMillis() % g<"h">(27358, 1844852272521036843L ^ a) / 200.0) * 0.5
-      );
+      double var10000 = crg.gj(-a.dbv.dnp().floatValue(), a.dbv.dnp().floatValue());
+      long var10001 = System.currentTimeMillis();
+      short var10002 = 27358;
+      long var10003 = 1844852272521036843L ^ a;
+      return (float)(var10000 + Math.sin(var10001 % 2000L / 200.0) * 0.5);
    }
 
    private float hgc() {
       long a = ekb.a ^ 116180376116719L;
-      return (float)(
-         crg.gj(-a.aud.dnp().floatValue(), a.aud.dnp().floatValue())
-            + Math.cos(System.currentTimeMillis() % g<"h">(23910, 1430922943298983205L ^ a) / 150.0) * 0.3F
-      );
+      double var10000 = crg.gj(-a.aud.dnp().floatValue(), a.aud.dnp().floatValue());
+      long var10001 = System.currentTimeMillis();
+      short var10002 = 23910;
+      long var10003 = 1430922943298983205L ^ a;
+      return (float)(var10000 + Math.cos(var10001 % 1750L / 150.0) * 0.3F);
    }
 
    public static void hcg(String[] var0) {

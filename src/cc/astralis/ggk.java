@@ -327,35 +327,45 @@ public class ggk extends brc {
          char var10005 = var10001[var4];
          short var10008 = 24000;
          long var10009 = 5161822245232855643L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var14 = 10284;
-               long var19 = 7220429789199810492L ^ var2;
-               yield 91;
-            }
-            case 1 -> {
-               short var13 = 14830;
-               long var18 = 3580024649520787063L ^ var2;
-               yield 87;
-            }
-            case 2 -> a<"b">(31168, 4360990553152745047L ^ var2);
-            case 3 -> {
-               short var12 = 32608;
-               long var17 = 2767144846474701050L ^ var2;
-               yield 35;
-            }
-            case 4 -> a<"b">(8735, 8120887529406576009L ^ var2);
-            case 5 -> {
-               short var11 = 17808;
-               long var16 = 8863162335382983170L ^ var2;
-               yield 113;
-            }
-            default -> {
-               short var10007 = 22582;
-               long var15 = 8020478521932599210L ^ var2;
-               yield 80;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 10284;
+               long var23 = 7220429789199810492L ^ var2;
+               var10 = 91;
+               break;
+            case 1:
+               var10 = 14830;
+               long var22 = 3580024649520787063L ^ var2;
+               var10 = 87;
+               break;
+            case 2:
+               var10 = 31168;
+               long var21 = 4360990553152745047L ^ var2;
+               var10 = 103;
+               break;
+            case 3:
+               var10 = 32608;
+               long var20 = 2767144846474701050L ^ var2;
+               var10 = 35;
+               break;
+            case 4:
+               var10 = 8735;
+               long var19 = 8120887529406576009L ^ var2;
+               var10 = 88;
+               break;
+            case 5:
+               var10 = 17808;
+               long var18 = 8863162335382983170L ^ var2;
+               var10 = 113;
+               break;
+            default:
+               var10 = 22582;
+               long var17 = 8020478521932599210L ^ var2;
+               var10 = 80;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

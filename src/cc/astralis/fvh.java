@@ -274,35 +274,45 @@ public class fvh extends brc {
          char var10005 = var10001[var4];
          short var10008 = 14292;
          long var10009 = 2328994004230974142L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> a<"k">(12148, 8015609686248174106L ^ var2);
-            case 1 -> {
-               short var14 = 27131;
-               long var19 = 39158387528266904L ^ var2;
-               yield 16;
-            }
-            case 2 -> {
-               short var13 = 21444;
-               long var18 = 7332702329268915885L ^ var2;
-               yield 85;
-            }
-            case 3 -> {
-               short var12 = 18639;
-               long var17 = 7016307288698738095L ^ var2;
-               yield 56;
-            }
-            case 4 -> {
-               short var11 = 13791;
-               long var16 = 7994316622752393396L ^ var2;
-               yield 41;
-            }
-            case 5 -> {
-               short var10 = 15887;
-               long var15 = 4209821047818953578L ^ var2;
-               yield 109;
-            }
-            default -> a<"k">(17462, 8734071210628241753L ^ var2);
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 12148;
+               long var23 = 8015609686248174106L ^ var2;
+               var10 = 54;
+               break;
+            case 1:
+               var10 = 27131;
+               long var22 = 39158387528266904L ^ var2;
+               var10 = 16;
+               break;
+            case 2:
+               var10 = 21444;
+               long var21 = 7332702329268915885L ^ var2;
+               var10 = 85;
+               break;
+            case 3:
+               var10 = 18639;
+               long var20 = 7016307288698738095L ^ var2;
+               var10 = 56;
+               break;
+            case 4:
+               var10 = 13791;
+               long var19 = 7994316622752393396L ^ var2;
+               var10 = 41;
+               break;
+            case 5:
+               var10 = 15887;
+               long var18 = 4209821047818953578L ^ var2;
+               var10 = 109;
+               break;
+            default:
+               var10 = 17462;
+               long var17 = 8734071210628241753L ^ var2;
+               var10 = 112;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

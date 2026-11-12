@@ -38,7 +38,9 @@ public class ffz extends bmd {
       long ax = ffz.a ^ 54392747049461L;
       a.fji(a);
       a.axc(a);
-      fll axx = bxc.emc(b, a<"l">(21419, 4629143144448681979L ^ ax));
+      short var10001 = 21419;
+      long var10002 = 4629143144448681979L ^ ax;
+      fll axx = bxc.emc(b, 10);
       int[] var10000 = dar.abu();
       axx.aof(a.aeb.fah(), a + 6.0F, a + 4.0F, cbc.fgl);
       String axxx = String.valueOf(a.aeb.dnp());
@@ -161,7 +163,7 @@ public class ffz extends bmd {
                   (byte)var8
                }
             );
-            long var33 = (var10[0] & 255L) << 56
+            long var34 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -171,24 +173,25 @@ public class ffz extends bmd {
                | var10[7] & 255L;
             switch (var30) {
                case 0:
-                  var18[var10001] = var33;
+                  var18[var10001] = var34;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[5];
                      short var19 = 7653;
                      long var23 = var14 ^ 7489852931418744177L;
                      dkt = 7;
-                     int var28 = a<"l">(21826, 6452618031911710162L ^ var14);
-                     short var32 = 4117;
-                     var33 = 5452484351073839232L ^ var14;
-                     short var35 = 4117;
+                     short var28 = 21826;
+                     long var32 = 6452618031911710162L ^ var14;
+                     short var33 = 4117;
+                     var34 = 5452484351073839232L ^ var14;
+                     short var36 = 4117;
                      long var10005 = 5452484351073839232L ^ var14;
-                     aot = new Color(var28, 40, 40);
+                     aot = new Color(40, 40, 40);
                      return;
                   }
                   break;
                default:
-                  var18[var10001] = var33;
+                  var18[var10001] = var34;
                   if (var2 < var5) {
                      continue label29;
                   }

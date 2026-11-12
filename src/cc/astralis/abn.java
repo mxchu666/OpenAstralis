@@ -138,8 +138,8 @@ public class abn extends hcr {
                   }
 
                   String var35 = var34.method_12832();
-                  short var43 = 21546;
-                  long var47 = 6953607680746150323L ^ ax;
+                  short var44 = 21546;
+                  long var50 = 6953607680746150323L ^ ax;
                   var33 = var35.contains("hurt");
                   if (axx == null) {
                      break label188;
@@ -166,27 +166,29 @@ public class abn extends hcr {
                            double axxxxxxxxxxxx = a.ekv.method_23318() - axxxxxxxxx;
                            double axxxxxxxxxxxxx = a.ekv.method_23321() - axxxxxxxxxx;
                            double axxxxxxxxxxxxxx = axxxxxxxxxxx * axxxxxxxxxxx + axxxxxxxxxxxx * axxxxxxxxxxxx + axxxxxxxxxxxxx * axxxxxxxxxxxxx;
-                           long var51;
-                           var33 = (var51 = axxxxxxx - d<"w">(31316, 8388931969173227063L ^ ax)) == 0L ? 0 : (var51 < 0L ? -1 : 1);
+                           var44 = 31316;
+                           var50 = 8388931969173227063L ^ ax;
+                           long var56;
+                           var33 = (var56 = axxxxxxx - 150L) == 0L ? 0 : (var56 < 0L ? -1 : 1);
                            if (axx == null) {
                               break label188;
                            }
 
                            if (var33 < 0) {
-                              double var52;
-                              var33 = (var52 = axxxxxxxxxxxxxx - dar.gqy().aws().diy(ekb.class).ejq.dnp().floatValue()) == 0.0 ? 0 : (var52 < 0.0 ? -1 : 1);
+                              double var57;
+                              var33 = (var57 = axxxxxxxxxxxxxx - dar.gqy().aws().diy(ekb.class).ejq.dnp().floatValue()) == 0.0 ? 0 : (var57 < 0.0 ? -1 : 1);
                               if (axx == null) {
                                  break label188;
                               }
 
                               if (var33 < 0) {
                                  String var37 = a.ekv.method_5477().getString();
-                                 String var44 = String.valueOf(axxxxxx);
-                                 short var48 = 23533;
+                                 String var46 = String.valueOf(axxxxxx);
+                                 short var52 = 23533;
                                  long var10003 = 7060350187886466687L ^ ax;
-                                 short var50 = 1682;
+                                 short var55 = 1682;
                                  long var10004 = 1322399274753297162L ^ ax;
-                                 bpa.bez("§aAttack confirmed on " + var37 + " via sound: " + var44);
+                                 bpa.bez("§aAttack confirmed on " + var37 + " via sound: " + var46);
                                  a.czn = false;
                                  a.ekv = null;
                                  a.dqr = false;
@@ -217,8 +219,11 @@ public class abn extends hcr {
                break label217;
             }
 
-            long var53;
-            var33 = (var53 = System.currentTimeMillis() - a.duw - d<"w">(28986, 8102996102437178714L ^ ax)) == 0L ? 0 : (var53 < 0L ? -1 : 1);
+            long var38 = System.currentTimeMillis() - a.duw;
+            short var47 = 28986;
+            long var53 = 8102996102437178714L ^ ax;
+            long var58;
+            var33 = (var58 = var38 - 150L) == 0L ? 0 : (var58 < 0L ? -1 : 1);
          }
 
          label224: {
@@ -229,7 +234,7 @@ public class abn extends hcr {
 
                a.dqr = true;
                a.czn = false;
-               var38 = a;
+               var39 = a;
                if (axx == null) {
                   break label224;
                }
@@ -238,67 +243,67 @@ public class abn extends hcr {
             }
 
             if (var33 == 0) {
-               var38 = a;
+               var39 = a;
                if (axx == null) {
                   break label224;
                }
 
                if (a.ekv != null) {
-                  String var39 = a.ekv.method_5477().getString();
-                  short var45 = 10259;
-                  long var49 = 2780219387091297671L ^ ax;
-                  bpa.bez("§cSwing missed or not confirmed on: " + var39);
+                  String var40 = a.ekv.method_5477().getString();
+                  short var48 = 10259;
+                  long var54 = 2780219387091297671L ^ ax;
+                  bpa.bez("§cSwing missed or not confirmed on: " + var40);
                   a.bwb = true;
                   a.gyb(true);
                }
             }
 
-            var38 = a;
+            var39 = a;
          }
 
-         var38.ekv = null;
+         var39.ekv = null;
       }
 
       class_2596 var29 = a.bed();
-      short var40 = var29 instanceof class_2708;
+      short var41 = var29 instanceof class_2708;
       if (axx != null) {
-         if (var40) {
+         if (var41) {
             class_2708 var26 = (class_2708)var29;
-            var40 = 15277;
-            long var46 = 1091747651038787127L ^ ax;
+            var41 = 15277;
+            long var49 = 1091747651038787127L ^ ax;
             bpa.bez("Flag. Wait a bit before flying again.");
             dar.gqy().aws().diy(eky.class).fga(false);
             dar.gqy().aws().diy(bni.class).fga(false);
          }
 
-         var40 = a.bed() instanceof class_2828;
+         var41 = a.bed() instanceof class_2828;
       }
 
       label227: {
          label150:
          if (axx != null) {
-            if (var40) {
-               var40 = a.gal.dnp();
+            if (var41) {
+               var41 = a.gal.dnp();
                if (axx == null) {
                   break label150;
                }
 
-               if (var40) {
+               if (var41) {
                   PlayerMoveC2SPacketAccessor axxxxxxxxxxxxxxx = (PlayerMoveC2SPacketAccessor)a.bed();
                   axxxxxxxxxxxxxxx.setY(axxxxxxxxxxxxxxx.getY() - axxxxxxxxxxxxxxx.getY() % 0.015625);
                }
             }
 
-            var42 = a;
+            var43 = a;
             if (axx == null) {
                break label227;
             }
 
-            var40 = a.bed() instanceof class_6373;
+            var41 = a.bed() instanceof class_6373;
          }
 
-         if (!var40) {
-            var42 = a;
+         if (!var41) {
+            var43 = a;
             if (axx == null) {
                break label227;
             }
@@ -308,10 +313,10 @@ public class abn extends hcr {
             }
          }
 
-         var42 = a;
+         var43 = a;
       }
 
-      var42.gmm(true);
+      var43.gmm(true);
       synchronized (a.hid) {
          a.hid.add(new g(a.bed(), System.currentTimeMillis()));
       }
@@ -354,7 +359,9 @@ public class abn extends hcr {
 
             int var10 = var9.method_2959();
             if (axx != null) {
-               if (var10 > b<"g">(5111, 7585915597954177961L ^ ax)) {
+               short var10001 = 5111;
+               long var10002 = 7585915597954177961L ^ ax;
+               if (var10 > 500) {
                   var11 = a;
                   if (axx == null) {
                      break label105;
@@ -365,8 +372,8 @@ public class abn extends hcr {
                   }
 
                   fnb var12 = fnb.hcp();
-                  short var10001 = 10841;
-                  long var10002 = 1991242256945256903L ^ ax;
+                  var10001 = 10841;
+                  var10002 = 1991242256945256903L ^ ax;
                   fnb var13 = var12.ael("Done you can now fly etc", gge.INFO);
                   var10001 = 30831;
                   var10002 = 7444621738235637813L ^ ax;
@@ -394,13 +401,16 @@ public class abn extends hcr {
                   if (axx != null) {
                      if (var14) {
                         fnb var15 = fnb.hcp();
-                        short var20 = 20683;
-                        long var25 = 5394199463609099099L ^ ax;
-                        var15.ael("Wait until disabler is finished.", gge.WARNING).bvw(b<"g">(22363, 8555087268228505348L ^ ax)).evs();
+                        short var22 = 20683;
+                        long var29 = 5394199463609099099L ^ ax;
+                        fnb var16 = var15.ael("Wait until disabler is finished.", gge.WARNING);
+                        var22 = 22363;
+                        var29 = 8555087268228505348L ^ ax;
+                        var16.bvw(1000).evs();
                         axxxx.fga(false);
                      }
 
-                     var16 = axxxxx;
+                     var17 = axxxxx;
                      if (axx == null) {
                         break label112;
                      }
@@ -412,31 +422,31 @@ public class abn extends hcr {
                      break label85;
                   }
 
-                  fnb var17 = fnb.hcp();
-                  short var21 = 8;
-                  long var26 = 6466724357448348562L ^ ax;
-                  fnb var18 = var17.ael("Wait until disabler is finished.", gge.WARNING);
-                  var21 = 9330;
-                  var26 = 8549036661017766954L ^ ax;
-                  var18.bvw(1000).evs();
-                  var16 = axxxxx;
+                  fnb var18 = fnb.hcp();
+                  short var24 = 8;
+                  long var31 = 6466724357448348562L ^ ax;
+                  fnb var19 = var18.ael("Wait until disabler is finished.", gge.WARNING);
+                  var24 = 9330;
+                  var31 = 8549036661017766954L ^ ax;
+                  var19.bvw(1000).evs();
+                  var17 = axxxxx;
                }
 
-               var16.fga(false);
+               var17.fga(false);
             }
          }
 
          var11 = a;
       }
 
-      int var23 = chi.field_1724.field_6012;
+      int var26 = chi.field_1724.field_6012;
       if (axx != null) {
-         short var28 = 2090;
+         short var33 = 2090;
          long var10003 = 2772350773071528051L ^ ax;
-         var23 = chi.field_1724.field_6012 <= 50 ? 1 : 0;
+         var26 = chi.field_1724.field_6012 <= 50 ? 1 : 0;
       }
 
-      var11.gyb((boolean)var23);
+      var11.gyb((boolean)var26);
    }
 
    @gdz
@@ -452,52 +462,47 @@ public class abn extends hcr {
 
    private void gyb(boolean a) {
       synchronized (a.hid) {
-         a.hid
-            .removeIf(
-               ax -> {
-                  long ax = abn.a ^ 52332178558044L;
-                  int[] var4 = dar.abu();
-                  int var10000 = a;
+         a.hid.removeIf(ax -> {
+            long ax = abn.a ^ 52332178558044L;
+            int[] var4 = dar.abu();
+            int var10000 = a;
+            if (var4 != null) {
+               label33:
+               if (!a) {
+                  long var5 = ax.dgk();
+                  long var10001 = System.currentTimeMillis();
+                  short var10003 = 147;
+                  long var10004 = 3087034597998988460L ^ ax;
+                  long var7;
+                  if (chi.field_1724.field_6012 < 150) {
+                     short var10002 = 6096;
+                     long var9 = 5978714267763544537L ^ ax;
+                     var7 = 5000L;
+                  } else {
+                     short var8 = 17311;
+                     long var10 = 9165369700015883669L ^ ax;
+                     var7 = 10000L;
+                  }
+
+                  long var11;
+                  var10000 = (var11 = var5 - (var10001 - var7)) == 0L ? 0 : (var11 < 0L ? -1 : 1);
                   if (var4 != null) {
-                     label33:
-                     if (!a) {
-                        long var5 = ax.dgk();
-                        long var10001 = System.currentTimeMillis();
-                        short var10003 = 147;
-                        long var10004 = 3087034597998988460L ^ ax;
-                        long var7;
-                        var10000 = (
-                                 var7 = var5
-                                    - (
-                                       var10001
-                                          - (
-                                             chi.field_1724.field_6012 < 150
-                                                ? d<"w">(6096, 5978714267763544537L ^ ax)
-                                                : d<"w">(17311, 9165369700015883669L ^ ax)
-                                          )
-                                    )
-                              )
-                              == 0L
-                           ? 0
-                           : (var7 < 0L ? -1 : 1);
-                        if (var4 != null) {
-                           if (var10000 <= 0) {
-                              break label33;
-                           }
-
-                           var10000 = 0;
-                        }
-
-                        return (boolean)var10000;
+                     if (var10000 <= 0) {
+                        break label33;
                      }
 
-                     gix.fcd(ax.gci());
-                     var10000 = 1;
+                     var10000 = 0;
                   }
 
                   return (boolean)var10000;
                }
-            );
+
+               gix.fcd(ax.gci());
+               var10000 = 1;
+            }
+
+            return (boolean)var10000;
+         });
       }
    }
 

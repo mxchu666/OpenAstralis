@@ -43,7 +43,7 @@ public class bgt {
             var10001 = 3799691013244504862L ^ a;
             GL45.glActiveTexture(33984);
             int[] var5 = dar.abu();
-            short var43 = 3768;
+            short var44 = 3768;
             long var10002 = 3720821660291490895L ^ a;
             GL45.glGetIntegerv(35725, a.avp.cgd());
             var3 = var5;
@@ -52,7 +52,7 @@ public class bgt {
             GL45.glGetIntegerv(32873, a.avp.ddr());
             var10000 = a.erc;
             if (var3 != null) {
-               short var45 = 29477;
+               short var46 = 29477;
                var10002 = 3938181704017189366L ^ a;
                if (a.erc < 330) {
                   var8 = GL.getCapabilities().GL_ARB_sampler_objects;
@@ -74,157 +74,159 @@ public class bgt {
          }
 
          short var10 = 22348;
-         long var47 = 6411904697212648840L ^ a;
+         long var48 = 6411904697212648840L ^ a;
          GL45.glGetIntegerv(34964, a.avp.atr());
          var10 = 25324;
-         var47 = 5859090135889479698L ^ a;
+         var48 = 5859090135889479698L ^ a;
          GL45.glGetIntegerv(34229, a.avp.byw());
          var8 = a.erc;
       }
 
-      short var49 = 20313;
-      long var91 = 5710749811052258695L ^ a;
-      var49 = 200;
+      short var50 = 20313;
+      long var93 = 5710749811052258695L ^ a;
+      var50 = 200;
       if (var3 != null) {
          if (var8 >= 200) {
-            GL45.glGetIntegerv(a<"h">(9760, 5930954708961414274L ^ a), a.avp.chb());
+            short var12 = 9760;
+            long var52 = 5930954708961414274L ^ a;
+            GL45.glGetIntegerv(2880, a.avp.chb());
          }
 
-         short var12 = 31171;
-         long var51 = 2213053560823059254L ^ a;
+         short var13 = 31171;
+         long var53 = 2213053560823059254L ^ a;
          GL45.glGetIntegerv(2978, a.avp.fnj());
-         var12 = 28682;
-         long var52 = 1858513178501356232L ^ a;
+         var13 = 28682;
+         long var54 = 1858513178501356232L ^ a;
          GL45.glGetIntegerv(3088, a.avp.fhh());
-         var12 = 9732;
-         long var53 = 4393767138100956329L ^ a;
+         var13 = 9732;
+         long var55 = 4393767138100956329L ^ a;
          GL45.glGetIntegerv(32969, a.avp.cxn());
-         var12 = 14613;
-         long var54 = 2204673735427085248L ^ a;
+         var13 = 14613;
+         long var56 = 2204673735427085248L ^ a;
          GL45.glGetIntegerv(32968, a.avp.asf());
-         var12 = 31727;
-         long var55 = 715638982145708301L ^ a;
+         var13 = 31727;
+         long var57 = 715638982145708301L ^ a;
          GL45.glGetIntegerv(32971, a.avp.bsz());
-         var12 = 13149;
-         long var56 = 459926822029842861L ^ a;
+         var13 = 13149;
+         long var58 = 459926822029842861L ^ a;
          GL45.glGetIntegerv(32970, a.avp.cas());
-         var12 = 17730;
-         long var57 = 5450562247484256169L ^ a;
+         var13 = 17730;
+         long var59 = 5450562247484256169L ^ a;
          GL45.glGetIntegerv(32777, a.avp.beb());
-         var12 = 25191;
-         long var58 = 5697086186979559580L ^ a;
+         var13 = 25191;
+         long var60 = 5697086186979559580L ^ a;
          GL45.glGetIntegerv(34877, a.avp.eyq());
-         var49 = 22319;
-         var91 = 8038568794120633743L ^ a;
+         var50 = 22319;
+         var93 = 8038568794120633743L ^ a;
          a.avp.gg(GL45.glIsEnabled(3042));
-         var49 = 7872;
-         var91 = 1131825208440058907L ^ a;
+         var50 = 7872;
+         var93 = 1131825208440058907L ^ a;
          a.avp.ffi(GL45.glIsEnabled(2884));
-         var49 = 18466;
-         var91 = 415819330865472244L ^ a;
+         var50 = 18466;
+         var93 = 415819330865472244L ^ a;
          a.avp.caa(GL45.glIsEnabled(2929));
-         var49 = 6531;
-         var91 = 3617000753995740017L ^ a;
+         var50 = 6531;
+         var93 = 3617000753995740017L ^ a;
          a.avp.aqd(GL45.glIsEnabled(2960));
-         var49 = 16426;
-         var91 = 6195904678232697551L ^ a;
+         var50 = 16426;
+         var93 = 6195904678232697551L ^ a;
          a.avp.fmt(GL45.glIsEnabled(3089));
          var8 = a.erc;
-         var49 = 1785;
-         var91 = 2324462247730637884L ^ a;
-         var49 = 310;
+         var50 = 1785;
+         var93 = 2324462247730637884L ^ a;
+         var50 = 310;
       }
 
       if (var3 != null) {
-         if (var8 >= var49) {
-            var49 = 21256;
-            var91 = 5120495071002737116L ^ a;
+         if (var8 >= var50) {
+            var50 = 21256;
+            var93 = 5120495071002737116L ^ a;
             a.avp.ffc(GL45.glIsEnabled(36765));
          }
 
-         var49 = 20848;
-         var91 = 5636080512761772984L ^ a;
+         var50 = 20848;
+         var93 = 5636080512761772984L ^ a;
          a.avp.dag(GL45.glGetBoolean(2930));
-         short var20 = 31083;
-         long var67 = 689888381970092951L ^ a;
+         short var21 = 31083;
+         long var69 = 689888381970092951L ^ a;
          GL45.glGetIntegerv(35055, a.avp.eb());
-         var20 = 14657;
-         long var68 = 4627241689649927080L ^ a;
+         var21 = 14657;
+         long var70 = 4627241689649927080L ^ a;
          GL45.glBindBuffer(35052, 0);
-         var20 = 4732;
-         long var69 = 4304464320030898358L ^ a;
+         var21 = 4732;
+         long var71 = 4304464320030898358L ^ a;
          GL45.glGetIntegerv(3328, a.avp.bjm());
-         var20 = 22540;
-         long var70 = 6304394811692724930L ^ a;
+         var21 = 22540;
+         long var72 = 6304394811692724930L ^ a;
          GL45.glGetIntegerv(3329, a.avp.hhg());
-         var20 = 26338;
-         long var71 = 1487335425411746888L ^ a;
+         var21 = 26338;
+         long var73 = 1487335425411746888L ^ a;
          GL45.glGetIntegerv(3330, a.avp.bph());
-         var20 = 4576;
-         long var72 = 5875884563290848048L ^ a;
+         var21 = 4576;
+         long var74 = 5875884563290848048L ^ a;
          GL45.glGetIntegerv(3332, a.avp.fq());
-         var20 = 28056;
-         long var73 = 3223853774809958247L ^ a;
+         var21 = 28056;
+         long var75 = 3223853774809958247L ^ a;
          GL45.glGetIntegerv(3331, a.avp.ara());
-         var20 = 5320;
-         long var74 = 1032532097961033234L ^ a;
+         var21 = 5320;
+         long var76 = 1032532097961033234L ^ a;
          GL45.glGetIntegerv(3333, a.avp.cb());
-         var20 = 22735;
-         long var75 = 1433442780643930721L ^ a;
+         var21 = 22735;
+         long var77 = 1433442780643930721L ^ a;
          GL45.glGetIntegerv(3312, a.avp.brm());
-         var20 = 16006;
-         long var76 = 5263864901618848876L ^ a;
+         var21 = 16006;
+         long var78 = 5263864901618848876L ^ a;
          GL45.glGetIntegerv(3313, a.avp.con());
-         var20 = 7779;
-         long var77 = 6242448426885739673L ^ a;
+         var21 = 7779;
+         long var79 = 6242448426885739673L ^ a;
          GL45.glGetIntegerv(3317, a.avp.gvg());
-         var20 = 2227;
-         long var78 = 9117235776685531672L ^ a;
+         var21 = 2227;
+         long var80 = 9117235776685531672L ^ a;
          GL45.glGetIntegerv(3314, a.avp.evg());
-         var20 = 31788;
-         long var79 = 7230093654839596756L ^ a;
+         var21 = 31788;
+         long var81 = 7230093654839596756L ^ a;
          GL45.glGetIntegerv(3316, a.avp.deb());
-         var20 = 16967;
-         long var80 = 3996248098799528070L ^ a;
+         var21 = 16967;
+         long var82 = 3996248098799528070L ^ a;
          GL45.glGetIntegerv(3315, a.avp.gzz());
          var8 = a.erc;
-         var49 = 15484;
-         var91 = 5178878031520028319L ^ a;
-         var49 = 120;
+         var50 = 15484;
+         var93 = 5178878031520028319L ^ a;
+         var50 = 120;
       }
 
       if (var3 != null) {
-         if (var8 >= var49) {
-            short var34 = 29840;
-            long var82 = 6182854763190296141L ^ a;
+         if (var8 >= var50) {
+            short var35 = 29840;
+            long var84 = 6182854763190296141L ^ a;
             GL45.glGetIntegerv(32876, a.avp.glh());
-            var34 = 19409;
-            long var83 = 7958556446562820405L ^ a;
+            var35 = 19409;
+            long var85 = 7958556446562820405L ^ a;
             GL45.glGetIntegerv(32875, a.avp.hcl());
-            var34 = 15607;
-            long var84 = 2968374515314710072L ^ a;
+            var35 = 15607;
+            long var86 = 2968374515314710072L ^ a;
             GL45.glGetIntegerv(32878, a.avp.cwc());
-            var34 = 4976;
-            long var85 = 9140221848463342044L ^ a;
+            var35 = 4976;
+            long var87 = 9140221848463342044L ^ a;
             GL45.glGetIntegerv(32877, a.avp.eul());
          }
 
-         short var38 = 7779;
-         long var86 = 6242448426885739673L ^ a;
+         short var39 = 7779;
+         long var88 = 6242448426885739673L ^ a;
          GL45.glPixelStorei(3317, 1);
-         var38 = 2227;
-         long var87 = 9117235776685531672L ^ a;
+         var39 = 2227;
+         long var89 = 9117235776685531672L ^ a;
          GL45.glPixelStorei(3314, 0);
-         var38 = 31788;
-         long var88 = 7230093654839596756L ^ a;
+         var39 = 31788;
+         long var90 = 7230093654839596756L ^ a;
          GL45.glPixelStorei(3316, 0);
-         var38 = 16967;
-         long var89 = 3996248098799528070L ^ a;
+         var39 = 16967;
+         long var91 = 3996248098799528070L ^ a;
          var8 = 3315;
-         var49 = 0;
+         var50 = 0;
       }
 
-      GL45.glPixelStorei(var8, var49);
+      GL45.glPixelStorei(var8, var50);
       return a;
    }
 
@@ -242,9 +244,9 @@ public class bgt {
             long var10001 = 2221206674303537808L ^ a;
             GL45.glBindTexture(3553, a.avp.ddr()[0]);
             var6 = a.erc;
-            short var43 = 284;
+            short var44 = 284;
             long var10002 = 4376086038178769910L ^ a;
-            int var44 = 330;
+            int var45 = 330;
             if (var3 != null) {
                if (a.erc < 330) {
                   var6 = GL.getCapabilities().GL_ARB_sampler_objects;
@@ -258,16 +260,16 @@ public class bgt {
                }
 
                var6 = 0;
-               var44 = a.avp.foi()[0];
+               var45 = a.avp.foi()[0];
             }
 
-            GL45.glBindSampler(var6, var44);
+            GL45.glBindSampler(var6, var45);
          }
 
          GL45.glActiveTexture(a.avp.hdz()[0]);
          short var7 = 18217;
          GL45.glBindVertexArray(a.avp.byw()[0]);
-         long var45 = 3940147669720002022L ^ a;
+         long var46 = 3940147669720002022L ^ a;
          GL45.glBindBuffer(34962, a.avp.atr()[0]);
          GL45.glBlendEquationSeparate(a.avp.beb()[0], a.avp.eyq()[0]);
          GL45.glBlendFuncSeparate(a.avp.cxn()[0], a.avp.asf()[0], a.avp.bsz()[0], a.avp.cas()[0]);
@@ -278,7 +280,7 @@ public class bgt {
          if (var3 != null) {
             if (var6 != 0) {
                short var8 = 30692;
-               long var46 = 1789257156398308608L ^ a;
+               long var47 = 1789257156398308608L ^ a;
                GL45.glEnable(3042);
                if (var3 != null) {
                   break label153;
@@ -286,7 +288,7 @@ public class bgt {
             }
 
             short var9 = 22319;
-            long var47 = 8038549477190434233L ^ a;
+            long var48 = 8038549477190434233L ^ a;
             var6 = 3042;
          }
 
@@ -298,7 +300,7 @@ public class bgt {
          if (var3 != null) {
             if (var10 != 0) {
                var10 = 2054;
-               long var48 = 5931709286486155984L ^ a;
+               long var49 = 5931709286486155984L ^ a;
                GL45.glEnable(2884);
                if (var3 != null) {
                   break label146;
@@ -306,7 +308,7 @@ public class bgt {
             }
 
             var10 = 7872;
-            long var49 = 1131842309737493549L ^ a;
+            long var50 = 1131842309737493549L ^ a;
             var10 = 2884;
          }
 
@@ -318,7 +320,7 @@ public class bgt {
          if (var3 != null) {
             if (var13 != 0) {
                var13 = 14567;
-               long var50 = 2439881666960232960L ^ a;
+               long var51 = 2439881666960232960L ^ a;
                GL45.glEnable(2929);
                if (var3 != null) {
                   break label139;
@@ -326,7 +328,7 @@ public class bgt {
             }
 
             var13 = 18466;
-            long var51 = 415836297407881922L ^ a;
+            long var52 = 415836297407881922L ^ a;
             var13 = 2929;
          }
 
@@ -338,7 +340,7 @@ public class bgt {
          if (var3 != null) {
             if (var16 != 0) {
                var16 = 9413;
-               long var52 = 3336722538035908096L ^ a;
+               long var53 = 3336722538035908096L ^ a;
                GL45.glEnable(2960);
                if (var3 != null) {
                   break label132;
@@ -346,7 +348,7 @@ public class bgt {
             }
 
             var16 = 6531;
-            long var53 = 3617017871272751943L ^ a;
+            long var54 = 3617017871272751943L ^ a;
             var16 = 2960;
          }
 
@@ -358,7 +360,7 @@ public class bgt {
          if (var3 != null) {
             if (var19 != 0) {
                var19 = 22130;
-               long var54 = 1797337549110017155L ^ a;
+               long var55 = 1797337549110017155L ^ a;
                GL45.glEnable(3089);
                if (var3 != null) {
                   break label125;
@@ -366,7 +368,7 @@ public class bgt {
             }
 
             var19 = 16426;
-            long var55 = 6195923845416905465L ^ a;
+            long var56 = 6195923845416905465L ^ a;
             var19 = 3089;
          }
 
@@ -374,9 +376,9 @@ public class bgt {
       }
 
       var6 = a.erc;
-      short var56 = 29107;
-      long var79 = 8793977175177124686L ^ a;
-      var56 = 310;
+      short var57 = 29107;
+      long var81 = 8793977175177124686L ^ a;
+      var57 = 310;
       if (var3 != null) {
          label115:
          if (a.erc >= 310) {
@@ -384,7 +386,7 @@ public class bgt {
             if (var3 != null) {
                if (var23 != 0) {
                   short var24 = 17071;
-                  long var58 = 2419198128547588181L ^ a;
+                  long var59 = 2419198128547588181L ^ a;
                   GL45.glEnable(36765);
                   if (var3 != null) {
                      break label115;
@@ -392,7 +394,7 @@ public class bgt {
                }
 
                short var25 = 21256;
-               long var59 = 5120512174817442282L ^ a;
+               long var60 = 5120512174817442282L ^ a;
                var23 = '辝';
             }
 
@@ -400,80 +402,82 @@ public class bgt {
          }
 
          var6 = a.erc;
-         var56 = 8338;
-         var79 = 2165981576535935570L ^ a;
-         var56 = 200;
+         var57 = 8338;
+         var81 = 2165981576535935570L ^ a;
+         var57 = 200;
       }
 
       label168: {
          if (var3 != null) {
-            if (var6 >= var56) {
+            if (var6 >= var57) {
                short var26 = 25617;
-               long var61 = 4933433844941573834L ^ a;
+               long var62 = 4933433844941573834L ^ a;
                GL45.glPolygonMode(1032, a.avp.chb()[0]);
             }
 
             GL45.glViewport(a.avp.fnj()[0], a.avp.fnj()[1], a.avp.fnj()[2], a.avp.fnj()[3]);
             short var27 = 21713;
             GL45.glScissor(a.avp.fhh()[0], a.avp.fhh()[1], a.avp.fhh()[2], a.avp.fhh()[3]);
-            long var62 = 3546040357192203776L ^ a;
+            long var63 = 3546040357192203776L ^ a;
             GL45.glPixelStorei(3328, a.avp.bjm()[0]);
             var27 = 30410;
-            long var63 = 5848047446167542821L ^ a;
+            long var64 = 5848047446167542821L ^ a;
             GL45.glPixelStorei(3329, a.avp.hhg()[0]);
             var27 = 3391;
-            long var64 = 717142486928992160L ^ a;
+            long var65 = 717142486928992160L ^ a;
             GL45.glPixelStorei(3330, a.avp.bph()[0]);
             var27 = 16396;
-            long var65 = 4106666152755489529L ^ a;
+            long var66 = 4106666152755489529L ^ a;
             GL45.glPixelStorei(3332, a.avp.fq()[0]);
             var27 = 3561;
-            long var66 = 2531321326878172935L ^ a;
+            long var67 = 2531321326878172935L ^ a;
             GL45.glPixelStorei(3331, a.avp.ara()[0]);
             var27 = 19095;
-            long var67 = 8866176888931344457L ^ a;
+            long var68 = 8866176888931344457L ^ a;
             GL45.glPixelStorei(3333, a.avp.cb()[0]);
             var27 = 15759;
-            long var68 = 3197954781327923060L ^ a;
+            long var69 = 3197954781327923060L ^ a;
             GL45.glBindBuffer(35052, a.avp.eb()[0]);
             var27 = 23794;
-            long var69 = 4792770359000397355L ^ a;
+            long var70 = 4792770359000397355L ^ a;
             GL45.glPixelStorei(3312, a.avp.brm()[0]);
             var27 = 29589;
-            long var70 = 7769492727567505763L ^ a;
+            long var71 = 7769492727567505763L ^ a;
             GL45.glPixelStorei(3313, a.avp.con()[0]);
             var27 = 10167;
-            long var71 = 2393310732121902422L ^ a;
+            long var72 = 2393310732121902422L ^ a;
             GL45.glPixelStorei(3317, a.avp.gvg()[0]);
             var27 = 30286;
-            long var72 = 7113053722821876884L ^ a;
+            long var73 = 7113053722821876884L ^ a;
             GL45.glPixelStorei(3314, a.avp.evg()[0]);
             var27 = 22263;
-            long var73 = 7455556299613699120L ^ a;
+            long var74 = 7455556299613699120L ^ a;
             GL45.glPixelStorei(3316, a.avp.deb()[0]);
             var27 = 9259;
-            long var74 = 1861444149688241907L ^ a;
+            long var75 = 1861444149688241907L ^ a;
             GL45.glPixelStorei(3315, a.avp.gzz()[0]);
             var6 = a.erc;
             if (var3 == null) {
                break label168;
             }
 
-            var56 = 12755;
-            var79 = 8019354642002516739L ^ a;
-            var56 = 120;
+            var57 = 12755;
+            var81 = 8019354642002516739L ^ a;
+            var57 = 120;
          }
 
-         if (var6 >= var56) {
+         if (var6 >= var57) {
             short var40 = 14090;
-            long var76 = 8385958319854394845L ^ a;
+            long var77 = 8385958319854394845L ^ a;
             GL45.glPixelStorei(32876, a.avp.glh()[0]);
-            GL45.glPixelStorei(a<"h">(28687, 1455526891380071064L ^ a), a.avp.hcl()[0]);
+            var40 = 28687;
+            long var78 = 1455526891380071064L ^ a;
+            GL45.glPixelStorei(32875, a.avp.hcl()[0]);
             var40 = 15408;
-            long var77 = 5755788281645373102L ^ a;
+            long var79 = 5755788281645373102L ^ a;
             GL45.glPixelStorei(32878, a.avp.cwc()[0]);
             var40 = 29364;
-            long var78 = 2712936460080535597L ^ a;
+            long var80 = 2712936460080535597L ^ a;
             GL45.glPixelStorei(32877, a.avp.eul()[0]);
          }
 

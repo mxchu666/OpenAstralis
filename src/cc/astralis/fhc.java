@@ -45,15 +45,17 @@ public class fhc extends guu {
       long var10004 = 4342964267911453580L ^ a;
       short var4 = 22965;
       long var10005 = 6938082009414848614L ^ a;
-      String[] var6 = new String[2];
+      String[] var7 = new String[2];
       short var10008 = 1735;
       long var10009 = 3942180976558083865L ^ a;
-      var6[0] = "Modern";
+      var7[0] = "Modern";
       var10008 = 23722;
       var10009 = 1749587334375593341L ^ a;
-      var6[1] = "Legacy";
-      a.doa = new adu("Mode", "Modern", var6);
-      a.gqt = new erp(dtw.EASE_IN_OUT_QUAD, g<"z">(31041, 5114791768259936705L ^ a));
+      var7[1] = "Legacy";
+      a.doa = new adu("Mode", "Modern", var7);
+      short var5 = 31041;
+      var10005 = 5114791768259936705L ^ a;
+      a.gqt = new erp(dtw.EASE_IN_OUT_QUAD, 500L);
       a.dkr = 0.0;
       var10003 = 4461;
       var10004 = 5544255725526849724L ^ a;
@@ -157,26 +159,26 @@ public class fhc extends guu {
       String axxxxxxxxxx = var31 + " / " + var10001;
       double axxxxxxxxxxx = a.gqt.hjo();
       short var32 = 1735;
-      long var41 = 3942181610216257521L ^ ax;
+      long var43 = 3942181610216257521L ^ ax;
       short var33 = "Modern".equals(a.doa.dnp());
       if (axx != null) {
          if (var33 != 0) {
             short var34 = 18872;
-            long var42 = 5792804843215374746L ^ ax;
+            long var44 = 5792804843215374746L ^ ax;
             var33 = 250;
          } else {
             short var35 = 23584;
-            long var43 = 4602496022265846833L ^ ax;
+            long var45 = 4602496022265846833L ^ ax;
             var33 = 210;
          }
       }
 
       short axxxxxxxxxxxx = var33;
       short var36 = 5060;
-      short var44 = 17294;
-      long var50 = 6938389948908356495L ^ ax;
+      short var46 = 17294;
+      long var54 = 6938389948908356495L ^ ax;
       byte axxxxxxxxxxxxx = 60;
-      long var45 = 7822711033009529589L ^ ax;
+      long var47 = 7822711033009529589L ^ ax;
       if ("Legacy".equals(a.doa.dnp())) {
          ezv axxxxxxxxxxxxxx = dar.gqy().aws().diy(ezv.class);
          String var21 = axxxxxxxxxxxxxx.eqi.dnp();
@@ -185,8 +187,8 @@ public class fhc extends guu {
          if (axx != null) {
             switch (var37) {
                case -1656737386:
-                  short var46 = 26518;
-                  long var51 = 4389798253377099428L ^ ax;
+                  short var48 = 26518;
+                  long var55 = 4389798253377099428L ^ ax;
                   var37 = var21.equals("Rainbow");
                   if (axx == null) {
                      break;
@@ -200,48 +202,56 @@ public class fhc extends guu {
             }
          }
          Color axxxxxxxxxxxxxxx = switch (var37) {
-            case 0 -> ezv.gbq(g<"z">(23834, 2522506938334977397L ^ ax), 0, 0.7F, 1.0F);
+            case 0 -> {
+               short var39 = 23834;
+               long var49 = 2522506938334977397L ^ ax;
+               yield ezv.gbq(3000L, 0, 0.7F, 1.0F);
+            }
             default -> dec.fbp(new class_5611(0.0F, 6.0F), axxxxxxxxxxxxxx.ehf.dnp(), axxxxxxxxxxxxxx.aoz.dnp());
          };
          var21 = axxxxxxxxxxxxxx.eqi.dnp();
          var22 = -1;
-         int var39 = var21.hashCode();
+         int var40 = var21.hashCode();
          if (axx != null) {
-            switch (var39) {
+            switch (var40) {
                case -1656737386:
-                  short var47 = 19781;
-                  long var52 = 2040654305681980543L ^ ax;
-                  var39 = var21.equals("Rainbow");
+                  short var50 = 19781;
+                  long var56 = 2040654305681980543L ^ ax;
+                  var40 = var21.equals("Rainbow");
                   if (axx == null) {
                      break;
                   }
 
-                  if (var39 != 0) {
+                  if (var40 != 0) {
                      var22 = 0;
                   }
                default:
-                  var39 = var22;
+                  var40 = var22;
             }
          }
-         Color axxxxxxxxxxxxxxxx = switch (var39) {
-            case 0 -> ezv.gbq(g<"z">(22465, 5293894031803652008L ^ ax), 0, 1.0F, 1.0F);
+         Color axxxxxxxxxxxxxxxx = switch (var40) {
+            case 0 -> {
+               short var42 = 22465;
+               long var51 = 5293894031803652008L ^ ax;
+               yield ezv.gbq(4000L, 0, 1.0F, 1.0F);
+            }
             default -> dec.fbp(new class_5611(0.0F, 6.0F), axxxxxxxxxxxxxx.ehf.dnp(), axxxxxxxxxxxxxx.aoz.dnp());
          };
-         float var48 = axxxxx;
-         float var53 = axxxxxx;
+         float var52 = axxxxx;
+         float var57 = axxxxxx;
          short var10004 = 17294;
          long var10005 = 6938389948908356495L ^ ax;
-         a.edh(var48, var53, axxxxxxxxxxxx, 60, axxxxxxxx, axxxxxxxxx, axxxxxxxxxx, axxxxxxxxxxx, axxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxx);
+         a.edh(var52, var57, axxxxxxxxxxxx, 60, axxxxxxxx, axxxxxxxxx, axxxxxxxxxx, axxxxxxxxxxx, axxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxx);
          if (axx != null) {
             return;
          }
       }
 
-      float var49 = axxxxx;
-      float var54 = axxxxxx;
-      short var55 = 17294;
-      long var56 = 6938389948908356495L ^ ax;
-      a.cwt(var49, var54, axxxxxxxxxxxx, 60, axxxxxxxx, axxxxxxxxx, axxxxxxxxxxx);
+      float var53 = axxxxx;
+      float var58 = axxxxxx;
+      short var59 = 17294;
+      long var60 = 6938389948908356495L ^ ax;
+      a.cwt(var53, var58, axxxxxxxxxxxx, 60, axxxxxxxx, axxxxxxxxx, axxxxxxxxxxx);
    }
 
    @gdz
@@ -622,11 +632,17 @@ public class fhc extends guu {
 
    private String avy(long a) {
       long ax = fhc.a ^ 108697402372317L;
-      long axx = a / g<"z">(9305, 3125463274534708629L ^ ax);
-      long axxx = axx / g<"z">(2052, 539357034819586505L ^ ax);
-      axx %= g<"z">(27222, 613413260234582936L ^ ax);
+      short var10001 = 9305;
+      long var10002 = 3125463274534708629L ^ ax;
+      long axx = a / 1000L;
+      var10001 = 2052;
+      var10002 = 539357034819586505L ^ ax;
+      long axxx = axx / 60L;
+      var10001 = 27222;
+      var10002 = 613413260234582936L ^ ax;
+      axx %= 60L;
       short var10000 = 24747;
-      long var10001 = 7002159461007511614L ^ ax;
+      long var12 = 7002159461007511614L ^ ax;
       return String.format("%d:%02d", axxx, axx);
    }
 
@@ -653,20 +669,20 @@ public class fhc extends guu {
 
                      label236: {
                         char axxxxx;
-                        int var9;
+                        short var9;
                         label217: {
                            label216: {
                               label237: {
                                  axxxxx = a.charAt(axxxx);
                                  var8 = axxxxx;
-                                 short var10001 = 5848;
+                                 var9 = 5848;
                                  long var10002 = 8509494324416800859L ^ ax;
                                  var9 = 65;
                                  label214:
                                  if (axx != null) {
                                     if (axxxxx >= 'A') {
                                        var8 = axxxxx;
-                                       var10001 = 20967;
+                                       var9 = 20967;
                                        var10002 = 4246900217117159253L ^ ax;
                                        var9 = 90;
                                        if (axx == null) {
@@ -679,7 +695,7 @@ public class fhc extends guu {
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 3121;
+                                    var9 = 3121;
                                     var10002 = 5505855111797666454L ^ ax;
                                     var9 = 97;
                                  }
@@ -688,18 +704,20 @@ public class fhc extends guu {
                                  if (axx != null) {
                                     if (var8 >= var9) {
                                        var8 = axxxxx;
-                                       var9 = e<"j">(5742, 4239274856470014201L ^ ax);
+                                       var9 = 5742;
+                                       var10002 = 4239274856470014201L ^ ax;
+                                       var9 = 122;
                                        if (axx == null) {
                                           break label205;
                                        }
 
-                                       if (axxxxx <= var9) {
+                                       if (axxxxx <= 'z') {
                                           break label237;
                                        }
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 13480;
+                                    var9 = 13480;
                                     var10002 = 5175898573643827757L ^ ax;
                                     var9 = 48;
                                  }
@@ -708,7 +726,7 @@ public class fhc extends guu {
                                  if (axx != null) {
                                     if (var8 >= var9) {
                                        var8 = axxxxx;
-                                       var10001 = 31289;
+                                       var9 = 31289;
                                        var10002 = 125572470127199366L ^ ax;
                                        var9 = 57;
                                        if (axx == null) {
@@ -721,7 +739,7 @@ public class fhc extends guu {
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 9854;
+                                    var9 = 9854;
                                     var10002 = 214295698167814358L ^ ax;
                                     var9 = 32;
                                  }
@@ -730,7 +748,7 @@ public class fhc extends guu {
                                  if (axx != null) {
                                     if (var8 >= var9) {
                                        var8 = axxxxx;
-                                       var10001 = 22139;
+                                       var9 = 22139;
                                        var10002 = 148040975449303232L ^ ax;
                                        var9 = 47;
                                        if (axx == null) {
@@ -743,7 +761,7 @@ public class fhc extends guu {
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 26677;
+                                    var9 = 26677;
                                     var10002 = 4218074181693249167L ^ ax;
                                     var9 = 58;
                                  }
@@ -752,7 +770,7 @@ public class fhc extends guu {
                                  if (axx != null) {
                                     if (var8 >= var9) {
                                        var8 = axxxxx;
-                                       var10001 = 11427;
+                                       var9 = 11427;
                                        var10002 = 5533472869341090305L ^ ax;
                                        var9 = 64;
                                        if (axx == null) {
@@ -765,7 +783,7 @@ public class fhc extends guu {
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 16032;
+                                    var9 = 16032;
                                     var10002 = 6196853349954994192L ^ ax;
                                     var9 = 91;
                                  }
@@ -774,7 +792,7 @@ public class fhc extends guu {
                                  if (axx != null) {
                                     if (var8 >= var9) {
                                        var8 = axxxxx;
-                                       var10001 = 16510;
+                                       var9 = 16510;
                                        var10002 = 6035242704645111542L ^ ax;
                                        var9 = 96;
                                        if (axx == null) {
@@ -787,7 +805,7 @@ public class fhc extends guu {
                                     }
 
                                     var8 = axxxxx;
-                                    var10001 = 2613;
+                                    var9 = 2613;
                                     var10002 = 5207329925968721069L ^ ax;
                                     var9 = 123;
                                  }
@@ -801,7 +819,7 @@ public class fhc extends guu {
                                  }
 
                                  var8 = axxxxx;
-                                 var10001 = 12815;
+                                 var9 = 12815;
                                  var10002 = 2227518755782151333L ^ ax;
                                  var9 = 126;
                                  if (axx == null) {
@@ -820,8 +838,8 @@ public class fhc extends guu {
                            }
 
                            var8 = axxxxx;
-                           short var22 = 17367;
-                           long var38 = 5284569410273983824L ^ ax;
+                           var9 = 17367;
+                           long var40 = 5284569410273983824L ^ ax;
                            var9 = 169;
                         }
 
@@ -832,8 +850,8 @@ public class fhc extends guu {
                               }
 
                               var8 = axxxxx;
-                              short var23 = 20765;
-                              long var39 = 3380007559180693377L ^ ax;
+                              var9 = 20765;
+                              long var41 = 3380007559180693377L ^ ax;
                               var9 = 174;
                            }
 
@@ -843,8 +861,8 @@ public class fhc extends guu {
                               }
 
                               var8 = axxxxx;
-                              short var24 = 24355;
-                              long var40 = 8162688735664284059L ^ ax;
+                              var9 = 24355;
+                              long var42 = 8162688735664284059L ^ ax;
                               var9 = 8482;
                            }
 
@@ -854,8 +872,8 @@ public class fhc extends guu {
                               }
 
                               var8 = axxxxx;
-                              short var25 = 7542;
-                              long var41 = 6786307920832652249L ^ ax;
+                              var9 = 7542;
+                              long var43 = 6786307920832652249L ^ ax;
                               var9 = 176;
                            }
 

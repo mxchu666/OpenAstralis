@@ -102,7 +102,9 @@ public class MixinInGameHud {
    )
    private void onRenderScoreboardSidebar(class_332 a, class_266 a, CallbackInfo a) {
       long ax = c ^ 87397680898961L;
-      long axx = b<"q">(29677, 4781066639527951049L ^ ax);
+      int var10000 = 29677;
+      long var10001 = 4781066639527951049L ^ ax;
+      long axx = 76092167215575L;
       if (a != null) {
          class_310 axxx = class_310.method_1551();
          class_269 axxxx = a.method_1117();
@@ -121,9 +123,9 @@ public class MixinInGameHud {
          }
 
          int var21 = axxx.method_22683().method_4486();
-         int var10000 = 22435;
+         var10000 = (short)22435;
          int var22 = axxx.method_22683().method_4502();
-         long var10001 = 4064989108573791192L ^ ax;
+         var10001 = 4064989108573791192L ^ ax;
          int axxxxxxxxx = 9;
          int axxxxxxxxxx = axxxxxx.size();
          int axxxxxxxxxxx = axxxxxxxxxx * axxxxxxxxx;
@@ -203,9 +205,9 @@ public class MixinInGameHud {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var25 = var23.doFinal("ÂW\u000bÖA\u000f¶\u0017".getBytes("ISO-8859-1"));
-      String var43 = a(var25).intern();
+      String var47 = a(var25).intern();
       int var10001 = -1;
-      String var22 = var43;
+      String var22 = var47;
       f = new HashMap(13);
       Cipher var11;
       var10000 = var11 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -231,7 +233,7 @@ public class MixinInGameHud {
          byte[] var18 = var15.substring(var10001, var13).getBytes("ISO-8859-1");
          long[] var32 = var17;
          var10001 = var14++;
-         long var45 = (var18[0] & 255L) << 56
+         long var49 = (var18[0] & 255L) << 56
             | (var18[1] & 255L) << 48
             | (var18[2] & 255L) << 40
             | (var18[3] & 255L) << 32
@@ -239,10 +241,10 @@ public class MixinInGameHud {
             | (var18[5] & 255L) << 16
             | (var18[6] & 255L) << 8
             | var18[7] & 255L;
-         byte var51 = -1;
+         byte var55 = -1;
 
          while (true) {
-            long var19 = var45;
+            long var19 = var49;
             byte[] var21 = var11.doFinal(
                new byte[]{
                   (byte)(var19 >>> 56),
@@ -255,7 +257,7 @@ public class MixinInGameHud {
                   (byte)var19
                }
             );
-            long var55 = (var21[0] & 255L) << 56
+            long var59 = (var21[0] & 255L) << 56
                | (var21[1] & 255L) << 48
                | (var21[2] & 255L) << 40
                | (var21[3] & 255L) << 32
@@ -263,9 +265,9 @@ public class MixinInGameHud {
                | (var21[5] & 255L) << 16
                | (var21[6] & 255L) << 8
                | var21[7] & 255L;
-            switch (var51) {
+            switch (var55) {
                case 0:
-                  var32[var10001] = var55;
+                  var32[var10001] = var59;
                   if (var13 >= var16) {
                      d = var17;
                      e = new Integer[12];
@@ -287,10 +289,10 @@ public class MixinInGameHud {
                      byte var2 = 0;
 
                      do {
-                        int var38 = var2;
+                        int var40 = var2;
                         var2 += 8;
-                        byte[] var7 = var4.substring(var38, var2).getBytes("ISO-8859-1");
-                        var38 = var3++;
+                        byte[] var7 = var4.substring(var40, var2).getBytes("ISO-8859-1");
+                        var40 = var3++;
                         long var8 = (var7[0] & 255L) << 56
                            | (var7[1] & 255L) << 48
                            | (var7[2] & 255L) << 40
@@ -311,7 +313,7 @@ public class MixinInGameHud {
                               (byte)var8
                            }
                         );
-                        var55 = (var10[0] & 255L) << 56
+                        var59 = (var10[0] & 255L) << 56
                            | (var10[1] & 255L) << 48
                            | (var10[2] & 255L) << 40
                            | (var10[3] & 255L) << 32
@@ -319,26 +321,30 @@ public class MixinInGameHud {
                            | (var10[5] & 255L) << 16
                            | (var10[6] & 255L) << 8
                            | var10[7] & 255L;
-                        byte var54 = -1;
-                        var6[var38] = var55;
+                        byte var58 = -1;
+                        var6[var40] = var59;
                      } while (var2 < var5);
 
                      g = var6;
                      h = new Long[3];
                      short var34 = 16323;
-                     long var40 = 2287480718963601936L ^ var26;
-                     String var48 = a(101, a(var22));
-                     byte var41 = -1;
-                     a = var48;
-                     long var28 = b<"q">(8521, 401959129352212932L ^ var26);
-                     long var49 = b<"q">(11200, 5592378988781476686L ^ var26) ^ var28;
-                     var41 = -1;
-                     b = var49;
+                     long var42 = 2287480718963601936L ^ var26;
+                     String var52 = a(101, a(var22));
+                     byte var43 = -1;
+                     a = var52;
+                     short var35 = 8521;
+                     long var44 = 401959129352212932L ^ var26;
+                     long var28 = 73024696905468L;
+                     short var36 = 11200;
+                     long var45 = 5592378988781476686L ^ var26;
+                     long var53 = 73024696905459L ^ var28;
+                     var43 = -1;
+                     b = var53;
                      return;
                   }
                   break;
                default:
-                  var32[var10001] = var55;
+                  var32[var10001] = var59;
                   if (var13 < var16) {
                      continue label47;
                   }
@@ -348,12 +354,12 @@ public class MixinInGameHud {
                   var13 = 0;
             }
 
-            byte var37 = var13;
+            byte var39 = var13;
             var13 += 8;
-            var18 = var15.substring(var37, var13).getBytes("ISO-8859-1");
+            var18 = var15.substring(var39, var13).getBytes("ISO-8859-1");
             var32 = var17;
             var10001 = var14++;
-            var45 = (var18[0] & 255L) << 56
+            var49 = (var18[0] & 255L) << 56
                | (var18[1] & 255L) << 48
                | (var18[2] & 255L) << 40
                | (var18[3] & 255L) << 32
@@ -361,7 +367,7 @@ public class MixinInGameHud {
                | (var18[5] & 255L) << 16
                | (var18[6] & 255L) << 8
                | var18[7] & 255L;
-            var51 = 0;
+            var55 = 0;
          }
       }
    }
@@ -387,39 +393,48 @@ public class MixinInGameHud {
       int var10000 = var10003;
 
       for (int var4 = 0; var10000 > var4; var4++) {
-         var10001[var4] = (char)(var10001[var4] ^ var10002 ^ switch (var4 % a<"i">(4170, 5208904133450652474L ^ var2)) {
-            case 0 -> {
-               short var15 = 12766;
-               long var20 = 6407735514516159148L ^ var2;
-               yield 56;
-            }
-            case 1 -> {
-               short var14 = 11254;
-               long var19 = 4536317651072049290L ^ var2;
-               yield 91;
-            }
-            case 2 -> {
-               short var13 = 6994;
-               long var18 = 5409375770166513704L ^ var2;
-               yield 88;
-            }
-            case 3 -> {
-               short var12 = 25229;
-               long var17 = 8522280359220029950L ^ var2;
-               yield 87;
-            }
-            case 4 -> {
-               short var11 = 5237;
-               long var16 = 5983613682928148236L ^ var2;
-               yield 120;
-            }
-            case 5 -> {
-               short var10 = 18379;
-               long var10008 = 4543745952340905140L ^ var2;
-               yield 75;
-            }
-            default -> a<"i">(10450, 3881758834009236387L ^ var2);
-         });
+         char var10005 = var10001[var4];
+         short var10008 = 4170;
+         long var10009 = 5208904133450652474L ^ var2;
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 12766;
+               long var23 = 6407735514516159148L ^ var2;
+               var10 = 56;
+               break;
+            case 1:
+               var10 = 11254;
+               long var22 = 4536317651072049290L ^ var2;
+               var10 = 91;
+               break;
+            case 2:
+               var10 = 6994;
+               long var21 = 5409375770166513704L ^ var2;
+               var10 = 88;
+               break;
+            case 3:
+               var10 = 25229;
+               long var20 = 8522280359220029950L ^ var2;
+               var10 = 87;
+               break;
+            case 4:
+               var10 = 5237;
+               long var19 = 5983613682928148236L ^ var2;
+               var10 = 120;
+               break;
+            case 5:
+               var10 = 18379;
+               long var18 = 4543745952340905140L ^ var2;
+               var10 = 75;
+               break;
+            default:
+               var10 = 10450;
+               long var17 = 3881758834009236387L ^ var2;
+               var10 = 81;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

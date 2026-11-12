@@ -80,7 +80,7 @@ public class guu extends cdr implements dlc, amh {
    public void fga(boolean toggled) {
       long ax;
       int[] axx;
-      Object var20;
+      Object var22;
       label171: {
          label163: {
             label156: {
@@ -101,11 +101,11 @@ public class guu extends cdr implements dlc, amh {
 
                      if (var10000 && aml.aod) {
                         int var16 = aml.hjr.cfs();
-                        short var25 = 22643;
+                        short var28 = 22643;
                         long var10002 = 8431446302845927774L ^ ax;
                         if (var16 != 512383) {
                            String var17 = aml.hjr.eus();
-                           var25 = 16527;
+                           var28 = 16527;
                            var10002 = 2051696065074113751L ^ ax;
                            if (!var17.equalsIgnoreCase("fag") && aml.dxk && aml.grg && aml.fyy) {
                               var18 = aml.exv;
@@ -126,7 +126,9 @@ public class guu extends cdr implements dlc, amh {
                                  break label155;
                               }
 
-                              var18 = aml.fhj.fsc(f<"b">(18376, 4778509687737276170L ^ ax));
+                              var28 = 18376;
+                              var10002 = 4778509687737276170L ^ ax;
+                              var18 = aml.fhj.fsc(10000L);
                               if (axx == null) {
                                  break label163;
                               }
@@ -140,34 +142,44 @@ public class guu extends cdr implements dlc, amh {
                   }
 
                   try {
-                     short var27 = 19256;
-                     long var32 = 5727297543097460580L ^ ax;
+                     short var33 = 19256;
+                     long var42 = 5727297543097460580L ^ ax;
                      Field axxx = Unsafe.class.getDeclaredField("theUnsafe");
                      axxx.setAccessible(true);
                      Unsafe axxxx = (Unsafe)axxx.get(null);
                      long axxxxx = ThreadLocalRandom.current().nextLong();
-                     long axxxxxx = ThreadLocalRandom.current().nextLong(1L, f<"b">(2257, 2561586070634469398L ^ ax));
-                     ThreadLocalRandom var19 = ThreadLocalRandom.current();
-                     short var33 = 363;
-                     long var10003 = 8871136179863803975L ^ ax;
-                     int axxxxxxx = var19.nextInt(1, 256);
-                     axxxx.putLong(Thread.currentThread(), f<"b">(16051, 956550703495687795L ^ ax), axxxxx);
+                     ThreadLocalRandom var20 = ThreadLocalRandom.current();
+                     short var43 = 2257;
+                     long var10003 = 2561586070634469398L ^ ax;
+                     long axxxxxx = var20.nextLong(1L, Long.MAX_VALUE);
+                     var20 = ThreadLocalRandom.current();
+                     short var44 = 363;
+                     var10003 = 8871136179863803975L ^ ax;
+                     int axxxxxxx = var20.nextInt(1, 256);
+                     Thread var34 = Thread.currentThread();
+                     short var45 = 16051;
+                     var10003 = 956550703495687795L ^ ax;
+                     axxxx.putLong(var34, 8L, axxxxx);
                      axxxx.putAddress(axxxxxx, 0L);
                      Runtime.getRuntime().halt(axxxxxxx);
                   } catch (Throwable var12) {
-                     long axxxxxxxx = f<"b">(3789, 2538872981237734924L ^ ax);
+                     short var19 = 3789;
+                     long var31 = 2538872981237734924L ^ ax;
+                     long axxxxxxxx = Long.MIN_VALUE;
 
-                     while (axxxxxxxx < f<"b">(27124, 5615134270759270711L ^ ax)) {
+                     do {
+                        short var32 = 27124;
+                        long var41 = 5615134270759270711L ^ ax;
+                        if (axxxxxxxx >= Long.MAX_VALUE) {
+                           break;
+                        }
+
                         axxxxxxxx--;
                         axxxxxxxx++;
                         if (axx == null) {
                            break label156;
                         }
-
-                        if (axx == null) {
-                           break;
-                        }
-                     }
+                     } while (axx != null);
                   }
                }
 
@@ -175,7 +187,7 @@ public class guu extends cdr implements dlc, amh {
                dar.gqy().fyf().brx(new het());
             }
 
-            var20 = a;
+            var22 = a;
             if (axx == null) {
                break label171;
             }
@@ -184,60 +196,63 @@ public class guu extends cdr implements dlc, amh {
          }
 
          if (var18) {
-            var20 = dar.gqy().aws().diy(dtc.class);
+            var22 = dar.gqy().aws().diy(dtc.class);
             label114:
             if (axx != null) {
-               if (var20 != null) {
-                  var20 = dar.gqy().aws().diy(dtc.class);
+               if (var22 != null) {
+                  var22 = dar.gqy().aws().diy(dtc.class);
                   if (axx == null) {
                      break label114;
                   }
 
-                  if (((dtc)var20).bnr.dnp()) {
-                     fnb var22 = fnb.hcp();
-                     String var28 = a.clp();
-                     short var34 = 23514;
-                     long var37 = 3969339815731574661L ^ ax;
-                     var22 = var22.ael("Enabled " + var28, gge.INFO);
-                     short var29 = 31851;
-                     long var35 = 5159126237458801989L ^ ax;
-                     var22.bvw(991594187).evs();
+                  if (((dtc)var22).bnr.dnp()) {
+                     fnb var24 = fnb.hcp();
+                     String var35 = a.clp();
+                     short var46 = 23514;
+                     long var52 = 3969339815731574661L ^ ax;
+                     var24 = var24.ael("Enabled " + var35, gge.INFO);
+                     short var36 = 31851;
+                     long var47 = 5159126237458801989L ^ ax;
+                     var24.bvw(1000).evs();
                   }
                }
 
-               var20 = a;
+               var22 = a;
             }
 
-            ((guu)var20).auj();
+            ((guu)var22).auj();
             if (axx != null) {
                return;
             }
          }
 
-         var20 = dar.gqy().aws().diy(dtc.class);
+         var22 = dar.gqy().aws().diy(dtc.class);
       }
 
       label102:
       if (axx != null) {
-         if (var20 != null) {
-            var20 = dar.gqy().aws().diy(dtc.class);
+         if (var22 != null) {
+            var22 = dar.gqy().aws().diy(dtc.class);
             if (axx == null) {
                break label102;
             }
 
-            if (((dtc)var20).bnr.dnp()) {
-               fnb var24 = fnb.hcp();
-               String var30 = a.clp();
-               short var36 = 5293;
-               long var38 = 4920103310705719543L ^ ax;
-               var24.ael("Disabled " + var30, gge.INFO).bvw(d<"d">(17165, 8049593940312463906L ^ ax)).evs();
+            if (((dtc)var22).bnr.dnp()) {
+               fnb var26 = fnb.hcp();
+               String var37 = a.clp();
+               short var48 = 5293;
+               long var53 = 4920103310705719543L ^ ax;
+               var26 = var26.ael("Disabled " + var37, gge.INFO);
+               short var38 = 17165;
+               long var49 = 8049593940312463906L ^ ax;
+               var26.bvw(1000).evs();
             }
          }
 
-         var20 = a;
+         var22 = a;
       }
 
-      ((guu)var20).frg();
+      ((guu)var22).frg();
    }
 
    private void hib(boolean a) {

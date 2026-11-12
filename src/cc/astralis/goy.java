@@ -17,7 +17,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.class_11908;
 import net.minecraft.class_2561;
 import net.minecraft.class_310;
-import net.minecraft.class_327;
 import net.minecraft.class_332;
 import net.minecraft.class_342;
 import net.minecraft.class_4185;
@@ -64,9 +63,9 @@ public class goy extends class_437 implements dlc {
       var10005 = axx - 10;
       short var26 = 12094;
       var10007 = 3137800110755080431L ^ a;
-      short var32 = 9001;
+      short var34 = 9001;
       long var10008 = 367769030470034671L ^ a;
-      short var33 = 22455;
+      short var37 = 22455;
       long var10009 = 3832907705766573380L ^ a;
       a.apj = new class_342(a.field_22793, var10004, var10005, 200, 20, class_2561.method_43470("UID"));
       short var10001 = 31548;
@@ -88,7 +87,9 @@ public class goy extends class_437 implements dlc {
       var14 = axx + 25;
       var20 = 2136;
       var10006 = 1985195981394956168L ^ a;
-      a.hhx = (class_4185)a.method_37063(var8.method_46434(var11, var14, 200, b<"i">(15887, 7166377219584489928L ^ a)).method_46431());
+      short var29 = 15887;
+      var10007 = 7166377219584489928L ^ a;
+      a.hhx = (class_4185)a.method_37063(var8.method_46434(var11, var14, 200, 20).method_46431());
       short var9 = 3740;
       var10003 = 3964922449786317922L ^ a;
       class_7840 var10 = class_4185.method_46430(class_2561.method_43470("Copy HWID"), axxx -> {
@@ -117,7 +118,9 @@ public class goy extends class_437 implements dlc {
       var16 = axx + 50;
       var20 = 2136;
       var10006 = 1985195981394956168L ^ a;
-      a.ebr = (class_4185)a.method_37063(var10.method_46434(var13, var16, 200, b<"i">(15887, 7166377219584489928L ^ a)).method_46431());
+      short var32 = 15887;
+      var10007 = 7166377219584489928L ^ a;
+      a.ebr = (class_4185)a.method_37063(var10.method_46434(var13, var16, 200, 20).method_46431());
    }
 
    // $VF: Handled exception range with multiple entry points by splitting it
@@ -243,13 +246,14 @@ public class goy extends class_437 implements dlc {
             var10 = a;
             if (axxx != null) {
                if (a.auq && aml.gkg) {
-                  class_327 var11 = a.field_22793;
                   var10002 = 28629;
                   var10003 = 4926904695811789008L ^ ax;
-                  var10004 = axxxx + b<"i">(1154, 2939368242597355191L ^ ax);
+                  var10005 = 1154;
+                  var10006 = 2939368242597355191L ^ ax;
+                  var10004 = axxxx + 80;
                   var10005 = 21459;
                   var10006 = 4549564630635710975L ^ ax;
-                  a.method_25300(var11, "Invalid UID / Could not verify. Please try again.", axx, var10004, 16729413);
+                  a.method_25300(a.field_22793, "Invalid UID / Could not verify. Please try again.", axx, var10004, 16729413);
                   break label43;
                }
 
@@ -267,7 +271,7 @@ public class goy extends class_437 implements dlc {
                }
 
                short var10001 = 7026;
-               long var13 = 1985972408472282234L ^ ax;
+               long var12 = 1985972408472282234L ^ ax;
                if (a.fno.equals("Authenticating...")) {
                   var10005 = 3614;
                   var10006 = 2211076234360902708L ^ ax;

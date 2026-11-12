@@ -27,10 +27,12 @@ public abstract class fsa<K, V> implements bri<K, V> {
 
    public fsa() {
       long a = e ^ 84240384081749L;
-      long ax = b<"m">(21579, 7048316940188676592L ^ a);
-      cdr[] var10000 = gge();
+      short var10000 = 21579;
+      long var10001 = 7048316940188676592L ^ a;
+      long ax = 90212258155054L;
+      cdr[] var6 = gge();
       super();
-      cdr[] var5 = var10000;
+      cdr[] var5 = var6;
       a.dwi = new HashMap<>();
       if (var5 == null) {
          cdr.apm(new String[3]);
@@ -40,7 +42,9 @@ public abstract class fsa<K, V> implements bri<K, V> {
    @Override
    public void ctx(K key, V value) {
       long ax = e ^ 91007288685109L;
-      long axx = b<"m">(13662, 2594145330941533572L ^ ax);
+      short var10000 = 13662;
+      long var10001 = 2594145330941533572L ^ ax;
+      long axx = 91224480797837L;
       gge();
       a.dwi.put(a, a);
       if (cdr.haa() == null) {

@@ -1,5 +1,6 @@
 package cc.astralis;
 
+import java.awt.Color;
 import java.lang.invoke.CallSite;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -29,6 +30,7 @@ import net.minecraft.class_2777;
 import net.minecraft.class_2797;
 import net.minecraft.class_3417;
 import net.minecraft.class_4048;
+import net.minecraft.class_4587;
 import net.minecraft.class_7422;
 import net.minecraft.class_7439;
 import net.minecraft.class_7472;
@@ -385,13 +387,15 @@ public class dvw extends guu {
          }
 
          a.hhe = System.currentTimeMillis();
-         a.exx = a.fhx.nextInt(e<"l">(699, 559259110792310285L ^ ax));
+         short var10002 = 699;
+         long var10003 = 559259110792310285L ^ ax;
+         a.exx = a.fhx.nextInt(101);
       }
 
       dvw var6 = a;
       if (axxx != null) {
          short var10001 = 13131;
-         long var10002 = 308671681357704654L ^ ax;
+         long var7 = 308671681357704654L ^ ax;
          if (!a.hba.emb("Attack")) {
             return;
          }
@@ -507,7 +511,12 @@ public class dvw extends guu {
       class_238 axxxxx = new class_238(-axxxx, 0.0, -axxxx, axxxx, axxx.comp_2186(), axxxx).method_1014(0.05);
       class_243 axxxxxx = a.cd.method_60933();
       if (axxxxxx != null) {
-         bqf.hjf(a.bus(), axxxxx.method_997(axxxxxx), dar.gqy().deo(), e<"l">(17081, 9034094441510854985L ^ ax));
+         class_4587 var11 = a.bus();
+         class_238 var10001 = axxxxx.method_997(axxxxxx);
+         Color var10002 = dar.gqy().deo();
+         short var10003 = 17081;
+         long var10004 = 9034094441510854985L ^ ax;
+         bqf.hjf(var11, var10001, var10002, 200);
       }
    }
 

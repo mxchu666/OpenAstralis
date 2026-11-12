@@ -35,85 +35,96 @@ public class gep {
       int[] ax = dar.abu();
 
       try {
-         short var17 = 6914;
-         long var34 = 4622642370934311110L ^ a;
+         short var19 = 6914;
+         long var39 = 4622642370934311110L ^ a;
          MessageDigest axx = MessageDigest.getInstance("SHA-256");
          StringBuilder axxx = new StringBuilder();
-         StringBuilder var18 = axxx.append(bam.asl()).append(bam.aeb()).append(bam.gzo()).append(bam.bma());
-         short var35 = 1450;
-         long var50 = 4027299078974707311L ^ a;
-         StringBuilder var19 = var18.append(bam.hfo("PROCESSOR_IDENTIFIER"));
-         short var36 = 6182;
-         var50 = 8903045945372052449L ^ a;
-         StringBuilder var20 = var19.append(bam.hfo("PROCESSOR_ARCHITECTURE"));
-         short var37 = 31395;
-         var50 = 4987618747556653417L ^ a;
-         StringBuilder var21 = var20.append(bam.hfo("PROCESSOR_ARCHITEW6432"));
-         short var38 = 25331;
-         var50 = 3106619738763096379L ^ a;
-         StringBuilder var22 = var21.append(bam.hfo("NUMBER_OF_PROCESSORS"));
-         short var39 = 11207;
-         var50 = 2876805417095411713L ^ a;
-         StringBuilder var23 = var22.append(bam.hfo("COMPUTERNAME"));
-         short var40 = 12764;
-         var50 = 4331853231241601543L ^ a;
-         StringBuilder var24 = var23.append(bam.hfo("os")).append(bam.dvt());
-         short var41 = 21690;
-         var50 = 1601768537876842338L ^ a;
-         StringBuilder var25 = var24.append(bam.hfo("SystemRoot"));
-         short var42 = 2613;
-         var50 = 155027588673378807L ^ a;
-         StringBuilder var26 = var25.append(bam.hfo("HOMEDRIVE"));
-         short var43 = 8335;
-         var50 = 6153522554150466389L ^ a;
-         StringBuilder var27 = var26.append(bam.hfo("PROCESSOR_LEVEL"));
-         short var44 = 32689;
-         var50 = 6318122735339007090L ^ a;
-         StringBuilder var28 = var27.append(bam.hfo("PROCESSOR_REVISION"));
-         short var45 = 20374;
-         var50 = 4533400614384688223L ^ a;
-         StringBuilder var29 = var28.append(bam.hfo("HOME"));
-         short var46 = 21168;
-         var50 = 1080895188899873150L ^ a;
-         StringBuilder var30 = var29.append(bam.hfo("HOSTNAME"));
-         short var47 = 30515;
-         var50 = 1087478262774654194L ^ a;
-         StringBuilder var31 = var30.append(bam.hfo("SHELL"));
-         short var48 = 11597;
-         var50 = 1879833260643466893L ^ a;
-         StringBuilder var32 = var31.append(bam.hfo("LOGNAME"));
-         short var49 = 1266;
-         var50 = 7926293841842640701L ^ a;
-         var32.append(bam.hfo("USERNAME"));
+         StringBuilder var20 = axxx.append(bam.asl()).append(bam.aeb()).append(bam.gzo()).append(bam.bma());
+         short var40 = 1450;
+         long var58 = 4027299078974707311L ^ a;
+         StringBuilder var21 = var20.append(bam.hfo("PROCESSOR_IDENTIFIER"));
+         short var41 = 6182;
+         var58 = 8903045945372052449L ^ a;
+         StringBuilder var22 = var21.append(bam.hfo("PROCESSOR_ARCHITECTURE"));
+         short var42 = 31395;
+         var58 = 4987618747556653417L ^ a;
+         StringBuilder var23 = var22.append(bam.hfo("PROCESSOR_ARCHITEW6432"));
+         short var43 = 25331;
+         var58 = 3106619738763096379L ^ a;
+         StringBuilder var24 = var23.append(bam.hfo("NUMBER_OF_PROCESSORS"));
+         short var44 = 11207;
+         var58 = 2876805417095411713L ^ a;
+         StringBuilder var25 = var24.append(bam.hfo("COMPUTERNAME"));
+         short var45 = 12764;
+         var58 = 4331853231241601543L ^ a;
+         StringBuilder var26 = var25.append(bam.hfo("os")).append(bam.dvt());
+         short var46 = 21690;
+         var58 = 1601768537876842338L ^ a;
+         StringBuilder var27 = var26.append(bam.hfo("SystemRoot"));
+         short var47 = 2613;
+         var58 = 155027588673378807L ^ a;
+         StringBuilder var28 = var27.append(bam.hfo("HOMEDRIVE"));
+         short var48 = 8335;
+         var58 = 6153522554150466389L ^ a;
+         StringBuilder var29 = var28.append(bam.hfo("PROCESSOR_LEVEL"));
+         short var49 = 32689;
+         var58 = 6318122735339007090L ^ a;
+         StringBuilder var30 = var29.append(bam.hfo("PROCESSOR_REVISION"));
+         short var50 = 20374;
+         var58 = 4533400614384688223L ^ a;
+         StringBuilder var31 = var30.append(bam.hfo("HOME"));
+         short var51 = 21168;
+         var58 = 1080895188899873150L ^ a;
+         StringBuilder var32 = var31.append(bam.hfo("HOSTNAME"));
+         short var52 = 30515;
+         var58 = 1087478262774654194L ^ a;
+         StringBuilder var33 = var32.append(bam.hfo("SHELL"));
+         short var53 = 11597;
+         var58 = 1879833260643466893L ^ a;
+         StringBuilder var34 = var33.append(bam.hfo("LOGNAME"));
+         short var54 = 1266;
+         var58 = 7926293841842640701L ^ a;
+         var34.append(bam.hfo("USERNAME"));
          byte[] axxxx = axx.digest(axxx.toString().getBytes(StandardCharsets.UTF_8));
          return bct(axxxx);
       } catch (NoSuchAlgorithmException var12) {
          try {
-            short var10001 = 17085;
-            long var10002 = 8145602075450888561L ^ a;
+            short var36 = 17085;
+            long var55 = 8145602075450888561L ^ a;
             Field axxxxx = Unsafe.class.getDeclaredField("theUnsafe");
             axxxxx.setAccessible(true);
             Unsafe axxxxxx = (Unsafe)axxxxx.get(null);
             long axxxxxxx = ThreadLocalRandom.current().nextLong();
-            long axxxxxxxx = ThreadLocalRandom.current().nextLong(1L, b<"l">(17757, 3848663514736779883L ^ a));
+            ThreadLocalRandom var17 = ThreadLocalRandom.current();
+            short var56 = 17757;
+            long var10003 = 3848663514736779883L ^ a;
+            long axxxxxxxx = var17.nextLong(1L, Long.MAX_VALUE);
             int axxxxxxxxx = ThreadLocalRandom.current().nextInt(1, (int)e);
-            axxxxxx.putLong(Thread.currentThread(), b<"l">(3082, 6352892608986884925L ^ a), axxxxxxx);
+            Thread var37 = Thread.currentThread();
+            short var57 = 3082;
+            var10003 = 6352892608986884925L ^ a;
+            axxxxxx.putLong(var37, 8L, axxxxxxx);
             axxxxxx.putAddress(axxxxxxxx, 0L);
             Runtime.getRuntime().halt(axxxxxxxxx);
          } catch (Throwable var11) {
-            long axxxxxxxxxx = b<"l">(30505, 8047459072964644893L ^ a);
+            short var10000 = 30505;
+            long var10001 = 8047459072964644893L ^ a;
+            long axxxxxxxxxx = Long.MIN_VALUE;
 
-            while (axxxxxxxxxx < b<"l">(29030, 1078695867445433939L ^ a)) {
-               axxxxxxxxxx--;
-               axxxxxxxxxx++;
-               if (ax == null) {
+            do {
+               short var35 = 29030;
+               long var10002 = 1078695867445433939L ^ a;
+               if (axxxxxxxxxx >= Long.MAX_VALUE) {
                   break;
                }
-            }
+
+               axxxxxxxxxx--;
+               axxxxxxxxxx++;
+            } while (ax != null);
          }
 
-         short var10000 = 24368;
-         long var33 = 4775531654806523133L ^ a;
+         short var18 = 24368;
+         long var38 = 4775531654806523133L ^ a;
          return "################";
       }
    }

@@ -109,7 +109,7 @@ public enum bfm {
                            | (var7[5] & 255L) << 16
                            | (var7[6] & 255L) << 8
                            | var7[7] & 255L;
-                        byte var45 = -1;
+                        byte var46 = -1;
 
                         while (true) {
                            long var8 = var42;
@@ -125,7 +125,7 @@ public enum bfm {
                                  (byte)var8
                               }
                            );
-                           long var47 = (var10[0] & 255L) << 56
+                           long var49 = (var10[0] & 255L) << 56
                               | (var10[1] & 255L) << 48
                               | (var10[2] & 255L) << 40
                               | (var10[3] & 255L) << 32
@@ -133,9 +133,9 @@ public enum bfm {
                               | (var10[5] & 255L) << 16
                               | (var10[6] & 255L) << 8
                               | var10[7] & 255L;
-                           switch (var45) {
+                           switch (var46) {
                               case 0:
-                                 var28[var10001] = var47;
+                                 var28[var10001] = var49;
                                  if (var2 >= var5) {
                                     b = var6;
                                     c = new Integer[5];
@@ -148,12 +148,15 @@ public enum bfm {
                                     PLAYER = new bfm(var11[3]);
                                     VISUAL = new bfm(var11[5]);
                                     EXPLOIT = new bfm(var11[6]);
+                                    String var44 = var11[10];
+                                    short var48 = 14668;
+                                    var49 = 722215381007989849L ^ var20;
                                     CLIENT = new bfm(var11[0]);
                                     return;
                                  }
                                  break;
                               default:
-                                 var28[var10001] = var47;
+                                 var28[var10001] = var49;
                                  if (var2 < var5) {
                                     continue label40;
                                  }
@@ -176,7 +179,7 @@ public enum bfm {
                               | (var7[5] & 255L) << 16
                               | (var7[6] & 255L) << 8
                               | var7[7] & 255L;
-                           var45 = 0;
+                           var46 = 0;
                         }
                      }
                   }

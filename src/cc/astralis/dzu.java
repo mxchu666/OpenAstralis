@@ -23,113 +23,23 @@ public class dzu extends guu {
    private static final Map p;
 
    public dzu() {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      //
-      // Bytecode:
-      // 00: getstatic cc/astralis/dzu.a J
-      // 03: ldc2_w 22322584483985
-      // 06: lxor
-      // 07: lstore 1
-      // 08: aload 0
-      // 09: getstatic cc/astralis/bfm.EXPLOIT Lcc/astralis/bfm;
-      // 0c: invokespecial cc/astralis/guu.<init> (Lcc/astralis/bfm;)V
-      // 0f: aload 0
-      // 10: new cc/astralis/cyx
-      // 13: dup
-      // 14: getstatic cc/astralis/dzu.g Ljava/lang/String;
-      // 17: sipush 29113
-      // 1a: ldc2_w 5542798435304387725
-      // 1d: lload 1
-      // 1e: lxor
-      // 1f: pop2
-      // 20: pop
-      // 21: ldc 1205291450
-      // 23: anewarray 40
-      // 26: dup
-      // 27: bipush 0
-      // 28: new cc/astralis/awe
-      // 2b: dup
-      // 2c: aload 0
-      // 2d: invokespecial cc/astralis/awe.<init> (Lcc/astralis/guu;)V
-      // 30: aastore
-      // 31: dup
-      // 32: bipush 1
-      // 33: new cc/astralis/frr
-      // 36: dup
-      // 37: aload 0
-      // 38: invokespecial cc/astralis/frr.<init> (Lcc/astralis/guu;)V
-      // 3b: aastore
-      // 3c: dup
-      // 3d: bipush 2
-      // 3e: new cc/astralis/aoy
-      // 41: dup
-      // 42: aload 0
-      // 43: invokespecial cc/astralis/aoy.<init> (Lcc/astralis/guu;)V
-      // 46: aastore
-      // 47: dup
-      // 48: bipush 3
-      // 49: new cc/astralis/guc
-      // 4c: dup
-      // 4d: aload 0
-      // 4e: invokespecial cc/astralis/guc.<init> (Lcc/astralis/guu;)V
-      // 51: aastore
-      // 52: dup
-      // 53: bipush 4
-      // 54: new cc/astralis/fii
-      // 57: dup
-      // 58: aload 0
-      // 59: invokespecial cc/astralis/fii.<init> (Lcc/astralis/guu;)V
-      // 5c: aastore
-      // 5d: dup
-      // 5e: bipush 5
-      // 5f: new cc/astralis/bey
-      // 62: dup
-      // 63: aload 0
-      // 64: invokespecial cc/astralis/bey.<init> (Lcc/astralis/guu;)V
-      // 67: aastore
-      // 68: dup
-      // 69: sipush 20617
-      // 6c: ldc2_w 8524632426966193598
-      // 6f: lload 1
-      // 70: lxor
-      // 71: invokedynamic a (IJ)I bsm=cc/astralis/dzu.b (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // 76: new cc/astralis/abn
-      // 79: dup
-      // 7a: aload 0
-      // 7b: invokespecial cc/astralis/abn.<init> (Lcc/astralis/guu;)V
-      // 7e: aastore
-      // 7f: dup
-      // 80: sipush 8071
-      // 83: ldc2_w 4840734307414497970
-      // 86: lload 1
-      // 87: lxor
-      // 88: pop2
-      // 89: pop
-      // 8a: ldc -453527880
-      // 8c: new cc/astralis/dxa
-      // 8f: dup
-      // 90: aload 0
-      // 91: invokespecial cc/astralis/dxa.<init> (Lcc/astralis/guu;)V
-      // 94: aastore
-      // 95: dup
-      // 96: sipush 30175
-      // 99: ldc2_w 5909663410986070249
-      // 9c: lload 1
-      // 9d: lxor
-      // 9e: invokedynamic a (IJ)I bsm=cc/astralis/dzu.b (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // a3: new cc/astralis/dlg
-      // a6: dup
-      // a7: aload 0
-      // a8: invokespecial cc/astralis/dlg.<init> (Lcc/astralis/guu;)V
-      // ab: aastore
-      // ac: invokespecial cc/astralis/cyx.<init> (Ljava/lang/String;[Lcc/astralis/hcr;)V
-      // af: putfield cc/astralis/dzu.epd Lcc/astralis/cyx;
-      // b2: aload 0
-      // b3: aload 0
-      // b4: getfield cc/astralis/dzu.epd Lcc/astralis/cyx;
-      // b7: invokevirtual cc/astralis/dzu.beb (Lcc/astralis/ffn;)V
-      // ba: return
+      long a = dzu.a ^ 22322584483985L;
+      super(bfm.EXPLOIT);
+      String var10003 = g;
+      short var10004 = 29113;
+      long var10005 = 5542798435304387725L ^ a;
+      hcr[] var3 = new hcr[]{new awe(a), new frr(a), new aoy(a), new guc(a), new fii(a), new bey(a), null, null, null};
+      short var10006 = 20617;
+      long var10007 = 8524632426966193598L ^ a;
+      var3[6] = new abn(a);
+      var10006 = 8071;
+      var10007 = 4840734307414497970L ^ a;
+      var3[7] = new dxa(a);
+      var10006 = 30175;
+      var10007 = 5909663410986070249L ^ a;
+      var3[8] = new dlg(a);
+      a.epd = new cyx(var10003, var3);
+      a.beb(a.epd);
    }
 
    @gdz

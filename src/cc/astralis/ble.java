@@ -37,23 +37,27 @@ public class ble extends hcr {
       long var10003 = 8872405426394427322L ^ ax;
       super(a, "Watchdog");
       a.ftw = (efx)a.clv();
-      short var4 = 855;
+      short var7 = 855;
       long var10004 = 6210375185528702314L ^ ax;
-      short var5 = 28558;
+      short var8 = 28558;
       long var10005 = 6000472842251315637L ^ ax;
-      String[] var6 = new String[2];
+      String[] var9 = new String[2];
       short var10008 = 28558;
       long var10009 = 6000472842251315637L ^ ax;
-      var6[0] = "Jump";
+      var9[0] = "Jump";
       var10008 = 32419;
       var10009 = 4303097045069510813L ^ ax;
-      var6[1] = "Bypass";
-      a.fob = new adu("Watchdog Sprint Mode", "Jump", var6);
+      var9[1] = "Bypass";
+      a.fob = new adu("Watchdog Sprint Mode", "Jump", var9);
       a.cce = new cbm();
       a.bzg = 0;
-      a.dgm = b<"e">(18672, 8424798808615980287L ^ ax);
+      short var10001 = 18672;
+      long var5 = 8424798808615980287L ^ ax;
+      a.dgm = -10000000000000000L;
       a.gip = 1.0E18;
-      a.ccb = b<"e">(8001, 2276793660206111567L ^ ax);
+      var10001 = 8001;
+      long var6 = 2276793660206111567L ^ ax;
+      a.ccb = 111111111111111111L;
       a.ebu(a.fob);
    }
 

@@ -228,11 +228,11 @@ public class cwp implements dlc {
 
                int axxxxxx = var11;
                short var12 = 367;
-               long var14 = 5404457736760385160L ^ ax;
+               long var15 = 5404457736760385160L ^ ax;
                float axxxxxxx = (6 + axxxxxx * axxxxxx) / 3.0F * 0.75F;
                int axxxxxxxx = (int)axxxxxxx;
-               float var15;
-               int var13 = (var15 = axxxxxxx - axxxxxxxx) == 0.0F ? 0 : (var15 < 0.0F ? -1 : 1);
+               float var21;
+               int var13 = (var21 = axxxxxxx - axxxxxxxx) == 0.0F ? 0 : (var21 < 0.0F ? -1 : 1);
                if (axxxx != null) {
                   if (var13 < 0) {
                      axxxxxxxx--;
@@ -256,8 +256,12 @@ public class cwp implements dlc {
       label56: {
          label76: {
             if (axxxx != null) {
-               if (var11 > a<"p">(12169, 5545812246706286699L ^ ax)) {
-                  axxx = a<"p">(12169, 5545812246706286699L ^ ax);
+               var10001 = 12169;
+               var10002 = 5545812246706286699L ^ ax;
+               if (var11 > 25) {
+                  short var14 = 12169;
+                  long var17 = 5545812246706286699L ^ ax;
+                  axxx = 25;
                   if (axxxx != null) {
                      break label76;
                   }
@@ -280,7 +284,9 @@ public class cwp implements dlc {
       }
 
       if (var11 > 0) {
-         axx = axx * (a<"p">(12169, 5545812246706286699L ^ ax) - axxx) / 25.0F;
+         var10001 = 12169;
+         var10002 = 5545812246706286699L ^ ax;
+         axx = axx * (25 - axxx) / 25.0F;
       }
 
       return axx;
@@ -448,12 +454,12 @@ public class cwp implements dlc {
 
             if (var16 == var10001) {
                double[] axxxxxxxxxx = new double[]{dw(axx), dw(axxxx)};
-               double var29;
-               var17 = (var29 = axxxxxxxxxx[0] - axxxxxxxxxx[1]) == 0.0 ? 0 : (var29 < 0.0 ? -1 : 1);
+               double var31;
+               var17 = (var31 = axxxxxxxxxx[0] - axxxxxxxxxx[1]) == 0.0 ? 0 : (var31 < 0.0 ? -1 : 1);
                if (axxx != null) {
                   if (var17 != 0) {
-                     double var30;
-                     int var18 = (var30 = axxxxxxxxxx[0] - axxxxxxxxxx[1]) == 0.0 ? 0 : (var30 < 0.0 ? -1 : 1);
+                     double var32;
+                     int var18 = (var32 = axxxxxxxxxx[0] - axxxxxxxxxx[1]) == 0.0 ? 0 : (var32 < 0.0 ? -1 : 1);
                      if (axxx != null) {
                         var18 = var18 > 0 ? 1 : 0;
                      }
@@ -507,12 +513,12 @@ public class cwp implements dlc {
          var19[0] = fsw(axx);
          var19[1] = fsw(axxxx);
          double[] axxxxxxxxxxx = var19;
-         double var31;
-         int var20 = (var31 = axxxxxxxxxxx[0] - axxxxxxxxxxx[1]) == 0.0 ? 0 : (var31 < 0.0 ? -1 : 1);
+         double var33;
+         int var20 = (var33 = axxxxxxxxxxx[0] - axxxxxxxxxxx[1]) == 0.0 ? 0 : (var33 < 0.0 ? -1 : 1);
          if (axxx != null) {
             if (var20 != 0) {
-               double var32;
-               int var21 = (var32 = axxxxxxxxxxx[0] - axxxxxxxxxxx[1]) == 0.0 ? 0 : (var32 < 0.0 ? -1 : 1);
+               double var34;
+               int var21 = (var34 = axxxxxxxxxxx[0] - axxxxxxxxxxx[1]) == 0.0 ? 0 : (var34 < 0.0 ? -1 : 1);
                if (axxx != null) {
                   var21 = var21 < 0 ? 1 : 0;
                }
@@ -536,7 +542,7 @@ public class cwp implements dlc {
          }
 
          short var26 = 22621;
-         long var28 = 532514951895246210L ^ ax;
+         long var29 = 532514951895246210L ^ ax;
          if (var20 < 9) {
             return (boolean)1;
          }
@@ -574,12 +580,12 @@ public class cwp implements dlc {
 
                if (var23 != 0) {
                   double[] axxxxxxxxxxxx = new double[]{ept(axx), ept(axxxx)};
-                  double var33;
-                  var23 = (var33 = axxxxxxxxxxxx[0] - axxxxxxxxxxxx[1]) == 0.0 ? 0 : (var33 < 0.0 ? -1 : 1);
+                  double var35;
+                  var23 = (var35 = axxxxxxxxxxxx[0] - axxxxxxxxxxxx[1]) == 0.0 ? 0 : (var35 < 0.0 ? -1 : 1);
                   if (axxx != null) {
                      if (var23 != 0) {
-                        double var34;
-                        int var24 = (var34 = axxxxxxxxxxxx[0] - axxxxxxxxxxxx[1]) == 0.0 ? 0 : (var34 < 0.0 ? -1 : 1);
+                        double var36;
+                        int var24 = (var36 = axxxxxxxxxxxx[0] - axxxxxxxxxxxx[1]) == 0.0 ? 0 : (var36 < 0.0 ? -1 : 1);
                         if (axxx != null) {
                            var24 = var24 > 0 ? 1 : 0;
                         }
@@ -595,13 +601,15 @@ public class cwp implements dlc {
                   }
 
                   if (var23 != 0) {
-                     int var35 = a.field_7874;
-                     int var27 = a<"p">(9557, 9105485325104748685L ^ ax) + axxxxxxxx.ckz();
+                     int var37 = a.field_7874;
+                     int var27 = 9557;
+                     long var30 = 9105485325104748685L ^ ax;
+                     var27 = 37 + axxxxxxxx.ckz();
                      if (axxx == null) {
-                        return (boolean)(var35 < var27 ? 1 : 0);
+                        return (boolean)(var37 < var27 ? 1 : 0);
                      }
 
-                     if (var35 == var27) {
+                     if (var37 == var27) {
                         return true;
                      }
                   }

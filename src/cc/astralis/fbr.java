@@ -395,11 +395,11 @@ public final class fbr {
 
             if (var20 && aml.aod) {
                var20 = aml.hjr.cfs();
-               short var27 = 28071;
+               short var29 = 28071;
                long var10002 = 7861086667341055680L ^ ax;
                if (var20 != 512383) {
                   String var23 = aml.hjr.eus();
-                  var27 = 9781;
+                  var29 = 9781;
                   var10002 = 998891774324145532L ^ ax;
                   label147:
                   if (!var23.equalsIgnoreCase("fag") && aml.dxk && aml.grg && aml.fyy) {
@@ -409,7 +409,9 @@ public final class fbr {
                            break label174;
                         }
 
-                        if (aml.fhj.fsc(c<"x">(18475, 8145380057277760491L ^ ax))) {
+                        var29 = 18475;
+                        var10002 = 8145380057277760491L ^ ax;
+                        if (aml.fhj.fsc(10000L)) {
                            break label147;
                         }
                      }
@@ -422,30 +424,41 @@ public final class fbr {
          }
 
          try {
-            short var29 = 5058;
-            long var31 = 7231313911322003594L ^ ax;
+            short var34 = 5058;
+            long var39 = 7231313911322003594L ^ ax;
             Field axxx = Unsafe.class.getDeclaredField("theUnsafe");
             axxx.setAccessible(true);
             Unsafe axxxx = (Unsafe)axxx.get(null);
             long axxxxx = ThreadLocalRandom.current().nextLong();
-            long axxxxxx = ThreadLocalRandom.current().nextLong(1L, c<"x">(14690, 3103449408118354596L ^ ax));
-            ThreadLocalRandom var26 = ThreadLocalRandom.current();
-            short var32 = 7320;
-            long var10003 = 3467025405887985662L ^ ax;
-            int axxxxxxx = var26.nextInt(1, 256);
-            axxxx.putLong(Thread.currentThread(), c<"x">(20542, 223994300224052223L ^ ax), axxxxx);
+            ThreadLocalRandom var27 = ThreadLocalRandom.current();
+            short var40 = 14690;
+            long var10003 = 3103449408118354596L ^ ax;
+            long axxxxxx = var27.nextLong(1L, Long.MAX_VALUE);
+            ThreadLocalRandom var28 = ThreadLocalRandom.current();
+            short var41 = 7320;
+            var10003 = 3467025405887985662L ^ ax;
+            int axxxxxxx = var28.nextInt(1, 256);
+            Thread var35 = Thread.currentThread();
+            short var42 = 20542;
+            var10003 = 223994300224052223L ^ ax;
+            axxxx.putLong(var35, 8L, axxxxx);
             axxxx.putAddress(axxxxxx, 0L);
             Runtime.getRuntime().halt(axxxxxxx);
          } catch (Throwable var12) {
-            long axxxxxxxx = c<"x">(18350, 1126351522103757933L ^ ax);
+            short var26 = 18350;
+            long var32 = 1126351522103757933L ^ ax;
+            long axxxxxxxx = Long.MIN_VALUE;
 
-            while (axxxxxxxx < c<"x">(32767, 8827184021049848893L ^ ax)) {
-               axxxxxxxx--;
-               axxxxxxxx++;
-               if (axx == null) {
+            do {
+               short var33 = 32767;
+               long var38 = 8827184021049848893L ^ ax;
+               if (axxxxxxxx >= Long.MAX_VALUE) {
                   break;
                }
-            }
+
+               axxxxxxxx--;
+               axxxxxxxx++;
+            } while (axx != null);
          }
 
          return a;

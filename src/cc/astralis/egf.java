@@ -28,14 +28,14 @@ public class egf extends brc {
       long a = c ^ 128845265258348L;
       short var10001 = 8060;
       long var10002 = 5277761748000798950L ^ a;
-      super(-2126587670);
+      super(12);
    }
 
    public egf(int configId) {
       long ax = c ^ 21298673153823L;
       short var10001 = 25480;
       long var10002 = 6223622254657483878L ^ ax;
-      super(1510132637);
+      super(12);
       a.dnp = a;
    }
 
@@ -155,14 +155,14 @@ public class egf extends brc {
                      int var21 = var11.length();
                      short var32 = 17639;
                      long var40 = 2521177389257740480L ^ var15;
-                     int var18 = 2000565927;
+                     char var18 = '`';
                      emx(var27);
                      int var17 = -1;
 
                      while (true) {
                         short var28 = 31836;
                         long var33 = 4729235355199334516L ^ var15;
-                        String var41 = b(-1395971003, b(var19.substring(++var17, var17 + var18)));
+                        String var41 = b(61, b(var19.substring(++var17, var17 + var18)));
                         byte var34 = -1;
                         var22[var20++] = var41;
                         if ((var17 += var18) >= var21) {
@@ -224,36 +224,36 @@ public class egf extends brc {
          char var10005 = var10001[var4];
          short var10008 = 25183;
          long var10009 = 3902195872104364822L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % -1684460727) {
+         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
             case 0 -> {
                short var15 = 6026;
                long var21 = 7807986374268800704L ^ var2;
-               yield -1569359379;
+               yield 61;
             }
             case 1 -> {
                short var14 = 1273;
                long var20 = 8440545346886131135L ^ var2;
-               yield 1709695263;
+               yield 42;
             }
             case 2 -> {
                short var13 = 3963;
                long var19 = 2446717343455532603L ^ var2;
-               yield 1922462754;
+               yield 34;
             }
             case 3 -> {
                short var12 = 11617;
                long var18 = 3510974329810088992L ^ var2;
-               yield -923743473;
+               yield 111;
             }
             case 4 -> {
                short var11 = 18778;
                long var17 = 6398256745696432158L ^ var2;
-               yield 328529817;
+               yield 31;
             }
             case 5 -> {
                short var10 = 6654;
                long var16 = 6878293243106115773L ^ var2;
-               yield 1083431047;
+               yield 13;
             }
             default -> 4;
          });

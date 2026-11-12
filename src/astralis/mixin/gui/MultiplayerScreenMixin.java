@@ -55,11 +55,11 @@ public abstract class MultiplayerScreenMixin extends class_437 {
          long var10002 = 8422949729019369663L ^ ax;
          short var8 = 17039;
          long var10003 = 1758456856165913287L ^ ax;
-         class_7840 axxx = var10000.method_46437(100, -865317628);
+         class_7840 axxx = var10000.method_46437(100, 20);
          ScreenAccessor var7 = (ScreenAccessor)axx;
          short var10 = 31614;
          long var10004 = 6147691510815206196L ^ ax;
-         int var9 = axx.field_22789 - -1838766564;
+         int var9 = axx.field_22789 - 105;
          short var11 = 30886;
          long var10005 = 5479877632935373024L ^ ax;
          var7.invokeAddDrawableChild(axxx.method_46433(var9, axx.field_22790 - 35).method_46431());
@@ -231,39 +231,48 @@ public abstract class MultiplayerScreenMixin extends class_437 {
       int var10000 = var10003;
 
       for (int var4 = 0; var10000 > var4; var4++) {
-         var10001[var4] = (char)(var10001[var4] ^ var10002 ^ switch (var4 % a<"v">(16142, 4109483011735642135L ^ var2)) {
-            case 0 -> {
-               short var15 = 24044;
-               long var20 = 1449994098807898873L ^ var2;
-               yield 1804580405;
-            }
-            case 1 -> a<"v">(1157, 3283194311515462559L ^ var2);
-            case 2 -> {
-               short var14 = 15387;
-               long var19 = 3977071433139970823L ^ var2;
-               yield 64;
-            }
-            case 3 -> {
-               short var13 = 25657;
-               long var18 = 2788248577136343851L ^ var2;
-               yield 117;
-            }
-            case 4 -> {
-               short var12 = 30228;
-               long var17 = 2502915071730854147L ^ var2;
-               yield 26;
-            }
-            case 5 -> {
-               short var11 = 16283;
-               long var16 = 5695280048900268164L ^ var2;
-               yield 96;
-            }
-            default -> {
-               short var10007 = 27811;
-               long var10008 = 5080508450642932656L ^ var2;
-               yield 107;
-            }
-         });
+         char var10005 = var10001[var4];
+         short var10008 = 16142;
+         long var10009 = 4109483011735642135L ^ var2;
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 24044;
+               long var23 = 1449994098807898873L ^ var2;
+               var10 = 19;
+               break;
+            case 1:
+               var10 = 1157;
+               long var22 = 3283194311515462559L ^ var2;
+               var10 = 25;
+               break;
+            case 2:
+               var10 = 15387;
+               long var21 = 3977071433139970823L ^ var2;
+               var10 = 64;
+               break;
+            case 3:
+               var10 = 25657;
+               long var20 = 2788248577136343851L ^ var2;
+               var10 = 117;
+               break;
+            case 4:
+               var10 = 30228;
+               long var19 = 2502915071730854147L ^ var2;
+               var10 = 26;
+               break;
+            case 5:
+               var10 = 16283;
+               long var18 = 5695280048900268164L ^ var2;
+               var10 = 96;
+               break;
+            default:
+               var10 = 27811;
+               long var17 = 5080508450642932656L ^ var2;
+               var10 = 107;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

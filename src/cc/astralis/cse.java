@@ -81,9 +81,9 @@ public class cse extends brc {
 
       while (true) {
          byte[] var19 = var12.doFinal(var16.substring(++var14, var14 + var15).getBytes("ISO-8859-1"));
-         String var41 = b(var19).intern();
+         String var48 = b(var19).intern();
          int var10001 = -1;
-         var11[var17++] = var41;
+         var11[var17++] = var48;
          if ((var14 += var15) >= var18) {
             i = new HashMap(13);
             Cipher var0;
@@ -110,7 +110,7 @@ public class cse extends brc {
                byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
                long[] var33 = var6;
                var10001 = var3++;
-               long var44 = (var7[0] & 255L) << 56
+               long var51 = (var7[0] & 255L) << 56
                   | (var7[1] & 255L) << 48
                   | (var7[2] & 255L) << 40
                   | (var7[3] & 255L) << 32
@@ -118,10 +118,10 @@ public class cse extends brc {
                   | (var7[5] & 255L) << 16
                   | (var7[6] & 255L) << 8
                   | var7[7] & 255L;
-               byte var50 = -1;
+               byte var58 = -1;
 
                while (true) {
-                  long var8 = var44;
+                  long var8 = var51;
                   byte[] var10 = var0.doFinal(
                      new byte[]{
                         (byte)(var8 >>> 56),
@@ -134,7 +134,7 @@ public class cse extends brc {
                         (byte)var8
                      }
                   );
-                  long var52 = (var10[0] & 255L) << 56
+                  long var60 = (var10[0] & 255L) << 56
                      | (var10[1] & 255L) << 48
                      | (var10[2] & 255L) << 40
                      | (var10[3] & 255L) << 32
@@ -142,9 +142,9 @@ public class cse extends brc {
                      | (var10[5] & 255L) << 16
                      | (var10[6] & 255L) << 8
                      | var10[7] & 255L;
-                  switch (var50) {
+                  switch (var58) {
                      case 0:
-                        var33[var10001] = var52;
+                        var33[var10001] = var60;
                         if (var2 >= var5) {
                            g = var6;
                            h = new Integer[13];
@@ -152,21 +152,25 @@ public class cse extends brc {
                            int var25 = 0;
                            String var24;
                            int var26 = (var24 = var11[0]).length();
-                           int var23 = a<"l">(14329, 7332260207066383912L ^ var20);
+                           short var43 = 14329;
+                           long var53 = 7332260207066383912L ^ var20;
+                           char var23 = 7;
                            bpl(null);
                            int var31 = -1;
 
                            label44:
                            while (true) {
-                              int var34 = a<"l">(1688, 7350101694644729676L ^ var20);
-                              String var40 = var24.substring(++var31, var31 + var23);
-                              byte var46 = -1;
+                              short var34 = 1688;
+                              long var44 = 7350101694644729676L ^ var20;
+                              byte var35 = 104;
+                              String var45 = var24.substring(++var31, var31 + var23);
+                              byte var54 = -1;
 
                               while (true) {
-                                 String var35 = b(var34, b(var40));
-                                 switch (var46) {
+                                 String var36 = b(var35, b(var45));
+                                 switch (var54) {
                                     case 0:
-                                       var27[var25++] = var35;
+                                       var27[var25++] = var36;
                                        if ((var31 += var23) >= var26) {
                                           b = var27;
                                           return;
@@ -175,26 +179,30 @@ public class cse extends brc {
                                        var23 = var24.charAt(var31);
                                        break;
                                     default:
-                                       var27[var25++] = var35;
+                                       var27[var25++] = var36;
                                        if ((var31 += var23) < var26) {
                                           var23 = var24.charAt(var31);
                                           continue label44;
                                        }
 
                                        var26 = (var24 = var11[1]).length();
-                                       var23 = a<"l">(3899, 7270124820467302125L ^ var20);
+                                       short var37 = 3899;
+                                       long var46 = 7270124820467302125L ^ var20;
+                                       var23 = '`';
                                        var31 = -1;
                                  }
 
-                                 var34 = a<"l">(7944, 4124300716344323802L ^ var20);
-                                 var40 = var24.substring(++var31, var31 + var23);
-                                 var46 = 0;
+                                 short var38 = 7944;
+                                 long var47 = 4124300716344323802L ^ var20;
+                                 var35 = 95;
+                                 var45 = var24.substring(++var31, var31 + var23);
+                                 var54 = 0;
                               }
                            }
                         }
                         break;
                      default:
-                        var33[var10001] = var52;
+                        var33[var10001] = var60;
                         if (var2 < var5) {
                            continue label54;
                         }
@@ -204,12 +212,12 @@ public class cse extends brc {
                         var2 = 0;
                   }
 
-                  byte var39 = var2;
+                  byte var42 = var2;
                   var2 += 8;
-                  var7 = var4.substring(var39, var2).getBytes("ISO-8859-1");
+                  var7 = var4.substring(var42, var2).getBytes("ISO-8859-1");
                   var33 = var6;
                   var10001 = var3++;
-                  var44 = (var7[0] & 255L) << 56
+                  var51 = (var7[0] & 255L) << 56
                      | (var7[1] & 255L) << 48
                      | (var7[2] & 255L) << 40
                      | (var7[3] & 255L) << 32
@@ -217,7 +225,7 @@ public class cse extends brc {
                      | (var7[5] & 255L) << 16
                      | (var7[6] & 255L) << 8
                      | var7[7] & 255L;
-                  var50 = 0;
+                  var58 = 0;
                }
             }
          }
@@ -230,7 +238,10 @@ public class cse extends brc {
       long var1 = c ^ 70418497216535L;
       char[] var10000 = var0.toCharArray();
       if (var10000.length < 2) {
-         var10000[0] = (char)(var10000[0] ^ a<"l">(21775, 395899884245911342L ^ var1));
+         char var10003 = var10000[0];
+         short var10004 = 21775;
+         long var10005 = 395899884245911342L ^ var1;
+         var10000[0] = (char)(var10003 ^ '$');
       }
 
       return var10000;
@@ -244,15 +255,48 @@ public class cse extends brc {
       int var10000 = var10003;
 
       for (int var4 = 0; var10000 > var4; var4++) {
-         var10001[var4] = (char)(var10001[var4] ^ var10002 ^ switch (var4 % a<"l">(3062, 7973988338578282607L ^ var2)) {
-            case 0 -> a<"l">(21233, 4990986430394499431L ^ var2);
-            case 1 -> a<"l">(1558, 4475765059565999500L ^ var2);
-            case 2 -> a<"l">(29018, 2558166148779221697L ^ var2);
-            case 3 -> a<"l">(21202, 4541048841812771151L ^ var2);
-            case 4 -> a<"l">(4978, 5233966716541583585L ^ var2);
-            case 5 -> a<"l">(10794, 4068480857362790843L ^ var2);
-            default -> a<"l">(342, 6189940491263496910L ^ var2);
-         });
+         char var10005 = var10001[var4];
+         short var10008 = 3062;
+         long var10009 = 7973988338578282607L ^ var2;
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 21233;
+               long var23 = 4990986430394499431L ^ var2;
+               var10 = 117;
+               break;
+            case 1:
+               var10 = 1558;
+               long var22 = 4475765059565999500L ^ var2;
+               var10 = 116;
+               break;
+            case 2:
+               var10 = 29018;
+               long var21 = 2558166148779221697L ^ var2;
+               var10 = 47;
+               break;
+            case 3:
+               var10 = 21202;
+               long var20 = 4541048841812771151L ^ var2;
+               var10 = 102;
+               break;
+            case 4:
+               var10 = 4978;
+               long var19 = 5233966716541583585L ^ var2;
+               var10 = 88;
+               break;
+            case 5:
+               var10 = 10794;
+               long var18 = 4068480857362790843L ^ var2;
+               var10 = 102;
+               break;
+            default:
+               var10 = 342;
+               long var17 = 6189940491263496910L ^ var2;
+               var10 = 36;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

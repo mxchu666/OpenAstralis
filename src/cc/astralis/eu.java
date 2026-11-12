@@ -192,7 +192,7 @@ public class eu {
       // 01f: aload 4
       // 021: aload 3
       // 022: ifnull 031
-      // 025: ifnull 1b8
+      // 025: ifnull 1b3
       // 028: goto 02f
       // 02b: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
       // 02e: athrow
@@ -266,218 +266,222 @@ public class eu {
       // 0a1: ldc2_w 7273151322966467755
       // 0a4: lload 1
       // 0a5: lxor
-      // 0a6: invokedynamic n (IJ)I bsm=cc/astralis/eu.b (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // 0ab: sastore
-      // 0ac: dup
-      // 0ad: bipush 5
-      // 0ae: sipush 22498
-      // 0b1: ldc2_w 6759389814039457474
-      // 0b4: lload 1
-      // 0b5: lxor
-      // 0b6: pop2
-      // 0b7: pop
-      // 0b8: ldc -3643
-      // 0ba: sastore
-      // 0bb: dup
-      // 0bc: sipush 14800
-      // 0bf: ldc2_w 3190859003127349454
-      // 0c2: lload 1
-      // 0c3: lxor
-      // 0c4: invokedynamic n (IJ)I bsm=cc/astralis/eu.b (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // 0c9: sipush 9099
-      // 0cc: ldc2_w 3935098994765519535
-      // 0cf: lload 1
-      // 0d0: lxor
-      // 0d1: pop2
-      // 0d2: pop
-      // 0d3: ldc -3639
-      // 0d5: sastore
-      // 0d6: dup
-      // 0d7: sipush 29096
-      // 0da: ldc2_w 6824331306312796317
-      // 0dd: lload 1
-      // 0de: lxor
-      // 0df: pop2
-      // 0e0: pop
-      // 0e1: ldc 7
-      // 0e3: sipush 19860
-      // 0e6: ldc2_w 3240023916553057453
-      // 0e9: lload 1
-      // 0ea: lxor
-      // 0eb: pop2
-      // 0ec: pop
-      // 0ed: ldc -3639
-      // 0ef: sastore
-      // 0f0: dup
-      // 0f1: sipush 17419
-      // 0f4: ldc2_w 4763721117243424055
-      // 0f7: lload 1
-      // 0f8: lxor
-      // 0f9: pop2
-      // 0fa: pop
-      // 0fb: ldc 8
-      // 0fd: sipush 25823
-      // 100: ldc2_w 2568457933472669178
-      // 103: lload 1
-      // 104: lxor
-      // 105: pop2
-      // 106: pop
-      // 107: ldc -3641
-      // 109: sastore
-      // 10a: dup
-      // 10b: sipush 28827
-      // 10e: ldc2_w 5926615685454072252
-      // 111: lload 1
-      // 112: lxor
-      // 113: pop2
-      // 114: pop
-      // 115: ldc 9
-      // 117: sipush 32729
-      // 11a: ldc2_w 2861075969856014021
-      // 11d: lload 1
-      // 11e: lxor
-      // 11f: pop2
-      // 120: pop
-      // 121: ldc -3641
-      // 123: sastore
-      // 124: dup
-      // 125: sipush 23767
-      // 128: ldc2_w 7578106333620020732
-      // 12b: lload 1
-      // 12c: lxor
-      // 12d: pop2
-      // 12e: pop
-      // 12f: ldc 10
-      // 131: sipush 30569
-      // 134: ldc2_w 6190473326508150340
-      // 137: lload 1
-      // 138: lxor
-      // 139: pop2
-      // 13a: pop
-      // 13b: ldc -3640
-      // 13d: sastore
-      // 13e: dup
-      // 13f: sipush 25717
-      // 142: ldc2_w 7629044139860434247
-      // 145: lload 1
-      // 146: lxor
-      // 147: pop2
-      // 148: pop
-      // 149: ldc 11
-      // 14b: sipush 32653
-      // 14e: ldc2_w 3996312100771137207
-      // 151: lload 1
-      // 152: lxor
-      // 153: pop2
-      // 154: pop
-      // 155: ldc -3640
-      // 157: sastore
-      // 158: dup
-      // 159: sipush 17701
-      // 15c: ldc2_w 8903729425396677636
-      // 15f: lload 1
-      // 160: lxor
-      // 161: pop2
-      // 162: pop
-      // 163: ldc_w 12
-      // 166: sipush 22093
-      // 169: ldc2_w 4615938922767757174
-      // 16c: lload 1
-      // 16d: lxor
-      // 16e: pop2
-      // 16f: pop
-      // 170: ldc_w -3642
-      // 173: sastore
-      // 174: dup
-      // 175: sipush 3293
-      // 178: ldc2_w 76196134443382249
-      // 17b: lload 1
-      // 17c: lxor
-      // 17d: pop2
-      // 17e: pop
-      // 17f: ldc_w 13
-      // 182: sipush 2669
-      // 185: ldc2_w 1948122758473511770
-      // 188: lload 1
-      // 189: lxor
-      // 18a: pop2
-      // 18b: pop
-      // 18c: ldc_w -3642
-      // 18f: sastore
-      // 190: dup
-      // 191: sipush 4355
-      // 194: ldc2_w 5429569391288346657
-      // 197: lload 1
-      // 198: lxor
-      // 199: pop2
-      // 19a: pop
-      // 19b: ldc_w 14
-      // 19e: bipush 0
-      // 19f: sastore
-      // 1a0: astore 7
-      // 1a2: aload 0
-      // 1a3: invokevirtual imgui/ImGuiIO.getFonts ()Limgui/ImFontAtlas;
-      // 1a6: aload 5
-      // 1a8: ldc 14.0
-      // 1aa: aload 6
-      // 1ac: aload 7
-      // 1ae: invokevirtual imgui/ImFontAtlas.addFontFromMemoryTTF ([BFLimgui/ImFontConfig;[S)Limgui/ImFont;
-      // 1b1: putstatic cc/astralis/eu.dbl Limgui/ImFont;
-      // 1b4: aload 3
-      // 1b5: ifnonnull 1d2
-      // 1b8: getstatic java/lang/System.err Ljava/io/PrintStream;
-      // 1bb: sipush 10260
-      // 1be: ldc2_w 2498394924788929658
-      // 1c1: lload 1
-      // 1c2: lxor
-      // 1c3: pop2
-      // 1c4: pop
-      // 1c5: ldc_w "FontAwesome font not found."
-      // 1c8: invokevirtual java/io/PrintStream.println (Ljava/lang/String;)V
-      // 1cb: goto 1d2
-      // 1ce: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1d1: athrow
-      // 1d2: aload 4
-      // 1d4: aload 3
-      // 1d5: ifnull 1e4
-      // 1d8: ifnull 214
-      // 1db: goto 1e2
-      // 1de: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1e1: athrow
-      // 1e2: aload 4
-      // 1e4: invokevirtual java/io/InputStream.close ()V
-      // 1e7: goto 214
-      // 1ea: invokestatic cc/astralis/eu.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1ed: athrow
-      // 1ee: astore 5
-      // 1f0: aload 4
-      // 1f2: aload 3
-      // 1f3: ifnull 202
-      // 1f6: ifnull 211
-      // 1f9: goto 200
-      // 1fc: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1ff: athrow
-      // 200: aload 4
-      // 202: invokevirtual java/io/InputStream.close ()V
-      // 205: goto 211
-      // 208: astore 6
-      // 20a: aload 5
-      // 20c: aload 6
-      // 20e: invokevirtual java/lang/Throwable.addSuppressed (Ljava/lang/Throwable;)V
-      // 211: aload 5
-      // 213: athrow
-      // 214: goto 22c
-      // 217: astore 4
-      // 219: getstatic java/lang/System.err Ljava/io/PrintStream;
-      // 21c: sipush 18828
-      // 21f: ldc2_w 9025809826641917408
-      // 222: lload 1
-      // 223: lxor
-      // 224: pop2
-      // 225: pop
-      // 226: ldc_w "Failed to load Font Awesome"
-      // 229: invokevirtual java/io/PrintStream.println (Ljava/lang/String;)V
-      // 22c: return
+      // 0a6: pop2
+      // 0a7: pop
+      // 0a8: ldc -3643
+      // 0aa: sastore
+      // 0ab: dup
+      // 0ac: bipush 5
+      // 0ad: sipush 22498
+      // 0b0: ldc2_w 6759389814039457474
+      // 0b3: lload 1
+      // 0b4: lxor
+      // 0b5: pop2
+      // 0b6: pop
+      // 0b7: ldc -3643
+      // 0b9: sastore
+      // 0ba: dup
+      // 0bb: sipush 14800
+      // 0be: ldc2_w 3190859003127349454
+      // 0c1: lload 1
+      // 0c2: lxor
+      // 0c3: pop2
+      // 0c4: pop
+      // 0c5: ldc 6
+      // 0c7: sipush 9099
+      // 0ca: ldc2_w 3935098994765519535
+      // 0cd: lload 1
+      // 0ce: lxor
+      // 0cf: pop2
+      // 0d0: pop
+      // 0d1: ldc -3639
+      // 0d3: sastore
+      // 0d4: dup
+      // 0d5: sipush 29096
+      // 0d8: ldc2_w 6824331306312796317
+      // 0db: lload 1
+      // 0dc: lxor
+      // 0dd: pop2
+      // 0de: pop
+      // 0df: ldc 7
+      // 0e1: sipush 19860
+      // 0e4: ldc2_w 3240023916553057453
+      // 0e7: lload 1
+      // 0e8: lxor
+      // 0e9: pop2
+      // 0ea: pop
+      // 0eb: ldc -3639
+      // 0ed: sastore
+      // 0ee: dup
+      // 0ef: sipush 17419
+      // 0f2: ldc2_w 4763721117243424055
+      // 0f5: lload 1
+      // 0f6: lxor
+      // 0f7: pop2
+      // 0f8: pop
+      // 0f9: ldc 8
+      // 0fb: sipush 25823
+      // 0fe: ldc2_w 2568457933472669178
+      // 101: lload 1
+      // 102: lxor
+      // 103: pop2
+      // 104: pop
+      // 105: ldc -3641
+      // 107: sastore
+      // 108: dup
+      // 109: sipush 28827
+      // 10c: ldc2_w 5926615685454072252
+      // 10f: lload 1
+      // 110: lxor
+      // 111: pop2
+      // 112: pop
+      // 113: ldc 9
+      // 115: sipush 32729
+      // 118: ldc2_w 2861075969856014021
+      // 11b: lload 1
+      // 11c: lxor
+      // 11d: pop2
+      // 11e: pop
+      // 11f: ldc -3641
+      // 121: sastore
+      // 122: dup
+      // 123: sipush 23767
+      // 126: ldc2_w 7578106333620020732
+      // 129: lload 1
+      // 12a: lxor
+      // 12b: pop2
+      // 12c: pop
+      // 12d: ldc 10
+      // 12f: sipush 30569
+      // 132: ldc2_w 6190473326508150340
+      // 135: lload 1
+      // 136: lxor
+      // 137: pop2
+      // 138: pop
+      // 139: ldc -3640
+      // 13b: sastore
+      // 13c: dup
+      // 13d: sipush 25717
+      // 140: ldc2_w 7629044139860434247
+      // 143: lload 1
+      // 144: lxor
+      // 145: pop2
+      // 146: pop
+      // 147: ldc 11
+      // 149: sipush 32653
+      // 14c: ldc2_w 3996312100771137207
+      // 14f: lload 1
+      // 150: lxor
+      // 151: pop2
+      // 152: pop
+      // 153: ldc -3640
+      // 155: sastore
+      // 156: dup
+      // 157: sipush 17701
+      // 15a: ldc2_w 8903729425396677636
+      // 15d: lload 1
+      // 15e: lxor
+      // 15f: pop2
+      // 160: pop
+      // 161: ldc 12
+      // 163: sipush 22093
+      // 166: ldc2_w 4615938922767757174
+      // 169: lload 1
+      // 16a: lxor
+      // 16b: pop2
+      // 16c: pop
+      // 16d: ldc -3642
+      // 16f: sastore
+      // 170: dup
+      // 171: sipush 3293
+      // 174: ldc2_w 76196134443382249
+      // 177: lload 1
+      // 178: lxor
+      // 179: pop2
+      // 17a: pop
+      // 17b: ldc_w 13
+      // 17e: sipush 2669
+      // 181: ldc2_w 1948122758473511770
+      // 184: lload 1
+      // 185: lxor
+      // 186: pop2
+      // 187: pop
+      // 188: ldc -3642
+      // 18a: sastore
+      // 18b: dup
+      // 18c: sipush 4355
+      // 18f: ldc2_w 5429569391288346657
+      // 192: lload 1
+      // 193: lxor
+      // 194: pop2
+      // 195: pop
+      // 196: ldc_w 14
+      // 199: bipush 0
+      // 19a: sastore
+      // 19b: astore 7
+      // 19d: aload 0
+      // 19e: invokevirtual imgui/ImGuiIO.getFonts ()Limgui/ImFontAtlas;
+      // 1a1: aload 5
+      // 1a3: ldc 14.0
+      // 1a5: aload 6
+      // 1a7: aload 7
+      // 1a9: invokevirtual imgui/ImFontAtlas.addFontFromMemoryTTF ([BFLimgui/ImFontConfig;[S)Limgui/ImFont;
+      // 1ac: putstatic cc/astralis/eu.dbl Limgui/ImFont;
+      // 1af: aload 3
+      // 1b0: ifnonnull 1cd
+      // 1b3: getstatic java/lang/System.err Ljava/io/PrintStream;
+      // 1b6: sipush 10260
+      // 1b9: ldc2_w 2498394924788929658
+      // 1bc: lload 1
+      // 1bd: lxor
+      // 1be: pop2
+      // 1bf: pop
+      // 1c0: ldc_w "FontAwesome font not found."
+      // 1c3: invokevirtual java/io/PrintStream.println (Ljava/lang/String;)V
+      // 1c6: goto 1cd
+      // 1c9: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 1cc: athrow
+      // 1cd: aload 4
+      // 1cf: aload 3
+      // 1d0: ifnull 1df
+      // 1d3: ifnull 20f
+      // 1d6: goto 1dd
+      // 1d9: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 1dc: athrow
+      // 1dd: aload 4
+      // 1df: invokevirtual java/io/InputStream.close ()V
+      // 1e2: goto 20f
+      // 1e5: invokestatic cc/astralis/eu.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 1e8: athrow
+      // 1e9: astore 5
+      // 1eb: aload 4
+      // 1ed: aload 3
+      // 1ee: ifnull 1fd
+      // 1f1: ifnull 20c
+      // 1f4: goto 1fb
+      // 1f7: invokestatic cc/astralis/eu.b (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 1fa: athrow
+      // 1fb: aload 4
+      // 1fd: invokevirtual java/io/InputStream.close ()V
+      // 200: goto 20c
+      // 203: astore 6
+      // 205: aload 5
+      // 207: aload 6
+      // 209: invokevirtual java/lang/Throwable.addSuppressed (Ljava/lang/Throwable;)V
+      // 20c: aload 5
+      // 20e: athrow
+      // 20f: goto 227
+      // 212: astore 4
+      // 214: getstatic java/lang/System.err Ljava/io/PrintStream;
+      // 217: sipush 18828
+      // 21a: ldc2_w 9025809826641917408
+      // 21d: lload 1
+      // 21e: lxor
+      // 21f: pop2
+      // 220: pop
+      // 221: ldc_w "Failed to load Font Awesome"
+      // 224: invokevirtual java/io/PrintStream.println (Ljava/lang/String;)V
+      // 227: return
    }
 
    public static void ady() {

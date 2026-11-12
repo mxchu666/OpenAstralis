@@ -57,7 +57,10 @@ public class hfu extends hcr {
             float axxxx = 0.00788F;
             bav.fym(axxxx);
             a.ewz(a.eil() + axxxx);
-            evd.dek(evd.fzm() * evd.cqz(1.712F, 1.712F, !a.ena.fsc(a<"t">(14819, 2757350697246216679L ^ ax)) ? 1.46F : 1.8F));
+            double var8 = evd.fzm();
+            short var10004 = 14819;
+            long var10005 = 2757350697246216679L ^ ax;
+            evd.dek(var8 * evd.cqz(1.712F, 1.712F, !a.ena.fsc(100L) ? 1.46F : 1.8F));
             if (axxx != null) {
                return;
             }
@@ -67,7 +70,10 @@ public class hfu extends hcr {
       }
 
       if (var7 == 1) {
-         evd.dek(evd.fzm() * evd.cqz(1.0407F, 1.0407F, !a.ena.fsc(a<"t">(18625, 4616339703488716996L ^ ax)) ? 1.11F : 1.45F));
+         double var9 = evd.fzm();
+         short var10 = 18625;
+         long var11 = 4616339703488716996L ^ ax;
+         evd.dek(var9 * evd.cqz(1.0407F, 1.0407F, !a.ena.fsc(100L) ? 1.11F : 1.45F));
       }
    }
 

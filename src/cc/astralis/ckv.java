@@ -44,17 +44,21 @@ public class ckv extends guu {
       long var10004 = 7111813783858348111L ^ a;
       short var4 = 31477;
       long var10005 = 4538759843386121755L ^ a;
-      String[] var6 = new String[2];
+      String[] var8 = new String[2];
       short var10008 = 31477;
       long var10009 = 4538759843386121755L ^ a;
-      var6[0] = "Modern";
+      var8[0] = "Modern";
       var10008 = 24932;
       var10009 = 5594700257398048135L ^ a;
-      var6[1] = "Legacy";
-      a.eub = new adu("Mode", "Modern", var6);
-      a.azu = new erp(dtw.EASE_IN_OUT_QUAD, g<"z">(20726, 3930296938192471164L ^ a));
+      var8[1] = "Legacy";
+      a.eub = new adu("Mode", "Modern", var8);
+      short var5 = 20726;
+      var10005 = 3930296938192471164L ^ a;
+      a.azu = new erp(dtw.EASE_IN_OUT_QUAD, 500L);
       a.amt = 0.0;
-      a.dgx = new erp(dtw.EASE_IN_OUT_SINE, g<"z">(8946, 4365189189549946491L ^ a));
+      short var6 = 8946;
+      var10005 = 4365189189549946491L ^ a;
+      a.dgx = new erp(dtw.EASE_IN_OUT_SINE, 300L);
       var10003 = 617;
       var10004 = 5680562982533670541L ^ a;
       a.edt = new env("Target Hud", 320.0F, 300.0F, 200.0F, 100.0F);
@@ -285,7 +289,7 @@ public class ckv extends guu {
       byte axxx = 46;
       int[] var25 = dar.abu();
       int axxxx = 3;
-      short var35 = 3113;
+      short var37 = 3113;
       long var10002 = 749858410638508778L ^ ax;
       int axxxxx = 40;
       dmp.hdn();
@@ -299,11 +303,11 @@ public class ckv extends guu {
       float var10004 = a + 46.0F;
       short var10007 = 15103;
       long var10008 = 7155113499453010987L ^ ax;
-      short var55 = 21413;
+      short var64 = 21413;
       long var10009 = 4239110271090220406L ^ ax;
-      short var58 = 21413;
+      short var69 = 21413;
       long var10010 = 4239110271090220406L ^ ax;
-      short var61 = 30655;
+      short var73 = 30655;
       long var10011 = 3610305880843450733L ^ ax;
       dmp.gst(a, a, var10003, var10004, new Color(30, 30, 30, 180));
       float axxxxxxxxx = 150.0F - (axxxxxxxx - a + 6.0F);
@@ -319,7 +323,7 @@ public class ckv extends guu {
       if (axxxxxxxxxxx != null) {
          switch (var10000) {
             case -1656737386:
-               short var37 = 28035;
+               short var39 = 28035;
                var10002 = 1364554943664651865L ^ ax;
                var10000 = axxxxxxxxxxxxxx.equals("Rainbow");
                if (axxxxxxxxxxx == null) {
@@ -334,7 +338,11 @@ public class ckv extends guu {
          }
       }
       Color axxxxxxxxxxxxxxx = switch (var10000) {
-         case 0 -> ezv.gbq(g<"z">(26874, 8177281057769294660L ^ ax), 0, 0.7F, 1.0F);
+         case 0 -> {
+            short var29 = 26874;
+            var10001 = 8177281057769294660L ^ ax;
+            yield ezv.gbq(3000L, 0, 0.7F, 1.0F);
+         }
          default -> dec.fbp(new class_5611(0.0F, 6.0F), axxxxxxxxxxxxx.ehf.dnp(), axxxxxxxxxxxxx.aoz.dnp());
       };
       String var23 = axxxxxxxxxxxxx.eqi.dnp();
@@ -343,7 +351,7 @@ public class ckv extends guu {
       if (axxxxxxxxxxx != null) {
          switch (var10000) {
             case -1656737386:
-               short var38 = 26307;
+               short var41 = 26307;
                var10002 = 2043442670079636755L ^ ax;
                var10000 = var23.equals("Rainbow");
                if (axxxxxxxxxxx == null) {
@@ -358,21 +366,25 @@ public class ckv extends guu {
          }
       }
       Color axxxxxxxxxxxxxxxx = switch (var10000) {
-         case 0 -> ezv.gbq(g<"z">(32222, 8079959409431944803L ^ ax), 0, 1.0F, 1.0F);
+         case 0 -> {
+            short var32 = 32222;
+            var10001 = 8079959409431944803L ^ ax;
+            yield ezv.gbq(4000L, 0, 1.0F, 1.0F);
+         }
          default -> dec.fbp(new class_5611(0.0F, 6.0F), axxxxxxxxxxxxx.ehf.dnp(), axxxxxxxxxxxxx.aoz.dnp());
       };
-      float var39 = a + 46.0F - 15.0F;
-      float var47 = axxxxxxxx + axxxxxxxxx;
+      float var43 = a + 46.0F - 15.0F;
+      float var52 = axxxxxxxx + axxxxxxxxx;
       var10003 = a + 46.0F - 3.0F;
       short var10006 = 20006;
-      long var53 = 3150755679196561638L ^ ax;
+      long var60 = 3150755679196561638L ^ ax;
       var10007 = 23407;
       var10008 = 3388215403417097658L ^ ax;
-      short var57 = 23407;
+      short var66 = 23407;
       var10009 = 3388215403417097658L ^ ax;
-      short var60 = 1118;
+      short var71 = 1118;
       var10010 = 8061280136596195993L ^ ax;
-      dmp.gst(axxxxxxxx, var39, var47, var10003, new Color(25, 25, 25, 220));
+      dmp.gst(axxxxxxxx, var43, var52, var10003, new Color(25, 25, 25, 220));
       dmp.dyl(axxxxxxxx, a + 46.0F - 15.0F, axxxxxxxxxx, 12.0F, axxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxx, false);
       dmp.dzr(a + 3.0F, a + 3.0F, 40.0F, 40.0F, hcu.fkx(ehy.cyx(a.bon.method_5845())), null);
       if (axxxxxxxxxxx != null) {
@@ -381,25 +393,28 @@ public class ckv extends guu {
             a.amt = -1.0;
          }
 
-         short var31 = 16706;
+         short var33 = 16706;
          var10001 = 5402438168238576281L ^ ax;
-         short var41 = 466;
+         short var45 = 466;
          var10002 = 501441363164532511L ^ ax;
          bxc.emc("Sf-Ui", 12).ebb(a.bon.method_5477().getString(), axxxxxxxx, a + 3.0F, Color.white);
-         var31 = 2825;
+         var33 = 2825;
          var10001 = 8434413139716643031L ^ ax;
-         short var43 = 28263;
+         short var47 = 28263;
          var10002 = 5538807899427496108L ^ ax;
-         fll var33 = bxc.emc("Sf-Ui", 10);
-         String var44 = fsg.format(a.bon.method_6032());
-         short var50 = 31682;
-         long var52 = 6497937926398961694L ^ ax;
-         var33.ebb(
-            var44 + " Health",
-            axxxxxxxx,
-            a + 3.0F + 14.0F,
-            new Color(e<"x">(20200, 3749706343545356342L ^ ax), e<"x">(20200, 3749706343545356342L ^ ax), e<"x">(20200, 3749706343545356342L ^ ax))
-         );
+         fll var35 = bxc.emc("Sf-Ui", 10);
+         String var48 = fsg.format(a.bon.method_6032());
+         short var55 = 31682;
+         long var57 = 6497937926398961694L ^ ax;
+         String var49 = var48 + " Health";
+         var10003 = a + 3.0F + 14.0F;
+         var10006 = 20200;
+         long var62 = 3749706343545356342L ^ ax;
+         var10007 = 20200;
+         var10008 = 3749706343545356342L ^ ax;
+         short var68 = 20200;
+         var10009 = 3749706343545356342L ^ ax;
+         var35.ebb(var49, axxxxxxxx, var10003, new Color(180, 180, 180));
          dmp.bzg();
       }
    }

@@ -51,7 +51,7 @@ public class hgh extends cec {
                   int var7 = a.dps.size();
                   var10001 = 32385;
                   var10002 = 7637135135553121723L ^ ax;
-                  if (var7 > 798323200) {
+                  if (var7 > 300) {
                      a.dps.poll();
                   }
 
@@ -75,7 +75,7 @@ public class hgh extends cec {
 
    @gdz
    public void bc(fxx event) {
-      hgh var5;
+      hgh var6;
       label58: {
          long ax;
          int[] var4;
@@ -85,8 +85,11 @@ public class hgh extends cec {
          label54:
          if (var4 != null) {
             if (var10000 == 0) {
-               long var6;
-               var10000 = (var6 = System.currentTimeMillis() - a.gfp - b<"q">(3827, 8755198205106298395L ^ ax)) == 0L ? 0 : (var6 < 0L ? -1 : 1);
+               long var5 = System.currentTimeMillis() - a.gfp;
+               short var10001 = 3827;
+               long var10002 = 8755198205106298395L ^ ax;
+               long var11;
+               var10000 = (var11 = var5 - 2500L) == 0L ? 0 : (var11 < 0L ? -1 : 1);
                if (var4 == null) {
                   break label54;
                }
@@ -94,29 +97,33 @@ public class hgh extends cec {
                if (var10000 > 0) {
                   a.fqw = true;
                   a.drh = 1.0;
-                  a.eyj = b<"q">(28014, 3966002451150372224L ^ ax);
+                  var10001 = 28014;
+                  var10002 = 3966002451150372224L ^ ax;
+                  a.eyj = 2500L;
                   if (var4 != null) {
                      return;
                   }
                }
             }
 
-            var5 = a;
+            var6 = a;
             if (var4 == null) {
                break label58;
             }
 
-            double var7;
-            var10000 = (var7 = a.drh - 0.05) == 0.0 ? 0 : (var7 < 0.0 ? -1 : 1);
+            double var12;
+            var10000 = (var12 = a.drh - 0.05) == 0.0 ? 0 : (var12 < 0.0 ? -1 : 1);
          }
 
          if (var10000 > 0) {
-            var5 = a;
+            var6 = a;
             if (var4 == null) {
                break label58;
             }
 
-            if (a.eyj >= b<"q">(19311, 2756281504492018563L ^ ax)) {
+            short var8 = 19311;
+            long var10 = 2756281504492018563L ^ ax;
+            if (a.eyj >= 300L) {
                a.fqw = true;
                if (var4 != null) {
                   return;
@@ -124,10 +131,10 @@ public class hgh extends cec {
             }
          }
 
-         var5 = a;
+         var6 = a;
       }
 
-      var5.fqw = false;
+      var6.fqw = false;
    }
 
    @gdz
@@ -137,7 +144,7 @@ public class hgh extends cec {
          class_1041 axx = chi.method_22683();
          short var10000 = 21573;
          long var10001 = 4613261448549412443L ^ ax;
-         int axxx = -778856849;
+         int axxx = 40;
       }
    }
 
@@ -156,10 +163,11 @@ public class hgh extends cec {
       }
 
       Long[] axx = var10000.toArray(new Long[0]);
+      short var13 = 19747;
       int axxx = 0;
       long var10001 = 5788112081103286275L ^ a;
       int axxxx = 0;
-      long axxxxx = b<"q">(19747, var10001);
+      long axxxxx = 50L;
       a.eyj = 0L;
       int axxxxxx = 1;
 
@@ -170,7 +178,7 @@ public class hgh extends cec {
                   long axxxxxxx = axx[axxxxxx] - axx[axxxxxx - 1];
                   int axxxxxxxx = (int)(axxxxxxx / axxxxx) - 1;
                   if (ax != null) {
-                     var13 = axxxxxxxx;
+                     var14 = axxxxxxxx;
                      if (ax == null) {
                         break;
                      }
@@ -194,11 +202,11 @@ public class hgh extends cec {
                   break label62;
                }
 
-               var13 = axxxxxx;
+               var14 = axxxxxx;
                break;
             }
 
-            if (var13 > 0) {
+            if (var14 > 0) {
                break label57;
             }
 
@@ -238,7 +246,7 @@ public class hgh extends cec {
          byte[] var20 = var17.substring(var10001, var15).getBytes("ISO-8859-1");
          long[] var26 = var19;
          var10001 = var16++;
-         long var36 = (var20[0] & 255L) << 56
+         long var40 = (var20[0] & 255L) << 56
             | (var20[1] & 255L) << 48
             | (var20[2] & 255L) << 40
             | (var20[3] & 255L) << 32
@@ -246,10 +254,10 @@ public class hgh extends cec {
             | (var20[5] & 255L) << 16
             | (var20[6] & 255L) << 8
             | var20[7] & 255L;
-         byte var41 = -1;
+         byte var45 = -1;
 
          while (true) {
-            long var21 = var36;
+            long var21 = var40;
             byte[] var23 = var13.doFinal(
                new byte[]{
                   (byte)(var21 >>> 56),
@@ -262,7 +270,7 @@ public class hgh extends cec {
                   (byte)var21
                }
             );
-            long var46 = (var23[0] & 255L) << 56
+            long var50 = (var23[0] & 255L) << 56
                | (var23[1] & 255L) << 48
                | (var23[2] & 255L) << 40
                | (var23[3] & 255L) << 32
@@ -270,14 +278,14 @@ public class hgh extends cec {
                | (var23[5] & 255L) << 16
                | (var23[6] & 255L) << 8
                | var23[7] & 255L;
-            switch (var41) {
+            switch (var45) {
                case 0:
-                  var26[var10001] = var46;
+                  var26[var10001] = var50;
                   if (var15 >= var18) {
                      c = var19;
                      d = new Integer[4];
                      short var27 = 21701;
-                     long var32 = var11 ^ 3488922340937031054L;
+                     long var34 = var11 ^ 3488922340937031054L;
                      ayy = 300;
                      h = new HashMap(13);
                      Cipher var0;
@@ -298,12 +306,12 @@ public class hgh extends cec {
 
                      label34:
                      while (true) {
-                        int var33 = var2;
+                        int var35 = var2;
                         var2 += 8;
-                        byte[] var7 = var4.substring(var33, var2).getBytes("ISO-8859-1");
+                        byte[] var7 = var4.substring(var35, var2).getBytes("ISO-8859-1");
                         long[] var29 = var6;
-                        var33 = var3++;
-                        long var39 = (var7[0] & 255L) << 56
+                        var35 = var3++;
+                        long var43 = (var7[0] & 255L) << 56
                            | (var7[1] & 255L) << 48
                            | (var7[2] & 255L) << 40
                            | (var7[3] & 255L) << 32
@@ -311,10 +319,10 @@ public class hgh extends cec {
                            | (var7[5] & 255L) << 16
                            | (var7[6] & 255L) << 8
                            | var7[7] & 255L;
-                        byte var44 = -1;
+                        byte var48 = -1;
 
                         while (true) {
-                           long var8 = var39;
+                           long var8 = var43;
                            byte[] var10 = var0.doFinal(
                               new byte[]{
                                  (byte)(var8 >>> 56),
@@ -327,7 +335,7 @@ public class hgh extends cec {
                                  (byte)var8
                               }
                            );
-                           var46 = (var10[0] & 255L) << 56
+                           var50 = (var10[0] & 255L) << 56
                               | (var10[1] & 255L) << 48
                               | (var10[2] & 255L) << 40
                               | (var10[3] & 255L) << 32
@@ -335,19 +343,23 @@ public class hgh extends cec {
                               | (var10[5] & 255L) << 16
                               | (var10[6] & 255L) << 8
                               | var10[7] & 255L;
-                           switch (var44) {
+                           switch (var48) {
                               case 0:
-                                 var29[var33] = var46;
+                                 var29[var35] = var50;
                                  if (var2 >= var5) {
                                     f = var6;
                                     g = new Long[6];
-                                    gtl = b<"q">(15184, var11 ^ 2106590616443193287L);
-                                    eha = b<"q">(27924, var11 ^ 3895778642241376645L);
+                                    short var30 = 15184;
+                                    long var38 = var11 ^ 2106590616443193287L;
+                                    gtl = 2500L;
+                                    short var31 = 27924;
+                                    long var39 = var11 ^ 3895778642241376645L;
+                                    eha = 300L;
                                     return;
                                  }
                                  break;
                               default:
-                                 var29[var33] = var46;
+                                 var29[var35] = var50;
                                  if (var2 < var5) {
                                     continue label34;
                                  }
@@ -357,12 +369,12 @@ public class hgh extends cec {
                                  var2 = 0;
                            }
 
-                           byte var35 = var2;
+                           byte var37 = var2;
                            var2 += 8;
-                           var7 = var4.substring(var35, var2).getBytes("ISO-8859-1");
+                           var7 = var4.substring(var37, var2).getBytes("ISO-8859-1");
                            var29 = var6;
-                           var33 = var3++;
-                           var39 = (var7[0] & 255L) << 56
+                           var35 = var3++;
+                           var43 = (var7[0] & 255L) << 56
                               | (var7[1] & 255L) << 48
                               | (var7[2] & 255L) << 40
                               | (var7[3] & 255L) << 32
@@ -370,13 +382,13 @@ public class hgh extends cec {
                               | (var7[5] & 255L) << 16
                               | (var7[6] & 255L) << 8
                               | var7[7] & 255L;
-                           var44 = 0;
+                           var48 = 0;
                         }
                      }
                   }
                   break;
                default:
-                  var26[var10001] = var46;
+                  var26[var10001] = var50;
                   if (var15 < var18) {
                      continue label50;
                   }
@@ -386,12 +398,12 @@ public class hgh extends cec {
                   var15 = 0;
             }
 
-            byte var31 = var15;
+            byte var33 = var15;
             var15 += 8;
-            var20 = var17.substring(var31, var15).getBytes("ISO-8859-1");
+            var20 = var17.substring(var33, var15).getBytes("ISO-8859-1");
             var26 = var19;
             var10001 = var16++;
-            var36 = (var20[0] & 255L) << 56
+            var40 = (var20[0] & 255L) << 56
                | (var20[1] & 255L) << 48
                | (var20[2] & 255L) << 40
                | (var20[3] & 255L) << 32
@@ -399,7 +411,7 @@ public class hgh extends cec {
                | (var20[5] & 255L) << 16
                | (var20[6] & 255L) << 8
                | var20[7] & 255L;
-            var41 = 0;
+            var45 = 0;
          }
       }
    }

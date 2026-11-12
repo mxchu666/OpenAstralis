@@ -270,9 +270,9 @@ public abstract class MixinHeldItemRenderer implements dlc {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var14 = var12.doFinal("\u009eZÃ²\u0015\u009d+\u0091".getBytes("ISO-8859-1"));
-      String var24 = a(var14).intern();
+      String var26 = a(var14).intern();
       int var10001 = -1;
-      String var11 = var24;
+      String var11 = var26;
       e = new HashMap(13);
       Cipher var0;
       var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -298,7 +298,7 @@ public abstract class MixinHeldItemRenderer implements dlc {
          byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
          long[] var19 = var6;
          var10001 = var3++;
-         long var26 = (var7[0] & 255L) << 56
+         long var28 = (var7[0] & 255L) << 56
             | (var7[1] & 255L) << 48
             | (var7[2] & 255L) << 40
             | (var7[3] & 255L) << 32
@@ -306,10 +306,10 @@ public abstract class MixinHeldItemRenderer implements dlc {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var30 = -1;
+         byte var32 = -1;
 
          while (true) {
-            long var8 = var26;
+            long var8 = var28;
             byte[] var10 = var0.doFinal(
                new byte[]{
                   (byte)(var8 >>> 56),
@@ -322,7 +322,7 @@ public abstract class MixinHeldItemRenderer implements dlc {
                   (byte)var8
                }
             );
-            long var32 = (var10[0] & 255L) << 56
+            long var34 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -330,20 +330,22 @@ public abstract class MixinHeldItemRenderer implements dlc {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var30) {
+            switch (var32) {
                case 0:
-                  var19[var10001] = var32;
+                  var19[var10001] = var34;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[11];
-                     String var28 = a(a<"f">(11440, 7215797520650950010L ^ var15), a(var11));
-                     byte var23 = -1;
-                     a = var28;
+                     short var20 = 11440;
+                     long var24 = 7215797520650950010L ^ var15;
+                     String var30 = a(110, a(var11));
+                     byte var25 = -1;
+                     a = var30;
                      return;
                   }
                   break;
                default:
-                  var19[var10001] = var32;
+                  var19[var10001] = var34;
                   if (var2 < var5) {
                      continue label29;
                   }
@@ -353,12 +355,12 @@ public abstract class MixinHeldItemRenderer implements dlc {
                   var2 = 0;
             }
 
-            byte var22 = var2;
+            byte var23 = var2;
             var2 += 8;
-            var7 = var4.substring(var22, var2).getBytes("ISO-8859-1");
+            var7 = var4.substring(var23, var2).getBytes("ISO-8859-1");
             var19 = var6;
             var10001 = var3++;
-            var26 = (var7[0] & 255L) << 56
+            var28 = (var7[0] & 255L) << 56
                | (var7[1] & 255L) << 48
                | (var7[2] & 255L) << 40
                | (var7[3] & 255L) << 32
@@ -366,7 +368,7 @@ public abstract class MixinHeldItemRenderer implements dlc {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var30 = 0;
+            var32 = 0;
          }
       }
    }
@@ -395,39 +397,45 @@ public abstract class MixinHeldItemRenderer implements dlc {
          char var10005 = var10001[var4];
          short var10008 = 12001;
          long var10009 = 82365125065968075L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var15 = 13763;
-               long var21 = 1106514694935417579L ^ var2;
-               yield 15;
-            }
-            case 1 -> {
-               short var14 = 13204;
-               long var20 = 4561897809750594746L ^ var2;
-               yield 8;
-            }
-            case 2 -> {
-               short var13 = 486;
-               long var19 = 884208686705256141L ^ var2;
-               yield 85;
-            }
-            case 3 -> a<"f">(29721, 3302264232958645055L ^ var2);
-            case 4 -> {
-               short var12 = 10697;
-               long var18 = 2862932416919768806L ^ var2;
-               yield 27;
-            }
-            case 5 -> {
-               short var11 = 16428;
-               long var17 = 877729036326725376L ^ var2;
-               yield 42;
-            }
-            default -> {
-               short var10007 = 4080;
-               long var16 = 6578167294206191828L ^ var2;
-               yield 125;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 13763;
+               long var23 = 1106514694935417579L ^ var2;
+               var10 = 15;
+               break;
+            case 1:
+               var10 = 13204;
+               long var22 = 4561897809750594746L ^ var2;
+               var10 = 8;
+               break;
+            case 2:
+               var10 = 486;
+               long var21 = 884208686705256141L ^ var2;
+               var10 = 85;
+               break;
+            case 3:
+               var10 = 29721;
+               long var20 = 3302264232958645055L ^ var2;
+               var10 = 32;
+               break;
+            case 4:
+               var10 = 10697;
+               long var19 = 2862932416919768806L ^ var2;
+               var10 = 27;
+               break;
+            case 5:
+               var10 = 16428;
+               long var18 = 877729036326725376L ^ var2;
+               var10 = 42;
+               break;
+            default:
+               var10 = 4080;
+               long var17 = 6578167294206191828L ^ var2;
+               var10 = 125;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

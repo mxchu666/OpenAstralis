@@ -256,7 +256,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                            | (var18[5] & 255L) << 16
                            | (var18[6] & 255L) << 8
                            | var18[7] & 255L;
-                        byte var109 = -1;
+                        byte var110 = -1;
 
                         while (true) {
                            long var19 = var83;
@@ -272,7 +272,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                  (byte)var19
                               }
                            );
-                           long var129 = (var21[0] & 255L) << 56
+                           long var131 = (var21[0] & 255L) << 56
                               | (var21[1] & 255L) << 48
                               | (var21[2] & 255L) << 40
                               | (var21[3] & 255L) << 32
@@ -280,9 +280,9 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                               | (var21[5] & 255L) << 16
                               | (var21[6] & 255L) << 8
                               | var21[7] & 255L;
-                           switch (var109) {
+                           switch (var110) {
                               case 0:
-                                 var56[var10001] = var129;
+                                 var56[var10001] = var131;
                                  if (var13 >= var16) {
                                     f = var17;
                                     g = new Integer[38];
@@ -319,7 +319,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                           | (var7[5] & 255L) << 16
                                           | (var7[6] & 255L) << 8
                                           | var7[7] & 255L;
-                                       byte var112 = -1;
+                                       byte var113 = -1;
 
                                        while (true) {
                                           long var8 = var86;
@@ -335,7 +335,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                                 (byte)var8
                                              }
                                           );
-                                          var129 = (var10[0] & 255L) << 56
+                                          var131 = (var10[0] & 255L) << 56
                                              | (var10[1] & 255L) << 48
                                              | (var10[2] & 255L) << 40
                                              | (var10[3] & 255L) << 32
@@ -343,9 +343,9 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                              | (var10[5] & 255L) << 16
                                              | (var10[6] & 255L) << 8
                                              | var10[7] & 255L;
-                                          switch (var112) {
+                                          switch (var113) {
                                              case 0:
-                                                var58[var68] = var129;
+                                                var58[var68] = var131;
                                                 if (var2 >= var5) {
                                                    l = var6;
                                                    m = new Long[10];
@@ -382,44 +382,46 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                                             byte[] var40 = var37.substring(var73, var35).getBytes(var22[4]);
                                                             long[] var61 = var39;
                                                             var73 = var36++;
-                                                            long var91 = (var40[0] & c<"v">(19480, 8301110658697023207L ^ var31))
-                                                               << a<"j">(10720, 11288223745996228L ^ var31);
-                                                            long var114 = var40[1] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var132 = 8390;
+                                                            long var91 = var40[0] & c<"v">(19480, 8301110658697023207L ^ var31);
+                                                            short var115 = 10720;
+                                                            var131 = 11288223745996228L ^ var31;
+                                                            long var92 = var91 << 56;
+                                                            long var116 = var40[1] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var135 = 8390;
                                                             long var10005 = 4308253920793853138L ^ var31;
-                                                            long var92 = var91 | var114 << 48;
-                                                            long var115 = var40[2] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var133 = 5334;
+                                                            long var93 = var92 | var116 << 48;
+                                                            long var117 = var40[2] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var136 = 5334;
                                                             var10005 = 7320764958426155209L ^ var31;
-                                                            long var93 = var92 | var115 << 40;
-                                                            long var116 = var40[3] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var134 = 3373;
+                                                            long var94 = var93 | var117 << 40;
+                                                            long var118 = var40[3] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var137 = 3373;
                                                             var10005 = 6607511760424849727L ^ var31;
-                                                            long var94 = var93 | var116 << 32;
-                                                            long var117 = var40[4] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var135 = 18967;
+                                                            long var95 = var94 | var118 << 32;
+                                                            long var119 = var40[4] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var138 = 18967;
                                                             var10005 = 8358976018472080909L ^ var31;
-                                                            long var95 = var94 | var117 << 24;
-                                                            long var118 = var40[5] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var136 = 28636;
+                                                            long var96 = var95 | var119 << 24;
+                                                            long var120 = var40[5] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var139 = 28636;
                                                             var10005 = 5631158503894987717L ^ var31;
-                                                            long var96 = var95 | var118 << 16;
-                                                            short var137 = 6026;
+                                                            long var97 = var96 | var120 << 16;
+                                                            short var140 = 6026;
                                                             var10005 = 153305361542630314L ^ var31;
-                                                            long var119 = var40[6] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            short var138 = 27282;
+                                                            long var121 = var40[6] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            short var141 = 27282;
                                                             var10005 = 2720503368733374105L ^ var31;
-                                                            long var97 = var96 | var119 << 8;
-                                                            short var139 = 32669;
+                                                            long var98 = var97 | var121 << 8;
+                                                            short var142 = 32669;
                                                             var10005 = 454746296358380419L ^ var31;
-                                                            long var98 = var97 | var40[7] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                            byte var120 = -1;
+                                                            long var99 = var98 | var40[7] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                            byte var122 = -1;
 
                                                             while (true) {
-                                                               var129 = var98 ^ var33;
-                                                               switch (var120) {
+                                                               var131 = var99 ^ var33;
+                                                               switch (var122) {
                                                                   case 0:
-                                                                     var61[var73] = var129;
+                                                                     var61[var73] = var131;
                                                                      if (var35 >= var38) {
                                                                         b = var39;
                                                                         c = new Long[4];
@@ -427,7 +429,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                                                      }
                                                                      break;
                                                                   default:
-                                                                     var61[var73] = var129;
+                                                                     var61[var73] = var131;
                                                                      if (var35 < var38) {
                                                                         continue label61;
                                                                      }
@@ -441,40 +443,40 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                                                var40 = var37.substring(var77, var35).getBytes(var22[1]);
                                                                var61 = var39;
                                                                var73 = var36++;
-                                                               long var100 = var40[0] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var122 = 1146;
-                                                               var129 = 54795116827793505L ^ var31;
-                                                               long var101 = var100 << 56;
-                                                               long var123 = var40[1] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var143 = 32295;
+                                                               long var101 = var40[0] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var124 = 1146;
+                                                               var131 = 54795116827793505L ^ var31;
+                                                               long var102 = var101 << 56;
+                                                               long var125 = var40[1] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var146 = 32295;
                                                                var10005 = 3350872338824962606L ^ var31;
-                                                               long var102 = var101 | var123 << 48;
-                                                               long var124 = var40[2] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var144 = 29329;
+                                                               long var103 = var102 | var125 << 48;
+                                                               long var126 = var40[2] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var147 = 29329;
                                                                var10005 = 4679027979386859145L ^ var31;
-                                                               long var103 = var102 | var124 << 40;
-                                                               long var125 = var40[3] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var145 = 32101;
+                                                               long var104 = var103 | var126 << 40;
+                                                               long var127 = var40[3] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var148 = 32101;
                                                                var10005 = 5315847112129716551L ^ var31;
-                                                               long var104 = var103 | var125 << 32;
-                                                               long var126 = var40[4] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var146 = 24672;
+                                                               long var105 = var104 | var127 << 32;
+                                                               long var128 = var40[4] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var149 = 24672;
                                                                var10005 = 5512226934768614498L ^ var31;
-                                                               long var105 = var104 | var126 << 24;
-                                                               long var127 = var40[5] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var147 = 28636;
+                                                               long var106 = var105 | var128 << 24;
+                                                               long var129 = var40[5] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var150 = 28636;
                                                                var10005 = 5631158503894987717L ^ var31;
-                                                               long var106 = var105 | var127 << 16;
-                                                               short var148 = 6026;
+                                                               long var107 = var106 | var129 << 16;
+                                                               short var151 = 6026;
                                                                var10005 = 153305361542630314L ^ var31;
-                                                               long var128 = var40[6] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               short var149 = 27282;
+                                                               long var130 = var40[6] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               short var152 = 27282;
                                                                var10005 = 2720503368733374105L ^ var31;
-                                                               long var107 = var106 | var128 << 8;
-                                                               short var150 = 32669;
+                                                               long var108 = var107 | var130 << 8;
+                                                               short var153 = 32669;
                                                                var10005 = 454746296358380419L ^ var31;
-                                                               var98 = var107 | var40[7] & c<"v">(4884, 4314415640531341801L ^ var31);
-                                                               var120 = 0;
+                                                               var99 = var108 | var40[7] & c<"v">(4884, 4314415640531341801L ^ var31);
+                                                               var122 = 0;
                                                             }
                                                          }
                                                       }
@@ -484,7 +486,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                                 }
                                                 break;
                                              default:
-                                                var58[var68] = var129;
+                                                var58[var68] = var131;
                                                 if (var2 < var5) {
                                                    continue label77;
                                                 }
@@ -507,13 +509,13 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                                              | (var7[5] & 255L) << 16
                                              | (var7[6] & 255L) << 8
                                              | var7[7] & 255L;
-                                          var112 = 0;
+                                          var113 = 0;
                                        }
                                     }
                                  }
                                  break;
                               default:
-                                 var56[var10001] = var129;
+                                 var56[var10001] = var131;
                                  if (var13 < var16) {
                                     continue label93;
                                  }
@@ -536,7 +538,7 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
                               | (var18[5] & 255L) << 16
                               | (var18[6] & 255L) << 8
                               | var18[7] & 255L;
-                           var109 = 0;
+                           var110 = 0;
                         }
                      }
                   }
@@ -623,20 +625,23 @@ public class cvn extends fsa<Integer, Class<? extends cdw>> implements ge {
    private static long a(int var0, long var1) {
       long var3 = d ^ 114226300751305L;
       int[] var5 = dar.abu();
-      int var10000 = var0 ^ (int)var1 ^ a<"j">(24467, 2840623097537600520L ^ var3);
-      short var10001 = 5208;
-      long var10002 = 8090345040341129185L ^ var3;
+      int var10000 = var0 ^ (int)var1;
+      short var10001 = 24467;
+      long var10002 = 2840623097537600520L ^ var3;
+      var10000 ^= 4197;
+      var10001 = 5208;
+      var10002 = 8090345040341129185L ^ var3;
       int var6 = var10000 & 32767;
-      Long var7 = c[var6];
+      Long var8 = c[var6];
       if (var5 != null) {
-         if (var7 == null) {
+         if (var8 == null) {
             c[var6] = b[var6] ^ var1;
          }
 
-         var7 = c[var6];
+         var8 = c[var6];
       }
 
-      return var7;
+      return var8;
    }
 
    private static String a(byte[] var0) {

@@ -308,35 +308,45 @@ public abstract class MixinClientConnection implements dmt {
          char var10005 = var10001[var4];
          short var10008 = 16528;
          long var10009 = 4311651254726047273L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var14 = 32463;
-               long var19 = 4784352667672971389L ^ var2;
-               yield 39;
-            }
-            case 1 -> a<"t">(478, 1692334221742896993L ^ var2);
-            case 2 -> {
-               short var13 = 1533;
-               long var18 = 4228000394471371594L ^ var2;
-               yield 15;
-            }
-            case 3 -> {
-               short var12 = 29815;
-               long var17 = 2217270265616794308L ^ var2;
-               yield 85;
-            }
-            case 4 -> a<"t">(4294, 6361026080502638206L ^ var2);
-            case 5 -> {
-               short var11 = 21100;
-               long var16 = 7058742510416995545L ^ var2;
-               yield 22;
-            }
-            default -> {
-               short var10007 = 31310;
-               long var15 = 2201171742754082036L ^ var2;
-               yield 50;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 32463;
+               long var23 = 4784352667672971389L ^ var2;
+               var10 = 39;
+               break;
+            case 1:
+               var10 = 478;
+               long var22 = 1692334221742896993L ^ var2;
+               var10 = 21;
+               break;
+            case 2:
+               var10 = 1533;
+               long var21 = 4228000394471371594L ^ var2;
+               var10 = 15;
+               break;
+            case 3:
+               var10 = 29815;
+               long var20 = 2217270265616794308L ^ var2;
+               var10 = 85;
+               break;
+            case 4:
+               var10 = 4294;
+               long var19 = 6361026080502638206L ^ var2;
+               var10 = 40;
+               break;
+            case 5:
+               var10 = 21100;
+               long var18 = 7058742510416995545L ^ var2;
+               var10 = 22;
+               break;
+            default:
+               var10 = 31310;
+               long var17 = 2201171742754082036L ^ var2;
+               var10 = 50;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

@@ -55,9 +55,9 @@ public class MixinShaderLoaderCache {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var14 = var12.doFinal("»ömÀ´9\u0018e\u0081'Ôý\fFÈt\u000b_¢À\u008a¸R\u008bl·Eö·:ÔÊ,/¹m\u0098Ðô©".getBytes("ISO-8859-1"));
-      String var24 = a(var14).intern();
+      String var26 = a(var14).intern();
       int var10001 = -1;
-      String var11 = var24;
+      String var11 = var26;
       e = new HashMap(13);
       Cipher var0;
       var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -83,7 +83,7 @@ public class MixinShaderLoaderCache {
          byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
          long[] var19 = var6;
          var10001 = var3++;
-         long var26 = (var7[0] & 255L) << 56
+         long var28 = (var7[0] & 255L) << 56
             | (var7[1] & 255L) << 48
             | (var7[2] & 255L) << 40
             | (var7[3] & 255L) << 32
@@ -91,10 +91,10 @@ public class MixinShaderLoaderCache {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var30 = -1;
+         byte var32 = -1;
 
          while (true) {
-            long var8 = var26;
+            long var8 = var28;
             byte[] var10 = var0.doFinal(
                new byte[]{
                   (byte)(var8 >>> 56),
@@ -107,7 +107,7 @@ public class MixinShaderLoaderCache {
                   (byte)var8
                }
             );
-            long var32 = (var10[0] & 255L) << 56
+            long var34 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -115,20 +115,22 @@ public class MixinShaderLoaderCache {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var30) {
+            switch (var32) {
                case 0:
-                  var19[var10001] = var32;
+                  var19[var10001] = var34;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[10];
-                     String var28 = a(a<"o">(12929, 4376289666209741393L ^ var15), a(var11));
-                     byte var23 = -1;
-                     a = var28;
+                     short var20 = 12929;
+                     long var24 = 4376289666209741393L ^ var15;
+                     String var30 = a(81, a(var11));
+                     byte var25 = -1;
+                     a = var30;
                      return;
                   }
                   break;
                default:
-                  var19[var10001] = var32;
+                  var19[var10001] = var34;
                   if (var2 < var5) {
                      continue label29;
                   }
@@ -138,12 +140,12 @@ public class MixinShaderLoaderCache {
                   var2 = 0;
             }
 
-            byte var22 = var2;
+            byte var23 = var2;
             var2 += 8;
-            var7 = var4.substring(var22, var2).getBytes("ISO-8859-1");
+            var7 = var4.substring(var23, var2).getBytes("ISO-8859-1");
             var19 = var6;
             var10001 = var3++;
-            var26 = (var7[0] & 255L) << 56
+            var28 = (var7[0] & 255L) << 56
                | (var7[1] & 255L) << 48
                | (var7[2] & 255L) << 40
                | (var7[3] & 255L) << 32
@@ -151,7 +153,7 @@ public class MixinShaderLoaderCache {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var30 = 0;
+            var32 = 0;
          }
       }
    }
@@ -163,7 +165,7 @@ public class MixinShaderLoaderCache {
          char var10003 = var10000[0];
          short var10004 = 7709;
          long var10005 = 6848840270570010646L ^ var1;
-         var10000[0] = (char)(var10003 ^ 572245839);
+         var10000[0] = (char)(var10003 ^ '0');
       }
 
       return var10000;
@@ -178,42 +180,44 @@ public class MixinShaderLoaderCache {
 
       for (int var4 = 0; var10000 > var4; var4++) {
          char var10005 = var10001[var4];
-         int var10;
-         switch (var4 % a<"o">(3848, 4674651202666493280L ^ var2)) {
+         short var10008 = 3848;
+         long var10009 = 4674651202666493280L ^ var2;
+         byte var10;
+         switch (var4 % 7) {
             case 0:
-               short var16 = 26246;
-               long var22 = 5572817235227221221L ^ var2;
-               var10 = 789874171;
+               var10 = 26246;
+               long var23 = 5572817235227221221L ^ var2;
+               var10 = 105;
                break;
             case 1:
-               short var15 = 29995;
-               long var21 = 8715530568342572877L ^ var2;
+               var10 = 29995;
+               long var22 = 8715530568342572877L ^ var2;
                var10 = 61;
                break;
             case 2:
-               short var14 = 26474;
-               long var20 = 7172123572608867598L ^ var2;
-               var10 = 1971027143;
+               var10 = 26474;
+               long var21 = 7172123572608867598L ^ var2;
+               var10 = 19;
                break;
             case 3:
                byte var13 = 125;
-               long var19 = 8890672964204722714L ^ var2;
+               long var20 = 8890672964204722714L ^ var2;
                var10 = 31;
                break;
             case 4:
-               short var12 = 4787;
-               long var18 = 359958891144866001L ^ var2;
-               var10 = -1662554341;
+               var10 = 4787;
+               long var19 = 359958891144866001L ^ var2;
+               var10 = 91;
                break;
             case 5:
-               short var11 = 31813;
-               long var17 = 1616085474672150048L ^ var2;
+               var10 = 31813;
+               long var18 = 1616085474672150048L ^ var2;
                var10 = 67;
                break;
             default:
-               short var10007 = 26011;
-               long var10008 = 5744823078809935867L ^ var2;
-               var10 = 1808415679;
+               var10 = 26011;
+               long var17 = 5744823078809935867L ^ var2;
+               var10 = 48;
          }
 
          var10001[var4] = (char)(var10005 ^ var10002 ^ var10);

@@ -1,9 +1,13 @@
 package cc.astralis;
 
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.class_746;
 
 public class hil extends hcr {
-   private static final long a;
+   private static final long a = 48039453267156L;
    private static final String d;
 
    public hil(guu parentClass) {
@@ -35,82 +39,21 @@ public class hil extends hcr {
    }
 
    static {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      //
-      // Bytecode:
-      // 00: ldc2_w 48039453267156
-      // 03: putstatic cc/astralis/hil.a J
-      // 06: getstatic cc/astralis/hil.a J
-      // 09: ldc2_w 64541650615982
-      // 0c: lxor
-      // 0d: lstore 0
-      // 0e: ldc "DES/CBC/PKCS5Padding"
-      // 10: invokestatic javax/crypto/Cipher.getInstance (Ljava/lang/String;)Ljavax/crypto/Cipher;
-      // 13: dup
-      // 14: astore 2
-      // 15: bipush 2
-      // 16: ldc "DES"
-      // 18: invokestatic javax/crypto/SecretKeyFactory.getInstance (Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
-      // 1b: bipush 8
-      // 1d: newarray 8
-      // 1f: dup
-      // 20: bipush 0
-      // 21: lload 0
-      // 22: bipush 56
-      // 24: lushr
-      // 25: l2i
-      // 26: i2b
-      // 27: bastore
-      // 28: bipush 1
-      // 29: istore 3
-      // 2a: iload 3
-      // 2b: bipush 8
-      // 2d: if_icmpge 44
-      // 30: dup
-      // 31: iload 3
-      // 32: lload 0
-      // 33: iload 3
-      // 34: bipush 8
-      // 36: imul
-      // 37: lshl
-      // 38: bipush 56
-      // 3a: lushr
-      // 3b: l2i
-      // 3c: i2b
-      // 3d: bastore
-      // 3e: iinc 3 1
-      // 41: goto 2a
-      // 44: new javax/crypto/spec/DESKeySpec
-      // 47: dup_x1
-      // 48: swap
-      // 49: invokespecial javax/crypto/spec/DESKeySpec.<init> ([B)V
-      // 4c: invokevirtual javax/crypto/SecretKeyFactory.generateSecret (Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
-      // 4f: new javax/crypto/spec/IvParameterSpec
-      // 52: dup
-      // 53: bipush 8
-      // 55: newarray 8
-      // 57: invokespecial javax/crypto/spec/IvParameterSpec.<init> ([B)V
-      // 5a: invokevirtual javax/crypto/Cipher.init (ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
-      // 5d: ldc "Mush"
-      // 5f: bipush -1
-      // 60: goto 69
-      // 63: putstatic cc/astralis/hil.d Ljava/lang/String;
-      // 66: goto 83
-      // 69: swap
-      // 6a: ldc "ISO-8859-1"
-      // 6c: invokevirtual java/lang/String.getBytes (Ljava/lang/String;)[B
-      // 6f: aload 2
-      // 70: swap
-      // 71: invokevirtual javax/crypto/Cipher.doFinal ([B)[B
-      // 74: astore 4
-      // 76: aload 4
-      // 78: invokestatic cc/astralis/hil.a ([B)Ljava/lang/String;
-      // 7b: invokevirtual java/lang/String.intern ()Ljava/lang/String;
-      // 7e: swap
-      // 7f: pop
-      // 80: goto 63
-      // 83: return
+      long var0 = a ^ 64541650615982L;
+      Cipher var2;
+      Cipher var10000 = var2 = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      SecretKeyFactory var10002 = SecretKeyFactory.getInstance("DES");
+      byte[] var10003 = new byte[]{(byte)(var0 >>> 56), 0, 0, 0, 0, 0, 0, 0};
+
+      for (int var3 = 1; var3 < 8; var3++) {
+         var10003[var3] = (byte)(var0 << var3 * 8 >>> 56);
+      }
+
+      var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
+      byte[] var4 = var2.doFinal("Mush".getBytes("ISO-8859-1"));
+      String var5 = a(var4).intern();
+      byte var10001 = -1;
+      d = var5;
    }
 
    private static String a(byte[] var0) {

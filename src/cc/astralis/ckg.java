@@ -68,7 +68,7 @@ public class ckg extends fig {
          long var10005 = 4554303629488347087L ^ ax;
          short var26 = 3891;
          long var10006 = 4554303629488347087L ^ ax;
-         Color axxx = new Color(1154916430, 30, 30);
+         Color axxx = new Color(30, 30, 30);
          axx = var10000;
          ckg var14 = a;
          if (axx != null) {
@@ -91,7 +91,7 @@ public class ckg extends fig {
       long var24 = 6485026104294007490L ^ ax;
       short var25 = 14906;
       long var27 = 6485026104294007490L ^ ax;
-      Color axxx = new Color(1791031259, 155006742, 155006742);
+      Color axxx = new Color(245, 245, 245);
       cbl.ebb(a.dty.clp(), a.hjg() + (a.av() - cbl.eq(a.dty.clp())) / 2.0F, a.dtt() + (a.gqc() - cbl.biu(a.dty.clp())) / 2.0F, axxx);
       if (!a.ais.isEmpty()) {
       }
@@ -235,10 +235,13 @@ public class ckg extends fig {
          float var10001x = a.hjg();
          float var10002x = a[0];
          float var10003x = a.av();
-         int var10007 = a<"n">(7695, 3962857612058950332L ^ ax);
-         short var10008 = 6941;
+         short var10007 = 7695;
+         long var10008 = 3962857612058950332L ^ ax;
+         short var11x = 6941;
          long var10009 = 8545986183571013547L ^ ax;
-         dmp.euv(var10001x, var10002x, var10003x, a, new Color(var10007, 32, a<"n">(6475, 1775387758041431547L ^ ax)));
+         short var12x = 6475;
+         long var10010 = 1775387758041431547L ^ ax;
+         dmp.euv(var10001x, var10002x, var10003x, a, new Color(32, 32, 36));
          Iterator var8x = a.ais.iterator();
          int[] axx = var10000x;
 

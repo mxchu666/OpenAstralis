@@ -47,7 +47,7 @@ public class cgk extends fwu {
       }
 
       label138: {
-         int var13;
+         short var13;
          label132: {
             var10 = var9.field_6252;
             label131:
@@ -77,25 +77,25 @@ public class cgk extends fwu {
 
                      if (var10 != 0) {
                         var10 = a.bv().djk;
-                        short var10001 = 17426;
+                        var13 = 17426;
                         long var10002 = 7369398860343329682L ^ ax;
-                        var13 = 1689497361;
+                        var13 = 20;
                         if (axxx == null) {
                            break label132;
                         }
 
-                        if (var10 >= 1689497361) {
+                        if (var10 >= 20) {
                            var10 = axx.field_6012 - a.bv().gab;
-                           var10001 = 17734;
+                           var13 = 17734;
                            var10002 = 8773297530687996615L ^ ax;
-                           var13 = 1716691471;
+                           var13 = 30;
                            if (axxx == null) {
                               break label132;
                            }
 
-                           if (var10 >= 1716691471) {
+                           if (var10 >= 30) {
                               var10 = axx.field_6012 - a.bv().dfw;
-                              var10001 = 22600;
+                              var13 = 22600;
                               var10002 = 3664928059452284875L ^ ax;
                               var13 = 20;
                               if (axxx == null) {

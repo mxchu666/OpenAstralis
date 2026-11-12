@@ -197,42 +197,46 @@ public class gdj extends guu {
    public void fic(bsm event) {
       long ax = gdj.a ^ 121599428749166L;
       int[] var10000 = dar.abu();
-      int var10001 = 132;
+      short var10001 = 132;
       long var10002 = 1929344992446022956L ^ ax;
       byte axx = 32;
       int[] axxx = var10000;
       class_2338 var11 = chi.field_1724.method_24515();
-      var10001 = b<"l">(27640, 624186893144682071L ^ ax);
-      short var16 = 26785;
+      var10001 = 27640;
+      var10002 = 624186893144682071L ^ ax;
+      short var19 = 26785;
       long var10003 = 7582221074866760968L ^ ax;
-      short var18 = 26785;
+      short var22 = 26785;
       long var10004 = 7582221074866760968L ^ ax;
+      class_2338 var12 = var11.method_10069(-32, -32, -32);
+      class_2338 var16 = chi.field_1724.method_24515();
+      short var20 = 11974;
+      var10003 = 3657880430468606824L ^ ax;
+      short var24 = 11974;
+      var10004 = 3657880430468606824L ^ ax;
+      short var27 = 11974;
+      long var10005 = 3657880430468606824L ^ ax;
 
-      for (class_2338 axxxx : class_2338.method_10097(
-         var11.method_10069(var10001, -32, -32),
-         chi.field_1724
-            .method_24515()
-            .method_10069(b<"l">(11974, 3657880430468606824L ^ ax), b<"l">(11974, 3657880430468606824L ^ ax), b<"l">(11974, 3657880430468606824L ^ ax))
-      )) {
+      for (class_2338 axxxx : class_2338.method_10097(var12, var16.method_10069(32, 32, 32))) {
          label44: {
             class_2680 axxxxx = chi.field_1687.method_8320(axxxx);
             class_2248 axxxxxx = axxxxx.method_26204();
-            class_2248 var12 = axxxxxx;
+            class_2248 var13 = axxxxxx;
             if (axxx != null) {
                if (!(axxxxxx instanceof class_2484)) {
                   break label44;
                }
 
-               var12 = axxxxxx;
+               var13 = axxxxxx;
             }
 
-            class_2484 axxxxxxx = (class_2484)var12;
-            class_4587 var13 = a.bus();
-            class_238 var15 = new class_238(axxxx);
-            Color var17 = a.dfv != null && chi.field_1687.method_8320(a.dfv) == axxxxx ? Color.red : Color.GREEN;
-            short var19 = 12320;
+            class_2484 axxxxxxx = (class_2484)var13;
+            class_4587 var14 = a.bus();
+            class_238 var17 = new class_238(axxxx);
+            Color var21 = a.dfv != null && chi.field_1687.method_8320(a.dfv) == axxxxx ? Color.red : Color.GREEN;
+            short var25 = 12320;
             var10004 = 8454098829278262667L ^ ax;
-            bqf.hjf(var13, var15, var17, 150);
+            bqf.hjf(var14, var17, var21, 150);
          }
 
          if (axxx == null) {

@@ -89,13 +89,16 @@ public class cem extends guu {
          a.bwl.removeIf(axxxxxxxx -> {
             long ax = cem.a ^ 63755914774281L;
             int[] var3 = dar.abu();
-            long var4x;
-            int var10000x = (var4x = System.currentTimeMillis() - axxxxxxxx.caz - e<"l">(12398, 6611098324501515448L ^ ax)) == 0L ? 0 : (var4x < 0L ? -1 : 1);
+            long var10000x = System.currentTimeMillis() - axxxxxxxx.caz;
+            short var10001 = 12398;
+            long var10002 = 6611098324501515448L ^ ax;
+            long var5x;
+            int var4x = (var5x = var10000x - 3000L) == 0L ? 0 : (var5x < 0L ? -1 : 1);
             if (var3 != null) {
-               var10000x = var10000x > 0 ? 1 : 0;
+               var4x = var4x > 0 ? 1 : 0;
             }
 
-            return (boolean)var10000x;
+            return (boolean)var4x;
          });
          Object var10000 = a.bwl;
          if (axx != null) {
@@ -238,7 +241,11 @@ public class cem extends guu {
                }
             }
             Color axxxxxxxxxx = switch (var10000) {
-               case 0 -> ezv.gbq(e<"l">(27426, 5675533014831385615L ^ ax), (int)(axxxxxxx * 100.0F), 0.7F, 1.0F);
+               case 0 -> {
+                  short var18 = 27426;
+                  long var19 = 5675533014831385615L ^ ax;
+                  yield ezv.gbq(3000L, (int)(axxxxxxx * 100.0F), 0.7F, 1.0F);
+               }
                default -> dec.fbp(new class_5611(0.0F, 6.0F), axxx.ehf.dnp(), axxx.aoz.dnp());
             };
             Color axxxxxxxxxxx = dec.ceu(axxxxxxxxxx, (int)(axxxxxxxx * 255.0F));

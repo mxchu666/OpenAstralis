@@ -39,29 +39,35 @@ public class een extends class_437 implements amh, dlc, fjk {
 
    public void method_25394(class_332 context, int mouseX, int mouseY, float delta) {
       long ax = een.a ^ 51097051149116L;
-      dmp.gst(0.0F, 0.0F, a.field_22789, a.field_22790, new Color(0, 0, 0, a<"d">(7301, 1455592368642058686L ^ ax)));
-      float var10000 = a.field_22789 / 2;
-      float var10002 = a.field_22789 / 2;
+      float var10002 = a.field_22789;
       float var10003 = a.field_22790;
+      short var10009 = 7301;
+      long var10010 = 1455592368642058686L ^ ax;
+      dmp.gst(0.0F, 0.0F, var10002, var10003, new Color(0, 0, 0, 200));
+      float var10000 = a.field_22789 / 2;
+      var10002 = a.field_22789 / 2;
+      var10003 = a.field_22790;
       short var10007 = 12253;
       long var10008 = 4769339897036593893L ^ ax;
-      short var10 = 11497;
-      long var10009 = 7870160479983393232L ^ ax;
-      short var13 = 11497;
-      long var10010 = 7870160479983393232L ^ ax;
-      short var16 = 4987;
+      short var12 = 11497;
+      long var15 = 7870160479983393232L ^ ax;
+      var10009 = 11497;
+      var10010 = 7870160479983393232L ^ ax;
+      short var20 = 4987;
       long var10011 = 3022021344437298753L ^ ax;
-      dmp.ezk(var10000, 0.0F, var10002, var10003, 1.0F, new Color(-632758857, -377991591, -377991591, 30));
+      dmp.ezk(var10000, 0.0F, var10002, var10003, 1.0F, new Color(255, 255, 255, 30));
       float var10001 = a.field_22790 / 2;
       var10002 = a.field_22789;
       var10003 = a.field_22790 / 2;
       var10007 = 11497;
       var10008 = 7870160479983393232L ^ ax;
-      short var12 = 11497;
-      var10009 = 7870160479983393232L ^ ax;
-      short var15 = 11497;
+      short var14 = 11497;
+      long var17 = 7870160479983393232L ^ ax;
+      var10009 = 11497;
       var10010 = 7870160479983393232L ^ ax;
-      dmp.ezk(0.0F, var10001, var10002, var10003, 1.0F, new Color(-377991591, -377991591, -377991591, a<"d">(21155, 256089782510921631L ^ ax)));
+      short var22 = 21155;
+      var10011 = 256089782510921631L ^ ax;
+      dmp.ezk(0.0F, var10001, var10002, var10003, 1.0F, new Color(255, 255, 255, 30));
    }
 
    public boolean method_25402(class_11909 click, boolean doubled) {

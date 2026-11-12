@@ -88,7 +88,7 @@ public class gaf extends class_437 implements dlc {
                               bfm axxxxxxx = var10[axxxxxx];
                               if (axx != null) {
                                  String var48 = axxxxxxx.eai();
-                                 short var80 = 1119;
+                                 short var81 = 1119;
                                  long var10002 = 3439419101627698408L ^ ax;
                                  var49 = ImGui.beginTabItem(var48 + "##tab");
                                  if (axx == null) {
@@ -121,8 +121,8 @@ public class gaf extends class_437 implements dlc {
                                  break label541;
                               }
 
-                              short var82 = 12572;
-                              long var105 = 3388894822204438950L ^ ax;
+                              short var83 = 12572;
+                              long var106 = 3388894822204438950L ^ ax;
                               a.fxh = "Configs";
                               a.ckc = null;
                               var49 = false;
@@ -141,8 +141,8 @@ public class gaf extends class_437 implements dlc {
                         break label562;
                      }
 
-                     short var83 = 12572;
-                     long var106 = 3388894822204438950L ^ ax;
+                     short var84 = 12572;
+                     long var107 = 3388894822204438950L ^ ax;
                      var47 = a.fxh.equals("Configs");
                   }
 
@@ -179,7 +179,7 @@ public class gaf extends class_437 implements dlc {
                               for (guu axxxxx : dar.gqy().aws().gtd(a.ckc)) {
                                  ImGui.pushID(axxxxx.clp());
                                  var54 = a.czb;
-                                 var85 = axxxxx;
+                                 var86 = axxxxx;
                                  if (axx == null) {
                                     break label567;
                                  }
@@ -224,8 +224,8 @@ public class gaf extends class_437 implements dlc {
                            ImGui.nextColumn();
                            short var56 = 26960;
                            var10001 = 3150980916572070371L ^ ax;
-                           short var117 = 31854;
-                           long var121 = 7152392721447500111L ^ ax;
+                           short var121 = 31854;
+                           long var126 = 7152392721447500111L ^ ax;
                            var57 = ImGui.beginChild("ModuleOptions", 0.0F, 0.0F, true, 128);
                            if (axx != null) {
                               if (var57 == 0) {
@@ -258,15 +258,15 @@ public class gaf extends class_437 implements dlc {
                            }
 
                            var54 = a.czb;
-                           var85 = a.czb;
+                           var86 = a.czb;
                         }
 
-                        boolean var89 = var85.aov();
+                        boolean var90 = var86.aov();
                         if (axx != null) {
-                           var89 = !var89;
+                           var90 = !var90;
                         }
 
-                        var54.atd(var89);
+                        var54.atd(var90);
                      }
 
                      ImGui.dummy(0.0F, 1.0F);
@@ -303,12 +303,12 @@ public class gaf extends class_437 implements dlc {
                                     }
 
                                     if (var60) {
-                                       boolean var90 = axxxxxxxxx.dnp();
+                                       boolean var91 = axxxxxxxxx.dnp();
                                        if (axx != null) {
-                                          var90 = !var90;
+                                          var91 = !var91;
                                        }
 
-                                       axxxxxxxxx.gbf(var90);
+                                       axxxxxxxxx.gbf(var91);
                                     }
                                  }
 
@@ -320,12 +320,12 @@ public class gaf extends class_437 implements dlc {
                                     bes axxxxxxxxxx = (bes)axxxxx;
                                     float[] axxxxxxxxxxx = axxxxxxxxxx.dnp().getData();
                                     String var61 = axxxxxxxxxx.fah();
-                                    short var91 = 12788;
-                                    long var107 = 705915862377953604L ^ ax;
+                                    short var92 = 12788;
+                                    long var108 = 705915862377953604L ^ ax;
                                     String axxxxxxxxxxxx = "##" + var61;
                                     String var62 = axxxxxxxxxx.fah();
-                                    short var92 = 18774;
-                                    var107 = 2782296628564656612L ^ ax;
+                                    short var93 = 18774;
+                                    var108 = 2782296628564656612L ^ ax;
                                     String axxxxxxxxxxxxx = var62 + " %.3f";
                                     boolean var63 = ImGui.sliderFloat(axxxxxxxxxxxx, axxxxxxxxxxx, axxxxxxxxxx.cpl(), axxxxxxxxxx.hgz(), axxxxxxxxxxxxx);
                                     if (axx != null) {
@@ -360,7 +360,10 @@ public class gaf extends class_437 implements dlc {
                                  if (var60) {
                                     acn axxxxxxxxxxxxxx = (acn)axxxxx;
                                     float[] axxxxxxxxxxxxxxx = dec.eul(axxxxxxxxxxxxxx.dnp().getRGB());
-                                    var60 = ImGui.colorEdit4(axxxxx.fah(), axxxxxxxxxxxxxxx, b<"m">(17364, 1019599977911944956L ^ ax));
+                                    String var64 = axxxxx.fah();
+                                    short var110 = 17364;
+                                    long var10003 = 1019599977911944956L ^ ax;
+                                    var60 = ImGui.colorEdit4(var64, axxxxxxxxxxxxxxx, 65536);
                                     if (axx == null) {
                                        break label472;
                                     }
@@ -377,10 +380,10 @@ public class gaf extends class_437 implements dlc {
                               if (axx != null) {
                                  if (var60) {
                                     dxl axxxxxxxxxxxxxxxx = (dxl)axxxxx;
-                                    String var64 = axxxxx.fah();
-                                    short var93 = 24447;
-                                    long var109 = 6853390998819706820L ^ ax;
-                                    var60 = ImGui.inputTextWithHint(var64, "You May Type Whatever You Wish Here <3", axxxxxxxxxxxxxxxx.gbs(), 0);
+                                    String var65 = axxxxx.fah();
+                                    short var94 = 24447;
+                                    long var111 = 6853390998819706820L ^ ax;
+                                    var60 = ImGui.inputTextWithHint(var65, "You May Type Whatever You Wish Here <3", axxxxxxxxxxxxxxxx.gbs(), 0);
                                     if (axx == null) {
                                        break label465;
                                     }
@@ -403,13 +406,13 @@ public class gaf extends class_437 implements dlc {
                                     }
 
                                     if (var60) {
-                                       String var65 = axxxxxxxxxxxxxxxxx.dnp();
-                                       short var94 = 30809;
-                                       long var110 = 473417143126110433L ^ ax;
-                                       String var66 = "##" + var65;
-                                       short var95 = 30421;
-                                       var110 = 8072764772912250472L ^ ax;
-                                       ImGui.inputTextWithHint(var66, "Search For Modes.", a.eam, 0);
+                                       String var66 = axxxxxxxxxxxxxxxxx.dnp();
+                                       short var95 = 30809;
+                                       long var112 = 473417143126110433L ^ ax;
+                                       String var67 = "##" + var66;
+                                       short var96 = 30421;
+                                       var112 = 8072764772912250472L ^ ax;
+                                       ImGui.inputTextWithHint(var67, "Search For Modes.", a.eam, 0);
                                        String axxxxxxxxxxxxxxxxxx = a.eam.get().toLowerCase();
 
                                        for (String axxxxxxxxxxxxxxxxxxx : axxxxxxxxxxxxxxxxx.ape()) {
@@ -437,7 +440,9 @@ public class gaf extends class_437 implements dlc {
 
                                              if (var60) {
                                                 axxxxxxxxxxxxxxxxx.gbf(axxxxxxxxxxxxxxxxxxx);
-                                                a.eam.set(new ImString(b<"m">(6449, 2599013598174075928L ^ ax)));
+                                                short var118 = 6449;
+                                                long var122 = 2599013598174075928L ^ ax;
+                                                a.eam.set(new ImString(500));
                                              }
                                           }
 
@@ -461,32 +466,32 @@ public class gaf extends class_437 implements dlc {
                                     label426: {
                                        axxxxxxxxxxxxxxxxxx = (cyx)axxxxx;
                                        axxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxxx.dnp();
-                                       hcr var67 = axxxxxxxxxxxxxxxxxxx;
+                                       hcr var68 = axxxxxxxxxxxxxxxxxxx;
                                        if (axx != null) {
                                           if (axxxxxxxxxxxxxxxxxxx == null) {
-                                             short var69 = 21703;
+                                             short var70 = 21703;
                                              var10001 = 2286179119578586227L ^ ax;
-                                             var68 = "None";
+                                             var69 = "None";
                                              break label426;
                                           }
 
-                                          var67 = axxxxxxxxxxxxxxxxxxx;
+                                          var68 = axxxxxxxxxxxxxxxxxxx;
                                        }
 
-                                       var68 = var67.akm();
+                                       var69 = var68.akm();
                                     }
 
-                                    String axxxxxxxxxxxxxxxxxxxx = var68;
+                                    String axxxxxxxxxxxxxxxxxxxx = var69;
                                     var60 = ImGui.beginCombo(axxxxxxxxxxxxxxxxxx.fah(), axxxxxxxxxxxxxxxxxxxx);
                                     if (axx == null) {
                                        break label430;
                                     }
 
                                     if (var60) {
-                                       short var70 = 20221;
+                                       short var71 = 20221;
                                        var10001 = 4221771265720813145L ^ ax;
-                                       short var98 = 29825;
-                                       long var112 = 1375848795933097021L ^ ax;
+                                       short var99 = 29825;
+                                       long var114 = 1375848795933097021L ^ ax;
                                        ImGui.inputTextWithHint("##search", "Search modes...", a.eam);
                                        String axxxxxxxxxxxxxxxxxxxxx = a.eam.get().toLowerCase();
 
@@ -513,27 +518,27 @@ public class gaf extends class_437 implements dlc {
                                              }
 
                                              boolean axxxxxxxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxxxxxxx == axxxxxxxxxxxxxxxxxxx;
-                                             boolean var71 = ImGui.selectable(axxxxxxxxxxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxxxxxxxxxx);
+                                             boolean var72 = ImGui.selectable(axxxxxxxxxxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxxxxxxxxxx);
                                              if (axx != null) {
-                                                if (!var71) {
+                                                if (!var72) {
                                                    break label580;
                                                 }
 
-                                                var71 = axxxxxxxxxxxxxxxxxxxxxxxx;
+                                                var72 = axxxxxxxxxxxxxxxxxxxxxxxx;
                                              }
 
-                                             if (!var71) {
+                                             if (!var72) {
                                                 axxxxxxxxxxxxxxxxxx.biz(axxxxxxxxxxxxxxxxxxxxxx);
-                                                hcr var72 = axxxxxxxxxxxxxxxxxxx;
+                                                hcr var73 = axxxxxxxxxxxxxxxxxxx;
                                                 if (axx != null) {
                                                    if (axxxxxxxxxxxxxxxxxxx != null) {
                                                       axxxxxxxxxxxxxxxxxxx.frr(false);
                                                    }
 
-                                                   var72 = axxxxxxxxxxxxxxxxxxxxxx;
+                                                   var73 = axxxxxxxxxxxxxxxxxxxxxx;
                                                 }
 
-                                                var72.frr(true);
+                                                var73.frr(true);
                                                 a.eam.set("");
                                              }
                                           }
@@ -560,11 +565,11 @@ public class gaf extends class_437 implements dlc {
                                           var60 = a.bst;
                                           if (axx != null) {
                                              if (!a.bst) {
-                                                String var73 = axxxxxxxxxxxxxxxxxxxxx.dnp();
-                                                short var99 = 16954;
-                                                long var113 = 463842939381222044L ^ ax;
-                                                ImGui.text("Current Path: " + var73);
-                                                short var74 = 14133;
+                                                String var74 = axxxxxxxxxxxxxxxxxxxxx.dnp();
+                                                short var100 = 16954;
+                                                long var115 = 463842939381222044L ^ ax;
+                                                ImGui.text("Current Path: " + var74);
+                                                short var75 = 14133;
                                                 var10001 = 1848765986878193546L ^ ax;
                                                 var60 = ImGui.button("Choose Path");
                                                 if (axx == null) {
@@ -576,15 +581,15 @@ public class gaf extends class_437 implements dlc {
                                                 }
 
                                                 a.bst = true;
-                                                short var10003 = 30856;
-                                                long var118 = 7959907644631232553L ^ ax;
+                                                short var119 = 30856;
+                                                long var123 = 7959907644631232553L ^ ax;
                                                 a.bwg = new fkc(System.getProperty("user.home"), axxxxxxxxxxxxxxxxxxxxx.cof());
                                                 if (axx != null) {
                                                    break label387;
                                                 }
                                              }
 
-                                             short var75 = 32133;
+                                             short var76 = 32133;
                                              var10001 = 152954637903082812L ^ ax;
                                              var60 = ImGui.button("Cancel Selection");
                                           }
@@ -610,7 +615,7 @@ public class gaf extends class_437 implements dlc {
                                           }
                                        }
 
-                                       var76 = axxxxx;
+                                       var77 = axxxxx;
                                        if (axx == null) {
                                           break label581;
                                        }
@@ -622,14 +627,14 @@ public class gaf extends class_437 implements dlc {
                                        break label391;
                                     }
 
-                                    var76 = axxxxx;
+                                    var77 = axxxxx;
                                  }
 
-                                 ale axxxxxxxxxxxxxxxxxxxxxx = (ale)var76;
-                                 String var77 = ek.bzp(axxxxxxxxxxxxxxxxxxxxxx.dnp().toString());
-                                 short var102 = 24654;
-                                 long var114 = 7398687513824897279L ^ ax;
-                                 ImGui.text("Currently Aiming For The " + var77);
+                                 ale axxxxxxxxxxxxxxxxxxxxxx = (ale)var77;
+                                 String var78 = ek.bzp(axxxxxxxxxxxxxxxxxxxxxx.dnp().toString());
+                                 short var103 = 24654;
+                                 long var116 = 7398687513824897279L ^ ax;
+                                 ImGui.text("Currently Aiming For The " + var78);
                                  a.bqb = true;
                                  a.geq = axxxxxxxxxxxxxxxxxxxxxx;
                               }
@@ -646,17 +651,17 @@ public class gaf extends class_437 implements dlc {
                            }
                         }
 
-                        short var78 = 23142;
+                        short var79 = 23142;
                         var10001 = 2425838697477349184L ^ ax;
                         var57 = 255;
                      }
 
-                     short var104 = 23828;
-                     long var115 = 6889450674529572913L ^ ax;
-                     short var116 = 9849;
-                     long var119 = 7695384583290807133L ^ ax;
-                     short var120 = 5716;
-                     long var122 = 5955563335458021089L ^ ax;
+                     short var105 = 23828;
+                     long var117 = 6889450674529572913L ^ ax;
+                     short var120 = 9849;
+                     long var124 = 7695384583290807133L ^ ax;
+                     short var125 = 5716;
+                     long var127 = 5955563335458021089L ^ ax;
                      ImGui.textColored(var57, 165, 0, 255, "This module has no settings");
                   }
 

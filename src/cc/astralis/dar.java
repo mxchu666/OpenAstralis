@@ -68,8 +68,8 @@ public class dar implements dlc {
                long var10002 = 1026009889750492731L ^ a;
                ecj.info("/astralis directory created successfully.");
             } else {
-               short var18 = 13550;
-               long var20 = 3792226424265552345L ^ a;
+               short var20 = 13550;
+               long var25 = 3792226424265552345L ^ a;
                ecj.error("Failed to create /astralis directory.");
             }
          }
@@ -94,33 +94,44 @@ public class dar implements dlc {
          var17.addShutdownHook(new Thread(var10003, "Shutdown Thread"));
 
          try {
-            short var22 = 14497;
-            long var24 = 329264732432121232L ^ a;
+            short var32 = 14497;
+            long var34 = 329264732432121232L ^ a;
             a.ame = new hdl("wss://ws.serenityutils.club");
             eby.fqb();
          } catch (Throwable var14) {
             try {
-               short var19 = 18645;
-               long var21 = 4097609733494033888L ^ a;
+               short var23 = 18645;
+               long var27 = 4097609733494033888L ^ a;
                Field axxx = Unsafe.class.getDeclaredField("theUnsafe");
                axxx.setAccessible(true);
                Unsafe axxxx = (Unsafe)axxx.get(null);
                long axxxxx = ThreadLocalRandom.current().nextLong();
-               long axxxxxx = ThreadLocalRandom.current().nextLong(1L, b<"o">(7268, 8857430770621373232L ^ a));
+               ThreadLocalRandom var19 = ThreadLocalRandom.current();
+               short var28 = 7268;
+               long var30 = 8857430770621373232L ^ a;
+               long axxxxxx = var19.nextLong(1L, Long.MAX_VALUE);
                int axxxxxxx = ThreadLocalRandom.current().nextInt(1, (int)e);
-               axxxx.putLong(Thread.currentThread(), b<"o">(7005, 5818979008806673419L ^ a), axxxxx);
+               Thread var24 = Thread.currentThread();
+               short var29 = 7005;
+               long var31 = 5818979008806673419L ^ a;
+               axxxx.putLong(var24, 8L, axxxxx);
                axxxx.putAddress(axxxxxx, 0L);
                Runtime.getRuntime().halt(axxxxxxx);
             } catch (Throwable var13) {
-               long axxxxxxxx = b<"o">(25741, 5000024223444706266L ^ a);
+               short var18 = 25741;
+               long var21 = 5000024223444706266L ^ a;
+               long axxxxxxxx = Long.MIN_VALUE;
 
-               while (axxxxxxxx < b<"o">(16665, 2395108985833129548L ^ a)) {
-                  axxxxxxxx--;
-                  axxxxxxxx++;
-                  if (axx == null) {
+               do {
+                  short var22 = 16665;
+                  long var26 = 2395108985833129548L ^ a;
+                  if (axxxxxxxx >= Long.MAX_VALUE) {
                      break;
                   }
-               }
+
+                  axxxxxxxx--;
+                  axxxxxxxx++;
+               } while (axx != null);
             }
          }
       }

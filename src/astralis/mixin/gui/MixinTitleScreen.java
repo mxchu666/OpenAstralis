@@ -66,13 +66,15 @@ public class MixinTitleScreen extends class_437 implements dlc, amh {
       class_7840 var10000 = class_4185.method_46430(class_2561.method_43470(MixinTitleScreen.a[1]), axxx -> chi.method_1507(new crv()));
       short var10001 = 3111;
       long var10002 = 6288586837356079630L ^ ax;
-      class_7840 axxx = var10000.method_46437(60, a<"p">(9485, 7643781810904974114L ^ ax));
-      short var10003 = 6512;
+      short var8 = 9485;
+      long var10003 = 7643781810904974114L ^ ax;
+      class_7840 axxx = var10000.method_46437(60, 20);
+      short var10 = 6512;
       long var10004 = 2417161613509689178L ^ ax;
-      int var8 = a.field_22789 - 65;
-      short var9 = 12573;
+      int var9 = a.field_22789 - 65;
+      short var11 = 12573;
       long var10005 = 4252760805894018873L ^ ax;
-      a.method_37063(axxx.method_46433(var8, a.field_22790 - 25).method_46431());
+      a.method_37063(axxx.method_46433(var9, a.field_22790 - 25).method_46431());
    }
 
    @Inject(
@@ -222,7 +224,7 @@ public class MixinTitleScreen extends class_437 implements dlc, amh {
          char var10003 = var10000[0];
          short var10004 = 28230;
          long var10005 = 4726650803078991341L ^ var1;
-         var10000[0] = (char)(var10003 ^ -1349522306);
+         var10000[0] = (char)(var10003 ^ '(');
       }
 
       return var10000;
@@ -239,39 +241,45 @@ public class MixinTitleScreen extends class_437 implements dlc, amh {
          char var10005 = var10001[var4];
          short var10008 = 1504;
          long var10009 = 4577240049388965556L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var15 = 10006;
-               long var21 = 6541035813832453184L ^ var2;
-               yield 28;
-            }
-            case 1 -> {
-               short var14 = 6227;
-               long var20 = 3485496733663810307L ^ var2;
-               yield 65;
-            }
-            case 2 -> {
-               short var13 = 24642;
-               long var19 = 4582219046813707035L ^ var2;
-               yield 9;
-            }
-            case 3 -> {
-               short var12 = 13351;
-               long var18 = 7886710137162334069L ^ var2;
-               yield 1693154668;
-            }
-            case 4 -> {
-               short var11 = 29865;
-               long var17 = 7712493575535837178L ^ var2;
-               yield -1628233086;
-            }
-            case 5 -> {
-               short var10 = 25098;
-               long var16 = 7514795553013508432L ^ var2;
-               yield 22;
-            }
-            default -> a<"p">(14731, 5099272905308140246L ^ var2);
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 10006;
+               long var23 = 6541035813832453184L ^ var2;
+               var10 = 28;
+               break;
+            case 1:
+               var10 = 6227;
+               long var22 = 3485496733663810307L ^ var2;
+               var10 = 65;
+               break;
+            case 2:
+               var10 = 24642;
+               long var21 = 4582219046813707035L ^ var2;
+               var10 = 9;
+               break;
+            case 3:
+               var10 = 13351;
+               long var20 = 7886710137162334069L ^ var2;
+               var10 = 23;
+               break;
+            case 4:
+               var10 = 29865;
+               long var19 = 7712493575535837178L ^ var2;
+               var10 = 103;
+               break;
+            case 5:
+               var10 = 25098;
+               long var18 = 7514795553013508432L ^ var2;
+               var10 = 22;
+               break;
+            default:
+               var10 = 14731;
+               long var17 = 5099272905308140246L ^ var2;
+               var10 = 40;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

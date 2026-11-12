@@ -134,42 +134,53 @@ public class bqf implements dlc {
          }
       }
       Color axxxxxx = switch (var32) {
-         case 0 -> ezv.gbq(c<"y">(23380, 912165839743806562L ^ ax), 0, 0.7F, 1.0F);
+         case 0 -> {
+            short var34 = 23380;
+            long var39 = 912165839743806562L ^ ax;
+            yield ezv.gbq(3000L, 0, 0.7F, 1.0F);
+         }
          default -> dec.fbp(new class_5611(0.0F, 6.0F), axx.ehf.dnp(), axx.aoz.dnp());
       };
       String var29 = axx.eqi.dnp();
       byte axxxxxxx = -1;
-      int var34 = var29.hashCode();
+      int var35 = var29.hashCode();
       if (axxx != null) {
-         switch (var34) {
+         switch (var35) {
             case -1656737386:
-               short var37 = 14613;
-               long var41 = 6938821246708299467L ^ ax;
-               var34 = var29.equals("Rainbow");
+               short var40 = 14613;
+               long var46 = 6938821246708299467L ^ ax;
+               var35 = var29.equals("Rainbow");
                if (axxx == null) {
                   break;
                }
 
-               if (var34 != 0) {
+               if (var35 != 0) {
                   axxxxxxx = 0;
                }
             default:
-               var34 = axxxxxxx;
+               var35 = axxxxxxx;
          }
       }
-      Color axxxxxxxx = switch (var34) {
-         case 0 -> ezv.gbq(c<"y">(5070, 4051667039465809146L ^ ax), 0, 1.0F, 1.0F);
+      Color axxxxxxxx = switch (var35) {
+         case 0 -> {
+            short var37 = 5070;
+            long var41 = 4051667039465809146L ^ ax;
+            yield ezv.gbq(4000L, 0, 1.0F, 1.0F);
+         }
          default -> dec.fbp(new class_5611(0.0F, 6.0F), axx.ehf.dnp(), axx.aoz.dnp());
       };
-      short var38 = 13158;
-      long var42 = 3199015070355320018L ^ ax;
+      short var42 = 13158;
+      long var47 = 3199015070355320018L ^ ax;
       Color axxxxxxxxx = dec.ceu(axxxxxx, 200);
-      var38 = 29115;
-      var42 = 8511707684391038478L ^ ax;
+      var42 = 29115;
+      var47 = 8511707684391038478L ^ ax;
       Color var31 = dec.ceu(axxxxxxxx, 200);
-      short var36 = 4815;
-      float axxxxxxxxxx = (float)(System.currentTimeMillis() % c<"y">(10693, 791296897400413936L ^ ax)) / 3000.0F;
-      long var40 = 4790519215233846655L ^ ax;
+      short var38 = 4815;
+      long var44 = System.currentTimeMillis();
+      short var49 = 10693;
+      long var10003 = 791296897400413936L ^ ax;
+      float axxxxxxxxxx = (float)(var44 % 3000L) / 3000.0F;
+      long var45 = 4790519215233846655L ^ ax;
       float axxxxxxxxxxx = 0.15F;
       a.method_61958(a.method_30950(chi.method_61966().method_60637(true)).method_1020(chi.field_1773.method_19418().method_19326()));
       Matrix4f axxxxxxxxxxxx = a.method_23760().method_23761();
@@ -225,7 +236,9 @@ public class bqf implements dlc {
       int axxxxxxx = 0;
 
       while (true) {
-         if (axxxxxxx <= b<"y">(99, 4347237011424027567L ^ ax)) {
+         byte var26 = 99;
+         long var10002 = 4347237011424027567L ^ ax;
+         if (axxxxxxx <= 360) {
             double axxxxxxxx = Math.toRadians(axxxxxxx);
             float axxxxxxxxx = (float)Math.sin(axxxxxxxx) * a;
             float axxxxxxxxxx = (float)Math.cos(axxxxxxxx) * a;
@@ -240,8 +253,8 @@ public class bqf implements dlc {
             if (axxx != null) {
                switch (var22) {
                   case -1656737386:
-                     short var25 = 14613;
-                     long var10002 = 6938791057983949493L ^ ax;
+                     short var27 = 14613;
+                     var10002 = 6938791057983949493L ^ ax;
                      var22 = axxxxxxxxxxxx.equals("Rainbow");
                      if (axxx == null) {
                         break;
@@ -255,7 +268,11 @@ public class bqf implements dlc {
                }
             }
             Color axxxxxxxxxxxxx = switch (var22) {
-               case 0 -> ezv.gbq(c<"y">(10693, 791345769362416270L ^ ax), 0, 0.7F, 1.0F);
+               case 0 -> {
+                  short var24 = 10693;
+                  var10001 = 791345769362416270L ^ ax;
+                  yield ezv.gbq(3000L, 0, 0.7F, 1.0F);
+               }
                default -> dec.fbp(new class_5611(0.0F, 6.0F), axxxxxxxxxxx.ehf.dnp(), axxxxxxxxxxx.aoz.dnp());
             };
             Color axxxxxxxxxxxxxx = dec.ceu(axxxxxxxxxxxxx, a);
@@ -268,7 +285,7 @@ public class bqf implements dlc {
          }
 
          axxxxx.method_37104();
-         short var24 = 25324;
+         short var25 = 25324;
          var10001 = 5981950142919786789L ^ ax;
          var22 = 2848;
          break;

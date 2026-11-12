@@ -53,28 +53,30 @@ public class dnu extends brc {
    public void etg(JsonObject json) {
       long ax = c ^ 62223174061464L;
       int[] var10000 = dar.abu();
-      long axx = c<"r">(1566, 963153233694900291L ^ ax);
-      int[] var10001 = fxc.gty();
+      short var10001 = 1566;
+      long var10002 = 963153233694900291L ^ ax;
+      long axx = 32630151548704L;
+      int[] var15 = fxc.gty();
       a.cps(a);
-      int[] axxx = var10001;
+      int[] axxx = var15;
       int[] axxxx = var10000;
       JsonObject var13 = a;
       String[] var12 = b;
-      short var10002 = 31205;
+      short var17 = 31205;
       long var10003 = 8929640590784962081L ^ ax;
-      String var15 = var12[9];
+      String var16 = var12[9];
       if (axxxx != null) {
-         if (!a.has(var15)) {
+         if (!a.has(var16)) {
             return;
          }
 
          var13 = a;
-         var10002 = 31205;
+         short var18 = 31205;
          var10003 = 8929640590784962081L ^ ax;
-         var15 = b[9];
+         var16 = b[9];
       }
 
-      JsonArray axxxxx = var13.getAsJsonArray(var15);
+      JsonArray axxxxx = var13.getAsJsonArray(var16);
       JsonArray var14 = axxxxx;
       if (axxxx != null) {
          if (axxxxx == null) {
@@ -97,25 +99,28 @@ public class dnu extends brc {
    @Override
    public String cql() {
       long a = c ^ 81017775090614L;
-      long ax = c<"r">(10448, 6120296671581980834L ^ a);
+      short var10000 = 10448;
+      long var10001 = 6120296671581980834L ^ a;
+      long ax = 30288795586497L;
       JsonObject axx = a.fdo();
-      int[] var10000 = dar.abu();
-      int[] var10001 = fxc.gty();
+      int[] var16 = dar.abu();
+      int[] var21 = fxc.gty();
       JsonArray axxx = new JsonArray();
       Iterator var9 = a.god.iterator();
-      int[] axxxx = var10001;
-      int[] axxxxx = var10000;
+      int[] axxxx = var21;
+      int[] axxxxx = var16;
 
       label33:
       while (true) {
+         Object var17;
          if (var9.hasNext()) {
-            var10000 = (int[])var9.next();
+            var17 = var9.next();
          } else {
-            var10000 = (int[])axx;
+            var17 = axx;
             String[] var12 = b;
             if (axxxxx != null) {
-               short var22 = 29063;
-               long var24 = 7842092293403881589L ^ a;
+               short var24 = 29063;
+               long var26 = 7842092293403881589L ^ a;
                axx.add(fz.dsg(var12[8], a.fkm, a.cis), axxx);
                break;
             }
@@ -123,81 +128,81 @@ public class dnu extends brc {
 
          String[] var14;
          do {
-            ago axxxxxx = (ago)var10000;
+            ago axxxxxx = (ago)var17;
             JsonObject axxxxxxx = new JsonObject();
             short var10002 = 12761;
             long var10003 = 3648930001471402043L ^ a;
-            Object[] var20 = new Object[14];
+            Object[] var22 = new Object[14];
             var14 = b;
-            var20[0] = var14[4];
-            var20[1] = axxxxxx.amx();
-            var20[2] = var14[3];
-            var20[3] = axxxxxx.chb();
+            var22[0] = var14[4];
+            var22[1] = axxxxxx.amx();
+            var22[2] = var14[3];
+            var22[3] = axxxxxx.chb();
             short var10006 = 23207;
             long var10007 = 410959420196428616L ^ a;
-            var20[4] = var14[7];
-            var20[5] = axxxxxx.ayq().cfs();
+            var22[4] = var14[7];
+            var22[5] = axxxxxx.ayq().cfs();
             short var10004 = 24681;
             long var10005 = 9162117506651005326L ^ a;
-            var20[6] = var14[0];
+            var22[6] = var14[0];
             var10004 = 12986;
             var10005 = 1889205266959594332L ^ a;
-            var20[7] = axxxxxx.ayq().eus();
+            var22[7] = axxxxxx.ayq().eus();
             var10004 = 17695;
             var10005 = 8003695236462445814L ^ a;
-            var20[8] = var14[5];
+            var22[8] = var14[5];
             var10004 = 4120;
             var10005 = 3856357529017733622L ^ a;
-            var20[9] = axxxxxx.bsl();
+            var22[9] = axxxxxx.bsl();
             var10004 = 25036;
             var10005 = 1628160420341325856L ^ a;
             var10006 = 27899;
             var10007 = 1365750128521751827L ^ a;
-            var20[10] = var14[6];
+            var22[10] = var14[6];
             var10004 = 24082;
             var10005 = 5835743926397411314L ^ a;
-            var20[11] = axxxxxx.cna();
+            var22[11] = axxxxxx.cna();
             var10004 = 6375;
             var10005 = 4310529379551467778L ^ a;
             var10006 = 16534;
             var10007 = 4790251065054855543L ^ a;
-            var20[12] = var14[10];
+            var22[12] = var14[10];
             var10004 = 11496;
             var10005 = 5055723908829343003L ^ a;
-            var20[13] = axxxxxx.dvu().toString();
-            a.eqw(axxxxxxx, var20);
+            var22[13] = axxxxxx.dvu().toString();
+            a.eqw(axxxxxxx, var22);
             axxx.add(axxxxxxx);
-            var10000 = axxxx;
+            int[] var18 = axxxx;
             if (axxxxx != null) {
                if (axxxx != null) {
                   break label33;
                }
 
-               var10000 = axxxx;
+               var18 = axxxx;
             }
 
-            if (var10000 == null) {
+            if (var18 == null) {
                continue label33;
             }
 
-            var10000 = (int[])axx;
+            var17 = axx;
             var14 = b;
          } while (axxxxx == null);
 
-         short var21 = 29063;
-         long var23 = 7842092293403881589L ^ a;
+         short var23 = 29063;
+         long var25 = 7842092293403881589L ^ a;
          axx.add(fz.dsg(var14[8], a.fkm, a.cis), axxx);
          break;
       }
 
-      String var18 = axx.toString();
+      String var19 = axx.toString();
       String[] var15 = b;
-      String var19 = fz.dvr(var18, cni.fsi(var15[1]), cni.fsi(var15[2]));
+      String var20 = fz.dvr(var19, cni.fsi(var15[1]), cni.fsi(var15[2]));
       if (cdr.haa() == null) {
          fxc.dsm(new int[4]);
       }
 
-      return var19;
+      return var20;
    }
 
    public List<ago> dtt() {
@@ -450,7 +455,10 @@ public class dnu extends brc {
       long var1 = c ^ 66347520976099L;
       char[] var10000 = var0.toCharArray();
       if (var10000.length < 2) {
-         var10000[0] = (char)(var10000[0] ^ a<"p">(1094, 7594356931948858085L ^ var1));
+         char var10003 = var10000[0];
+         short var10004 = 1094;
+         long var10005 = 7594356931948858085L ^ var1;
+         var10000[0] = (char)(var10003 ^ '\f');
       }
 
       return var10000;
@@ -467,35 +475,45 @@ public class dnu extends brc {
          char var10005 = var10001[var4];
          short var10008 = 12986;
          long var10009 = 1889157224888072029L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var14 = 12602;
-               long var19 = 4203011402002560203L ^ var2;
-               yield 66;
-            }
-            case 1 -> {
-               short var13 = 6532;
-               long var18 = 5653372394116078708L ^ var2;
-               yield 40;
-            }
-            case 2 -> a<"p">(9721, 8552124684801794061L ^ var2);
-            case 3 -> {
-               short var12 = 3452;
-               long var17 = 5618595096313186448L ^ var2;
-               yield 106;
-            }
-            case 4 -> {
-               short var11 = 15855;
-               long var16 = 3108511126683547673L ^ var2;
-               yield 50;
-            }
-            case 5 -> {
-               short var10 = 644;
-               long var15 = 5452083905075595110L ^ var2;
-               yield 23;
-            }
-            default -> a<"p">(1094, 7594347491759604145L ^ var2);
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 12602;
+               long var23 = 4203011402002560203L ^ var2;
+               var10 = 66;
+               break;
+            case 1:
+               var10 = 6532;
+               long var22 = 5653372394116078708L ^ var2;
+               var10 = 40;
+               break;
+            case 2:
+               var10 = 9721;
+               long var21 = 8552124684801794061L ^ var2;
+               var10 = 93;
+               break;
+            case 3:
+               var10 = 3452;
+               long var20 = 5618595096313186448L ^ var2;
+               var10 = 106;
+               break;
+            case 4:
+               var10 = 15855;
+               long var19 = 3108511126683547673L ^ var2;
+               var10 = 50;
+               break;
+            case 5:
+               var10 = 644;
+               long var18 = 5452083905075595110L ^ var2;
+               var10 = 23;
+               break;
+            default:
+               var10 = 1094;
+               long var17 = 7594347491759604145L ^ var2;
+               var10 = 12;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

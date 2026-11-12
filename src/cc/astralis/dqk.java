@@ -32,7 +32,9 @@ public class dqk extends guu {
       short var10006 = 1526;
       long var10007 = 2563358853963077834L ^ a;
       var3[6] = new aqo(a);
-      var3[b<"u">(25886, 7664319759746709544L ^ a)] = new gus(a);
+      var10006 = 25886;
+      var10007 = 7664319759746709544L ^ a;
+      var3[7] = new gus(a);
       var10006 = 23886;
       var10007 = 2762543842232139892L ^ a;
       var3[8] = new ddx(a);
@@ -48,7 +50,9 @@ public class dqk extends guu {
       var10006 = 6701;
       var10007 = 6556484486079727378L ^ a;
       var3[12] = new bsi(a);
-      var3[b<"u">(30845, 1314154328032552266L ^ a)] = new ayw(a);
+      var10006 = 30845;
+      var10007 = 1314154328032552266L ^ a;
+      var3[13] = new ayw(a);
       var10006 = 10337;
       var10007 = 8292274313336386911L ^ a;
       var3[14] = new hak(a);

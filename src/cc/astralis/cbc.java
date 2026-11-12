@@ -49,8 +49,12 @@ public class cbc extends bmd {
       super();
       a.gaw = new ArrayList<>();
       int[] axx = var10000;
-      a.beq = new erp(dtw.EASE_IN_OUT_SINE, c<"r">(4345, 9160063788821229682L ^ ax));
-      a.bxz = new erp(dtw.EASE_IN_OUT_SINE, c<"r">(32520, 8220452856284635010L ^ ax));
+      short var10004 = 4345;
+      long var10005 = 9160063788821229682L ^ ax;
+      a.beq = new erp(dtw.EASE_IN_OUT_SINE, 300L);
+      var10004 = 32520;
+      var10005 = 8220452856284635010L ^ ax;
+      a.bxz = new erp(dtw.EASE_IN_OUT_SINE, 300L);
       a.cca = a;
       a.fqg(a);
       a.fuo(a);
@@ -68,16 +72,16 @@ public class cbc extends bmd {
                         var10000 = (int[])axxxx;
                         if (axx != null) {
                            switch (axxxx) {
-                              case gbp var19:
+                              case gbp var21:
                                  var10000 = (int[])axxxx;
                                  break;
-                              case adu var20:
+                              case adu var22:
                                  break label37;
-                              case cyx var21:
+                              case cyx var23:
                                  break label38;
-                              case bes var22:
+                              case bes var24:
                                  break label39;
-                              case acn var23:
+                              case acn var25:
                                  break label40;
                               default:
                                  break label41;
@@ -388,15 +392,15 @@ public class cbc extends bmd {
 
          while (true) {
             byte[] var30 = var22.doFinal(var36.getBytes("ISO-8859-1"));
-            String var56 = a(var30).intern();
+            String var58 = a(var30).intern();
             switch (var10001) {
                case 0:
-                  var29[var27++] = var56;
+                  var29[var27++] = var58;
                   if ((var35 += var25) >= var28) {
                      b = var29;
                      c = new String[5];
                      short var38 = 14837;
-                     long var47 = 1647303624595382415L ^ var31;
+                     long var48 = 1647303624595382415L ^ var31;
                      czp = "...";
                      g = new HashMap(13);
                      Cipher var11;
@@ -423,7 +427,7 @@ public class cbc extends bmd {
                         byte[] var18 = var15.substring(var10001, var13).getBytes("ISO-8859-1");
                         long[] var40 = var17;
                         var10001 = var14++;
-                        long var60 = (var18[0] & 255L) << 56
+                        long var62 = (var18[0] & 255L) << 56
                            | (var18[1] & 255L) << 48
                            | (var18[2] & 255L) << 40
                            | (var18[3] & 255L) << 32
@@ -431,10 +435,10 @@ public class cbc extends bmd {
                            | (var18[5] & 255L) << 16
                            | (var18[6] & 255L) << 8
                            | var18[7] & 255L;
-                        byte var67 = -1;
+                        byte var69 = -1;
 
                         while (true) {
-                           long var19 = var60;
+                           long var19 = var62;
                            byte[] var21 = var11.doFinal(
                               new byte[]{
                                  (byte)(var19 >>> 56),
@@ -447,7 +451,7 @@ public class cbc extends bmd {
                                  (byte)var19
                               }
                            );
-                           long var76 = (var21[0] & 255L) << 56
+                           long var79 = (var21[0] & 255L) << 56
                               | (var21[1] & 255L) << 48
                               | (var21[2] & 255L) << 40
                               | (var21[3] & 255L) << 32
@@ -455,19 +459,21 @@ public class cbc extends bmd {
                               | (var21[5] & 255L) << 16
                               | (var21[6] & 255L) << 8
                               | var21[7] & 255L;
-                           switch (var67) {
+                           switch (var69) {
                               case 0:
-                                 var40[var10001] = var76;
+                                 var40[var10001] = var79;
                                  if (var13 >= var16) {
                                     e = var17;
                                     f = new Integer[16];
                                     short var41 = 18500;
-                                    long var51 = var31 ^ 2965449311517219185L;
+                                    long var52 = var31 ^ 2965449311517219185L;
                                     elx = 4;
                                     short var42 = 9707;
-                                    long var52 = var31 ^ 700732302808577243L;
+                                    long var53 = var31 ^ 700732302808577243L;
                                     gsu = 6;
-                                    eas = b<"f">(27654, var31 ^ 6887966977629437244L);
+                                    short var43 = 27654;
+                                    long var54 = var31 ^ 6887966977629437244L;
+                                    eas = 60;
                                     j = new HashMap(13);
                                     Cipher var0;
                                     var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -486,10 +492,10 @@ public class cbc extends bmd {
                                     byte var2 = 0;
 
                                     do {
-                                       int var53 = var2;
+                                       int var55 = var2;
                                        var2 += 8;
-                                       byte[] var7 = var4.substring(var53, var2).getBytes("ISO-8859-1");
-                                       var53 = var3++;
+                                       byte[] var7 = var4.substring(var55, var2).getBytes("ISO-8859-1");
+                                       var55 = var3++;
                                        long var8 = (var7[0] & 255L) << 56
                                           | (var7[1] & 255L) << 48
                                           | (var7[2] & 255L) << 40
@@ -510,7 +516,7 @@ public class cbc extends bmd {
                                              (byte)var8
                                           }
                                        );
-                                       var76 = (var10[0] & 255L) << 56
+                                       var79 = (var10[0] & 255L) << 56
                                           | (var10[1] & 255L) << 48
                                           | (var10[2] & 255L) << 40
                                           | (var10[3] & 255L) << 32
@@ -518,37 +524,38 @@ public class cbc extends bmd {
                                           | (var10[5] & 255L) << 16
                                           | (var10[6] & 255L) << 8
                                           | var10[7] & 255L;
-                                       byte var70 = -1;
-                                       var6[var53] = var76;
+                                       byte var72 = -1;
+                                       var6[var55] = var79;
                                     } while (var2 < var5);
 
                                     h = var6;
                                     i = new Long[2];
-                                    int var63 = b<"f">(23559, 8411112501445201212L ^ var31);
-                                    short var71 = 20950;
-                                    var76 = 163263822954791147L ^ var31;
-                                    short var79 = 20950;
+                                    short var65 = 23559;
+                                    long var73 = 8411112501445201212L ^ var31;
+                                    short var74 = 20950;
+                                    var79 = 163263822954791147L ^ var31;
+                                    short var82 = 20950;
                                     long var10005 = 163263822954791147L ^ var31;
-                                    gb = new Color(var63, 30, 30);
-                                    short var64 = 31001;
-                                    long var72 = 1136647800637270059L ^ var31;
-                                    short var73 = 130;
-                                    var76 = 6360019278598427068L ^ var31;
-                                    short var81 = 130;
+                                    gb = new Color(30, 30, 30);
+                                    short var66 = 31001;
+                                    long var75 = 1136647800637270059L ^ var31;
+                                    short var76 = 130;
+                                    var79 = 6360019278598427068L ^ var31;
+                                    short var84 = 130;
                                     var10005 = 6360019278598427068L ^ var31;
                                     crk = new Color(33, 33, 33);
-                                    short var65 = 24063;
-                                    long var74 = 1413486048155700424L ^ var31;
-                                    short var75 = 15348;
-                                    var76 = 8199838361593866956L ^ var31;
-                                    short var83 = 15348;
+                                    short var67 = 24063;
+                                    long var77 = 1413486048155700424L ^ var31;
+                                    short var78 = 15348;
+                                    var79 = 8199838361593866956L ^ var31;
+                                    short var86 = 15348;
                                     var10005 = 8199838361593866956L ^ var31;
                                     fgl = new Color(180, 180, 180).darker();
                                     return;
                                  }
                                  break;
                               default:
-                                 var40[var10001] = var76;
+                                 var40[var10001] = var79;
                                  if (var13 < var16) {
                                     continue label54;
                                  }
@@ -558,12 +565,12 @@ public class cbc extends bmd {
                                  var13 = 0;
                            }
 
-                           byte var50 = var13;
+                           byte var51 = var13;
                            var13 += 8;
-                           var18 = var15.substring(var50, var13).getBytes("ISO-8859-1");
+                           var18 = var15.substring(var51, var13).getBytes("ISO-8859-1");
                            var40 = var17;
                            var10001 = var14++;
-                           var60 = (var18[0] & 255L) << 56
+                           var62 = (var18[0] & 255L) << 56
                               | (var18[1] & 255L) << 48
                               | (var18[2] & 255L) << 40
                               | (var18[3] & 255L) << 32
@@ -571,7 +578,7 @@ public class cbc extends bmd {
                               | (var18[5] & 255L) << 16
                               | (var18[6] & 255L) << 8
                               | var18[7] & 255L;
-                           var67 = 0;
+                           var69 = 0;
                         }
                      }
                   }
@@ -579,7 +586,7 @@ public class cbc extends bmd {
                   var25 = var26.charAt(var35);
                   break;
                default:
-                  var29[var27++] = var56;
+                  var29[var27++] = var58;
                   if ((var35 += var25) < var28) {
                      var25 = var26.charAt(var35);
                      continue label72;

@@ -26,7 +26,9 @@ public class dfg extends brc {
 
    public dfg() {
       long a = c ^ 113410352141651L;
-      super(a<"y">(19390, 4359463895358576808L ^ a));
+      short var10001 = 19390;
+      long var10002 = 4359463895358576808L ^ a;
+      super(13);
    }
 
    public dfg(String message) {
@@ -243,7 +245,10 @@ public class dfg extends brc {
       long var1 = c ^ 137422171975523L;
       char[] var10000 = var0.toCharArray();
       if (var10000.length < 2) {
-         var10000[0] = (char)(var10000[0] ^ a<"y">(7688, 1922831802259912493L ^ var1));
+         char var10003 = var10000[0];
+         short var10004 = 7688;
+         long var10005 = 1922831802259912493L ^ var1;
+         var10000[0] = (char)(var10003 ^ 16);
       }
 
       return var10000;

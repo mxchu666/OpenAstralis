@@ -41,7 +41,9 @@ public class eky extends guu {
       var10006 = 6859;
       var10007 = 5872707328932881177L ^ a;
       var4[8] = new dnf(a);
-      var4[e<"c">(10952, 8790195160150577951L ^ a)] = new chp(a);
+      var10006 = 10952;
+      var10007 = 8790195160150577951L ^ a;
+      var4[9] = new chp(a);
       a.fyl = new cyx("Speed Modes", var4);
       a.beb(a.fyl);
    }
@@ -105,7 +107,9 @@ public class eky extends guu {
             var5 = hjr;
          }
 
-         if (var5 <= e<"c">(2504, 1603983739535876564L ^ ax)) {
+         var10001 = 2504;
+         var10002 = 1603983739535876564L ^ ax;
+         if (var5 <= 9) {
             return;
          }
       }

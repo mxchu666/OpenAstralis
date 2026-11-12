@@ -62,19 +62,19 @@ public class ezw extends guu {
       super(bfm.COMBAT);
       short var10003 = 30728;
       long var10004 = 7953229018705552167L ^ a;
-      short var34 = 31343;
+      short var35 = 31343;
       long var10005 = 1960545951199387991L ^ a;
-      String[] var65 = new String[3];
+      String[] var67 = new String[3];
       short var10008 = 31343;
       long var10009 = 1960545951199387991L ^ a;
-      var65[0] = "Normal";
+      var67[0] = "Normal";
       var10008 = 927;
       var10009 = 5338264378376296637L ^ a;
-      var65[1] = "Silent";
+      var67[1] = "Silent";
       var10008 = 27409;
       var10009 = 7059447205718421548L ^ a;
-      var65[2] = "Flex";
-      a.ggy = new adu("Mode", "Normal", var65);
+      var67[2] = "Flex";
+      a.ggy = new adu("Mode", "Normal", var67);
       var10003 = 27854;
       var10004 = 5313805394322192367L ^ a;
       a.deb = new bes("Range", 4.5F, 1.0F, 6.0F, 0.1F);
@@ -159,7 +159,9 @@ public class ezw extends guu {
       var10003 = 6596;
       var10004 = 1960178898609171875L ^ a;
       var3[13] = a.cte;
-      var3[e<"y">(30766, 3545106078976511053L ^ a)] = a.cxj;
+      var10003 = 30766;
+      var10004 = 3545106078976511053L ^ a;
+      var3[14] = a.cxj;
       var10003 = 18320;
       var10004 = 1863568349737759738L ^ a;
       var3[15] = a.fzb;
@@ -435,7 +437,9 @@ public class ezw extends guu {
             var10 = a.fh;
          }
 
-         if (var10 < e<"y">(5618, 1273727101809050241L ^ ax)) {
+         short var10001 = 5618;
+         long var10002 = 1273727101809050241L ^ ax;
+         if (var10 < 15) {
             return;
          }
 

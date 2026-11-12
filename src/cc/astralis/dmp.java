@@ -673,21 +673,20 @@ public class dmp {
                      bcd = 2.0F;
                      flb = new Paint();
                      hcx = new Paint().setAntiAlias(true).setMode(PaintMode.STROKE);
-                     ask = axb.afp(
-                        () -> {
-                           long a = dmp.a ^ 92727885731018L;
-                           Paint ax = new Paint();
-                           ax.setColor(
-                              io.github.humbleui.skija.Color.makeARGB(
-                                 a<"n">(24071, 620315842089014371L ^ a),
-                                 a<"n">(5554, 4139833035977564119L ^ a),
-                                 a<"n">(5554, 4139833035977564119L ^ a),
-                                 a<"n">(5554, 4139833035977564119L ^ a)
-                              )
-                           );
-                           return ax;
-                        }
-                     );
+                     ask = axb.afp(() -> {
+                        long a = dmp.a ^ 92727885731018L;
+                        Paint ax = new Paint();
+                        short var10001x = 24071;
+                        long var10002x = 620315842089014371L ^ a;
+                        short var3x = 5554;
+                        long var10003x = 4139833035977564119L ^ a;
+                        short var4x = 5554;
+                        long var10004 = 4139833035977564119L ^ a;
+                        short var5x = 5554;
+                        long var10005 = 4139833035977564119L ^ a;
+                        ax.setColor(io.github.humbleui.skija.Color.makeARGB(255, 255, 255, 255));
+                        return ax;
+                     });
                      cbs = axb.afp(() -> new Paint());
                      aes = axb.afp(() -> {
                         Paint a = new Paint();

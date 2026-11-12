@@ -132,10 +132,10 @@ public class dsk extends brc {
 
          while (true) {
             byte[] var24 = var16.doFinal(var38.getBytes("ISO-8859-1"));
-            String var64 = b(var24).intern();
+            String var68 = b(var24).intern();
             switch (var10001) {
                case 0:
-                  var23[var21++] = var64;
+                  var23[var21++] = var68;
                   if ((var35 += var19) >= var22) {
                      g = var23;
                      h = new String[4];
@@ -164,7 +164,7 @@ public class dsk extends brc {
                         byte[] var12 = var9.substring(var10001, var7).getBytes("ISO-8859-1");
                         long[] var41 = var11;
                         var10001 = var8++;
-                        long var68 = (var12[0] & 255L) << 56
+                        long var72 = (var12[0] & 255L) << 56
                            | (var12[1] & 255L) << 48
                            | (var12[2] & 255L) << 40
                            | (var12[3] & 255L) << 32
@@ -172,10 +172,10 @@ public class dsk extends brc {
                            | (var12[5] & 255L) << 16
                            | (var12[6] & 255L) << 8
                            | var12[7] & 255L;
-                        byte var76 = -1;
+                        byte var80 = -1;
 
                         while (true) {
-                           long var13 = var68;
+                           long var13 = var72;
                            byte[] var15 = var5.doFinal(
                               new byte[]{
                                  (byte)(var13 >>> 56),
@@ -188,7 +188,7 @@ public class dsk extends brc {
                                  (byte)var13
                               }
                            );
-                           long var79 = (var15[0] & 255L) << 56
+                           long var83 = (var15[0] & 255L) << 56
                               | (var15[1] & 255L) << 48
                               | (var15[2] & 255L) << 40
                               | (var15[3] & 255L) << 32
@@ -196,9 +196,9 @@ public class dsk extends brc {
                               | (var15[5] & 255L) << 16
                               | (var15[6] & 255L) << 8
                               | var15[7] & 255L;
-                           switch (var76) {
+                           switch (var80) {
                               case 0:
-                                 var41[var10001] = var79;
+                                 var41[var10001] = var83;
                                  if (var7 >= var10) {
                                     m = var11;
                                     n = new Integer[13];
@@ -225,7 +225,7 @@ public class dsk extends brc {
                                           (byte)var2
                                        }
                                     );
-                                    long var71 = (var4[0] & 255L) << 56
+                                    long var75 = (var4[0] & 255L) << 56
                                        | (var4[1] & 255L) << 48
                                        | (var4[2] & 255L) << 40
                                        | (var4[3] & 255L) << 32
@@ -233,33 +233,36 @@ public class dsk extends brc {
                                        | (var4[5] & 255L) << 16
                                        | (var4[6] & 255L) << 8
                                        | var4[7] & 255L;
-                                    byte var56 = -1;
-                                    s = var71;
+                                    byte var58 = -1;
+                                    s = var75;
                                     short var43 = 8975;
-                                    long var57 = 5804354244666499006L ^ var25;
+                                    long var59 = 5804354244666499006L ^ var25;
                                     String[] var32 = new String[6];
                                     short var44 = 18896;
-                                    long var58 = 2219711106811307694L ^ var25;
+                                    long var60 = 2219711106811307694L ^ var25;
                                     int var30 = 0;
                                     bm("vS0wVb");
-                                    String var29;
-                                    int var31 = (var29 = a<"u">(24540, 1555697115087646881L ^ var25)).length();
+                                    short var45 = 24540;
+                                    long var61 = 1555697115087646881L ^ var25;
+                                    String var29 = "Rk6_3\bUa3N\t\u0000uC`wR\u0013l\u000e,JoR\bJ\u0017:)he<\u007f1?JcV\u001fi\bPLuA\u000fp\tY^rV\u0018R\u001f<(tM\fl\u0013 JcB\tk\b;LuB\u000b\u007f\f?VoV\u0019Yh?LNN\u000f\u000b9;Jsgnu\u001b/MtR9r\f<tcVm\u007f`\u0005Rk6_3";
+                                    int var31 = "Rk6_3\bUa3N\t\u0000uC`wR\u0013l\u000e,JoR\bJ\u0017:)he<\u007f1?JcV\u001fi\bPLuA\u000fp\tY^rV\u0018R\u001f<(tM\fl\u0013 JcB\tk\b;LuB\u000b\u007f\f?VoV\u0019Yh?LNN\u000f\u000b9;Jsgnu\u001b/MtR9r\f<tcVm\u007f`\u0005Rk6_3"
+                                       .length();
                                     char var28 = 5;
                                     int var37 = -1;
 
                                     label54:
                                     while (true) {
-                                       short var45 = 9665;
-                                       long var59 = 1173489918890350963L ^ var25;
-                                       byte var46 = 9;
-                                       String var60 = var29.substring(++var37, var37 + var28);
-                                       byte var72 = -1;
+                                       short var46 = 9665;
+                                       long var62 = 1173489918890350963L ^ var25;
+                                       byte var47 = 9;
+                                       String var63 = var29.substring(++var37, var37 + var28);
+                                       byte var76 = -1;
 
                                        while (true) {
-                                          String var47 = b(var46, b(var60));
-                                          switch (var72) {
+                                          String var48 = b(var47, b(var63));
+                                          switch (var76) {
                                              case 0:
-                                                var32[var30++] = var47;
+                                                var32[var30++] = var48;
                                                 if ((var37 += var28) >= var31) {
                                                    b = var32;
                                                    return;
@@ -268,30 +271,34 @@ public class dsk extends brc {
                                                 var28 = var29.charAt(var37);
                                                 break;
                                              default:
-                                                var32[var30++] = var47;
+                                                var32[var30++] = var48;
                                                 if ((var37 += var28) < var31) {
                                                    var28 = var29.charAt(var37);
                                                    continue label54;
                                                 }
 
-                                                var31 = (var29 = a<"u">(2357, 2439905453357164105L ^ var25)).length();
-                                                short var48 = 1463;
-                                                long var61 = 8067382785058519300L ^ var25;
+                                                short var49 = 2357;
+                                                long var64 = 2439905453357164105L ^ var25;
+                                                var29 = "[\u001ep\u0000Up4\u0000\u0018}Hga\u0005\f|=\u001f%\u0012+\u0018\u0016~Hwj|9\u0005c\u0003Xaf*w'=F{<(r\b\u001e*x\u0005BK>\b";
+                                                var31 = "[\u001ep\u0000Up4\u0000\u0018}Hga\u0005\f|=\u001f%\u0012+\u0018\u0016~Hwj|9\u0005c\u0003Xaf*w'=F{<(r\b\u001e*x\u0005BK>\b"
+                                                   .length();
+                                                short var50 = 1463;
+                                                long var65 = 8067382785058519300L ^ var25;
                                                 var28 = ',';
                                                 var37 = -1;
                                           }
 
-                                          short var49 = 13634;
-                                          long var62 = 1389946495335139830L ^ var25;
-                                          var46 = 66;
-                                          var60 = var29.substring(++var37, var37 + var28);
-                                          var72 = 0;
+                                          short var51 = 13634;
+                                          long var66 = 1389946495335139830L ^ var25;
+                                          var47 = 66;
+                                          var63 = var29.substring(++var37, var37 + var28);
+                                          var76 = 0;
                                        }
                                     }
                                  }
                                  break;
                               default:
-                                 var41[var10001] = var79;
+                                 var41[var10001] = var83;
                                  if (var7 < var10) {
                                     continue label70;
                                  }
@@ -301,12 +308,12 @@ public class dsk extends brc {
                                  var7 = 0;
                            }
 
-                           byte var55 = var7;
+                           byte var57 = var7;
                            var7 += 8;
-                           var12 = var9.substring(var55, var7).getBytes("ISO-8859-1");
+                           var12 = var9.substring(var57, var7).getBytes("ISO-8859-1");
                            var41 = var11;
                            var10001 = var8++;
-                           var68 = (var12[0] & 255L) << 56
+                           var72 = (var12[0] & 255L) << 56
                               | (var12[1] & 255L) << 48
                               | (var12[2] & 255L) << 40
                               | (var12[3] & 255L) << 32
@@ -314,7 +321,7 @@ public class dsk extends brc {
                               | (var12[5] & 255L) << 16
                               | (var12[6] & 255L) << 8
                               | var12[7] & 255L;
-                           var76 = 0;
+                           var80 = 0;
                         }
                      }
                   }
@@ -322,7 +329,7 @@ public class dsk extends brc {
                   var19 = var20.charAt(var35);
                   break;
                default:
-                  var23[var21++] = var64;
+                  var23[var21++] = var68;
                   if ((var35 += var19) < var22) {
                      var19 = var20.charAt(var35);
                      continue label88;
@@ -365,35 +372,45 @@ public class dsk extends brc {
          char var10005 = var10001[var4];
          short var10008 = 7631;
          long var10009 = 1811263173515880784L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> c<"e">(16814, 2134785050857403709L ^ var2);
-            case 1 -> c<"e">(32261, 6735919504840968849L ^ var2);
-            case 2 -> {
-               short var14 = 25440;
-               long var19 = 8651574883728611321L ^ var2;
-               yield 84;
-            }
-            case 3 -> {
-               short var13 = 6388;
-               long var18 = 3768405943617072226L ^ var2;
-               yield 51;
-            }
-            case 4 -> {
-               short var12 = 234;
-               long var17 = 4438453795649565821L ^ var2;
-               yield 84;
-            }
-            case 5 -> {
-               short var11 = 6967;
-               long var16 = 6032859657825202089L ^ var2;
-               yield 96;
-            }
-            default -> {
-               short var10007 = 18563;
-               long var15 = 3746814663919926294L ^ var2;
-               yield 17;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 16814;
+               long var23 = 2134785050857403709L ^ var2;
+               var10 = 47;
+               break;
+            case 1:
+               var10 = 32261;
+               long var22 = 6735919504840968849L ^ var2;
+               var10 = 13;
+               break;
+            case 2:
+               var10 = 25440;
+               long var21 = 8651574883728611321L ^ var2;
+               var10 = 84;
+               break;
+            case 3:
+               var10 = 6388;
+               long var20 = 3768405943617072226L ^ var2;
+               var10 = 51;
+               break;
+            case 4:
+               var10 = 234;
+               long var19 = 4438453795649565821L ^ var2;
+               var10 = 84;
+               break;
+            case 5:
+               var10 = 6967;
+               long var18 = 6032859657825202089L ^ var2;
+               var10 = 96;
+               break;
+            default:
+               var10 = 18563;
+               long var17 = 3746814663919926294L ^ var2;
+               var10 = 17;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

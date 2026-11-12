@@ -107,7 +107,7 @@ public class fhd extends guu {
       long var10005 = 67533697694376653L ^ a;
       short var83 = 13509;
       long var10006 = 2263476125006212619L ^ a;
-      String[] var84 = new String[413732359];
+      String[] var84 = new String[6];
       short var10008 = 12068;
       long var10009 = 67533697694376653L ^ a;
       var84[0] = "Basic";
@@ -240,26 +240,20 @@ public class fhd extends guu {
       a.awh = 0.0F;
       short var10001 = 19040;
       long var10002 = 5993033652576440498L ^ a;
-      ffn[] var3 = new ffn[-2145299727];
-      var3[0] = a.bij;
-      var3[1] = a.bab;
-      var3[2] = a.cmi;
-      var3[3] = a.fdy;
-      var3[4] = a.gf.bih(() -> {
+      ffn[] var3 = new ffn[]{a.bij, a.bab, a.cmi, a.fdy, a.gf.bih(() -> {
          long ax = fhd.a ^ 10124754603256L;
          short var10001x = 16814;
          long var10002x = 8165832557372994826L ^ ax;
          return a.cmi.emb("Modern Watchdog");
-      });
-      var3[5] = a.dee.bih(() -> {
+      }), a.dee.bih(() -> {
          long ax = fhd.a ^ 55645601517513L;
          short var10001x = 16814;
          long var10002x = 8165842903044748859L ^ ax;
          return a.cmi.emb("Modern Watchdog");
-      });
+      }), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
       var10003 = 31247;
       var10004 = 6772800527575802064L ^ a;
-      var3[-1236291285] = a.hio.bih(() -> {
+      var3[6] = a.hio.bih(() -> {
          long ax = fhd.a ^ 102663632148769L;
          short var10001x = 16814;
          long var10002x = 8165739811265372371L ^ ax;
@@ -267,49 +261,49 @@ public class fhd extends guu {
       });
       var10003 = 24918;
       var10004 = 6104326545412324251L ^ a;
-      var3[903212573] = a.erv;
+      var3[7] = a.erv;
       var10003 = 27323;
       var10004 = 8387994622357434475L ^ a;
-      var3[-1015782542] = a.ftz;
+      var3[8] = a.ftz;
       var10003 = 20741;
       var10004 = 8555040613146348498L ^ a;
-      var3[439902766] = a.caw;
+      var3[9] = a.caw;
       var10003 = 11743;
       var10004 = 2708462870811719452L ^ a;
-      var3[2062055825] = a.bax;
+      var3[10] = a.bax;
       var10003 = 10243;
       var10004 = 13139611803464388L ^ a;
-      var3[-1318218227] = a.aco;
+      var3[11] = a.aco;
       var10003 = 2669;
       var10004 = 1668630493037858992L ^ a;
-      var3[-521176575] = a.ady;
+      var3[12] = a.ady;
       var10003 = 26830;
       var10004 = 1767880840720871959L ^ a;
-      var3[1540739061] = a.dds;
+      var3[13] = a.dds;
       var10003 = 14516;
       var10004 = 6222994159152865916L ^ a;
-      var3[-1781353030] = a.fgh.bih(a.dds::dnp);
+      var3[14] = a.fgh.bih(a.dds::dnp);
       var10003 = 641;
       var10004 = 7893854074953701463L ^ a;
-      var3[437273364] = a.ait.bih(a.dds::dnp);
+      var3[15] = a.ait.bih(a.dds::dnp);
       var10003 = 28981;
       var10004 = 3594837860807076846L ^ a;
-      var3[1174126346] = a.bnq;
+      var3[16] = a.bnq;
       var10003 = 23348;
       var10004 = 8166325213207118314L ^ a;
-      var3[-1292452875] = a.esi.bih(a.bnq::dnp);
+      var3[17] = a.esi.bih(a.bnq::dnp);
       var10003 = 25022;
       var10004 = 1245285367485987708L ^ a;
-      var3[1879267472] = a.ckt;
+      var3[18] = a.ckt;
       var10003 = 180;
       var10004 = 300278127040141927L ^ a;
-      var3[1377799528] = a.csq.bih(a.ckt::dnp);
+      var3[19] = a.csq.bih(a.ckt::dnp);
       var10003 = 1776;
       var10004 = 8989187029245434937L ^ a;
-      var3[207432471] = a.euy;
+      var3[20] = a.euy;
       var10003 = 6336;
       var10004 = 1098168900325343745L ^ a;
-      var3[52146516] = a.ecl;
+      var3[21] = a.ecl;
       a.bfi(var3);
    }
 
@@ -378,7 +372,7 @@ public class fhd extends guu {
       class_1041 var10001 = chi.method_22683();
       short var10002 = 20878;
       long var10003 = 6348499108853726465L ^ ax;
-      boolean axx = class_3675.method_15987(var10001, -710917528);
+      boolean axx = class_3675.method_15987(var10001, 32);
       int[] axxx = var10000;
       fhd var6 = a;
       if (axxx != null) {
@@ -1098,7 +1092,7 @@ public class fhd extends guu {
          Color var10002 = dar.gqy().deo();
          short var10003 = 21270;
          long var10004 = 4244077891437926787L ^ ax;
-         bqf.hjf(var5, var10001, var10002, -1543554869);
+         bqf.hjf(var5, var10001, var10002, 50);
       }
    }
 
@@ -1183,7 +1177,7 @@ public class fhd extends guu {
                long var10009 = 7893829756732795676L ^ ax;
                short var32 = 30656;
                long var10010 = 6116061737246563930L ^ ax;
-               dmp.cpp(var19, axxxx, var29, 15.0F, 3.0F, new Color(-1520536531, 437273364, -1170090830, a.csq.dnp().intValue()));
+               dmp.cpp(var19, axxxx, var29, 15.0F, 3.0F, new Color(15, 15, 18, a.csq.dnp().intValue()));
                bsf.aof(axxxxx, axxxxxxxxxx, axxxxxxxxxxx, dar.gqy().deo());
                var23 = 11675;
                var28 = 6164161005039113006L ^ ax;
@@ -1756,7 +1750,7 @@ public class fhd extends guu {
                            while (true) {
                               short var10001 = 2451;
                               long var10002 = 4226583816160000211L ^ a;
-                              if (axxxxxxx <= -879912463) {
+                              if (axxxxxxx <= -3) {
                                  break label152;
                               }
 
@@ -1877,7 +1871,7 @@ public class fhd extends guu {
       while (true) {
          short var10001 = 17284;
          long var10002 = 1999170418732279678L ^ a;
-         if (axxxx < -1591548452) {
+         if (axxxx < 9) {
             class_1799 axxxxx = chi.field_1724.method_31548().method_5438(axxxx);
             if (axx != null) {
                var8 = axxxxx.method_7909() instanceof class_1747;
@@ -2155,31 +2149,31 @@ public class fhd extends guu {
                                     int[] var37 = new int[3];
                                     short var52 = 16115;
                                     long var10005 = 4628544389427520879L ^ var20;
-                                    var37[0] = -937238807;
+                                    var37[0] = 180;
                                     short var53 = 6405;
                                     var10005 = 7674020367450981023L ^ var20;
-                                    var37[1] = -1100908983;
+                                    var37[1] = 180;
                                     short var54 = 25355;
                                     var10005 = 888097967500605598L ^ var20;
-                                    var37[2] = -1848398885;
+                                    var37[2] = 80;
                                     short var45 = 28535;
                                     long var49 = 8798339598275453905L ^ var20;
                                     int[] var50 = new int[2];
                                     short var10006 = 6405;
                                     long var10007 = 7674020367450981023L ^ var20;
-                                    var50[0] = -1100908983;
+                                    var50[0] = 180;
                                     var10006 = 11534;
                                     var10007 = 3784556848917771928L ^ var20;
-                                    var50[1] = -883759743;
+                                    var50[1] = 125;
                                     short var55 = 11003;
                                     var10005 = 8293008654303880813L ^ var20;
                                     int[] var59 = new int[2];
                                     short var10008 = 3610;
                                     long var10009 = 674659453891466628L ^ var20;
-                                    var59[0] = -1766449491;
+                                    var59[0] = 140;
                                     var10008 = 729;
                                     var10009 = 9198844466602563935L ^ var20;
-                                    var59[1] = -691204190;
+                                    var59[1] = 120;
                                     aac = Map.of("Fast", var37, "Normal", var50, "Slow", var59);
                                     return;
                                  }

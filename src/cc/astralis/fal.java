@@ -111,7 +111,7 @@ public class fal extends bmd {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var29 = -1;
+         byte var30 = -1;
 
          while (true) {
             long var8 = var26;
@@ -127,7 +127,7 @@ public class fal extends bmd {
                   (byte)var8
                }
             );
-            long var31 = (var10[0] & 255L) << 56
+            long var34 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -135,23 +135,27 @@ public class fal extends bmd {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var29) {
+            switch (var30) {
                case 0:
-                  var18[var10001] = var31;
+                  var18[var10001] = var34;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[4];
                      short var19 = 15731;
                      long var23 = var14 ^ 919015584603544467L;
                      dlm = 3;
-                     bcr = new Color(
-                        a<"x">(20470, 6706729428529408277L ^ var14), a<"x">(20084, 2965660239773493398L ^ var14), a<"x">(20084, 2965660239773493398L ^ var14)
-                     );
+                     short var28 = 20470;
+                     long var32 = 6706729428529408277L ^ var14;
+                     short var33 = 20084;
+                     var34 = 2965660239773493398L ^ var14;
+                     short var36 = 20084;
+                     long var10005 = 2965660239773493398L ^ var14;
+                     bcr = new Color(40, 40, 40);
                      return;
                   }
                   break;
                default:
-                  var18[var10001] = var31;
+                  var18[var10001] = var34;
                   if (var2 < var5) {
                      continue label29;
                   }
@@ -174,7 +178,7 @@ public class fal extends bmd {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var29 = 0;
+            var30 = 0;
          }
       }
    }

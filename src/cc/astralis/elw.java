@@ -220,7 +220,7 @@ public class elw implements fgh {
 
                      short var26 = 8233;
                      long var31 = 1015148107494917210L ^ var20;
-                     String var39 = a(-1634085112, a(var16));
+                     String var39 = a(18, a(var16));
                      var30 = -1;
                      a = var39;
                      return;
@@ -262,7 +262,7 @@ public class elw implements fgh {
          char var10003 = var10000[0];
          short var10004 = 7307;
          long var10005 = 1693011804541138330L ^ var1;
-         var10000[0] = (char)(var10003 ^ -1043725783);
+         var10000[0] = (char)(var10003 ^ 'M');
       }
 
       return var10000;
@@ -279,42 +279,42 @@ public class elw implements fgh {
          char var10005 = var10001[var4];
          short var10008 = 17362;
          long var10009 = 6465315773144876331L ^ var2;
-         int var10;
-         switch (var4 % 1436162503) {
+         byte var10;
+         switch (var4 % 7) {
             case 0:
-               short var16 = 3509;
+               var10 = 3509;
                long var23 = 1162981201546061L ^ var2;
-               var10 = -429650521;
+               var10 = 26;
                break;
             case 1:
-               short var15 = 13761;
+               var10 = 13761;
                long var22 = 9130358018166469434L ^ var2;
-               var10 = -1838558524;
+               var10 = 18;
                break;
             case 2:
-               short var14 = 29530;
+               var10 = 29530;
                long var21 = 3516429486645507492L ^ var2;
-               var10 = 655195637;
+               var10 = 85;
                break;
             case 3:
-               short var13 = 28050;
+               var10 = 28050;
                long var20 = 7375806199827786600L ^ var2;
-               var10 = 513396614;
+               var10 = 104;
                break;
             case 4:
-               short var12 = 2047;
+               var10 = 2047;
                long var19 = 4070501898561552642L ^ var2;
-               var10 = 1416260818;
+               var10 = 121;
                break;
             case 5:
-               short var11 = 19799;
+               var10 = 19799;
                long var18 = 8625208819494308771L ^ var2;
-               var10 = 2108649237;
+               var10 = 14;
                break;
             default:
-               short var10007 = 18946;
+               var10 = 18946;
                long var17 = 8283346560408669431L ^ var2;
-               var10 = 546598939;
+               var10 = 77;
          }
 
          var10001[var4] = (char)(var10005 ^ var10002 ^ var10);

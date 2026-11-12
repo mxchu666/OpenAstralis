@@ -34,165 +34,36 @@ public class hin extends guu {
    private static final Map r;
 
    public hin() {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      //
-      // Bytecode:
-      // 000: getstatic cc/astralis/hin.a J
-      // 003: ldc2_w 80133711302750
-      // 006: lxor
-      // 007: lstore 1
-      // 008: aload 0
-      // 009: getstatic cc/astralis/bfm.VISUAL Lcc/astralis/bfm;
-      // 00c: invokespecial cc/astralis/guu.<init> (Lcc/astralis/bfm;)V
-      // 00f: aload 0
-      // 010: new cc/astralis/gbp
-      // 013: dup
-      // 014: sipush 19507
-      // 017: ldc2_w 4794871602822335358
-      // 01a: lload 1
-      // 01b: lxor
-      // 01c: pop2
-      // 01d: pop
-      // 01e: ldc "Change Aspect Ratio"
-      // 020: bipush 1
-      // 021: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
-      // 024: invokespecial cc/astralis/gbp.<init> (Ljava/lang/String;Ljava/lang/Boolean;)V
-      // 027: putfield cc/astralis/hin.cmt Lcc/astralis/gbp;
-      // 02a: aload 0
-      // 02b: new cc/astralis/bes
-      // 02e: dup
-      // 02f: sipush 5309
-      // 032: ldc2_w 6487330328637838335
-      // 035: lload 1
-      // 036: lxor
-      // 037: pop2
-      // 038: pop
-      // 039: ldc "Zoom"
-      // 03b: fconst_1
-      // 03c: ldc 0.5
-      // 03e: ldc 5.0
-      // 040: ldc 0.01
-      // 042: invokespecial cc/astralis/bes.<init> (Ljava/lang/String;FFFF)V
-      // 045: aload 0
-      // 046: getfield cc/astralis/hin.cmt Lcc/astralis/gbp;
-      // 049: dup
-      // 04a: invokestatic java/util/Objects.requireNonNull (Ljava/lang/Object;)Ljava/lang/Object;
-      // 04d: pop
-      // 04e: invokedynamic get (Lcc/astralis/gbp;)Ljava/util/function/Supplier; bsm=java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[ ()Ljava/lang/Object;, cc/astralis/ffn.dnp ()Ljava/lang/Object;, ()Ljava/lang/Boolean; ]
-      // 053: invokevirtual cc/astralis/bes.bih (Ljava/util/function/Supplier;)Lcc/astralis/ffn;
-      // 056: checkcast cc/astralis/bes
-      // 059: putfield cc/astralis/hin.dtl Lcc/astralis/bes;
-      // 05c: aload 0
-      // 05d: new cc/astralis/gbp
-      // 060: dup
-      // 061: sipush 21099
-      // 064: ldc2_w 5721840809139885352
-      // 067: lload 1
-      // 068: lxor
-      // 069: pop2
-      // 06a: pop
-      // 06b: ldc "Modify Third Person"
-      // 06d: bipush 1
-      // 06e: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
-      // 071: invokespecial cc/astralis/gbp.<init> (Ljava/lang/String;Ljava/lang/Boolean;)V
-      // 074: putfield cc/astralis/hin.gff Lcc/astralis/gbp;
-      // 077: aload 0
-      // 078: new cc/astralis/gbp
-      // 07b: dup
-      // 07c: sipush 8063
-      // 07f: ldc2_w 4216524766536833075
-      // 082: lload 1
-      // 083: lxor
-      // 084: pop2
-      // 085: pop
-      // 086: ldc "Camera No Clip"
-      // 088: bipush 1
-      // 089: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
-      // 08c: invokespecial cc/astralis/gbp.<init> (Ljava/lang/String;Ljava/lang/Boolean;)V
-      // 08f: putfield cc/astralis/hin.ahi Lcc/astralis/gbp;
-      // 092: aload 0
-      // 093: sipush 22833
-      // 096: ldc2_w 518156587203033562
-      // 099: lload 1
-      // 09a: lxor
-      // 09b: invokedynamic r (IJ)I bsm=cc/astralis/hin.e (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // 0a0: anewarray 87
-      // 0a3: dup
-      // 0a4: bipush 0
-      // 0a5: aload 0
-      // 0a6: getfield cc/astralis/hin.gff Lcc/astralis/gbp;
-      // 0a9: aastore
-      // 0aa: dup
-      // 0ab: bipush 1
-      // 0ac: aload 0
-      // 0ad: getfield cc/astralis/hin.ahi Lcc/astralis/gbp;
-      // 0b0: aload 0
-      // 0b1: getfield cc/astralis/hin.gff Lcc/astralis/gbp;
-      // 0b4: dup
-      // 0b5: invokestatic java/util/Objects.requireNonNull (Ljava/lang/Object;)Ljava/lang/Object;
-      // 0b8: pop
-      // 0b9: invokedynamic get (Lcc/astralis/gbp;)Ljava/util/function/Supplier; bsm=java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[ ()Ljava/lang/Object;, cc/astralis/ffn.dnp ()Ljava/lang/Object;, ()Ljava/lang/Boolean; ]
-      // 0be: invokevirtual cc/astralis/gbp.bih (Ljava/util/function/Supplier;)Lcc/astralis/ffn;
-      // 0c1: aastore
-      // 0c2: dup
-      // 0c3: bipush 2
-      // 0c4: aload 0
-      // 0c5: getfield cc/astralis/hin.cmt Lcc/astralis/gbp;
-      // 0c8: aastore
-      // 0c9: dup
-      // 0ca: bipush 3
-      // 0cb: aload 0
-      // 0cc: getfield cc/astralis/hin.dtl Lcc/astralis/bes;
-      // 0cf: aastore
-      // 0d0: dup
-      // 0d1: bipush 4
-      // 0d2: getstatic cc/astralis/hin.don Lcc/astralis/bes;
-      // 0d5: aastore
-      // 0d6: dup
-      // 0d7: bipush 5
-      // 0d8: getstatic cc/astralis/hin.boo Lcc/astralis/bes;
-      // 0db: aastore
-      // 0dc: dup
-      // 0dd: sipush 21933
-      // 0e0: ldc2_w 3056104894110692674
-      // 0e3: lload 1
-      // 0e4: lxor
-      // 0e5: pop2
-      // 0e6: pop
-      // 0e7: ldc 6
-      // 0e9: getstatic cc/astralis/hin.djx Lcc/astralis/bes;
-      // 0ec: aastore
-      // 0ed: dup
-      // 0ee: sipush 16784
-      // 0f1: ldc2_w 4084916608355918204
-      // 0f4: lload 1
-      // 0f5: lxor
-      // 0f6: invokedynamic r (IJ)I bsm=cc/astralis/hin.e (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[  ]
-      // 0fb: getstatic cc/astralis/hin.aqe Lcc/astralis/bes;
-      // 0fe: aastore
-      // 0ff: dup
-      // 100: sipush 24746
-      // 103: ldc2_w 1851768015283372103
-      // 106: lload 1
-      // 107: lxor
-      // 108: pop2
-      // 109: pop
-      // 10a: ldc 8
-      // 10c: getstatic cc/astralis/hin.afc Lcc/astralis/bes;
-      // 10f: aastore
-      // 110: dup
-      // 111: sipush 32235
-      // 114: ldc2_w 3836409372684508421
-      // 117: lload 1
-      // 118: lxor
-      // 119: pop2
-      // 11a: pop
-      // 11b: ldc 9
-      // 11d: getstatic cc/astralis/hin.bak Lcc/astralis/bes;
-      // 120: aastore
-      // 121: invokevirtual cc/astralis/hin.bfi ([Lcc/astralis/ffn;)V
-      // 124: return
+      long a = hin.a ^ 80133711302750L;
+      super(bfm.VISUAL);
+      short var10003 = 19507;
+      long var10004 = 4794871602822335358L ^ a;
+      a.cmt = new gbp("Change Aspect Ratio", true);
+      var10003 = 5309;
+      var10004 = 6487330328637838335L ^ a;
+      a.dtl = (bes)new bes("Zoom", 1.0F, 0.5F, 5.0F, 0.01F).bih(a.cmt::dnp);
+      var10003 = 21099;
+      var10004 = 5721840809139885352L ^ a;
+      a.gff = new gbp("Modify Third Person", true);
+      var10003 = 8063;
+      var10004 = 4216524766536833075L ^ a;
+      a.ahi = new gbp("Camera No Clip", true);
+      short var10001 = 22833;
+      long var10002 = 518156587203033562L ^ a;
+      ffn[] var3 = new ffn[]{a.gff, a.ahi.bih(a.gff::dnp), a.cmt, a.dtl, don, boo, null, null, null, null};
+      var10003 = 21933;
+      var10004 = 3056104894110692674L ^ a;
+      var3[6] = djx;
+      var10003 = 16784;
+      var10004 = 4084916608355918204L ^ a;
+      var3[7] = aqe;
+      var10003 = 24746;
+      var10004 = 1851768015283372103L ^ a;
+      var3[8] = afc;
+      var10003 = 32235;
+      var10004 = 3836409372684508421L ^ a;
+      var3[9] = bak;
+      a.bfi(var3);
    }
 
    static {

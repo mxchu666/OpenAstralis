@@ -69,7 +69,9 @@ public class gjp extends brc {
       int var10000 = var3;
       if (var2 != null) {
          if (var3 == 0) {
-            return a<"f">(4148, 4863650260271729561L ^ var0);
+            short var4 = 4148;
+            long var10001 = 4863650260271729561L ^ var0;
+            return 24;
          }
 
          var10000 = 0;
@@ -100,9 +102,9 @@ public class gjp extends brc {
 
       while (true) {
          byte[] var19 = var12.doFinal(var16.substring(++var14, var14 + var15).getBytes("ISO-8859-1"));
-         String var49 = b(var19).intern();
+         String var50 = b(var19).intern();
          int var10001 = -1;
-         var11[var17++] = var49;
+         var11[var17++] = var50;
          if ((var14 += var15) >= var18) {
             i = new HashMap(13);
             Cipher var0;
@@ -129,7 +131,7 @@ public class gjp extends brc {
                byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
                long[] var33 = var6;
                var10001 = var3++;
-               long var52 = (var7[0] & 255L) << 56
+               long var53 = (var7[0] & 255L) << 56
                   | (var7[1] & 255L) << 48
                   | (var7[2] & 255L) << 40
                   | (var7[3] & 255L) << 32
@@ -137,10 +139,10 @@ public class gjp extends brc {
                   | (var7[5] & 255L) << 16
                   | (var7[6] & 255L) << 8
                   | var7[7] & 255L;
-               byte var58 = -1;
+               byte var60 = -1;
 
                while (true) {
-                  long var8 = var52;
+                  long var8 = var53;
                   byte[] var10 = var0.doFinal(
                      new byte[]{
                         (byte)(var8 >>> 56),
@@ -153,7 +155,7 @@ public class gjp extends brc {
                         (byte)var8
                      }
                   );
-                  long var60 = (var10[0] & 255L) << 56
+                  long var62 = (var10[0] & 255L) << 56
                      | (var10[1] & 255L) << 48
                      | (var10[2] & 255L) << 40
                      | (var10[3] & 255L) << 32
@@ -161,9 +163,9 @@ public class gjp extends brc {
                      | (var10[5] & 255L) << 16
                      | (var10[6] & 255L) << 8
                      | var10[7] & 255L;
-                  switch (var58) {
+                  switch (var60) {
                      case 0:
-                        var33[var10001] = var60;
+                        var33[var10001] = var62;
                         if (var2 >= var5) {
                            g = var6;
                            h = new Integer[12];
@@ -173,21 +175,23 @@ public class gjp extends brc {
                            long var44 = 4735195827136246986L ^ var20;
                            String var24;
                            int var26 = (var24 = var11[0]).length();
-                           int var23 = a<"f">(27269, 3225371172348876855L ^ var20);
+                           short var45 = 27269;
+                           long var55 = 3225371172348876855L ^ var20;
+                           char var23 = ',';
                            fml(7);
                            int var31 = -1;
 
                            label44:
                            while (true) {
                               short var35 = 19569;
-                              long var45 = 3746623174941146829L ^ var20;
+                              long var46 = 3746623174941146829L ^ var20;
                               byte var36 = 37;
-                              String var46 = var24.substring(++var31, var31 + var23);
-                              byte var54 = -1;
+                              String var47 = var24.substring(++var31, var31 + var23);
+                              byte var56 = -1;
 
                               while (true) {
-                                 String var37 = b(var36, b(var46));
-                                 switch (var54) {
+                                 String var37 = b(var36, b(var47));
+                                 switch (var56) {
                                     case 0:
                                        var27[var25++] = var37;
                                        if ((var31 += var23) >= var26) {
@@ -206,22 +210,22 @@ public class gjp extends brc {
 
                                        var26 = (var24 = var11[1]).length();
                                        short var38 = 9312;
-                                       long var47 = 1256547504662648543L ^ var20;
-                                       var23 = 96;
+                                       long var48 = 1256547504662648543L ^ var20;
+                                       var23 = '`';
                                        var31 = -1;
                                  }
 
                                  short var39 = 1156;
-                                 long var48 = 4442451349904111167L ^ var20;
+                                 long var49 = 4442451349904111167L ^ var20;
                                  var36 = 69;
-                                 var46 = var24.substring(++var31, var31 + var23);
-                                 var54 = 0;
+                                 var47 = var24.substring(++var31, var31 + var23);
+                                 var56 = 0;
                               }
                            }
                         }
                         break;
                      default:
-                        var33[var10001] = var60;
+                        var33[var10001] = var62;
                         if (var2 < var5) {
                            continue label54;
                         }
@@ -236,7 +240,7 @@ public class gjp extends brc {
                   var7 = var4.substring(var43, var2).getBytes("ISO-8859-1");
                   var33 = var6;
                   var10001 = var3++;
-                  var52 = (var7[0] & 255L) << 56
+                  var53 = (var7[0] & 255L) << 56
                      | (var7[1] & 255L) << 48
                      | (var7[2] & 255L) << 40
                      | (var7[3] & 255L) << 32
@@ -244,7 +248,7 @@ public class gjp extends brc {
                      | (var7[5] & 255L) << 16
                      | (var7[6] & 255L) << 8
                      | var7[7] & 255L;
-                  var58 = 0;
+                  var60 = 0;
                }
             }
          }

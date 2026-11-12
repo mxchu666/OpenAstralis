@@ -154,55 +154,55 @@ public class adv extends guu {
          dmp.cdw(axxxx, axxxxx, a.cxg, 16.0F, 4.0F, 4.0F, axxxxxxxx, axxxxxxxx, dar.gqy().deo(), dar.gqy().cxj(), false);
          short var34 = 20272;
          long var10002 = 1718594227093532480L ^ ax;
-         float var38 = axxxx + a.cxg / 2.0F;
+         float var39 = axxxx + a.cxg / 2.0F;
          int var10004 = 23220;
          long var10005 = 7057990570960586742L ^ ax;
-         cbl.fau("Player List", var38, axxxxx + 8, Color.white);
+         cbl.fau("Player List", var39, axxxxx + 8, Color.white);
          int axxxxxxxxx = 0;
          short var35 = 15399;
          var10002 = 6493424605422281064L ^ ax;
          int axxxxxxxxxx = axxxxx + 16;
-         short var40 = 18812;
+         short var41 = 18812;
          long var10003 = 7817701897261913146L ^ ax;
-         short var47 = 29341;
-         long var57 = 3659303743490437082L ^ ax;
+         short var49 = 29341;
+         long var60 = 3659303743490437082L ^ ax;
          var10004 = (short)6182;
          var10005 = 7251501269994685795L ^ ax;
-         short var70 = 31510;
+         short var74 = 31510;
          long var10006 = 1481225835179746911L ^ ax;
          Color axxxxxxxxxxx = new Color(20, 20, 30, 200);
          float var27 = axxxx;
-         short var41 = 15399;
+         short var42 = 15399;
          var10003 = 6493424605422281064L ^ ax;
          float var36 = axxxxx + 16;
-         float var42 = a.cxg;
-         short var49 = 15399;
-         long var59 = 6493424605422281064L ^ ax;
+         float var43 = a.cxg;
+         short var51 = 15399;
+         long var62 = 6493424605422281064L ^ ax;
          var10004 = axxx.size();
-         short var71 = 8773;
+         short var75 = 8773;
          var10006 = 1747425755470987032L ^ ax;
-         dmp.caz(var27, var36, var42, 16 + var10004 * 14, 0.0F, 0.0F, 4.0F, 4.0F, axxxxxxxxxxx);
+         dmp.caz(var27, var36, var43, 16 + var10004 * 14, 0.0F, 0.0F, 4.0F, 4.0F, axxxxxxxxxxx);
 
          for (class_640 axxxxxxxxxxxx : axxx) {
             Color var28;
             if (axxxxxxxxx % 2 == 0) {
-               short var43 = 9861;
+               short var44 = 9861;
                var10003 = 2425495590748617672L ^ ax;
-               short var51 = 9861;
-               long var61 = 2425495590748617672L ^ ax;
-               short var62 = 25313;
+               short var53 = 9861;
+               long var64 = 2425495590748617672L ^ ax;
+               short var65 = 25313;
                var10005 = 7987175015740686250L ^ ax;
-               short var73 = 26383;
+               short var77 = 26383;
                var10006 = 5871838397451156044L ^ ax;
                var28 = new Color(30, 30, 40, 200);
             } else {
-               short var44 = 25120;
+               short var45 = 25120;
                var10003 = 1917375843065872254L ^ ax;
-               short var53 = 17076;
-               long var63 = 3597060678373056496L ^ ax;
-               short var64 = 12866;
+               short var55 = 17076;
+               long var66 = 3597060678373056496L ^ ax;
+               short var67 = 12866;
                var10005 = 1063303717227261704L ^ ax;
-               short var75 = 26383;
+               short var79 = 26383;
                var10006 = 5871838397451156044L ^ ax;
                var28 = new Color(25, 25, 35, 200);
             }
@@ -221,7 +221,7 @@ public class adv extends guu {
                if (axx != null) {
                   if (axxxxxxxxxxxxxxxx != null) {
                      var10004 = axxxxxxxxxxxxxxxx.length;
-                     short var76 = 29160;
+                     short var80 = 29160;
                      var10006 = 2258057138106248372L ^ ax;
                      System.arraycopy(axxxxxxxxxxxxxxxx, 0, axxxxxxxxxxxxx, 1, Math.min(var10004, 8));
                      if (axx != null) {
@@ -232,10 +232,10 @@ public class adv extends guu {
                   var30 = axxxxxxxxxxxxx;
                }
 
-               short var45 = 1868;
+               short var46 = 1868;
                var10003 = 2757597912358771213L ^ ax;
-               short var55 = 1232;
-               long var66 = 8097550380903933091L ^ ax;
+               short var57 = 1232;
+               long var69 = 8097550380903933091L ^ ax;
                Arrays.fill(var30, 1, 9, "Loading");
                hbc.bfk(axxxxxxxxxxxxxxx);
             }
@@ -255,18 +255,23 @@ public class adv extends guu {
                   if (axxxxxxxxxxxxxxxx == 0) {
                      var32 = Color.WHITE;
                   } else {
-                     int var46 = e<"c">(26591, 860499297971649159L ^ ax);
-                     short var56 = 32697;
-                     long var67 = 8089459117452632825L ^ ax;
-                     short var68 = 32697;
+                     short var47 = 26591;
+                     var10003 = 860499297971649159L ^ ax;
+                     short var59 = 32697;
+                     long var70 = 8089459117452632825L ^ ax;
+                     short var71 = 32697;
                      var10005 = 8089459117452632825L ^ ax;
-                     var32 = new Color(var46, 180, 180);
+                     var32 = new Color(180, 180, 180);
                   }
 
                   Color axxxxxxxxxxxxxxxxx = var32;
                   float axxxxxxxxxxxxxxxxxx = cbl.eq(axxxxxxxxxxxxx[axxxxxxxxxxxxxxxx]);
                   axxxxxxxxxxxxxxx += axxxxxxxxxxxxxxxxxx + 12.0F;
-                  cbl.ebb(axxxxxxxxxxxxx[axxxxxxxxxxxxxxxx], axxxxxxxxxxxxxx, axxxxxxxxxx + e<"c">(27877, 4666177605936460218L ^ ax) - 5, axxxxxxxxxxxxxxxxx);
+                  String var38 = axxxxxxxxxxxxx[axxxxxxxxxxxxxxxx];
+                  float var48 = axxxxxxxxxxxxxx;
+                  short var72 = 27877;
+                  var10005 = 4666177605936460218L ^ ax;
+                  cbl.ebb(var38, var48, axxxxxxxxxx + 7 - 5, axxxxxxxxxxxxxxxxx);
                   axxxxxxxxxxxxxx += (int)(axxxxxxxxxxxxxxxxxx + 12.0F);
                   axxxxxxxxxxxxxxxx++;
                   if (axx != null) {
@@ -274,8 +279,8 @@ public class adv extends guu {
                   }
                }
 
-               float var82;
-               var31 = (var82 = axxxxxxxxxxxxxxx - a.cxg) == 0.0F ? 0 : (var82 < 0.0F ? -1 : 1);
+               float var87;
+               var31 = (var87 = axxxxxxxxxxxxxxx - a.cxg) == 0.0F ? 0 : (var87 < 0.0F ? -1 : 1);
                break;
             }
 

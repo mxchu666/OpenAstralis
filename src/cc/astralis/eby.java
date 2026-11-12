@@ -43,15 +43,15 @@ public class eby {
       var18 = 17528;
       long var10001 = 9199546849436271796L ^ a;
       String var17 = System.getProperty("os.name").toLowerCase();
-      short var20 = 15816;
+      short var22 = 15816;
       long var10002 = 2566847987509722382L ^ a;
       var18 = var17.startsWith("win");
       label63:
       if (ax != null) {
          if (var18) {
-            short var25 = 17465;
+            short var30 = 17465;
             long var10003 = 2202239306220438779L ^ a;
-            short var31 = 15185;
+            short var39 = 15185;
             long var10004 = 8628104926177655683L ^ a;
             File axx = new File("C:\\Windows\\System32\\drivers\\etc", "hosts");
             var18 = axx.exists();
@@ -65,7 +65,7 @@ public class eby {
                while (axxx.hasNextLine()) {
                   String axxxx = axxx.nextLine().toLowerCase();
                   if (ax != null) {
-                     short var21 = 2444;
+                     short var23 = 2444;
                      var10002 = 733718856611645787L ^ a;
                      var18 = axxxx.contains("wss://ws.serenityutils.club");
                      if (ax == null) {
@@ -73,7 +73,7 @@ public class eby {
                      }
 
                      if (!var18) {
-                        short var22 = 31348;
+                        short var24 = 31348;
                         var10002 = 4839826556869032636L ^ a;
                         if (!axxxx.contains("45.144.55.184")) {
                            if (ax != null) {
@@ -83,40 +83,50 @@ public class eby {
                         }
                      }
 
-                     short var23 = 6878;
+                     short var25 = 6878;
                      var10002 = 6985174887244880397L ^ a;
                      dar.ecj.error("Runtime Standard Failed 0x02");
                   }
 
                   try {
-                     short var24 = 5837;
+                     short var28 = 5837;
                      var10002 = 3314731224952559108L ^ a;
                      Field axxxxx = Unsafe.class.getDeclaredField("theUnsafe");
                      axxxxx.setAccessible(true);
                      Unsafe axxxxxx = (Unsafe)axxxxx.get(null);
                      long axxxxxxx = ThreadLocalRandom.current().nextLong();
-                     long axxxxxxxx = ThreadLocalRandom.current().nextLong(1L, c<"a">(13597, 6363893389077235333L ^ a));
-                     ThreadLocalRandom var19 = ThreadLocalRandom.current();
-                     short var30 = 11041;
+                     ThreadLocalRandom var20 = ThreadLocalRandom.current();
+                     short var36 = 13597;
+                     var10003 = 6363893389077235333L ^ a;
+                     long axxxxxxxx = var20.nextLong(1L, Long.MAX_VALUE);
+                     ThreadLocalRandom var21 = ThreadLocalRandom.current();
+                     short var37 = 11041;
                      var10003 = 7600478760500327401L ^ a;
-                     int axxxxxxxxx = var19.nextInt(1, 256);
-                     axxxxxx.putLong(Thread.currentThread(), c<"a">(11717, 3221414300771638873L ^ a), axxxxxxx);
+                     int axxxxxxxxx = var21.nextInt(1, 256);
+                     Thread var29 = Thread.currentThread();
+                     short var38 = 11717;
+                     var10003 = 3221414300771638873L ^ a;
+                     axxxxxx.putLong(var29, 8L, axxxxxxx);
                      axxxxxx.putAddress(axxxxxxxx, 0L);
                      Runtime.getRuntime().halt(axxxxxxxxx);
                   } catch (Throwable var13) {
-                     long axxxxxxxxxx = c<"a">(4110, 5822405786677371799L ^ a);
+                     var18 = 4110;
+                     var10001 = 5822405786677371799L ^ a;
+                     long axxxxxxxxxx = Long.MIN_VALUE;
 
-                     while (axxxxxxxxxx < c<"a">(28338, 3980814760639962415L ^ a)) {
+                     do {
+                        short var27 = 28338;
+                        var10002 = 3980814760639962415L ^ a;
+                        if (axxxxxxxxxx >= Long.MAX_VALUE) {
+                           break;
+                        }
+
                         axxxxxxxxxx--;
                         axxxxxxxxxx++;
                         if (ax == null) {
                            return;
                         }
-
-                        if (ax == null) {
-                           break;
-                        }
-                     }
+                     } while (ax != null);
                   }
 
                   axxx.close();
@@ -140,60 +150,61 @@ public class eby {
       int[] var10000 = dar.abu();
       short var10001 = 7427;
       long var10002 = 6507812420037229798L ^ a;
-      String[] var27 = new String[13];
+      String[] var30 = new String[13];
       short var10004 = 15317;
       long var10005 = 1846042673882268203L ^ a;
-      var27[0] = "-agentlib:jdwp";
+      var30[0] = "-agentlib:jdwp";
       var10004 = 15602;
       var10005 = 929284770619393306L ^ a;
-      var27[1] = "-XBootclasspath";
+      var30[1] = "-XBootclasspath";
       var10004 = 29527;
       var10005 = 8063377328407431860L ^ a;
-      var27[2] = "-javaagent";
+      var30[2] = "-javaagent";
       var10004 = 32488;
       var10005 = 3142635203667150613L ^ a;
-      var27[3] = "-Xdebug";
+      var30[3] = "-Xdebug";
       var10004 = 21489;
       var10005 = 1352606633202117146L ^ a;
-      var27[4] = "-agentlib";
+      var30[4] = "-agentlib";
       var10004 = 17625;
       var10005 = 2336990715085290815L ^ a;
-      var27[5] = "-Xrunjdwp";
-      int var10003 = b<"n">(2841, 5976319606861703921L ^ a);
+      var30[5] = "-Xrunjdwp";
+      short var10003 = 2841;
+      long var58 = 5976319606861703921L ^ a;
       var10004 = 25861;
       var10005 = 8880677712338705634L ^ a;
-      var27[var10003] = "-Xnoagent";
-      short var34 = 10517;
-      long var46 = 15969916579449073L ^ a;
+      var30[6] = "-Xnoagent";
+      var10003 = 10517;
+      long var60 = 15969916579449073L ^ a;
       var10004 = 17895;
       var10005 = 8177060162528836610L ^ a;
-      var27[7] = "-verbose";
-      var34 = 8112;
-      long var48 = 2112625976994741842L ^ a;
+      var30[7] = "-verbose";
+      var10003 = 8112;
+      long var62 = 2112625976994741842L ^ a;
       var10004 = 25575;
       var10005 = 4682493383340939781L ^ a;
-      var27[8] = "-DproxySet";
-      var34 = 30524;
-      long var50 = 9086511401242810070L ^ a;
+      var30[8] = "-DproxySet";
+      var10003 = 30524;
+      long var64 = 9086511401242810070L ^ a;
       var10004 = 7575;
       var10005 = 2901827200110404715L ^ a;
-      var27[9] = "-DproxyHost";
-      var34 = 29426;
-      long var52 = 8028780958810592021L ^ a;
+      var30[9] = "-DproxyHost";
+      var10003 = 29426;
+      long var66 = 8028780958810592021L ^ a;
       var10004 = 31438;
       var10005 = 4275367396377477927L ^ a;
-      var27[10] = "-DproxyPort";
-      var34 = 5582;
-      long var54 = 4276350161526600751L ^ a;
+      var30[10] = "-DproxyPort";
+      var10003 = 5582;
+      long var68 = 4276350161526600751L ^ a;
       var10004 = 13256;
       var10005 = 3883115212438571556L ^ a;
-      var27[11] = "-Djavax.net.ssl.trustStore";
-      var34 = 11001;
-      long var56 = 3009379137659931418L ^ a;
+      var30[11] = "-Djavax.net.ssl.trustStore";
+      var10003 = 11001;
+      long var70 = 3009379137659931418L ^ a;
       var10004 = 12830;
       var10005 = 3463529474851146737L ^ a;
-      var27[12] = "-Djavax.net.ssl.trustStorePassword";
-      String[] ax = var27;
+      var30[12] = "-Djavax.net.ssl.trustStorePassword";
+      String[] ax = var30;
       RuntimeMXBean axx = ManagementFactory.getRuntimeMXBean();
       String axxx = axx.getInputArguments().toString();
       boolean axxxx = true;
@@ -306,21 +317,35 @@ public class eby {
          axxxxxxxxxxxxxx.setAccessible(true);
          Unsafe axxxxxxxxxxxxxxx = (Unsafe)axxxxxxxxxxxxxx.get(null);
          long axxxxxxxxxxxxxxxx = ThreadLocalRandom.current().nextLong();
-         long axxxxxxxxxxxxxxxxx = ThreadLocalRandom.current().nextLong(1L, c<"a">(28338, 3980848603866391559L ^ a));
-         int axxxxxxxxxxxxxxxxxx = ThreadLocalRandom.current().nextInt(1, b<"n">(27692, 4881434081133678023L ^ a));
-         axxxxxxxxxxxxxxx.putLong(Thread.currentThread(), c<"a">(3206, 3389727683688760881L ^ a), axxxxxxxxxxxxxxxx);
+         ThreadLocalRandom var28 = ThreadLocalRandom.current();
+         short var41 = 28338;
+         long var50 = 3980848603866391559L ^ a;
+         long axxxxxxxxxxxxxxxxx = var28.nextLong(1L, Long.MAX_VALUE);
+         ThreadLocalRandom var29 = ThreadLocalRandom.current();
+         short var42 = 27692;
+         long var51 = 4881434081133678023L ^ a;
+         int axxxxxxxxxxxxxxxxxx = var29.nextInt(1, 256);
+         Thread var36 = Thread.currentThread();
+         short var43 = 3206;
+         long var52 = 3389727683688760881L ^ a;
+         axxxxxxxxxxxxxxx.putLong(var36, 8L, axxxxxxxxxxxxxxxx);
          axxxxxxxxxxxxxxx.putAddress(axxxxxxxxxxxxxxxxx, 0L);
          Runtime.getRuntime().halt(axxxxxxxxxxxxxxxxxx);
       } catch (Throwable var17) {
-         long axxxxxxxxxxxxxxxxxxx = c<"a">(5113, 3957621420351494479L ^ a);
+         short var27 = 5113;
+         long var33 = 3957621420351494479L ^ a;
+         long axxxxxxxxxxxxxxxxxxx = Long.MIN_VALUE;
 
-         while (axxxxxxxxxxxxxxxxxxx < c<"a">(28338, 3980848603866391559L ^ a)) {
-            axxxxxxxxxxxxxxxxxxx--;
-            axxxxxxxxxxxxxxxxxxx++;
-            if (axxxxxxxxxxx == null) {
+         do {
+            var10001 = 28338;
+            var10002 = 3980848603866391559L ^ a;
+            if (axxxxxxxxxxxxxxxxxxx >= Long.MAX_VALUE) {
                break;
             }
-         }
+
+            axxxxxxxxxxxxxxxxxxx--;
+            axxxxxxxxxxxxxxxxxxx++;
+         } while (axxxxxxxxxxx != null);
       }
    }
 

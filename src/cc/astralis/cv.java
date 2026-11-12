@@ -63,24 +63,26 @@ public class cv extends class_437 implements dlc, cds {
 
    public void method_25426() {
       long a = cv.a ^ 68206361917496L;
-      int ax = b<"z">(14455, 6228347402867969561L ^ a);
-      short var10000 = 19285;
-      long var10001 = 8374851498329603382L ^ a;
+      short var10000 = 14455;
+      long var10001 = 6228347402867969561L ^ a;
+      int ax = 200;
+      var10000 = 19285;
+      var10001 = 8374851498329603382L ^ a;
       int axx = 20;
       int var10005 = 20309;
       long var10006 = 1741609813749233971L ^ a;
       int var10004 = (a.field_22789 - 200) / 2;
-      short var83 = 24983;
+      short var88 = 24983;
       long var10007 = 3382530022852024309L ^ a;
       var10005 = (a.field_22790 - 20) / 2;
-      short var84 = 27840;
+      short var89 = 27840;
       var10007 = 2829166101903825569L ^ a;
       var10005 -= 25;
-      short var85 = 20309;
+      short var90 = 20309;
       var10007 = 1741609813749233971L ^ a;
-      short var88 = 24983;
+      short var93 = 24983;
       long var10008 = 3382530022852024309L ^ a;
-      short var89 = 30618;
+      short var94 = 30618;
       long var10009 = 1061343696284212025L ^ a;
       a.axb = new class_342(a.field_22793, var10004, var10005, 200, 20, class_2561.method_43470("Name"));
       var10000 = 20309;
@@ -89,20 +91,20 @@ public class cv extends class_437 implements dlc, cds {
       var10000 = 24983;
       var10001 = 3382530022852024309L ^ a;
       int axxxx = 20;
-      class_7840 var14 = class_4185.method_46430(a.c(), axxxxx -> {
+      class_7840 var15 = class_4185.method_46430(a.c(), axxxxx -> {
          int ax = djc.esp().indexOf(a.hbv);
          int axx = (ax + 1) % djc.esp().size();
          a.hbv = djc.esp().get(axx);
          axxxxx.method_25355(a.c());
       });
-      short var25 = 20309;
+      short var27 = 20309;
       long var10002 = 1741609813749233971L ^ a;
-      short var34 = 24983;
+      short var36 = 24983;
       long var10003 = 3382530022852024309L ^ a;
-      class_7840 axxxxx = var14.method_46437(200, 20);
+      class_7840 axxxxx = var15.method_46437(200, 20);
       var10000 = 32408;
       var10001 = 6988327924001460792L ^ a;
-      class_7840 var16 = class_4185.method_46430(class_2561.method_43470("Browser Login"), axxxxxx -> gxg.eru(ax -> {
+      class_7840 var17 = class_4185.method_46430(class_2561.method_43470("Browser Login"), axxxxxx -> gxg.eru(ax -> {
          long ax = cv.a ^ 109422521694663L;
          if (ax != null) {
             new Thread(() -> {
@@ -116,14 +118,14 @@ public class cv extends class_437 implements dlc, cds {
             }).start();
          }
       }, a.hbv.cxy()));
-      short var27 = 20309;
+      short var29 = 20309;
       var10002 = 1741609813749233971L ^ a;
-      short var36 = 24983;
+      short var38 = 24983;
       var10003 = 3382530022852024309L ^ a;
-      class_7840 axxxxxx = var16.method_46437(200, 20);
+      class_7840 axxxxxx = var17.method_46437(200, 20);
       var10000 = 16078;
       var10001 = 7351117020629865071L ^ a;
-      class_7840 var18 = class_4185.method_46430(class_2561.method_43470("Cracked Login"), axxxxxxx -> {
+      class_7840 var19 = class_4185.method_46430(class_2561.method_43470("Cracked Login"), axxxxxxx -> {
          long ax = cv.a ^ 31405397784749L;
          int[] var10000x = dar.abu();
          ehy.ckh(new gfv(a.axb.method_1882(), "", ""));
@@ -132,14 +134,14 @@ public class cv extends class_437 implements dlc, cds {
             crv.emo().add(new gfv(chi.method_1548().method_1676(), "", "", false));
          }
       });
-      short var29 = 20309;
+      short var31 = 20309;
       var10002 = 1741609813749233971L ^ a;
-      short var38 = 24983;
+      short var40 = 24983;
       var10003 = 3382530022852024309L ^ a;
-      class_7840 axxxxxxx = var18.method_46437(200, 20);
+      class_7840 axxxxxxx = var19.method_46437(200, 20);
       var10000 = 18844;
       var10001 = 2975180556490990897L ^ a;
-      class_7840 var20 = class_4185.method_46430(class_2561.method_43470("Token Login"), axxxxxxxx -> {
+      class_7840 var21 = class_4185.method_46430(class_2561.method_43470("Token Login"), axxxxxxxx -> {
          long ax = cv.a ^ 62785265808911L;
          int[] var10000x = dar.abu();
          MinecraftClientSessionAccessor axx = (MinecraftClientSessionAccessor)chi;
@@ -186,14 +188,14 @@ public class cv extends class_437 implements dlc, cds {
             dar.ecj.error("fail");
          }
       });
-      short var31 = 20309;
+      short var33 = 20309;
       var10002 = 1741609813749233971L ^ a;
-      short var40 = 24983;
+      short var42 = 24983;
       var10003 = 3382530022852024309L ^ a;
-      class_7840 axxxxxxxx = var20.method_46437(200, 20);
+      class_7840 axxxxxxxx = var21.method_46437(200, 20);
       var10000 = 17602;
       var10001 = 2642345098655590508L ^ a;
-      class_7840 var22 = class_4185.method_46430(class_2561.method_43470("Cookie Login"), axxxxxxxxx -> {
+      class_7840 var23 = class_4185.method_46430(class_2561.method_43470("Cookie Login"), axxxxxxxxx -> {
          long ax = cv.a ^ 6439628851425L;
          short var10003x = 3001;
          long var10004x = 5312809427093477324L ^ ax;
@@ -203,51 +205,54 @@ public class cv extends class_437 implements dlc, cds {
          a.ebz = new fkc(var4x, "txt");
          a.gmy = true;
       });
-      short var33 = 20309;
+      short var35 = 20309;
       var10002 = 1741609813749233971L ^ a;
-      short var42 = 24983;
+      short var44 = 24983;
       var10003 = 3382530022852024309L ^ a;
-      class_7840 axxxxxxxxx = var22.method_46437(200, 20);
+      class_7840 axxxxxxxxx = var23.method_46437(200, 20);
       a.method_25429(a.axb);
-      short var52 = 20309;
-      long var60 = 1741609813749233971L ^ a;
-      int var43 = (a.field_22789 - 200) / 2;
-      short var61 = 24983;
-      long var75 = 3382530022852024309L ^ a;
-      int var53 = (a.field_22790 - 20) / 2;
-      var61 = 4279;
-      long var76 = 3231486598321186515L ^ a;
-      a.method_37063(axxxxx.method_46433(var43, var53 - 60).method_46431());
       short var54 = 20309;
       long var63 = 1741609813749233971L ^ a;
-      int var44 = (a.field_22789 - 200) / 2;
-      var61 = 24983;
-      long var77 = 3382530022852024309L ^ a;
-      a.method_37063(axxxxxxx.method_46433(var44, (a.field_22790 - 20) / 2).method_46431());
-      short var55 = 20309;
-      long var65 = 1741609813749233971L ^ a;
       int var45 = (a.field_22789 - 200) / 2;
-      var61 = 24983;
-      long var78 = 3382530022852024309L ^ a;
-      int var56 = (a.field_22790 - 20) / 2;
-      var61 = 30614;
-      long var79 = 8313423470350909937L ^ a;
-      a.method_37063(axxxxxx.method_46433(var45, var56 + 25).method_46431());
+      short var64 = 24983;
+      long var79 = 3382530022852024309L ^ a;
+      int var55 = (a.field_22790 - 20) / 2;
+      var64 = 4279;
+      long var80 = 3231486598321186515L ^ a;
+      a.method_37063(axxxxx.method_46433(var45, var55 - 60).method_46431());
+      short var56 = 20309;
+      long var66 = 1741609813749233971L ^ a;
+      int var46 = (a.field_22789 - 200) / 2;
+      var64 = 24983;
+      long var81 = 3382530022852024309L ^ a;
+      a.method_37063(axxxxxxx.method_46433(var46, (a.field_22790 - 20) / 2).method_46431());
       short var57 = 20309;
       long var68 = 1741609813749233971L ^ a;
-      int var46 = (a.field_22789 - 200) / 2;
-      var61 = 24983;
-      long var80 = 3382530022852024309L ^ a;
+      int var47 = (a.field_22789 - 200) / 2;
+      var64 = 24983;
+      long var82 = 3382530022852024309L ^ a;
       int var58 = (a.field_22790 - 20) / 2;
-      var61 = 13095;
-      long var81 = 5757410930407408967L ^ a;
-      a.method_37063(axxxxxxxx.method_46433(var46, var58 + 50).method_46431());
+      var64 = 30614;
+      long var83 = 8313423470350909937L ^ a;
+      a.method_37063(axxxxxx.method_46433(var47, var58 + 25).method_46431());
       short var59 = 20309;
       long var71 = 1741609813749233971L ^ a;
-      int var47 = (a.field_22789 - 200) / 2;
-      var61 = 24983;
-      long var82 = 3382530022852024309L ^ a;
-      a.method_37063(axxxxxxxxx.method_46433(var47, (a.field_22790 - 20) / 2 + b<"z">(6512, 6100719801063452447L ^ a)).method_46431());
+      int var48 = (a.field_22789 - 200) / 2;
+      var64 = 24983;
+      long var84 = 3382530022852024309L ^ a;
+      int var60 = (a.field_22790 - 20) / 2;
+      var64 = 13095;
+      long var85 = 5757410930407408967L ^ a;
+      a.method_37063(axxxxxxxx.method_46433(var48, var60 + 50).method_46431());
+      short var61 = 20309;
+      long var74 = 1741609813749233971L ^ a;
+      int var49 = (a.field_22789 - 200) / 2;
+      var64 = 24983;
+      long var86 = 3382530022852024309L ^ a;
+      int var62 = (a.field_22790 - 20) / 2;
+      var64 = 6512;
+      long var87 = 6100719801063452447L ^ a;
+      a.method_37063(axxxxxxxxx.method_46433(var49, var62 + 75).method_46431());
    }
 
    private class_2561 c() {

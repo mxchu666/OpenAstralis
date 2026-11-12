@@ -49,45 +49,60 @@ public class eyu extends class_437 implements dlc {
       var10000 = 22842;
       var10001 = 1331787285798557869L ^ a;
       int axx = 20;
-      class_327 var10003 = a.field_22793;
       int var10005 = 27239;
       long var10006 = 5101916039578233841L ^ a;
       int var10004 = (a.field_22789 - 200) / 2;
-      var10005 = (a.field_22790 - b<"m">(7261, 2960227982845468108L ^ a)) / 2 - b<"m">(14725, 3262899880088467477L ^ a);
-      short var27 = 27239;
-      long var10007 = 5101916039578233841L ^ a;
-      int var28 = b<"m">(7261, 2960227982845468108L ^ a);
-      short var10008 = 27018;
+      short var42 = 7261;
+      long var10007 = 2960227982845468108L ^ a;
+      var10005 = (a.field_22790 - 20) / 2;
+      short var43 = 14725;
+      var10007 = 3262899880088467477L ^ a;
+      var10005 -= 25;
+      short var44 = 27239;
+      var10007 = 5101916039578233841L ^ a;
+      short var47 = 7261;
+      long var10008 = 2960227982845468108L ^ a;
+      short var48 = 27018;
       long var10009 = 7156156816515536713L ^ a;
-      a.dlu = new class_342(var10003, var10004, var10005, 200, var28, class_2561.method_43470("Name"));
+      a.dlu = new class_342(a.field_22793, var10004, var10005, 200, 20, class_2561.method_43470("Name"));
       var10000 = 27239;
       var10001 = 5101916039578233841L ^ a;
       int axxx = 200;
-      int axxxx = b<"m">(7261, 2960227982845468108L ^ a);
+      var10000 = 7261;
+      var10001 = 2960227982845468108L ^ a;
+      int axxxx = 20;
       var10000 = 27364;
       var10001 = 896978421311083557L ^ a;
-      class_7840 var12 = class_4185.method_46430(class_2561.method_43470("Change Skin"), axxxxx -> {});
-      short var18 = 27239;
+      class_7840 var13 = class_4185.method_46430(class_2561.method_43470("Change Skin"), axxxxx -> {});
+      short var20 = 27239;
       long var10002 = 5101916039578233841L ^ a;
-      class_7840 axxxxx = var12.method_46437(200, b<"m">(7261, 2960227982845468108L ^ a));
+      short var23 = 7261;
+      long var10003 = 2960227982845468108L ^ a;
+      class_7840 axxxxx = var13.method_46437(200, 20);
       var10000 = 1862;
       var10001 = 6961575208250079620L ^ a;
-      class_7840 var14 = class_4185.method_46430(class_2561.method_43470("Change Name"), axxxxxx -> {});
-      short var20 = 27239;
-      var10002 = 5101916039578233841L ^ a;
-      class_7840 axxxxxx = var14.method_46437(200, b<"m">(7261, 2960227982845468108L ^ a));
-      a.method_25429(a.dlu);
+      class_7840 var15 = class_4185.method_46430(class_2561.method_43470("Change Name"), axxxxxx -> {});
       short var22 = 27239;
-      long var24 = 5101916039578233841L ^ a;
-      a.method_37063(axxxxxx.method_46433((a.field_22789 - 200) / 2, (a.field_22790 - b<"m">(7261, 2960227982845468108L ^ a)) / 2).method_46431());
-      short var23 = 27239;
-      long var25 = 5101916039578233841L ^ a;
-      a.method_37063(
-         axxxxx.method_46433(
-               (a.field_22789 - 200) / 2, (a.field_22790 - b<"m">(7261, 2960227982845468108L ^ a)) / 2 + b<"m">(7261, 2960227982845468108L ^ a) + 5
-            )
-            .method_46431()
-      );
+      var10002 = 5101916039578233841L ^ a;
+      short var25 = 7261;
+      var10003 = 2960227982845468108L ^ a;
+      class_7840 axxxxxx = var15.method_46437(200, 20);
+      a.method_25429(a.dlu);
+      short var29 = 27239;
+      long var32 = 5101916039578233841L ^ a;
+      int var26 = (a.field_22789 - 200) / 2;
+      short var33 = 7261;
+      long var39 = 2960227982845468108L ^ a;
+      a.method_37063(axxxxxx.method_46433(var26, (a.field_22790 - 20) / 2).method_46431());
+      short var30 = 27239;
+      long var34 = 5101916039578233841L ^ a;
+      int var27 = (a.field_22789 - 200) / 2;
+      var33 = 7261;
+      long var40 = 2960227982845468108L ^ a;
+      int var31 = (a.field_22790 - 20) / 2;
+      var33 = 7261;
+      long var41 = 2960227982845468108L ^ a;
+      a.method_37063(axxxxx.method_46433(var27, var31 + 20 + 5).method_46431());
    }
 
    public void method_25394(class_332 context, int mouseX, int mouseY, float delta) {

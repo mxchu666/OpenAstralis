@@ -27,7 +27,7 @@ public class gyn extends brc {
       long a = c ^ 120691098759667L;
       short var10001 = 3633;
       long var10002 = 5980712947144087861L ^ a;
-      super(-1065923125);
+      super(6);
    }
 
    @Override
@@ -60,7 +60,7 @@ public class gyn extends brc {
          if (var3 == 0) {
             short var4 = 21555;
             long var10001 = 152246494285063943L ^ var0;
-            return 1081941577;
+            return 114;
          }
 
          var10000 = 0;
@@ -157,14 +157,14 @@ public class gyn extends brc {
                      int var21 = var11.length();
                      short var31 = 2011;
                      long var39 = 7881212238042344915L ^ var15;
-                     int var18 = 794894420;
+                     char var18 = '`';
                      aqg(0);
                      int var17 = -1;
 
                      while (true) {
                         short var27 = 15621;
                         long var32 = 1323199328176707330L ^ var15;
-                        String var40 = b(-2034018439, b(var19.substring(++var17, var17 + var18)));
+                        String var40 = b(50, b(var19.substring(++var17, var17 + var18)));
                         byte var33 = -1;
                         var22[var20++] = var40;
                         if ((var17 += var18) >= var21) {
@@ -212,7 +212,7 @@ public class gyn extends brc {
          char var10003 = var10000[0];
          short var10004 = 1795;
          long var10005 = 3138397305798516915L ^ var1;
-         var10000[0] = (char)(var10003 ^ 442451427);
+         var10000[0] = (char)(var10003 ^ '9');
       }
 
       return var10000;
@@ -229,42 +229,42 @@ public class gyn extends brc {
          char var10005 = var10001[var4];
          short var10008 = 11458;
          long var10009 = 4721574070093738695L ^ var2;
-         int var10;
-         switch (var4 % -1337397012) {
+         byte var10;
+         switch (var4 % 7) {
             case 0:
-               short var16 = 6961;
+               var10 = 6961;
                long var23 = 7629598264276600114L ^ var2;
-               var10 = 714925817;
+               var10 = 15;
                break;
             case 1:
-               short var15 = 23204;
+               var10 = 23204;
                long var22 = 6032448499781371050L ^ var2;
-               var10 = 1267149508;
+               var10 = 90;
                break;
             case 2:
-               short var14 = 17997;
+               var10 = 17997;
                long var21 = 5664617878474233924L ^ var2;
-               var10 = -950534412;
+               var10 = 85;
                break;
             case 3:
-               short var13 = 2453;
+               var10 = 2453;
                long var20 = 8781113483628828563L ^ var2;
-               var10 = -344514769;
+               var10 = 53;
                break;
             case 4:
-               short var12 = 5852;
+               var10 = 5852;
                long var19 = 9091439182668581073L ^ var2;
-               var10 = 1197803854;
+               var10 = 118;
                break;
             case 5:
-               short var11 = 16040;
+               var10 = 16040;
                long var18 = 2943356168103321762L ^ var2;
-               var10 = -1570566050;
+               var10 = 106;
                break;
             default:
-               short var10007 = 855;
+               var10 = 855;
                long var17 = 89359358939192671L ^ var2;
-               var10 = -1811595333;
+               var10 = 57;
          }
 
          var10001[var4] = (char)(var10005 ^ var10002 ^ var10);

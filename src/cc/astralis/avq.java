@@ -38,7 +38,10 @@ public class avq extends guu {
    public void ahs(elx event) {
       long ax = avq.a ^ 120878497251612L;
       int[] var10000 = dar.abu();
-      a.efe(String.valueOf(ftb.hbp(a.buo.dnp().intValue(), b<"v">(26245, 5186733959573098595L ^ ax))));
+      double var10002 = a.buo.dnp().intValue();
+      short var10003 = 26245;
+      long var10004 = 5186733959573098595L ^ ax;
+      a.efe(String.valueOf(ftb.hbp(var10002, 6)));
       int[] axx = var10000;
       class_1309 axxx = dar.gqy().aws().diy(ekb.class).gvw;
       eky axxxx = dar.gqy().aws().diy(eky.class);
@@ -132,19 +135,21 @@ public class avq extends guu {
          if (a != 0.0) {
             float var19;
             label68: {
-               double var24;
-               int var10001 = (var24 = a - 0.0) == 0.0 ? 0 : (var24 < 0.0 ? -1 : 1);
+               double var26;
+               int var10001 = (var26 = a - 0.0) == 0.0 ? 0 : (var26 < 0.0 ? -1 : 1);
                if (axx != null) {
                   if (var10001 > 0) {
-                     double var25;
-                     int var20 = (var25 = a - 0.0) == 0.0 ? 0 : (var25 < 0.0 ? -1 : 1);
+                     double var27;
+                     int var20 = (var27 = a - 0.0) == 0.0 ? 0 : (var27 < 0.0 ? -1 : 1);
                      if (axx != null) {
                         if (var20 > 0) {
                            short var21 = 21235;
-                           long var23 = 6229066711129893767L ^ ax;
+                           long var24 = 6229066711129893767L ^ ax;
                            var20 = -45;
                         } else {
-                           var20 = b<"v">(17212, 6598539049297590857L ^ ax);
+                           short var22 = 17212;
+                           long var25 = 6598539049297590857L ^ ax;
+                           var20 = 45;
                         }
                      }
 
@@ -152,8 +157,8 @@ public class avq extends guu {
                      break label68;
                   }
 
-                  double var26;
-                  var10001 = (var26 = a - 0.0) == 0.0 ? 0 : (var26 < 0.0 ? -1 : 1);
+                  double var28;
+                  var10001 = (var28 = a - 0.0) == 0.0 ? 0 : (var28 < 0.0 ? -1 : 1);
                }
 
                label55: {
@@ -163,8 +168,8 @@ public class avq extends guu {
                         break label55;
                      }
 
-                     double var27;
-                     var10001 = (var27 = a - 0.0) == 0.0 ? 0 : (var27 < 0.0 ? -1 : 1);
+                     double var29;
+                     var10001 = (var29 = a - 0.0) == 0.0 ? 0 : (var29 < 0.0 ? -1 : 1);
                   }
 
                   if (axx != null) {
@@ -174,7 +179,7 @@ public class avq extends guu {
                         var10001 = 45;
                      } else {
                         short var18 = 11493;
-                        long var22 = 405631583200531859L ^ ax;
+                        long var23 = 405631583200531859L ^ ax;
                         var10001 = -45;
                      }
                   }

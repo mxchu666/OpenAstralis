@@ -18,6 +18,7 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.class_1041;
 import net.minecraft.class_1268;
+import net.minecraft.class_1294;
 import net.minecraft.class_1297;
 import net.minecraft.class_1299;
 import net.minecraft.class_1747;
@@ -32,9 +33,12 @@ import net.minecraft.class_243;
 import net.minecraft.class_2879;
 import net.minecraft.class_304;
 import net.minecraft.class_310;
+import net.minecraft.class_315;
+import net.minecraft.class_3532;
 import net.minecraft.class_3965;
 import net.minecraft.class_4587;
 import net.minecraft.class_638;
+import net.minecraft.class_746;
 import net.minecraft.class_239.class_240;
 
 public class efx extends guu {
@@ -118,34 +122,34 @@ public class efx extends guu {
       int[] var10000 = dar.abu();
       short var10004 = 29206;
       long var10005 = 5118616045073169690L ^ a;
-      short var145 = 18618;
+      short var149 = 18618;
       long var10006 = 3236698855878182787L ^ a;
-      String[] var165 = new String[4];
+      String[] var169 = new String[4];
       short var10009 = 10726;
       long var10010 = 4694935003934271119L ^ a;
-      var165[0] = "Normal";
+      var169[0] = "Normal";
       var10009 = 17758;
       var10010 = 5268201454946208374L ^ a;
-      var165[1] = "Modern Watchdog";
+      var169[1] = "Modern Watchdog";
       var10009 = 11744;
       var10010 = 5663065953896505984L ^ a;
-      var165[2] = "Telly";
+      var169[2] = "Telly";
       var10009 = 20101;
       var10010 = 2253099706860257677L ^ a;
-      var165[3] = "Snap";
-      a.aqg = new adu("Scaffold Mode", "Normal", var165);
+      var169[3] = "Snap";
+      a.aqg = new adu("Scaffold Mode", "Normal", var169);
       var10004 = 10213;
       var10005 = 6235973740084799703L ^ a;
-      short var147 = 1266;
+      short var151 = 1266;
       var10006 = 7829588862803479518L ^ a;
-      String[] var167 = new String[2];
+      String[] var171 = new String[2];
       var10009 = 17797;
       var10010 = 5689842658287438522L ^ a;
-      var167[0] = "Update";
+      var171[0] = "Update";
       var10009 = 32470;
       var10010 = 6822322386814988724L ^ a;
-      var167[1] = "Click";
-      a.bqc = new adu("Place Mode", "Update", var167);
+      var171[1] = "Click";
+      a.bqc = new adu("Place Mode", "Update", var171);
       var10004 = 31371;
       var10005 = 113799823361996188L ^ a;
       a.gju = new bes("Start Placing After", 5.0F, 0.0F, 9.0F, 1.0F);
@@ -172,153 +176,153 @@ public class efx extends guu {
       a.euz = new gbp("Jump", false);
       int[] var3 = var10000;
       short var10003 = 16949;
-      long var77 = 8994178587173997879L ^ a;
+      long var79 = 8994178587173997879L ^ a;
       a.hge = new gbp("Don't jump diagonally", false);
       var10003 = 23955;
-      long var78 = 9094745706310062723L ^ a;
+      long var80 = 9094745706310062723L ^ a;
       a.bjk = new bes("Jump Every", 1.0F, 1.0F, 30.0F, 1.0F);
       var10003 = 4049;
-      long var79 = 5318868268672876722L ^ a;
+      long var81 = 5318868268672876722L ^ a;
       a.exn = new bes("Place Delay", 0.0F, 0.0F, 10.0F, 1.0F);
       var10003 = 19772;
-      long var80 = 2690326005127135763L ^ a;
+      long var82 = 2690326005127135763L ^ a;
       a.fpf = new gbp("Sprint On Jump", false);
       var10003 = 20968;
-      long var81 = 1239938196215324297L ^ a;
+      long var83 = 1239938196215324297L ^ a;
       a.bza = new gbp("Sprint", false);
       var10003 = 14916;
-      long var82 = 4371409955720115491L ^ a;
+      long var84 = 4371409955720115491L ^ a;
       a.epf = new gbp("Change FOV", false);
       var10003 = 11396;
-      long var83 = 2570381698267947950L ^ a;
+      long var85 = 2570381698267947950L ^ a;
       a.gdh = new cyx("Sprint Mode", new ecs(a), new arx(a), new dkm(a));
       var10003 = 17100;
-      long var84 = 2776524004880010697L ^ a;
+      long var86 = 2776524004880010697L ^ a;
       a.gez = new gbp("Tower", false);
       var10003 = 11842;
-      long var85 = 1538464201380962640L ^ a;
+      long var87 = 1538464201380962640L ^ a;
       a.cuw = new cyx("Tower Mode", new cgw(a), new bgl(a));
       var10003 = 13897;
-      long var86 = 5982643869323508034L ^ a;
+      long var88 = 5982643869323508034L ^ a;
       a.czw = new gbp("No Off Hand check", true);
       var10003 = 20983;
-      long var87 = 5035522264662367946L ^ a;
+      long var89 = 5035522264662367946L ^ a;
       a.gso = new gbp("Block Counter", true);
       var10003 = 18656;
-      long var88 = 2017380996828055501L ^ a;
+      long var90 = 2017380996828055501L ^ a;
       var10004 = 10527;
       var10005 = 1862297927488841278L ^ a;
-      String[] var157 = new String[2];
+      String[] var161 = new String[2];
       short var10008 = 2388;
-      long var187 = 678744821673035363L ^ a;
-      var157[0] = "Astralis";
+      long var191 = 678744821673035363L ^ a;
+      var161[0] = "Astralis";
       var10008 = 16907;
-      long var188 = 9216871595052420378L ^ a;
-      var157[1] = "Adjust";
-      a.end = new adu("Block Counter Mode", "Astralis", var157);
+      long var192 = 9216871595052420378L ^ a;
+      var161[1] = "Adjust";
+      a.end = new adu("Block Counter Mode", "Astralis", var161);
       var10003 = 24198;
-      long var90 = 2163235057141338511L ^ a;
+      long var92 = 2163235057141338511L ^ a;
       a.dhl = new gbp("Block ESP", true);
       var10003 = 31573;
-      long var91 = 7966276003476272251L ^ a;
+      long var93 = 7966276003476272251L ^ a;
       var10004 = 18462;
       var10005 = 789059682154039045L ^ a;
-      String[] var159 = new String[2];
+      String[] var163 = new String[2];
       var10008 = 18462;
-      long var189 = 789059682154039045L ^ a;
-      var159[0] = "Accurate";
+      long var193 = 789059682154039045L ^ a;
+      var163[0] = "Accurate";
       var10008 = 1017;
-      long var190 = 3575420179344133364L ^ a;
-      var159[1] = "Prediction";
-      a.fdv = new adu("Block ESP Mode", "Accurate", var159);
+      long var194 = 3575420179344133364L ^ a;
+      var163[1] = "Prediction";
+      a.fdv = new adu("Block ESP Mode", "Accurate", var163);
       var10003 = 11212;
-      long var93 = 5602640085958501592L ^ a;
+      long var95 = 5602640085958501592L ^ a;
       a.euu = new gbp("Sneak", false);
       var10003 = 2263;
-      long var94 = 8857177065079113659L ^ a;
+      long var96 = 8857177065079113659L ^ a;
       a.grx = new bes("Sneak Every", 1.0F, 1.0F, 30.0F, 1.0F);
       var10003 = 27074;
-      long var95 = 6169403297980147446L ^ a;
+      long var97 = 6169403297980147446L ^ a;
       a.flo = new gbp("Autoswap to next stack", true);
       var10003 = 15321;
-      long var96 = 6383712457065510085L ^ a;
+      long var98 = 6383712457065510085L ^ a;
       a.esl = new gbp("Rotations", true);
       var10003 = 6318;
-      long var97 = 5490620219211814794L ^ a;
+      long var99 = 5490620219211814794L ^ a;
       a.ggy = new gbp("180 on jump key", false);
       var10003 = 28575;
-      long var98 = 2786835437019455730L ^ a;
+      long var100 = 2786835437019455730L ^ a;
       var10004 = 12497;
       var10005 = 1971575053594247098L ^ a;
-      String[] var161 = new String[4];
+      String[] var165 = new String[4];
       var10008 = 16548;
-      long var191 = 4268102371946942396L ^ a;
-      var161[0] = "Off";
+      long var195 = 4268102371946942396L ^ a;
+      var165[0] = "Off";
       var10008 = 10726;
-      long var192 = 4694935003934271119L ^ a;
-      var161[1] = "Normal";
+      long var196 = 4694935003934271119L ^ a;
+      var165[1] = "Normal";
       var10008 = 31478;
-      long var193 = 3296986833227347440L ^ a;
-      var161[2] = "Advanced";
+      long var197 = 3296986833227347440L ^ a;
+      var165[2] = "Advanced";
       var10008 = 16656;
-      long var194 = 3280760497962110515L ^ a;
-      var161[3] = "MC";
-      a.gkz = new adu("Ray Cast Mode", "Off", var161);
+      long var198 = 3280760497962110515L ^ a;
+      var165[3] = "MC";
+      a.gkz = new adu("Ray Cast Mode", "Off", var165);
       var10003 = 9942;
-      long var100 = 7034826567316548072L ^ a;
+      long var102 = 7034826567316548072L ^ a;
       a.ewl = new bes("Min Yaw Speed", 120.0F, 1.0F, 180.0F, 1.0F);
       var10003 = 17053;
-      long var101 = 1453571114383494556L ^ a;
+      long var103 = 1453571114383494556L ^ a;
       a.dih = new bes("Max Yaw Speed", 120.0F, 1.0F, 180.0F, 1.0F);
       var10003 = 3878;
-      long var102 = 676570180342186057L ^ a;
+      long var104 = 676570180342186057L ^ a;
       a.ezy = new bes("Min Pitch Speed", 120.0F, 1.0F, 180.0F, 1.0F);
       var10003 = 14265;
-      long var103 = 3646913518110914743L ^ a;
+      long var105 = 3646913518110914743L ^ a;
       a.ael = new bes("Max Pitch Speed", 120.0F, 1.0F, 180.0F, 1.0F);
       var10003 = 2262;
-      long var104 = 8255421607588726732L ^ a;
+      long var106 = 8255421607588726732L ^ a;
       var10004 = 28532;
       var10005 = 7762890693807071344L ^ a;
-      short var163 = 12131;
+      short var167 = 12131;
       var10006 = 1971085004764920462L ^ a;
-      String[] var164 = new String[6];
+      String[] var168 = new String[6];
       var10008 = 28532;
-      long var195 = 7762890693807071344L ^ a;
-      var164[0] = "Basic";
+      long var199 = 7762890693807071344L ^ a;
+      var168[0] = "Basic";
       var10008 = 27994;
-      long var196 = 8254015602457862767L ^ a;
-      var164[1] = "Edge";
+      long var200 = 8254015602457862767L ^ a;
+      var168[1] = "Edge";
       var10008 = 17758;
-      long var197 = 5268201454946208374L ^ a;
-      var164[2] = "Modern Watchdog";
+      long var201 = 5268201454946208374L ^ a;
+      var168[2] = "Modern Watchdog";
       var10008 = 17866;
-      long var198 = 123389735295437484L ^ a;
-      var164[3] = "Modern Watchdog 2";
+      long var202 = 123389735295437484L ^ a;
+      var168[3] = "Modern Watchdog 2";
       var10008 = 28529;
-      long var199 = 8109229975263633489L ^ a;
-      var164[4] = "God Bridge";
+      long var203 = 8109229975263633489L ^ a;
+      var168[4] = "God Bridge";
       var10008 = 18203;
-      long var200 = 8473884255235983366L ^ a;
-      var164[5] = "Intave";
-      a.hfi = new adu("Rotation Mode", "Basic", var164);
+      long var204 = 8473884255235983366L ^ a;
+      var168[5] = "Intave";
+      a.hfi = new adu("Rotation Mode", "Basic", var168);
       var10003 = 6950;
-      long var106 = 3606449650073342997L ^ a;
+      long var108 = 3606449650073342997L ^ a;
       a.aof = new gbp("Brute Force Yaw", true);
       var10003 = 23952;
-      long var107 = 4915896766692053641L ^ a;
+      long var109 = 4915896766692053641L ^ a;
       a.dgy = new gbp("Brute Force Pitch", true);
       var10003 = 21363;
-      long var108 = 2334544928923343897L ^ a;
+      long var110 = 2334544928923343897L ^ a;
       a.aba = new gbp("Spoof Ray Cast", false);
       var10003 = 9569;
-      long var109 = 7073938492098980432L ^ a;
+      long var111 = 7073938492098980432L ^ a;
       a.cci = new gbp("Stable", false);
       var10003 = 9668;
-      long var110 = 7692005801944754891L ^ a;
+      long var112 = 7692005801944754891L ^ a;
       a.bld = new bes("Yaw Value", 180.0F, 0.0F, 360.0F, 1.0F);
       var10003 = 31226;
-      long var111 = 862428912575444684L ^ a;
+      long var113 = 862428912575444684L ^ a;
       a.dgj = new bes("Pitch Value", 81.7F, -90.0F, 90.0F, 0.1F);
       a.ciu = -1;
       a.dsa = new cbm();
@@ -377,77 +381,79 @@ public class efx extends guu {
          null
       };
       var10003 = 9144;
-      long var112 = 3950215343920264805L ^ a;
+      long var114 = 3950215343920264805L ^ a;
       var4[6] = a.bdd;
       var10003 = 17921;
-      long var113 = 7308210642741154787L ^ a;
+      long var115 = 7308210642741154787L ^ a;
       var4[7] = a.epf;
-      var4[e<"u">(30456, 7688202087667098424L ^ a)] = a.bn;
+      var10003 = 30456;
+      long var116 = 7688202087667098424L ^ a;
+      var4[8] = a.bn;
       var10003 = 20329;
-      long var114 = 5658199239190338222L ^ a;
+      long var117 = 5658199239190338222L ^ a;
       var4[9] = a.cdk.bih(a.bdd::dnp);
       var10003 = 3928;
-      long var115 = 6727412134240098986L ^ a;
+      long var118 = 6727412134240098986L ^ a;
       var4[10] = a.euz;
       var10003 = 821;
-      long var116 = 766460450673530594L ^ a;
+      long var119 = 766460450673530594L ^ a;
       var4[11] = a.hge.bih(a.euz::dnp);
       var10003 = 27170;
-      long var117 = 4512930774983868357L ^ a;
+      long var120 = 4512930774983868357L ^ a;
       var4[12] = a.bjk.bih(a.euz::dnp);
       var10003 = 15674;
-      long var118 = 2002686725485406431L ^ a;
+      long var121 = 2002686725485406431L ^ a;
       var4[13] = a.bza;
       var10003 = 15704;
-      long var119 = 1829081115442784428L ^ a;
+      long var122 = 1829081115442784428L ^ a;
       var4[14] = a.fpf;
       var10003 = 19891;
-      long var120 = 3884934975117416525L ^ a;
+      long var123 = 3884934975117416525L ^ a;
       var4[15] = a.gdh.bih(a.bza::dnp);
       var10003 = 24460;
-      long var121 = 3045557632174574162L ^ a;
+      long var124 = 3045557632174574162L ^ a;
       var4[16] = a.gez;
       var10003 = 2263;
-      long var122 = 89049025673501964L ^ a;
+      long var125 = 89049025673501964L ^ a;
       var4[17] = a.cuw.bih(a.gez::dnp);
       var10003 = 8250;
-      long var123 = 7320342079517767120L ^ a;
+      long var126 = 7320342079517767120L ^ a;
       var4[18] = a.czw;
       var10003 = 17185;
-      long var124 = 7229821888262690528L ^ a;
+      long var127 = 7229821888262690528L ^ a;
       var4[19] = a.gso;
       var10003 = 29717;
-      long var125 = 5041565561642508796L ^ a;
+      long var128 = 5041565561642508796L ^ a;
       var4[20] = a.end.bih(a.gso::dnp);
       var10003 = 25894;
-      long var126 = 1380754287279272185L ^ a;
+      long var129 = 1380754287279272185L ^ a;
       var4[21] = a.dhl;
       var10003 = 7162;
-      long var127 = 7172289930726542858L ^ a;
+      long var130 = 7172289930726542858L ^ a;
       var4[22] = a.fdv.bih(a.dhl::dnp);
       var10003 = 12463;
-      long var128 = 166324328227808633L ^ a;
+      long var131 = 166324328227808633L ^ a;
       var4[23] = a.euu;
       var10003 = 32462;
-      long var129 = 6484521120444771125L ^ a;
+      long var132 = 6484521120444771125L ^ a;
       var4[24] = a.grx.bih(a.euu::dnp);
       var10003 = 19024;
-      long var130 = 6143063010808127365L ^ a;
+      long var133 = 6143063010808127365L ^ a;
       var4[25] = a.gkz;
       var10003 = 4112;
-      long var131 = 737335857102980581L ^ a;
+      long var134 = 737335857102980581L ^ a;
       var4[26] = a.flo;
       var10003 = 16911;
-      long var132 = 8795959866686429175L ^ a;
+      long var135 = 8795959866686429175L ^ a;
       var4[27] = a.esl;
       var10003 = 17070;
-      long var133 = 5721771729870509912L ^ a;
+      long var136 = 5721771729870509912L ^ a;
       var4[28] = a.ggy.bih(a.esl::dnp);
       var10003 = 27081;
-      long var134 = 3270207451699444778L ^ a;
+      long var137 = 3270207451699444778L ^ a;
       var4[29] = a.hfi.bih(a.esl::dnp);
       var10003 = 23977;
-      long var135 = 2375428277816445007L ^ a;
+      long var138 = 2375428277816445007L ^ a;
       var4[30] = a.aof.bih(() -> {
          long ax = efx.a ^ 13125369025572L;
          int[] var3x = dar.abu();
@@ -461,7 +467,7 @@ public class efx extends guu {
          return var10000x;
       });
       var10003 = 5060;
-      long var136 = 4109098445314721280L ^ a;
+      long var139 = 4109098445314721280L ^ a;
       var4[31] = a.dgy.bih(() -> {
          long ax = efx.a ^ 88191224945843L;
          int[] var3x = dar.abu();
@@ -475,7 +481,7 @@ public class efx extends guu {
          return var10000x;
       });
       var10003 = 31817;
-      long var137 = 6807170411532511664L ^ a;
+      long var140 = 6807170411532511664L ^ a;
       var4[32] = a.aba.bih(() -> {
          long ax = efx.a ^ 33248483775458L;
          int[] var3x = dar.abu();
@@ -496,7 +502,9 @@ public class efx extends guu {
             return var10000x ? true : false;
          }
       });
-      var4[e<"u">(24386, 6266468391071894145L ^ a)] = a.cci.bih(() -> {
+      var10003 = 24386;
+      long var141 = 6266468391071894145L ^ a;
+      var4[33] = a.cci.bih(() -> {
          long ax = efx.a ^ 57955359090107L;
          int[] var3x = dar.abu();
          short var10001x = 17758;
@@ -517,25 +525,25 @@ public class efx extends guu {
          }
       });
       var10003 = 20328;
-      long var138 = 8352548059348196016L ^ a;
+      long var142 = 8352548059348196016L ^ a;
       var4[34] = a.ewl.bih(a.esl::dnp);
       var10003 = 3475;
-      long var139 = 1133082573751097418L ^ a;
+      long var143 = 1133082573751097418L ^ a;
       var4[35] = a.dih.bih(a.esl::dnp);
       var10003 = 12753;
-      long var140 = 3423689948347868160L ^ a;
+      long var144 = 3423689948347868160L ^ a;
       var4[36] = a.ezy.bih(a.esl::dnp);
       var10003 = 31276;
-      long var141 = 6668853111776899049L ^ a;
+      long var145 = 6668853111776899049L ^ a;
       var4[37] = a.ael.bih(a.esl::dnp);
       var10003 = 25429;
-      long var142 = 7552146136224298629L ^ a;
+      long var146 = 7552146136224298629L ^ a;
       var4[38] = a.bld.bih(a.esl::dnp);
       var10003 = 1836;
-      long var143 = 2068851975314412228L ^ a;
+      long var147 = 2068851975314412228L ^ a;
       var4[39] = a.dgj.bih(a.esl::dnp);
       var10003 = 14483;
-      long var144 = 2433678218440977778L ^ a;
+      long var148 = 2433678218440977778L ^ a;
       var4[40] = a.cgy;
       a.bfi(var4);
       if (var3 == null) {
@@ -1400,1786 +1408,1017 @@ public class efx extends guu {
    }
 
    private float[] dba() {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.OutOfMemoryError: Java heap space
-      //   at org.jetbrains.java.decompiler.util.collections.SFormsFastMapDirect.<init>(SFormsFastMapDirect.java:23)
-      //   at org.jetbrains.java.decompiler.util.collections.SFormsFastMapDirect.<init>(SFormsFastMapDirect.java:28)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.getFilteredOutMap(SFormsConstructor.java:275)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.mergeInVarMaps(SFormsConstructor.java:241)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.ssaStatements(SFormsConstructor.java:107)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.splitVariables(SFormsConstructor.java:94)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SSAUConstructorSparseEx.splitVariables(SSAUConstructorSparseEx.java:43)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.StackVarsProcessor.simplifyStackVars(StackVarsProcessor.java:65)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.StackVarsProcessor.simplifyStackVars(StackVarsProcessor.java:40)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:231)
-      //
-      // Bytecode:
-      // 000: getstatic cc/astralis/efx.a J
-      // 003: ldc2_w 139167474333626
-      // 006: lxor
-      // 007: lstore 1
-      // 008: invokestatic cc/astralis/dar.abu ()[I
-      // 00b: astore 3
-      // 00c: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 00f: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 012: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 015: aload 0
-      // 016: getfield cc/astralis/efx.bld Lcc/astralis/bes;
-      // 019: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 01c: checkcast imgui/type/ImFloat
-      // 01f: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 022: fsub
-      // 023: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 026: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 029: getfield net/minecraft/class_315.field_1849 Lnet/minecraft/class_304;
-      // 02c: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 02f: aload 3
-      // 030: ifnull 05d
-      // 033: ifeq 051
-      // 036: goto 03d
-      // 039: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 03c: athrow
-      // 03d: sipush 14237
-      // 040: ldc2_w 4610058168480697408
-      // 043: lload 1
-      // 044: lxor
-      // 045: pop2
-      // 046: pop
-      // 047: ldc_w 45
-      // 04a: goto 0aa
-      // 04d: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 050: athrow
-      // 051: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 054: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 057: getfield net/minecraft/class_315.field_1913 Lnet/minecraft/class_304;
-      // 05a: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 05d: aload 3
-      // 05e: ifnull 08b
-      // 061: ifeq 07f
-      // 064: goto 06b
-      // 067: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 06a: athrow
-      // 06b: sipush 2257
-      // 06e: ldc2_w 2520769002355405590
-      // 071: lload 1
-      // 072: lxor
-      // 073: pop2
-      // 074: pop
-      // 075: ldc_w -45
-      // 078: goto 0aa
-      // 07b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 07e: athrow
-      // 07f: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 082: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 085: getfield net/minecraft/class_315.field_1881 Lnet/minecraft/class_304;
-      // 088: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 08b: aload 3
-      // 08c: ifnull 0a6
-      // 08f: ifeq 0a9
-      // 092: goto 099
-      // 095: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 098: athrow
-      // 099: sipush 24245
-      // 09c: ldc2_w 6256740870304916824
-      // 09f: lload 1
-      // 0a0: lxor
-      // 0a1: pop2
-      // 0a2: pop
-      // 0a3: ldc_w 180
-      // 0a6: goto 0aa
-      // 0a9: bipush 0
-      // 0aa: i2f
-      // 0ab: fadd
-      // 0ac: fstore 4
-      // 0ae: aload 0
-      // 0af: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 0b2: aload 3
-      // 0b3: ifnull 0d6
-      // 0b6: ifnull 0cf
-      // 0b9: goto 0c0
-      // 0bc: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0bf: athrow
-      // 0c0: aload 0
-      // 0c1: aload 0
-      // 0c2: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 0c5: putfield cc/astralis/efx.hil Lcc/astralis/aqy;
-      // 0c8: goto 0cf
-      // 0cb: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0ce: athrow
-      // 0cf: aload 0
-      // 0d0: getfield cc/astralis/efx.dgj Lcc/astralis/bes;
-      // 0d3: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 0d6: checkcast imgui/type/ImFloat
-      // 0d9: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 0dc: fstore 6
-      // 0de: invokestatic cc/astralis/evd.dbj ()Z
-      // 0e1: aload 3
-      // 0e2: ifnull 13c
-      // 0e5: ifne 129
-      // 0e8: goto 0ef
-      // 0eb: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0ee: athrow
-      // 0ef: aload 0
-      // 0f0: getfield cc/astralis/efx.hfi Lcc/astralis/adu;
-      // 0f3: sipush 17493
-      // 0f6: ldc2_w 8367579644308874606
-      // 0f9: lload 1
-      // 0fa: lxor
-      // 0fb: pop2
-      // 0fc: pop
-      // 0fd: ldc "Modern Watchdog"
-      // 0ff: invokevirtual cc/astralis/adu.emb (Ljava/lang/String;)Z
-      // 102: aload 3
-      // 103: ifnull 13c
-      // 106: goto 10d
-      // 109: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 10c: athrow
-      // 10d: ifeq 129
-      // 110: goto 117
-      // 113: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 116: athrow
-      // 117: bipush 2
-      // 118: newarray 6
-      // 11a: dup
-      // 11b: bipush 0
-      // 11c: fload 4
-      // 11e: fastore
-      // 11f: dup
-      // 120: bipush 1
-      // 121: fload 6
-      // 123: fastore
-      // 124: areturn
-      // 125: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 128: athrow
-      // 129: aload 0
-      // 12a: getfield cc/astralis/efx.hfi Lcc/astralis/adu;
-      // 12d: sipush 17758
-      // 130: ldc2_w 5268116525027779703
-      // 133: lload 1
-      // 134: lxor
-      // 135: pop2
-      // 136: pop
-      // 137: ldc "Modern Watchdog"
-      // 139: invokevirtual cc/astralis/adu.emb (Ljava/lang/String;)Z
-      // 13c: ifeq 238
-      // 13f: new net/minecraft/class_243
-      // 142: dup
-      // 143: aload 0
-      // 144: getfield cc/astralis/efx.adx Lnet/minecraft/class_2338;
-      // 147: invokevirtual net/minecraft/class_2338.method_10263 ()I
-      // 14a: i2d
-      // 14b: ldc2_w 0.5
-      // 14e: dadd
-      // 14f: aload 0
-      // 150: getfield cc/astralis/efx.adx Lnet/minecraft/class_2338;
-      // 153: invokevirtual net/minecraft/class_2338.method_10264 ()I
-      // 156: i2d
-      // 157: aload 0
-      // 158: getfield cc/astralis/efx.adx Lnet/minecraft/class_2338;
-      // 15b: invokevirtual net/minecraft/class_2338.method_10260 ()I
-      // 15e: i2d
-      // 15f: ldc2_w 0.5
-      // 162: dadd
-      // 163: invokespecial net/minecraft/class_243.<init> (DDD)V
-      // 166: astore 8
-      // 168: invokestatic cc/astralis/evd.fgd ()F
-      // 16b: f2d
-      // 16c: dstore 9
-      // 16e: dload 9
-      // 170: invokestatic java/lang/Math.sin (D)D
-      // 173: dneg
-      // 174: dstore 11
-      // 176: dload 9
-      // 178: invokestatic java/lang/Math.cos (D)D
-      // 17b: dstore 13
-      // 17d: aload 8
-      // 17f: getfield net/minecraft/class_243.field_1352 D
-      // 182: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 185: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 188: invokevirtual net/minecraft/class_746.method_23317 ()D
-      // 18b: dsub
-      // 18c: dstore 15
-      // 18e: aload 8
-      // 190: getfield net/minecraft/class_243.field_1350 D
-      // 193: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 196: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 199: invokevirtual net/minecraft/class_746.method_23321 ()D
-      // 19c: dsub
-      // 19d: dstore 17
-      // 19f: dload 11
-      // 1a1: dload 17
-      // 1a3: dmul
-      // 1a4: dload 13
-      // 1a6: dload 15
-      // 1a8: dmul
-      // 1a9: dsub
-      // 1aa: dconst_0
-      // 1ab: dcmpl
-      // 1ac: aload 3
-      // 1ad: ifnull 1bb
-      // 1b0: ifle 1be
-      // 1b3: goto 1ba
-      // 1b6: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 1b9: athrow
-      // 1ba: bipush 1
-      // 1bb: goto 1bf
-      // 1be: bipush 0
-      // 1bf: istore 7
-      // 1c1: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 1c4: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 1c7: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 1ca: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 1cd: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 1d0: getfield net/minecraft/class_746.field_3913 Lnet/minecraft/class_744;
-      // 1d3: invokevirtual net/minecraft/class_744.method_3128 ()Lnet/minecraft/class_241;
-      // 1d6: getfield net/minecraft/class_241.field_1343 F
-      // 1d9: f2d
-      // 1da: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 1dd: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 1e0: getfield net/minecraft/class_746.field_3913 Lnet/minecraft/class_744;
-      // 1e3: invokevirtual net/minecraft/class_744.method_3128 ()Lnet/minecraft/class_241;
-      // 1e6: getfield net/minecraft/class_241.field_1342 F
-      // 1e9: f2d
-      // 1ea: invokestatic java/lang/Math.atan2 (DD)D
-      // 1ed: invokestatic java/lang/Math.toDegrees (D)D
-      // 1f0: d2f
-      // 1f1: fsub
-      // 1f2: invokestatic cc/astralis/efx.fuk (F)F
-      // 1f5: fstore 19
-      // 1f7: ldc_w 260.0
-      // 1fa: fstore 20
-      // 1fc: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 1ff: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 202: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 205: invokestatic cc/astralis/evd.bpi ()Z
-      // 208: aload 3
-      // 209: ifnull 222
-      // 20c: ifeq 220
-      // 20f: goto 216
-      // 212: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 215: athrow
-      // 216: ldc_w -135.0
-      // 219: goto 231
-      // 21c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 21f: athrow
-      // 220: iload 7
-      // 222: ifne 22e
-      // 225: fload 20
-      // 227: goto 231
-      // 22a: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 22d: athrow
-      // 22e: fload 20
-      // 230: fneg
-      // 231: fadd
-      // 232: fstore 5
-      // 234: aload 3
-      // 235: ifnonnull 2e1
-      // 238: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 23b: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 23e: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 241: aload 0
-      // 242: getfield cc/astralis/efx.bld Lcc/astralis/bes;
-      // 245: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 248: checkcast imgui/type/ImFloat
-      // 24b: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 24e: fsub
-      // 24f: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 252: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 255: getfield net/minecraft/class_315.field_1849 Lnet/minecraft/class_304;
-      // 258: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 25b: aload 3
-      // 25c: ifnull 290
-      // 25f: goto 266
-      // 262: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 265: athrow
-      // 266: ifeq 284
-      // 269: goto 270
-      // 26c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 26f: athrow
-      // 270: sipush 20293
-      // 273: ldc2_w 2731960675547313327
-      // 276: lload 1
-      // 277: lxor
-      // 278: pop2
-      // 279: pop
-      // 27a: ldc_w 45
-      // 27d: goto 2dd
-      // 280: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 283: athrow
-      // 284: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 287: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 28a: getfield net/minecraft/class_315.field_1913 Lnet/minecraft/class_304;
-      // 28d: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 290: aload 3
-      // 291: ifnull 2be
-      // 294: ifeq 2b2
-      // 297: goto 29e
-      // 29a: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 29d: athrow
-      // 29e: sipush 19241
-      // 2a1: ldc2_w 2806683832130728153
-      // 2a4: lload 1
-      // 2a5: lxor
-      // 2a6: pop2
-      // 2a7: pop
-      // 2a8: ldc_w -45
-      // 2ab: goto 2dd
-      // 2ae: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 2b1: athrow
-      // 2b2: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 2b5: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 2b8: getfield net/minecraft/class_315.field_1881 Lnet/minecraft/class_304;
-      // 2bb: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 2be: aload 3
-      // 2bf: ifnull 2d9
-      // 2c2: ifeq 2dc
-      // 2c5: goto 2cc
-      // 2c8: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 2cb: athrow
-      // 2cc: sipush 10203
-      // 2cf: ldc2_w 725978257269529641
-      // 2d2: lload 1
-      // 2d3: lxor
-      // 2d4: pop2
-      // 2d5: pop
-      // 2d6: ldc_w 180
-      // 2d9: goto 2dd
-      // 2dc: bipush 0
-      // 2dd: i2f
-      // 2de: fadd
-      // 2df: fstore 5
-      // 2e1: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 2e4: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 2e7: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 2ea: ldc_w 45.0
-      // 2ed: fadd
-      // 2ee: fstore 7
-      // 2f0: aload 0
-      // 2f1: invokevirtual cc/astralis/efx.erx ()Z
-      // 2f4: aload 3
-      // 2f5: ifnull eee
-      // 2f8: ifeq ee6
-      // 2fb: goto 302
-      // 2fe: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 301: athrow
-      // 302: bipush 0
-      // 303: istore 8
-      // 305: fload 5
-      // 307: fstore 9
-      // 309: fload 6
-      // 30b: fstore 10
-      // 30d: aload 0
-      // 30e: getfield cc/astralis/efx.aof Lcc/astralis/gbp;
-      // 311: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 314: checkcast java/lang/Boolean
-      // 317: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 31a: aload 3
-      // 31b: ifnull 365
-      // 31e: ifne 34a
-      // 321: goto 328
-      // 324: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 327: athrow
-      // 328: aload 0
-      // 329: getfield cc/astralis/efx.dgy Lcc/astralis/gbp;
-      // 32c: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 32f: checkcast java/lang/Boolean
-      // 332: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 335: aload 3
-      // 336: ifnull 58c
-      // 339: goto 340
-      // 33c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 33f: athrow
-      // 340: ifeq 57f
-      // 343: goto 34a
-      // 346: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 349: athrow
-      // 34a: aload 0
-      // 34b: getfield cc/astralis/efx.hfi Lcc/astralis/adu;
-      // 34e: sipush 31831
-      // 351: ldc2_w 1685727535056411989
-      // 354: lload 1
-      // 355: lxor
-      // 356: pop2
-      // 357: pop
-      // 358: ldc_w "Intave"
-      // 35b: invokevirtual cc/astralis/adu.emb (Ljava/lang/String;)Z
-      // 35e: goto 365
-      // 361: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 364: athrow
-      // 365: aload 3
-      // 366: ifnull 58c
-      // 369: ifne 57f
-      // 36c: goto 373
-      // 36f: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 372: athrow
-      // 373: aload 0
-      // 374: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 377: aload 3
-      // 378: ifnull 586
-      // 37b: goto 382
-      // 37e: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 381: athrow
-      // 382: ifnull 57f
-      // 385: goto 38c
-      // 388: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 38b: athrow
-      // 38c: aload 0
-      // 38d: getfield cc/astralis/efx.dgy Lcc/astralis/gbp;
-      // 390: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 393: checkcast java/lang/Boolean
-      // 396: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 399: aload 3
-      // 39a: ifnull 484
-      // 39d: goto 3a4
-      // 3a0: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 3a3: athrow
-      // 3a4: ifeq 477
-      // 3a7: goto 3ae
-      // 3aa: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 3ad: athrow
-      // 3ae: ldc_w 90.0
-      // 3b1: fstore 11
-      // 3b3: fload 11
-      // 3b5: ldc_w 30.0
-      // 3b8: fcmpl
-      // 3b9: ifle 477
-      // 3bc: iload 8
-      // 3be: aload 3
-      // 3bf: ifnull 484
-      // 3c2: aload 3
-      // 3c3: ifnull 484
-      // 3c6: goto 3cd
-      // 3c9: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 3cc: athrow
-      // 3cd: ifne 477
-      // 3d0: goto 3d7
-      // 3d3: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 3d6: athrow
-      // 3d7: aload 0
-      // 3d8: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 3db: invokevirtual cc/astralis/aqy.aoc ()Lnet/minecraft/class_2350;
-      // 3de: aload 0
-      // 3df: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 3e2: invokevirtual cc/astralis/aqy.dnc ()Lnet/minecraft/class_2338;
-      // 3e5: bipush 1
-      // 3e6: ldc 5.0
-      // 3e8: fload 5
-      // 3ea: fload 11
-      // 3ec: invokestatic cc/astralis/bfc.gto (Lnet/minecraft/class_2350;Lnet/minecraft/class_2338;ZFFF)Z
-      // 3ef: aload 3
-      // 3f0: ifnull 40d
-      // 3f3: goto 3fa
-      // 3f6: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 3f9: athrow
-      // 3fa: ifeq 425
-      // 3fd: goto 404
-      // 400: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 403: athrow
-      // 404: fload 5
-      // 406: fstore 9
-      // 408: fload 11
-      // 40a: fstore 10
-      // 40c: bipush 1
-      // 40d: istore 8
-      // 40f: aload 0
-      // 410: bipush 2
-      // 411: newarray 6
-      // 413: dup
-      // 414: bipush 0
-      // 415: fload 9
-      // 417: fastore
-      // 418: dup
-      // 419: bipush 1
-      // 41a: fload 10
-      // 41c: fastore
-      // 41d: putfield cc/astralis/efx.gpi [F
-      // 420: aload 0
-      // 421: bipush 0
-      // 422: putfield cc/astralis/efx.hek I
-      // 425: fload 11
-      // 427: fload 11
-      // 429: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 42c: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 42f: getstatic net/minecraft/class_1294.field_5904 Lnet/minecraft/class_6880;
-      // 432: invokevirtual net/minecraft/class_746.method_6059 (Lnet/minecraft/class_6880;)Z
-      // 435: aload 3
-      // 436: ifnull 450
-      // 439: ifeq 453
-      // 43c: goto 443
-      // 43f: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 442: athrow
-      // 443: sipush 29868
-      // 446: ldc2_w 7902739088776941389
-      // 449: lload 1
-      // 44a: lxor
-      // 44b: pop2
-      // 44c: pop
-      // 44d: ldc_w 60
-      // 450: goto 460
-      // 453: sipush 17228
-      // 456: ldc2_w 4408724373406218398
-      // 459: lload 1
-      // 45a: lxor
-      // 45b: pop2
-      // 45c: pop
-      // 45d: ldc_w 80
-      // 460: i2f
-      // 461: fcmpl
-      // 462: ifle 46f
-      // 465: ldc_w 0.5
-      // 468: goto 470
-      // 46b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 46e: athrow
-      // 46f: fconst_2
-      // 470: fsub
-      // 471: fstore 11
-      // 473: aload 3
-      // 474: ifnonnull 3b3
-      // 477: aload 0
-      // 478: getfield cc/astralis/efx.aof Lcc/astralis/gbp;
-      // 47b: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 47e: checkcast java/lang/Boolean
-      // 481: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 484: aload 3
-      // 485: ifnull 58c
-      // 488: ifeq 57f
-      // 48b: goto 492
-      // 48e: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 491: athrow
-      // 492: iload 8
-      // 494: aload 3
-      // 495: ifnull 58c
-      // 498: goto 49f
-      // 49b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 49e: athrow
-      // 49f: ifne 57f
-      // 4a2: goto 4a9
-      // 4a5: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 4a8: athrow
-      // 4a9: fconst_0
-      // 4aa: fstore 11
-      // 4ac: fload 11
-      // 4ae: ldc_w 180.0
-      // 4b1: fcmpg
-      // 4b2: ifgt 57f
-      // 4b5: iload 8
-      // 4b7: aload 3
-      // 4b8: ifnull 58c
-      // 4bb: aload 3
-      // 4bc: ifnull 58c
-      // 4bf: goto 4c6
-      // 4c2: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 4c5: athrow
-      // 4c6: ifne 57f
-      // 4c9: goto 4d0
-      // 4cc: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 4cf: athrow
-      // 4d0: ldc_w -1.0
-      // 4d3: fstore 12
-      // 4d5: fload 12
-      // 4d7: fconst_1
-      // 4d8: fcmpg
-      // 4d9: ifgt 574
-      // 4dc: iload 8
-      // 4de: aload 3
-      // 4df: ifnull 4b2
-      // 4e2: ifne 574
-      // 4e5: fload 5
-      // 4e7: fload 11
-      // 4e9: fload 12
-      // 4eb: fmul
-      // 4ec: fadd
-      // 4ed: fstore 13
-      // 4ef: ldc_w 85.0
-      // 4f2: fstore 14
-      // 4f4: fload 14
-      // 4f6: ldc_w 30.0
-      // 4f9: fcmpl
-      // 4fa: ifle 56a
-      // 4fd: iload 8
-      // 4ff: aload 3
-      // 500: ifnull 4d9
-      // 503: aload 3
-      // 504: ifnull 530
-      // 507: ifne 56a
-      // 50a: goto 511
-      // 50d: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 510: athrow
-      // 511: aload 0
-      // 512: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 515: invokevirtual cc/astralis/aqy.aoc ()Lnet/minecraft/class_2350;
-      // 518: aload 0
-      // 519: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 51c: invokevirtual cc/astralis/aqy.dnc ()Lnet/minecraft/class_2338;
-      // 51f: bipush 1
-      // 520: ldc 5.0
-      // 522: fload 13
-      // 524: fload 14
-      // 526: invokestatic cc/astralis/bfc.gto (Lnet/minecraft/class_2350;Lnet/minecraft/class_2338;ZFFF)Z
-      // 529: goto 530
-      // 52c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 52f: athrow
-      // 530: aload 3
-      // 531: ifnull 547
-      // 534: ifeq 55f
-      // 537: goto 53e
-      // 53a: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 53d: athrow
-      // 53e: fload 13
-      // 540: fstore 9
-      // 542: fload 14
-      // 544: fstore 10
-      // 546: bipush 1
-      // 547: istore 8
-      // 549: aload 0
-      // 54a: bipush 2
-      // 54b: newarray 6
-      // 54d: dup
-      // 54e: bipush 0
-      // 54f: fload 9
-      // 551: fastore
-      // 552: dup
-      // 553: bipush 1
-      // 554: fload 10
-      // 556: fastore
-      // 557: putfield cc/astralis/efx.gpi [F
-      // 55a: aload 0
-      // 55b: bipush 0
-      // 55c: putfield cc/astralis/efx.hek I
-      // 55f: fload 14
-      // 561: ldc 5.0
-      // 563: fsub
-      // 564: fstore 14
-      // 566: aload 3
-      // 567: ifnonnull 4f4
-      // 56a: fload 12
-      // 56c: fconst_2
-      // 56d: fadd
-      // 56e: fstore 12
-      // 570: aload 3
-      // 571: ifnonnull 4d5
-      // 574: fload 11
-      // 576: ldc 5.0
-      // 578: fadd
-      // 579: fstore 11
-      // 57b: aload 3
-      // 57c: ifnonnull 4ac
-      // 57f: aload 0
-      // 580: getfield cc/astralis/efx.aof Lcc/astralis/gbp;
-      // 583: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 586: checkcast java/lang/Boolean
-      // 589: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 58c: ifeq 598
-      // 58f: fload 9
-      // 591: goto 59a
-      // 594: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 597: athrow
-      // 598: fload 5
-      // 59a: fstore 5
-      // 59c: aload 0
-      // 59d: getfield cc/astralis/efx.dgy Lcc/astralis/gbp;
-      // 5a0: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 5a3: checkcast java/lang/Boolean
-      // 5a6: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 5a9: ifeq 5b5
-      // 5ac: fload 10
-      // 5ae: goto 5b7
-      // 5b1: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 5b4: athrow
-      // 5b5: fload 6
-      // 5b7: fstore 6
-      // 5b9: aload 0
-      // 5ba: getfield cc/astralis/efx.hfi Lcc/astralis/adu;
-      // 5bd: invokevirtual cc/astralis/adu.dnp ()Ljava/lang/Object;
-      // 5c0: checkcast java/lang/String
-      // 5c3: astore 11
-      // 5c5: bipush -1
-      // 5c6: istore 12
-      // 5c8: aload 11
-      // 5ca: invokevirtual java/lang/String.hashCode ()I
-      // 5cd: aload 3
-      // 5ce: ifnull 721
-      // 5d1: lookupswitch 334 6 -2099899231 292 -1310785555 246 -638370176 154 2154973 200 63955982 63 482016750 109
-      // 60c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 60f: athrow
-      // 610: aload 11
-      // 612: sipush 3952
-      // 615: ldc2_w 5313209609133043303
-      // 618: lload 1
-      // 619: lxor
-      // 61a: pop2
-      // 61b: pop
-      // 61c: ldc_w "Basic"
-      // 61f: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 622: aload 3
-      // 623: ifnull 721
-      // 626: goto 62d
-      // 629: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 62c: athrow
-      // 62d: ifeq 71f
-      // 630: goto 637
-      // 633: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 636: athrow
-      // 637: bipush 0
-      // 638: istore 12
-      // 63a: aload 3
-      // 63b: ifnonnull 71f
-      // 63e: aload 11
-      // 640: sipush 17758
-      // 643: ldc2_w 5268116525027779703
-      // 646: lload 1
-      // 647: lxor
-      // 648: pop2
-      // 649: pop
-      // 64a: ldc "Modern Watchdog"
-      // 64c: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 64f: aload 3
-      // 650: ifnull 721
-      // 653: goto 65a
-      // 656: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 659: athrow
-      // 65a: ifeq 71f
-      // 65d: goto 664
-      // 660: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 663: athrow
-      // 664: bipush 1
-      // 665: istore 12
-      // 667: aload 3
-      // 668: ifnonnull 71f
-      // 66b: aload 11
-      // 66d: sipush 3342
-      // 670: ldc2_w 4678491614261390351
-      // 673: lload 1
-      // 674: lxor
-      // 675: pop2
-      // 676: pop
-      // 677: ldc_w "Modern Watchdog 2"
-      // 67a: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 67d: aload 3
-      // 67e: ifnull 721
-      // 681: goto 688
-      // 684: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 687: athrow
-      // 688: ifeq 71f
-      // 68b: goto 692
-      // 68e: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 691: athrow
-      // 692: bipush 2
-      // 693: istore 12
-      // 695: aload 3
-      // 696: ifnonnull 71f
-      // 699: aload 11
-      // 69b: sipush 20551
-      // 69e: ldc2_w 422302444792148323
-      // 6a1: lload 1
-      // 6a2: lxor
-      // 6a3: pop2
-      // 6a4: pop
-      // 6a5: ldc_w "Edge"
-      // 6a8: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 6ab: aload 3
-      // 6ac: ifnull 721
-      // 6af: goto 6b6
-      // 6b2: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 6b5: athrow
-      // 6b6: ifeq 71f
-      // 6b9: goto 6c0
-      // 6bc: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 6bf: athrow
-      // 6c0: bipush 3
-      // 6c1: istore 12
-      // 6c3: aload 3
-      // 6c4: ifnonnull 71f
-      // 6c7: aload 11
-      // 6c9: sipush 2822
-      // 6cc: ldc2_w 7774212677414627877
-      // 6cf: lload 1
-      // 6d0: lxor
-      // 6d1: pop2
-      // 6d2: pop
-      // 6d3: ldc_w "God Bridge"
-      // 6d6: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 6d9: aload 3
-      // 6da: ifnull 721
-      // 6dd: goto 6e4
-      // 6e0: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 6e3: athrow
-      // 6e4: ifeq 71f
-      // 6e7: goto 6ee
-      // 6ea: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 6ed: athrow
-      // 6ee: bipush 4
-      // 6ef: istore 12
-      // 6f1: aload 3
-      // 6f2: ifnonnull 71f
-      // 6f5: aload 11
-      // 6f7: sipush 18203
-      // 6fa: ldc2_w 8473871843768100359
-      // 6fd: lload 1
-      // 6fe: lxor
-      // 6ff: pop2
-      // 700: pop
-      // 701: ldc_w "Intave"
-      // 704: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 707: aload 3
-      // 708: ifnull 721
-      // 70b: goto 712
-      // 70e: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 711: athrow
-      // 712: ifeq 71f
-      // 715: goto 71c
-      // 718: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 71b: athrow
-      // 71c: bipush 5
-      // 71d: istore 12
-      // 71f: iload 12
-      // 721: aload 3
-      // 722: ifnull 751
-      // 725: tableswitch 1981 0 5 43 57 147 432 947 1787
-      // 74c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 74f: athrow
-      // 750: bipush 2
-      // 751: newarray 6
-      // 753: dup
-      // 754: bipush 0
-      // 755: fload 5
-      // 757: fastore
-      // 758: dup
-      // 759: bipush 1
-      // 75a: fload 6
-      // 75c: fastore
-      // 75d: areturn
-      // 75e: aload 0
-      // 75f: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 762: aload 3
-      // 763: ifnull 77b
-      // 766: ifnull 7aa
-      // 769: goto 770
-      // 76c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 76f: athrow
-      // 770: aload 0
-      // 771: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 774: goto 77b
-      // 777: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 77a: athrow
-      // 77b: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 77e: invokevirtual net/minecraft/class_2338.method_10263 ()I
-      // 781: i2d
-      // 782: aload 0
-      // 783: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 786: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 789: invokevirtual net/minecraft/class_2338.method_10264 ()I
-      // 78c: i2d
-      // 78d: aload 0
-      // 78e: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 791: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 794: invokevirtual net/minecraft/class_2338.method_10260 ()I
-      // 797: i2d
-      // 798: aload 0
-      // 799: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 79c: getfield cc/astralis/aqy.aoc Lnet/minecraft/class_2350;
-      // 79f: invokestatic cc/astralis/efx.eze (DDDLnet/minecraft/class_2350;)[F
-      // 7a2: astore 13
-      // 7a4: aload 13
-      // 7a6: bipush 1
-      // 7a7: faload
-      // 7a8: fstore 6
-      // 7aa: bipush 2
-      // 7ab: newarray 6
-      // 7ad: dup
-      // 7ae: bipush 0
-      // 7af: fload 5
-      // 7b1: fastore
-      // 7b2: dup
-      // 7b3: bipush 1
-      // 7b4: fload 6
-      // 7b6: fastore
-      // 7b7: areturn
-      // 7b8: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 7bb: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 7be: getfield net/minecraft/class_315.field_1894 Lnet/minecraft/class_304;
-      // 7c1: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 7c4: istore 13
-      // 7c6: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 7c9: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 7cc: getfield net/minecraft/class_315.field_1913 Lnet/minecraft/class_304;
-      // 7cf: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 7d2: istore 14
-      // 7d4: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 7d7: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 7da: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 7dd: iload 14
-      // 7df: aload 3
-      // 7e0: ifnull 803
-      // 7e3: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 7e6: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 7e9: getfield net/minecraft/class_315.field_1849 Lnet/minecraft/class_304;
-      // 7ec: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 7ef: if_icmpne 801
-      // 7f2: goto 7f9
-      // 7f5: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 7f8: athrow
-      // 7f9: dconst_0
-      // 7fa: goto 811
-      // 7fd: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 800: athrow
-      // 801: iload 14
-      // 803: ifeq 80e
-      // 806: dconst_1
-      // 807: goto 811
-      // 80a: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 80d: athrow
-      // 80e: ldc2_w -1.0
-      // 811: iload 13
-      // 813: aload 3
-      // 814: ifnull 837
-      // 817: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 81a: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // 81d: getfield net/minecraft/class_315.field_1881 Lnet/minecraft/class_304;
-      // 820: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // 823: if_icmpne 835
-      // 826: goto 82d
-      // 829: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 82c: athrow
-      // 82d: dconst_0
-      // 82e: goto 845
-      // 831: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 834: athrow
-      // 835: iload 13
-      // 837: ifeq 842
-      // 83a: dconst_1
-      // 83b: goto 845
-      // 83e: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 841: athrow
-      // 842: ldc2_w -1.0
-      // 845: invokestatic java/lang/Math.atan2 (DD)D
-      // 848: invokestatic java/lang/Math.toDegrees (D)D
-      // 84b: d2f
-      // 84c: fsub
-      // 84d: fstore 15
-      // 84f: fload 15
-      // 851: invokestatic cc/astralis/efx.fuk (F)F
-      // 854: fstore 16
-      // 856: bipush 2
-      // 857: newarray 6
-      // 859: dup
-      // 85a: bipush 0
-      // 85b: fload 15
-      // 85d: getstatic cc/astralis/efx.gig I
-      // 860: aload 3
-      // 861: ifnull 881
-      // 864: bipush 1
-      // 865: if_icmpne 877
-      // 868: goto 86f
-      // 86b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 86e: athrow
-      // 86f: bipush 0
-      // 870: goto 8ac
-      // 873: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 876: athrow
-      // 877: fload 16
-      // 879: invokestatic java/lang/Math.abs (F)F
-      // 87c: f2d
-      // 87d: ldc2_w 22.5
-      // 880: dcmpl
-      // 881: aload 3
-      // 882: ifnull 89c
-      // 885: ifle 89f
-      // 888: goto 88f
-      // 88b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 88e: athrow
-      // 88f: sipush 19437
-      // 892: ldc2_w 8724396567992201270
-      // 895: lload 1
-      // 896: lxor
-      // 897: pop2
-      // 898: pop
-      // 899: ldc_w -140
-      // 89c: goto 8ac
-      // 89f: sipush 9865
-      // 8a2: ldc2_w 5589048730744659316
-      // 8a5: lload 1
-      // 8a6: lxor
-      // 8a7: pop2
-      // 8a8: pop
-      // 8a9: ldc_w 90
-      // 8ac: i2f
-      // 8ad: fload 16
-      // 8af: aload 3
-      // 8b0: ifnull 8c9
-      // 8b3: fconst_0
-      // 8b4: fcmpl
-      // 8b5: ifne 8c7
-      // 8b8: goto 8bf
-      // 8bb: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 8be: athrow
-      // 8bf: fconst_1
-      // 8c0: goto 8cc
-      // 8c3: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 8c6: athrow
-      // 8c7: fload 16
-      // 8c9: invokestatic java/lang/Math.signum (F)F
-      // 8cc: fmul
-      // 8cd: fadd
-      // 8ce: fastore
-      // 8cf: dup
-      // 8d0: bipush 1
-      // 8d1: fload 6
-      // 8d3: fastore
-      // 8d4: areturn
-      // 8d5: invokestatic cc/astralis/evd.fnh ()F
-      // 8d8: fstore 13
-      // 8da: aload 0
-      // 8db: getfield cc/astralis/efx.ggy Lcc/astralis/gbp;
-      // 8de: invokevirtual cc/astralis/gbp.dnp ()Ljava/lang/Object;
-      // 8e1: checkcast java/lang/Boolean
-      // 8e4: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 8e7: aload 3
-      // 8e8: ifnull 92d
-      // 8eb: ifeq 92a
-      // 8ee: goto 8f5
-      // 8f1: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 8f4: athrow
-      // 8f5: invokestatic cc/astralis/evd.dbj ()Z
-      // 8f8: aload 3
-      // 8f9: ifnull 92d
-      // 8fc: goto 903
-      // 8ff: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 902: athrow
-      // 903: ifne 92a
-      // 906: goto 90d
-      // 909: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 90c: athrow
-      // 90d: bipush 2
-      // 90e: newarray 6
-      // 910: dup
-      // 911: bipush 0
-      // 912: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 915: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 918: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // 91b: ldc_w 180.0
-      // 91e: fsub
-      // 91f: fastore
-      // 920: dup
-      // 921: bipush 1
-      // 922: fload 6
-      // 924: fastore
-      // 925: areturn
-      // 926: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 929: athrow
-      // 92a: invokestatic cc/astralis/evd.fsj ()Z
-      // 92d: aload 3
-      // 92e: ifnull 951
-      // 931: ifeq 94d
-      // 934: goto 93b
-      // 937: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 93a: athrow
-      // 93b: bipush 2
-      // 93c: newarray 6
-      // 93e: dup
-      // 93f: bipush 0
-      // 940: fload 5
-      // 942: fastore
-      // 943: dup
-      // 944: bipush 1
-      // 945: fload 6
-      // 947: fastore
-      // 948: areturn
-      // 949: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 94c: athrow
-      // 94d: aload 0
-      // 94e: getfield cc/astralis/efx.hci Z
-      // 951: aload 3
-      // 952: ifnull 9be
-      // 955: ifne 9b3
-      // 958: goto 95f
-      // 95b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 95e: athrow
-      // 95f: aload 0
-      // 960: aload 3
-      // 961: ifnull 980
-      // 964: goto 96b
-      // 967: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 96a: athrow
-      // 96b: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 96e: ifnull 984
-      // 971: goto 978
-      // 974: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 977: athrow
-      // 978: aload 0
-      // 979: goto 980
-      // 97c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 97f: athrow
-      // 980: bipush 1
-      // 981: putfield cc/astralis/efx.hci Z
-      // 984: bipush 2
-      // 985: newarray 6
-      // 987: dup
-      // 988: bipush 0
-      // 989: invokestatic cc/astralis/evd.bpi ()Z
-      // 98c: ifeq 9a1
-      // 98f: fload 13
-      // 991: ldc_w 140.0
-      // 994: fsub
-      // 995: aload 0
-      // 996: getfield cc/astralis/efx.dku F
-      // 999: fadd
-      // 99a: goto 9ac
-      // 99d: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 9a0: athrow
-      // 9a1: fload 13
-      // 9a3: ldc_w 100.0
-      // 9a6: fadd
-      // 9a7: aload 0
-      // 9a8: getfield cc/astralis/efx.dku F
-      // 9ab: fadd
-      // 9ac: fastore
-      // 9ad: dup
-      // 9ae: bipush 1
-      // 9af: fload 6
-      // 9b1: fastore
-      // 9b2: areturn
-      // 9b3: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 9b6: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 9b9: getfield net/minecraft/class_746.field_6012 I
-      // 9bc: bipush 3
-      // 9bd: irem
-      // 9be: ifne 9d2
-      // 9c1: aload 0
-      // 9c2: fconst_0
-      // 9c3: ldc 9.0
-      // 9c5: invokestatic cc/astralis/crg.gj (FF)F
-      // 9c8: putfield cc/astralis/efx.dku F
-      // 9cb: goto 9d2
-      // 9ce: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 9d1: athrow
-      // 9d2: new net/minecraft/class_243
-      // 9d5: dup
-      // 9d6: aload 0
-      // 9d7: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 9da: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 9dd: invokevirtual net/minecraft/class_2338.method_10263 ()I
-      // 9e0: i2d
-      // 9e1: ldc2_w 0.5
-      // 9e4: dadd
-      // 9e5: aload 0
-      // 9e6: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 9e9: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 9ec: invokevirtual net/minecraft/class_2338.method_10264 ()I
-      // 9ef: i2d
-      // 9f0: aload 0
-      // 9f1: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // 9f4: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // 9f7: invokevirtual net/minecraft/class_2338.method_10260 ()I
-      // 9fa: i2d
-      // 9fb: ldc2_w 0.5
-      // 9fe: dadd
-      // 9ff: invokespecial net/minecraft/class_243.<init> (DDD)V
-      // a02: astore 15
-      // a04: fload 13
-      // a06: f2d
-      // a07: invokestatic java/lang/Math.toRadians (D)D
-      // a0a: dstore 16
-      // a0c: dload 16
-      // a0e: invokestatic java/lang/Math.sin (D)D
-      // a11: dneg
-      // a12: dstore 18
-      // a14: dload 16
-      // a16: invokestatic java/lang/Math.cos (D)D
-      // a19: dstore 20
-      // a1b: aload 15
-      // a1d: getfield net/minecraft/class_243.field_1352 D
-      // a20: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // a23: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // a26: invokevirtual net/minecraft/class_746.method_23317 ()D
-      // a29: dsub
-      // a2a: dstore 22
-      // a2c: aload 15
-      // a2e: getfield net/minecraft/class_243.field_1350 D
-      // a31: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // a34: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // a37: invokevirtual net/minecraft/class_746.method_23321 ()D
-      // a3a: dsub
-      // a3b: dstore 24
-      // a3d: dload 18
-      // a3f: dload 24
-      // a41: dmul
-      // a42: dload 20
-      // a44: dload 22
-      // a46: dmul
-      // a47: dsub
-      // a48: dconst_0
-      // a49: dcmpl
-      // a4a: aload 3
-      // a4b: ifnull a59
-      // a4e: ifle a5c
-      // a51: goto a58
-      // a54: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // a57: athrow
-      // a58: bipush 1
-      // a59: goto a5d
-      // a5c: bipush 0
-      // a5d: istore 14
-      // a5f: invokestatic cc/astralis/evd.bpi ()Z
-      // a62: aload 3
-      // a63: ifnull a8f
-      // a66: ifeq a85
-      // a69: goto a70
-      // a6c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // a6f: athrow
-      // a70: aload 0
-      // a71: fload 13
-      // a73: ldc_w 140.0
-      // a76: fsub
-      // a77: putfield cc/astralis/efx.dxn F
-      // a7a: aload 3
-      // a7b: ifnonnull ac7
-      // a7e: goto a85
-      // a81: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // a84: athrow
-      // a85: invokestatic cc/astralis/evd.bpi ()Z
-      // a88: goto a8f
-      // a8b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // a8e: athrow
-      // a8f: aload 3
-      // a90: ifnull ac8
-      // a93: ifne ac7
-      // a96: goto a9d
-      // a99: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // a9c: athrow
-      // a9d: aload 0
-      // a9e: fload 13
-      // aa0: iload 14
-      // aa2: ifeq abb
-      // aa5: goto aac
-      // aa8: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // aab: athrow
-      // aac: ldc_w 100.0
-      // aaf: aload 0
-      // ab0: getfield cc/astralis/efx.dku F
-      // ab3: fadd
-      // ab4: goto ac3
-      // ab7: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // aba: athrow
-      // abb: ldc_w -100.0
-      // abe: aload 0
-      // abf: getfield cc/astralis/efx.dku F
-      // ac2: fsub
-      // ac3: fadd
-      // ac4: putfield cc/astralis/efx.dxn F
-      // ac7: bipush 2
-      // ac8: newarray 6
-      // aca: dup
-      // acb: bipush 0
-      // acc: aload 0
-      // acd: getfield cc/astralis/efx.dxn F
-      // ad0: fastore
-      // ad1: dup
-      // ad2: bipush 1
-      // ad3: ldc_w 82.0
-      // ad6: fastore
-      // ad7: areturn
-      // ad8: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // adb: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // ade: astore 13
-      // ae0: aload 13
-      // ae2: getfield net/minecraft/class_315.field_1894 Lnet/minecraft/class_304;
-      // ae5: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // ae8: istore 14
-      // aea: aload 13
-      // aec: getfield net/minecraft/class_315.field_1881 Lnet/minecraft/class_304;
-      // aef: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // af2: istore 15
-      // af4: aload 13
-      // af6: getfield net/minecraft/class_315.field_1913 Lnet/minecraft/class_304;
-      // af9: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // afc: istore 16
-      // afe: aload 13
-      // b00: getfield net/minecraft/class_315.field_1849 Lnet/minecraft/class_304;
-      // b03: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // b06: istore 17
-      // b08: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // b0b: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // b0e: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // b11: ldc_w 180.0
-      // b14: fsub
-      // b15: iload 14
-      // b17: aload 3
-      // b18: ifnull b7e
-      // b1b: iload 15
-      // b1d: if_icmpne b7c
-      // b20: goto b27
-      // b23: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b26: athrow
-      // b27: iload 16
-      // b29: aload 3
-      // b2a: ifnull b4a
-      // b2d: goto b34
-      // b30: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b33: athrow
-      // b34: iload 17
-      // b36: if_icmpne b48
-      // b39: goto b40
-      // b3c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b3f: athrow
-      // b40: bipush 0
-      // b41: goto c34
-      // b44: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b47: athrow
-      // b48: iload 16
-      // b4a: aload 3
-      // b4b: ifnull b79
-      // b4e: ifeq b6c
-      // b51: goto b58
-      // b54: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b57: athrow
-      // b58: sipush 28280
-      // b5b: ldc2_w 7573004262951015814
-      // b5e: lload 1
-      // b5f: lxor
-      // b60: pop2
-      // b61: pop
-      // b62: ldc_w -90
-      // b65: goto c34
-      // b68: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b6b: athrow
-      // b6c: sipush 26747
-      // b6f: ldc2_w 2748581162446214037
-      // b72: lload 1
-      // b73: lxor
-      // b74: pop2
-      // b75: pop
-      // b76: ldc_w 90
-      // b79: goto c34
-      // b7c: iload 14
-      // b7e: aload 3
-      // b7f: ifnull be3
-      // b82: ifeq be1
-      // b85: goto b8c
-      // b88: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b8b: athrow
-      // b8c: iload 16
-      // b8e: aload 3
-      // b8f: ifnull baf
-      // b92: goto b99
-      // b95: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // b98: athrow
-      // b99: iload 17
-      // b9b: if_icmpne bad
-      // b9e: goto ba5
-      // ba1: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // ba4: athrow
-      // ba5: bipush 0
-      // ba6: goto c34
-      // ba9: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // bac: athrow
-      // bad: iload 16
-      // baf: aload 3
-      // bb0: ifnull bde
-      // bb3: ifeq bd1
-      // bb6: goto bbd
-      // bb9: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // bbc: athrow
-      // bbd: sipush 19241
-      // bc0: ldc2_w 2806683832130728153
-      // bc3: lload 1
-      // bc4: lxor
-      // bc5: pop2
-      // bc6: pop
-      // bc7: ldc_w -45
-      // bca: goto c34
-      // bcd: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // bd0: athrow
-      // bd1: sipush 20293
-      // bd4: ldc2_w 2731960675547313327
-      // bd7: lload 1
-      // bd8: lxor
-      // bd9: pop2
-      // bda: pop
-      // bdb: ldc_w 45
-      // bde: goto c34
-      // be1: iload 16
-      // be3: aload 3
-      // be4: ifnull c09
-      // be7: iload 17
-      // be9: if_icmpne c07
-      // bec: goto bf3
-      // bef: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // bf2: athrow
-      // bf3: sipush 10203
-      // bf6: ldc2_w 725978257269529641
-      // bf9: lload 1
-      // bfa: lxor
-      // bfb: pop2
-      // bfc: pop
-      // bfd: ldc_w 180
-      // c00: goto c34
-      // c03: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c06: athrow
-      // c07: iload 16
-      // c09: aload 3
-      // c0a: ifnull c24
-      // c0d: ifeq c27
-      // c10: goto c17
-      // c13: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c16: athrow
-      // c17: sipush 12419
-      // c1a: ldc2_w 2482577612975803244
-      // c1d: lload 1
-      // c1e: lxor
-      // c1f: pop2
-      // c20: pop
-      // c21: ldc_w -135
-      // c24: goto c34
-      // c27: sipush 17228
-      // c2a: ldc2_w 7946074926747121833
-      // c2d: lload 1
-      // c2e: lxor
-      // c2f: pop2
-      // c30: pop
-      // c31: ldc_w 135
-      // c34: i2f
-      // c35: fadd
-      // c36: invokestatic net/minecraft/class_3532.method_15393 (F)F
-      // c39: fstore 18
-      // c3b: fload 18
-      // c3d: ldc_w -22.5
-      // c40: fcmpl
-      // c41: aload 3
-      // c42: ifnull c75
-      // c45: iflt c6f
-      // c48: goto c4f
-      // c4b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c4e: athrow
-      // c4f: fload 18
-      // c51: ldc_w 22.5
-      // c54: fcmpg
-      // c55: aload 3
-      // c56: ifnull c75
-      // c59: goto c60
-      // c5c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c5f: athrow
-      // c60: ifge c6f
-      // c63: goto c6a
-      // c66: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c69: athrow
-      // c6a: ldc_w 45.0
-      // c6d: fstore 18
-      // c6f: fload 18
-      // c71: ldc_w -22.5
-      // c74: fcmpg
-      // c75: aload 3
-      // c76: ifnull ca9
-      // c79: ifge ca3
-      // c7c: goto c83
-      // c7f: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c82: athrow
-      // c83: fload 18
-      // c85: ldc_w -67.5
-      // c88: fcmpl
-      // c89: aload 3
-      // c8a: ifnull ca9
-      // c8d: goto c94
-      // c90: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c93: athrow
-      // c94: iflt ca3
-      // c97: goto c9e
-      // c9a: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // c9d: athrow
-      // c9e: ldc_w -45.0
-      // ca1: fstore 18
-      // ca3: fload 18
-      // ca5: ldc_w -67.5
-      // ca8: fcmpg
-      // ca9: aload 3
-      // caa: ifnull cdd
-      // cad: ifge cd7
-      // cb0: goto cb7
-      // cb3: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // cb6: athrow
-      // cb7: fload 18
-      // cb9: ldc_w -112.5
-      // cbc: fcmpl
-      // cbd: aload 3
-      // cbe: ifnull cdd
-      // cc1: goto cc8
-      // cc4: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // cc7: athrow
-      // cc8: iflt cd7
-      // ccb: goto cd2
-      // cce: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // cd1: athrow
-      // cd2: ldc_w -45.0
-      // cd5: fstore 18
-      // cd7: fload 18
-      // cd9: ldc_w -112.5
-      // cdc: fcmpg
-      // cdd: aload 3
-      // cde: ifnull d11
-      // ce1: ifge d0b
-      // ce4: goto ceb
-      // ce7: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // cea: athrow
-      // ceb: fload 18
-      // ced: ldc_w -157.5
-      // cf0: fcmpl
-      // cf1: aload 3
-      // cf2: ifnull d11
-      // cf5: goto cfc
-      // cf8: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // cfb: athrow
-      // cfc: iflt d0b
-      // cff: goto d06
-      // d02: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d05: athrow
-      // d06: ldc_w -135.0
-      // d09: fstore 18
-      // d0b: fload 18
-      // d0d: ldc_w -157.5
-      // d10: fcmpg
-      // d11: aload 3
-      // d12: ifnull d47
-      // d15: ifge d3a
-      // d18: goto d1f
-      // d1b: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d1e: athrow
-      // d1f: fload 18
-      // d21: aload 3
-      // d22: ifnull d73
-      // d25: goto d2c
-      // d28: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d2b: athrow
-      // d2c: ldc_w -180.0
-      // d2f: fcmpl
-      // d30: ifge d70
-      // d33: goto d3a
-      // d36: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d39: athrow
-      // d3a: fload 18
-      // d3c: ldc_w 157.5
-      // d3f: fcmpl
-      // d40: goto d47
-      // d43: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d46: athrow
-      // d47: aload 3
-      // d48: ifnull d7b
-      // d4b: iflt d75
-      // d4e: goto d55
-      // d51: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d54: athrow
-      // d55: fload 18
-      // d57: ldc_w 180.0
-      // d5a: fcmpg
-      // d5b: aload 3
-      // d5c: ifnull d7b
-      // d5f: goto d66
-      // d62: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d65: athrow
-      // d66: ifge d75
-      // d69: goto d70
-      // d6c: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d6f: athrow
-      // d70: ldc_w -135.0
-      // d73: fstore 18
-      // d75: fload 18
-      // d77: ldc_w 112.5
-      // d7a: fcmpl
-      // d7b: aload 3
-      // d7c: ifnull daf
-      // d7f: iflt da9
-      // d82: goto d89
-      // d85: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d88: athrow
-      // d89: fload 18
-      // d8b: ldc_w 157.5
-      // d8e: fcmpg
-      // d8f: aload 3
-      // d90: ifnull daf
-      // d93: goto d9a
-      // d96: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // d99: athrow
-      // d9a: ifge da9
-      // d9d: goto da4
-      // da0: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // da3: athrow
-      // da4: ldc_w 135.0
-      // da7: fstore 18
-      // da9: fload 18
-      // dab: ldc_w 67.5
-      // dae: fcmpl
-      // daf: aload 3
-      // db0: ifnull de3
-      // db3: iflt ddd
-      // db6: goto dbd
-      // db9: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // dbc: athrow
-      // dbd: fload 18
-      // dbf: ldc_w 112.5
-      // dc2: fcmpg
-      // dc3: aload 3
-      // dc4: ifnull de3
-      // dc7: goto dce
-      // dca: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // dcd: athrow
-      // dce: ifge ddd
-      // dd1: goto dd8
-      // dd4: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // dd7: athrow
-      // dd8: ldc_w 135.0
-      // ddb: fstore 18
-      // ddd: fload 18
-      // ddf: ldc_w 22.5
-      // de2: fcmpl
-      // de3: aload 3
-      // de4: ifnull e12
-      // de7: iflt e11
-      // dea: goto df1
-      // ded: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // df0: athrow
-      // df1: fload 18
-      // df3: ldc_w 67.5
-      // df6: fcmpg
-      // df7: aload 3
-      // df8: ifnull e12
-      // dfb: goto e02
-      // dfe: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e01: athrow
-      // e02: ifge e11
-      // e05: goto e0c
-      // e08: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e0b: athrow
-      // e0c: ldc_w 45.0
-      // e0f: fstore 18
-      // e11: bipush 2
-      // e12: newarray 6
-      // e14: dup
-      // e15: bipush 0
-      // e16: fload 18
-      // e18: fastore
-      // e19: dup
-      // e1a: bipush 1
-      // e1b: ldc_w 75.7
-      // e1e: fastore
-      // e1f: areturn
-      // e20: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // e23: getfield net/minecraft/class_310.field_1690 Lnet/minecraft/class_315;
-      // e26: getfield net/minecraft/class_315.field_1903 Lnet/minecraft/class_304;
-      // e29: invokevirtual net/minecraft/class_304.method_1434 ()Z
-      // e2c: aload 3
-      // e2d: ifnull e76
-      // e30: ifeq e6a
-      // e33: goto e3a
-      // e36: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e39: athrow
-      // e3a: aload 0
-      // e3b: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // e3e: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // e41: invokevirtual net/minecraft/class_2338.method_10263 ()I
-      // e44: i2d
-      // e45: aload 0
-      // e46: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // e49: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // e4c: invokevirtual net/minecraft/class_2338.method_10264 ()I
-      // e4f: i2d
-      // e50: aload 0
-      // e51: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // e54: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // e57: invokevirtual net/minecraft/class_2338.method_10260 ()I
-      // e5a: i2d
-      // e5b: aload 0
-      // e5c: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // e5f: getfield cc/astralis/aqy.aoc Lnet/minecraft/class_2350;
-      // e62: invokestatic cc/astralis/efx.eze (DDDLnet/minecraft/class_2350;)[F
-      // e65: areturn
-      // e66: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e69: athrow
-      // e6a: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // e6d: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // e70: invokevirtual net/minecraft/class_746.method_24515 ()Lnet/minecraft/class_2338;
-      // e73: invokestatic cc/astralis/amg.gmi (Lnet/minecraft/class_2338;)Z
-      // e76: aload 3
-      // e77: ifnull ed5
-      // e7a: ifeq ed4
-      // e7d: goto e84
-      // e80: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e83: athrow
-      // e84: aload 0
-      // e85: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // e88: aload 3
-      // e89: ifnull ea8
-      // e8c: goto e93
-      // e8f: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e92: athrow
-      // e93: ifnull ee2
-      // e96: goto e9d
-      // e99: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // e9c: athrow
-      // e9d: aload 0
-      // e9e: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // ea1: goto ea8
-      // ea4: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // ea7: athrow
-      // ea8: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // eab: invokevirtual net/minecraft/class_2338.method_10263 ()I
-      // eae: i2d
-      // eaf: aload 0
-      // eb0: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // eb3: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // eb6: invokevirtual net/minecraft/class_2338.method_10264 ()I
-      // eb9: i2d
-      // eba: aload 0
-      // ebb: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // ebe: getfield cc/astralis/aqy.dnc Lnet/minecraft/class_2338;
-      // ec1: invokevirtual net/minecraft/class_2338.method_10260 ()I
-      // ec4: i2d
-      // ec5: aload 0
-      // ec6: getfield cc/astralis/efx.hba Lcc/astralis/aqy;
-      // ec9: getfield cc/astralis/aqy.aoc Lnet/minecraft/class_2350;
-      // ecc: invokestatic cc/astralis/efx.eze (DDDLnet/minecraft/class_2350;)[F
-      // ecf: astore 13
-      // ed1: aload 13
-      // ed3: areturn
-      // ed4: bipush 2
-      // ed5: newarray 6
-      // ed7: dup
-      // ed8: bipush 0
-      // ed9: fload 7
-      // edb: fastore
-      // edc: dup
-      // edd: bipush 1
-      // ede: fload 6
-      // ee0: fastore
-      // ee1: areturn
-      // ee2: aload 3
-      // ee3: ifnonnull f02
-      // ee6: bipush 2
-      // ee7: goto eee
-      // eea: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // eed: athrow
-      // eee: newarray 6
-      // ef0: dup
-      // ef1: bipush 0
-      // ef2: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // ef5: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // ef8: invokevirtual net/minecraft/class_746.method_36454 ()F
-      // efb: fastore
-      // efc: dup
-      // efd: bipush 1
-      // efe: fload 6
-      // f00: fastore
-      // f01: areturn
-      // f02: bipush 2
-      // f03: newarray 6
-      // f05: dup
-      // f06: bipush 0
-      // f07: fload 7
-      // f09: fastore
-      // f0a: dup
-      // f0b: bipush 1
-      // f0c: fload 6
-      // f0e: fastore
-      // f0f: areturn
+      long a;
+      int[] ax;
+      float var10000;
+      short var10001;
+      label985: {
+         a = efx.a ^ 139167474333626L;
+         ax = dar.abu();
+         var10000 = chi.field_1724.method_36454() - a.bld.dnp().floatValue();
+         var10001 = chi.field_1690.field_1849.method_1434();
+         if (ax != null) {
+            if (var10001 != 0) {
+               var10001 = (short)14237;
+               long var109 = 4610058168480697408L ^ a;
+               var10001 = 45;
+               break label985;
+            }
+
+            var10001 = chi.field_1690.field_1913.method_1434();
+         }
+
+         if (ax != null) {
+            if (var10001 != 0) {
+               var10001 = (short)2257;
+               long var108 = 2520769002355405590L ^ a;
+               var10001 = -45;
+               break label985;
+            }
+
+            var10001 = chi.field_1690.field_1881.method_1434();
+         }
+
+         if (ax != null) {
+            if (var10001 != 0) {
+               var10001 = (short)24245;
+               long var10002 = 6256740870304916824L ^ a;
+               var10001 = 180;
+            } else {
+               var10001 = 0;
+            }
+         }
+      }
+
+      float axx = var10000 + var10001;
+      Object var51 = a.hba;
+      if (ax != null) {
+         if (a.hba != null) {
+            a.hil = a.hba;
+         }
+
+         var51 = a.dgj.dnp();
+      }
+
+      float axxx;
+      axxx = ((ImFloat)var51).floatValue();
+      var52 = evd.dbj();
+      label970:
+      if (ax != null) {
+         if (!var52) {
+            var10001 = (short)17493;
+            long var110 = 8367579644308874606L ^ a;
+            var52 = a.hfi.emb("Modern Watchdog");
+            if (ax == null) {
+               break label970;
+            }
+
+            if (var52) {
+               return new float[]{axx, axxx};
+            }
+         }
+
+         var10001 = (short)17758;
+         long var111 = 5268116525027779703L ^ a;
+         var52 = a.hfi.emb("Modern Watchdog");
+      }
+
+      float axxxx;
+      label986: {
+         if (var52) {
+            class_243 axxxxx = new class_243(a.adx.method_10263() + 0.5, a.adx.method_10264(), a.adx.method_10260() + 0.5);
+            double axxxxxx = evd.fgd();
+            double axxxxxxx = -Math.sin(axxxxxx);
+            double axxxxxxxx = Math.cos(axxxxxx);
+            double axxxxxxxxx = axxxxx.field_1352 - chi.field_1724.method_23317();
+            double axxxxxxxxxx = axxxxx.field_1350 - chi.field_1724.method_23321();
+            double var141;
+            int var53 = (var141 = axxxxxxx * axxxxxxxxxx - axxxxxxxx * axxxxxxxxx - 0.0) == 0.0 ? 0 : (var141 < 0.0 ? -1 : 1);
+            if (ax != null) {
+               var53 = var53 > 0 ? 1 : 0;
+            }
+
+            label959: {
+               boolean axxxxxxxxxxx = (boolean)var53;
+               float axxxxxxxxxxxx = fuk(
+                  chi.field_1724.method_36454()
+                     - (float)Math.toDegrees(Math.atan2(chi.field_1724.field_3913.method_3128().field_1343, chi.field_1724.field_3913.method_3128().field_1342))
+               );
+               float axxxxxxxxxxxxx = 260.0F;
+               var10000 = chi.field_1724.method_36454();
+               var10001 = evd.bpi();
+               if (ax != null) {
+                  if (var10001 != 0) {
+                     var86 = -135.0F;
+                     break label959;
+                  }
+
+                  var10001 = axxxxxxxxxxx;
+               }
+
+               var86 = var10001 == 0 ? axxxxxxxxxxxxx : -axxxxxxxxxxxxx;
+            }
+
+            axxxx = var10000 + var86;
+            if (ax != null) {
+               break label986;
+            }
+         }
+
+         label988: {
+            var10000 = chi.field_1724.method_36454() - a.bld.dnp().floatValue();
+            var87 = chi.field_1690.field_1849.method_1434();
+            if (ax != null) {
+               if (var87 != 0) {
+                  short var90 = 20293;
+                  long var114 = 2731960675547313327L ^ a;
+                  var87 = 45;
+                  break label988;
+               }
+
+               var87 = chi.field_1690.field_1913.method_1434();
+            }
+
+            if (ax != null) {
+               if (var87 != 0) {
+                  short var89 = 19241;
+                  long var113 = 2806683832130728153L ^ a;
+                  var87 = -45;
+                  break label988;
+               }
+
+               var87 = chi.field_1690.field_1881.method_1434();
+            }
+
+            if (ax != null) {
+               if (var87 != 0) {
+                  short var88 = 10203;
+                  long var112 = 725978257269529641L ^ a;
+                  var87 = 180;
+               } else {
+                  var87 = 0;
+               }
+            }
+         }
+
+         axxxx = var10000 + var87;
+      }
+
+      label940: {
+         float axxxxxxxxxxx;
+         label939: {
+            axxxxxxxxxxx = chi.field_1724.method_36454() + 45.0F;
+            byte var56 = a.erx();
+            if (ax != null) {
+               if (var56 != 0) {
+                  float axxxxxxxxxxxx;
+                  float axxxxxxxxxxxxx;
+                  label934: {
+                     label933: {
+                        label990: {
+                           boolean axxxxxxxxxxxxxx = false;
+                           axxxxxxxxxxxxx = axxxx;
+                           axxxxxxxxxxxx = axxx;
+                           var57 = a.aof.dnp();
+                           if (ax != null) {
+                              if (var57 == 0) {
+                                 var57 = a.dgy.dnp();
+                                 if (ax == null) {
+                                    break label934;
+                                 }
+
+                                 if (var57 == 0) {
+                                    break label990;
+                                 }
+                              }
+
+                              short var91 = 31831;
+                              long var115 = 1685727535056411989L ^ a;
+                              var57 = a.hfi.emb("Intave");
+                           }
+
+                           if (ax == null) {
+                              break label934;
+                           }
+
+                           if (var57 == 0) {
+                              var58 = a.hba;
+                              if (ax == null) {
+                                 break label933;
+                              }
+
+                              if (a.hba != null) {
+                                 var57 = a.dgy.dnp();
+                                 label898:
+                                 if (ax != null) {
+                                    if (var57 != 0) {
+                                       float axxxxxxxxxxxxxxx = 90.0F;
+
+                                       while (axxxxxxxxxxxxxxx > 30.0F) {
+                                          var57 = axxxxxxxxxxxxxx;
+                                          if (ax == null || ax == null) {
+                                             break label898;
+                                          }
+
+                                          if (axxxxxxxxxxxxxx != 0) {
+                                             break;
+                                          }
+
+                                          label913: {
+                                             byte var59 = bfc.gto(a.hba.aoc(), a.hba.dnc(), true, 5.0F, axxxx, axxxxxxxxxxxxxxx);
+                                             if (ax != null) {
+                                                if (var59 == 0) {
+                                                   break label913;
+                                                }
+
+                                                axxxxxxxxxxxxx = axxxx;
+                                                axxxxxxxxxxxx = axxxxxxxxxxxxxxx;
+                                                var59 = 1;
+                                             }
+
+                                             axxxxxxxxxxxxxx = (boolean)var59;
+                                             a.gpi = new float[]{axxxxxxxxxxxxx, axxxxxxxxxxxx};
+                                             a.hek = 0;
+                                          }
+
+                                          short var116 = chi.field_1724.method_6059(class_1294.field_5904);
+                                          if (ax != null) {
+                                             if (var116 != 0) {
+                                                var116 = 29868;
+                                                long var10003 = 7902739088776941389L ^ a;
+                                                var116 = 60;
+                                             } else {
+                                                var116 = 17228;
+                                                long var134 = 4408724373406218398L ^ a;
+                                                var116 = 80;
+                                             }
+                                          }
+
+                                          axxxxxxxxxxxxxxx -= axxxxxxxxxxxxxxx > var116 ? 0.5F : 2.0F;
+                                          if (ax == null) {
+                                             break;
+                                          }
+                                       }
+                                    }
+
+                                    var57 = a.aof.dnp();
+                                 }
+
+                                 if (ax == null) {
+                                    break label934;
+                                 }
+
+                                 if (var57 != 0) {
+                                    var57 = axxxxxxxxxxxxxx;
+                                    if (ax == null) {
+                                       break label934;
+                                    }
+
+                                    if (axxxxxxxxxxxxxx == 0) {
+                                       float axxxxxxxxxxxxxxx = 0.0F;
+
+                                       label888:
+                                       do {
+                                          float var142;
+                                          int var60 = (var142 = axxxxxxxxxxxxxxx - 180.0F) == 0.0F ? 0 : (var142 < 0.0F ? -1 : 1);
+
+                                          label885:
+                                          while (true) {
+                                             if (var60 > 0) {
+                                                break label888;
+                                             }
+
+                                             var57 = axxxxxxxxxxxxxx;
+                                             if (ax == null || ax == null) {
+                                                break label934;
+                                             }
+
+                                             if (axxxxxxxxxxxxxx != 0) {
+                                                break label888;
+                                             }
+
+                                             float axxxxxxxxxxxxxxxx = -1.0F;
+
+                                             while (true) {
+                                                float var143;
+                                                int var61 = (var143 = axxxxxxxxxxxxxxxx - 1.0F) == 0.0F ? 0 : (var143 < 0.0F ? -1 : 1);
+
+                                                label880:
+                                                while (true) {
+                                                   if (var61 > 0) {
+                                                      break label885;
+                                                   }
+
+                                                   var60 = axxxxxxxxxxxxxx;
+                                                   if (ax == null) {
+                                                      continue label885;
+                                                   }
+
+                                                   if (axxxxxxxxxxxxxx != 0) {
+                                                      break label885;
+                                                   }
+
+                                                   float axxxxxxxxxxxxxxxxx = axxxx + axxxxxxxxxxxxxxx * axxxxxxxxxxxxxxxx;
+                                                   float axxxxxxxxxxxxxxxxxx = 85.0F;
+
+                                                   while (true) {
+                                                      if (!(axxxxxxxxxxxxxxxxxx > 30.0F)) {
+                                                         break label880;
+                                                      }
+
+                                                      var61 = axxxxxxxxxxxxxx;
+                                                      if (ax == null) {
+                                                         break;
+                                                      }
+
+                                                      if (ax != null) {
+                                                         if (axxxxxxxxxxxxxx != 0) {
+                                                            break label880;
+                                                         }
+
+                                                         var61 = bfc.gto(a.hba.aoc(), a.hba.dnc(), true, 5.0F, axxxxxxxxxxxxxxxxx, axxxxxxxxxxxxxxxxxx);
+                                                      }
+
+                                                      label875: {
+                                                         if (ax != null) {
+                                                            if (var61 == 0) {
+                                                               break label875;
+                                                            }
+
+                                                            axxxxxxxxxxxxx = axxxxxxxxxxxxxxxxx;
+                                                            axxxxxxxxxxxx = axxxxxxxxxxxxxxxxxx;
+                                                            var61 = 1;
+                                                         }
+
+                                                         axxxxxxxxxxxxxx = (boolean)var61;
+                                                         a.gpi = new float[]{axxxxxxxxxxxxx, axxxxxxxxxxxx};
+                                                         a.hek = 0;
+                                                      }
+
+                                                      axxxxxxxxxxxxxxxxxx -= 5.0F;
+                                                      if (ax == null) {
+                                                         break label880;
+                                                      }
+                                                   }
+                                                }
+
+                                                axxxxxxxxxxxxxxxx += 2.0F;
+                                                if (ax == null) {
+                                                   break label885;
+                                                }
+                                             }
+                                          }
+
+                                          axxxxxxxxxxxxxxx += 5.0F;
+                                       } while (ax != null);
+                                    }
+                                 }
+                              }
+                           }
+                        }
+
+                        var58 = a.aof.dnp();
+                     }
+
+                     var57 = (Boolean)var58;
+                  }
+
+                  axxxx = var57 != 0 ? axxxxxxxxxxxxx : axxxx;
+                  axxx = a.dgy.dnp() ? axxxxxxxxxxxx : axxx;
+                  String var32 = a.hfi.dnp();
+                  byte var33 = -1;
+                  var62 = var32.hashCode();
+                  label829:
+                  if (ax != null) {
+                     switch (var62) {
+                        case 63955982:
+                           short var92 = 3952;
+                           long var119 = 5313209609133043303L ^ a;
+                           var62 = var32.equals("Basic");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 == 0) {
+                              break;
+                           }
+
+                           var33 = 0;
+                           if (ax != null) {
+                              break;
+                           }
+                        case 482016750:
+                           short var93 = 17758;
+                           long var120 = 5268116525027779703L ^ a;
+                           var62 = var32.equals("Modern Watchdog");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 == 0) {
+                              break;
+                           }
+
+                           var33 = 1;
+                           if (ax != null) {
+                              break;
+                           }
+                        case -638370176:
+                           short var94 = 3342;
+                           long var121 = 4678491614261390351L ^ a;
+                           var62 = var32.equals("Modern Watchdog 2");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 == 0) {
+                              break;
+                           }
+
+                           var33 = 2;
+                           if (ax != null) {
+                              break;
+                           }
+                        case 2154973:
+                           short var95 = 20551;
+                           long var122 = 422302444792148323L ^ a;
+                           var62 = var32.equals("Edge");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 == 0) {
+                              break;
+                           }
+
+                           var33 = 3;
+                           if (ax != null) {
+                              break;
+                           }
+                        case -1310785555:
+                           short var96 = 2822;
+                           long var123 = 7774212677414627877L ^ a;
+                           var62 = var32.equals("God Bridge");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 == 0) {
+                              break;
+                           }
+
+                           var33 = 4;
+                           if (ax != null) {
+                              break;
+                           }
+                        case -2099899231:
+                           short var97 = 18203;
+                           long var124 = 8473871843768100359L ^ a;
+                           var62 = var32.equals("Intave");
+                           if (ax == null) {
+                              break label829;
+                           }
+
+                           if (var62 != 0) {
+                              var33 = 5;
+                           }
+                     }
+
+                     var62 = var33;
+                  }
+
+                  if (ax == null) {
+                     break label940;
+                  }
+
+                  switch (var62) {
+                     case 0:
+                        var62 = 2;
+                        break label940;
+                     case 1:
+                        aqy var78 = a.hba;
+                        if (ax != null) {
+                           if (a.hba == null) {
+                              return new float[]{axxxx, axxx};
+                           }
+
+                           var78 = a.hba;
+                        }
+
+                        float[] axxxxxxxxxxxxxxxxxxxxxxxxx = eze(var78.dnc.method_10263(), a.hba.dnc.method_10264(), a.hba.dnc.method_10260(), a.hba.aoc);
+                        axxx = axxxxxxxxxxxxxxxxxxxxxxxxx[1];
+                        return new float[]{axxxx, axxx};
+                     case 2:
+                        boolean axxxxxxxxxxxxxxxxxxxxxx;
+                        label774: {
+                           axxxxxxxxxxxxxxxxxxxxxx = chi.field_1690.field_1894.method_1434();
+                           boolean axxxxxxxxxxxxxxxxxxxxxxx = chi.field_1690.field_1913.method_1434();
+                           var10000 = chi.field_1724.method_36454();
+                           boolean var106 = axxxxxxxxxxxxxxxxxxxxxxx;
+                           if (ax != null) {
+                              if (axxxxxxxxxxxxxxxxxxxxxxx == chi.field_1690.field_1849.method_1434()) {
+                                 var107 = 0.0;
+                                 break label774;
+                              }
+
+                              var106 = axxxxxxxxxxxxxxxxxxxxxxx;
+                           }
+
+                           var107 = var106 ? 1.0 : -1.0;
+                        }
+
+                        double var133;
+                        label768: {
+                           boolean var132 = axxxxxxxxxxxxxxxxxxxxxx;
+                           if (ax != null) {
+                              if (axxxxxxxxxxxxxxxxxxxxxx == chi.field_1690.field_1881.method_1434()) {
+                                 var133 = 0.0;
+                                 break label768;
+                              }
+
+                              var132 = axxxxxxxxxxxxxxxxxxxxxx;
+                           }
+
+                           var133 = var132 ? 1.0 : -1.0;
+                        }
+
+                        float axxxxxxxxxxxxxxxxxxxxxxx;
+                        float axxxxxxxxxxxxxxxxxxxxxxxx;
+                        int var10004;
+                        label762: {
+                           axxxxxxxxxxxxxxxxxxxxxxx = var10000 - (float)Math.toDegrees(Math.atan2(var107, var133));
+                           axxxxxxxxxxxxxxxxxxxxxxxx = fuk(axxxxxxxxxxxxxxxxxxxxxxx);
+                           var77 = new float[2];
+                           var10004 = gig;
+                           if (ax != null) {
+                              if (gig == 1) {
+                                 var10004 = 0;
+                                 break label762;
+                              }
+
+                              double var162;
+                              var10004 = (var162 = Math.abs(axxxxxxxxxxxxxxxxxxxxxxxx) - 22.5) == 0.0 ? 0 : (var162 < 0.0 ? -1 : 1);
+                           }
+
+                           if (ax != null) {
+                              if (var10004 > 0) {
+                                 short var135 = 19437;
+                                 long var10005 = 8724396567992201270L ^ a;
+                                 var10004 = -140;
+                              } else {
+                                 short var136 = 9865;
+                                 long var138 = 5589048730744659316L ^ a;
+                                 var10004 = 90;
+                              }
+                           }
+                        }
+
+                        float var140;
+                        label756: {
+                           var137 = var10004;
+                           var140 = axxxxxxxxxxxxxxxxxxxxxxxx;
+                           if (ax != null) {
+                              if (axxxxxxxxxxxxxxxxxxxxxxxx == 0.0F) {
+                                 var140 = 1.0F;
+                                 break label756;
+                              }
+
+                              var140 = axxxxxxxxxxxxxxxxxxxxxxxx;
+                           }
+
+                           var140 = Math.signum(var140);
+                        }
+
+                        var77[0] = axxxxxxxxxxxxxxxxxxxxxxx + var137 * var140;
+                        var77[1] = axxx;
+                        return var77;
+                     case 3:
+                        float axxxxxxxxxxxxxxxxxxxxx;
+                        axxxxxxxxxxxxxxxxxxxxx = evd.fnh();
+                        var71 = a.ggy.dnp();
+                        label750:
+                        if (ax != null) {
+                           if (var71 != 0) {
+                              var71 = evd.dbj();
+                              if (ax == null) {
+                                 break label750;
+                              }
+
+                              if (var71 == 0) {
+                                 return new float[]{chi.field_1724.method_36454() - 180.0F, axxx};
+                              }
+                           }
+
+                           var71 = evd.fsj();
+                        }
+
+                        if (ax != null) {
+                           if (var71 != 0) {
+                              return new float[]{axxxx, axxx};
+                           }
+
+                           var71 = a.hci;
+                        }
+
+                        if (ax != null) {
+                           if (var71 == 0) {
+                              efx var75 = a;
+                              if (ax != null) {
+                                 if (a.hba == null) {
+                                    return new float[]{evd.bpi() ? axxxxxxxxxxxxxxxxxxxxx - 140.0F + a.dku : axxxxxxxxxxxxxxxxxxxxx + 100.0F + a.dku, axxx};
+                                 }
+
+                                 var75 = a;
+                              }
+
+                              var75.hci = true;
+                              return new float[]{evd.bpi() ? axxxxxxxxxxxxxxxxxxxxx - 140.0F + a.dku : axxxxxxxxxxxxxxxxxxxxx + 100.0F + a.dku, axxx};
+                           }
+
+                           var71 = chi.field_1724.field_6012 % 3;
+                        }
+
+                        if (var71 == 0) {
+                           a.dku = crg.gj(0.0F, 9.0F);
+                        }
+
+                        class_243 axxxxxxxxxxxxxxxxxxxxxx = new class_243(
+                           a.hba.dnc.method_10263() + 0.5, a.hba.dnc.method_10264(), a.hba.dnc.method_10260() + 0.5
+                        );
+                        double axxxxxxxxxxxxxxxxxxxxxxx = Math.toRadians(axxxxxxxxxxxxxxxxxxxxx);
+                        double axxxxxxxxxxxxxxxxxxxxxxxx = -Math.sin(axxxxxxxxxxxxxxxxxxxxxxx);
+                        double axxxxxxxxxxxxxxxxxxxxxxxxx = Math.cos(axxxxxxxxxxxxxxxxxxxxxxx);
+                        double axxxxxxxxxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxxxxxxx.field_1352 - chi.field_1724.method_23317();
+                        double axxxxxxxxxxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxxxxxxx.field_1350 - chi.field_1724.method_23321();
+                        double var161;
+                        int var72 = (
+                                 var161 = axxxxxxxxxxxxxxxxxxxxxxxx * axxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    - axxxxxxxxxxxxxxxxxxxxxxxxx * axxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    - 0.0
+                              )
+                              == 0.0
+                           ? 0
+                           : (var161 < 0.0 ? -1 : 1);
+                        if (ax != null) {
+                           var72 = var72 > 0 ? 1 : 0;
+                        }
+
+                        label739: {
+                           label1009: {
+                              boolean axxxxxxxxxxxxxxxxxxxxxxxxxxxx = (boolean)var72;
+                              var73 = evd.bpi();
+                              if (ax != null) {
+                                 if (var73 != 0) {
+                                    a.dxn = axxxxxxxxxxxxxxxxxxxxx - 140.0F;
+                                    if (ax != null) {
+                                       break label1009;
+                                    }
+                                 }
+
+                                 var73 = evd.bpi();
+                              }
+
+                              if (ax == null) {
+                                 break label739;
+                              }
+
+                              if (var73 == 0) {
+                                 a.dxn = axxxxxxxxxxxxxxxxxxxxx + (axxxxxxxxxxxxxxxxxxxxxxxxxxxx != 0 ? 100.0F + a.dku : -100.0F - a.dku);
+                              }
+                           }
+
+                           var73 = 2;
+                        }
+
+                        float[] var74 = new float[var73];
+                        var74[0] = a.dxn;
+                        var74[1] = 82.0F;
+                        return var74;
+                     case 4:
+                        label1005: {
+                           class_315 axxxxxxxxxxxxxxx = chi.field_1690;
+                           boolean axxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxx.field_1894.method_1434();
+                           boolean axxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxx.field_1881.method_1434();
+                           boolean axxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxx.field_1913.method_1434();
+                           boolean axxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxx.field_1849.method_1434();
+                           var10000 = chi.field_1724.method_36454() - 180.0F;
+                           var98 = axxxxxxxxxxxxxxxx;
+                           if (ax != null) {
+                              if (axxxxxxxxxxxxxxxx == axxxxxxxxxxxxxxxxx) {
+                                 var98 = axxxxxxxxxxxxxxxxxx;
+                                 if (ax != null) {
+                                    if (axxxxxxxxxxxxxxxxxx == axxxxxxxxxxxxxxxxxxx) {
+                                       var98 = 0;
+                                       break label1005;
+                                    }
+
+                                    var98 = axxxxxxxxxxxxxxxxxx;
+                                 }
+
+                                 if (ax != null) {
+                                    if (var98 != 0) {
+                                       short var104 = 28280;
+                                       long var130 = 7573004262951015814L ^ a;
+                                       var98 = -90;
+                                    } else {
+                                       short var105 = 26747;
+                                       long var131 = 2748581162446214037L ^ a;
+                                       var98 = 90;
+                                    }
+                                 }
+                                 break label1005;
+                              }
+
+                              var98 = axxxxxxxxxxxxxxxx;
+                           }
+
+                           if (ax != null) {
+                              if (var98 != 0) {
+                                 var98 = axxxxxxxxxxxxxxxxxx;
+                                 if (ax != null) {
+                                    if (axxxxxxxxxxxxxxxxxx == axxxxxxxxxxxxxxxxxxx) {
+                                       var98 = 0;
+                                       break label1005;
+                                    }
+
+                                    var98 = axxxxxxxxxxxxxxxxxx;
+                                 }
+
+                                 if (ax != null) {
+                                    if (var98 != 0) {
+                                       short var102 = 19241;
+                                       long var128 = 2806683832130728153L ^ a;
+                                       var98 = -45;
+                                    } else {
+                                       short var103 = 20293;
+                                       long var129 = 2731960675547313327L ^ a;
+                                       var98 = 45;
+                                    }
+                                 }
+                                 break label1005;
+                              }
+
+                              var98 = axxxxxxxxxxxxxxxxxx;
+                           }
+
+                           if (ax != null) {
+                              if (var98 == axxxxxxxxxxxxxxxxxxx) {
+                                 short var101 = 10203;
+                                 long var127 = 725978257269529641L ^ a;
+                                 var98 = 180;
+                                 break label1005;
+                              }
+
+                              var98 = axxxxxxxxxxxxxxxxxx;
+                           }
+
+                           if (ax != null) {
+                              if (var98 != 0) {
+                                 short var99 = 12419;
+                                 long var125 = 2482577612975803244L ^ a;
+                                 var98 = -135;
+                              } else {
+                                 short var100 = 17228;
+                                 long var126 = 7946074926747121833L ^ a;
+                                 var98 = 135;
+                              }
+                           }
+                        }
+
+                        float axxxxxxxxxxxxxxxxxxxx;
+                        axxxxxxxxxxxxxxxxxxxx = class_3532.method_15393(var10000 + var98);
+                        float var144;
+                        var68 = (var144 = axxxxxxxxxxxxxxxxxxxx - -22.5F) == 0.0F ? 0 : (var144 < 0.0F ? -1 : 1);
+                        label692:
+                        if (ax != null) {
+                           if (var68 >= 0) {
+                              float var145;
+                              var68 = (var145 = axxxxxxxxxxxxxxxxxxxx - 22.5F) == 0.0F ? 0 : (var145 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label692;
+                              }
+
+                              if (var68 < 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = 45.0F;
+                              }
+                           }
+
+                           float var146;
+                           var68 = (var146 = axxxxxxxxxxxxxxxxxxxx - -22.5F) == 0.0F ? 0 : (var146 < 0.0F ? -1 : 1);
+                        }
+
+                        label685:
+                        if (ax != null) {
+                           if (var68 < 0) {
+                              float var147;
+                              var68 = (var147 = axxxxxxxxxxxxxxxxxxxx - -67.5F) == 0.0F ? 0 : (var147 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label685;
+                              }
+
+                              if (var68 >= 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = -45.0F;
+                              }
+                           }
+
+                           float var148;
+                           var68 = (var148 = axxxxxxxxxxxxxxxxxxxx - -67.5F) == 0.0F ? 0 : (var148 < 0.0F ? -1 : 1);
+                        }
+
+                        label678:
+                        if (ax != null) {
+                           if (var68 < 0) {
+                              float var149;
+                              var68 = (var149 = axxxxxxxxxxxxxxxxxxxx - -112.5F) == 0.0F ? 0 : (var149 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label678;
+                              }
+
+                              if (var68 >= 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = -45.0F;
+                              }
+                           }
+
+                           float var150;
+                           var68 = (var150 = axxxxxxxxxxxxxxxxxxxx - -112.5F) == 0.0F ? 0 : (var150 < 0.0F ? -1 : 1);
+                        }
+
+                        label671:
+                        if (ax != null) {
+                           if (var68 < 0) {
+                              float var151;
+                              var68 = (var151 = axxxxxxxxxxxxxxxxxxxx - -157.5F) == 0.0F ? 0 : (var151 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label671;
+                              }
+
+                              if (var68 >= 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = -135.0F;
+                              }
+                           }
+
+                           float var152;
+                           var68 = (var152 = axxxxxxxxxxxxxxxxxxxx - -157.5F) == 0.0F ? 0 : (var152 < 0.0F ? -1 : 1);
+                        }
+
+                        label664: {
+                           label663: {
+                              label662: {
+                                 label1006: {
+                                    if (ax != null) {
+                                       if (var68 < 0) {
+                                          var10000 = axxxxxxxxxxxxxxxxxxxx;
+                                          if (ax == null) {
+                                             break label662;
+                                          }
+
+                                          if (axxxxxxxxxxxxxxxxxxxx >= -180.0F) {
+                                             break label1006;
+                                          }
+                                       }
+
+                                       float var153;
+                                       var68 = (var153 = axxxxxxxxxxxxxxxxxxxx - 157.5F) == 0.0F ? 0 : (var153 < 0.0F ? -1 : 1);
+                                    }
+
+                                    if (ax == null) {
+                                       break label664;
+                                    }
+
+                                    if (var68 < 0) {
+                                       break label663;
+                                    }
+
+                                    float var154;
+                                    var68 = (var154 = axxxxxxxxxxxxxxxxxxxx - 180.0F) == 0.0F ? 0 : (var154 < 0.0F ? -1 : 1);
+                                    if (ax == null) {
+                                       break label664;
+                                    }
+
+                                    if (var68 >= 0) {
+                                       break label663;
+                                    }
+                                 }
+
+                                 var10000 = -135.0F;
+                              }
+
+                              axxxxxxxxxxxxxxxxxxxx = var10000;
+                           }
+
+                           float var155;
+                           var68 = (var155 = axxxxxxxxxxxxxxxxxxxx - 112.5F) == 0.0F ? 0 : (var155 < 0.0F ? -1 : 1);
+                        }
+
+                        label642:
+                        if (ax != null) {
+                           if (var68 >= 0) {
+                              float var156;
+                              var68 = (var156 = axxxxxxxxxxxxxxxxxxxx - 157.5F) == 0.0F ? 0 : (var156 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label642;
+                              }
+
+                              if (var68 < 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = 135.0F;
+                              }
+                           }
+
+                           float var157;
+                           var68 = (var157 = axxxxxxxxxxxxxxxxxxxx - 67.5F) == 0.0F ? 0 : (var157 < 0.0F ? -1 : 1);
+                        }
+
+                        label635:
+                        if (ax != null) {
+                           if (var68 >= 0) {
+                              float var158;
+                              var68 = (var158 = axxxxxxxxxxxxxxxxxxxx - 112.5F) == 0.0F ? 0 : (var158 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label635;
+                              }
+
+                              if (var68 < 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = 135.0F;
+                              }
+                           }
+
+                           float var159;
+                           var68 = (var159 = axxxxxxxxxxxxxxxxxxxx - 22.5F) == 0.0F ? 0 : (var159 < 0.0F ? -1 : 1);
+                        }
+
+                        label628:
+                        if (ax != null) {
+                           if (var68 >= 0) {
+                              float var160;
+                              var68 = (var160 = axxxxxxxxxxxxxxxxxxxx - 67.5F) == 0.0F ? 0 : (var160 < 0.0F ? -1 : 1);
+                              if (ax == null) {
+                                 break label628;
+                              }
+
+                              if (var68 < 0) {
+                                 axxxxxxxxxxxxxxxxxxxx = 45.0F;
+                              }
+                           }
+
+                           var68 = 2;
+                        }
+
+                        float[] var70 = new float[var68];
+                        var70[0] = axxxxxxxxxxxxxxxxxxxx;
+                        var70[1] = 75.7F;
+                        return var70;
+                     case 5:
+                        var63 = chi.field_1690.field_1903.method_1434();
+                        if (ax != null) {
+                           if (var63 != 0) {
+                              return eze(a.hba.dnc.method_10263(), a.hba.dnc.method_10264(), a.hba.dnc.method_10260(), a.hba.aoc);
+                           }
+
+                           var63 = amg.gmi(chi.field_1724.method_24515());
+                        }
+
+                        if (ax == null) {
+                           break label939;
+                        }
+
+                        if (var63 == 0) {
+                           var63 = 2;
+                           break label939;
+                        }
+
+                        if (ax == null) {
+                           return eze(a.hba.dnc.method_10263(), a.hba.dnc.method_10264(), a.hba.dnc.method_10260(), a.hba.aoc);
+                        }
+
+                        if (a.hba != null) {
+                           return eze(a.hba.dnc.method_10263(), a.hba.dnc.method_10264(), a.hba.dnc.method_10260(), a.hba.aoc);
+                        }
+                     default:
+                        if (ax != null) {
+                           return new float[]{axxxxxxxxxxx, axxx};
+                        }
+                  }
+               }
+
+               var56 = 2;
+            }
+
+            float[] var65 = new float[var56];
+            var65[0] = chi.field_1724.method_36454();
+            var65[1] = axxx;
+            return var65;
+         }
+
+         float[] var66 = new float[var63];
+         var66[0] = axxxxxxxxxxx;
+         var66[1] = axxx;
+         return var66;
+      }
+
+      float[] var79 = new float[var62];
+      var79[0] = axxxx;
+      var79[1] = axxx;
+      return var79;
    }
 
    public static float[] eze(double x, double y, double z, class_2350 direction) {
@@ -3195,90 +2434,19 @@ public class efx extends guu {
    }
 
    public static float[] agi(double x, double y, double z) {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      //
-      // Bytecode:
-      // 00: getstatic cc/astralis/efx.a J
-      // 03: ldc2_w 45084619852787
-      // 06: lxor
-      // 07: lstore 6
-      // 09: getstatic cc/astralis/efx.chi Lnet/minecraft/class_310;
-      // 0c: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 0f: astore 8
-      // 11: aload 8
-      // 13: ifnonnull 26
-      // 16: bipush 2
-      // 17: newarray 6
-      // 19: dup
-      // 1a: bipush 0
-      // 1b: fconst_0
-      // 1c: fastore
-      // 1d: dup
-      // 1e: bipush 1
-      // 1f: fconst_0
-      // 20: fastore
-      // 21: areturn
-      // 22: invokestatic cc/astralis/efx.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 25: athrow
-      // 26: dload 0
-      // 27: aload 8
-      // 29: invokevirtual net/minecraft/class_746.method_23317 ()D
-      // 2c: dsub
-      // 2d: dstore 9
-      // 2f: dload 4
-      // 31: aload 8
-      // 33: invokevirtual net/minecraft/class_746.method_23321 ()D
-      // 36: dsub
-      // 37: dstore 11
-      // 39: dload 2
-      // 3a: aload 8
-      // 3c: invokevirtual net/minecraft/class_746.method_23318 ()D
-      // 3f: dsub
-      // 40: ldc2_w 1.2
-      // 43: dsub
-      // 44: dstore 13
-      // 46: dload 9
-      // 48: dload 9
-      // 4a: dmul
-      // 4b: dload 11
-      // 4d: dload 11
-      // 4f: dmul
-      // 50: dadd
-      // 51: invokestatic java/lang/Math.sqrt (D)D
-      // 54: dstore 15
-      // 56: dload 11
-      // 58: dload 9
-      // 5a: invokestatic java/lang/Math.atan2 (DD)D
-      // 5d: ldc2_w 180.0
-      // 60: dmul
-      // 61: ldc2_w 3.1415927410125732
-      // 64: ddiv
-      // 65: ldc2_w 90.0
-      // 68: dsub
-      // 69: d2f
-      // 6a: fstore 17
-      // 6c: dload 13
-      // 6e: dload 15
-      // 70: invokestatic java/lang/Math.atan2 (DD)D
-      // 73: ldc2_w 180.0
-      // 76: dmul
-      // 77: ldc2_w 3.1415927410125732
-      // 7a: ddiv
-      // 7b: dneg
-      // 7c: d2f
-      // 7d: fstore 18
-      // 7f: bipush 2
-      // 80: newarray 6
-      // 82: dup
-      // 83: bipush 0
-      // 84: fload 17
-      // 86: fastore
-      // 87: dup
-      // 88: bipush 1
-      // 89: fload 18
-      // 8b: fastore
-      // 8c: areturn
+      long ax = efx.a ^ 45084619852787L;
+      class_746 axx = chi.field_1724;
+      if (axx == null) {
+         return new float[]{0.0F, 0.0F};
+      } else {
+         double axxx = a - axx.method_23317();
+         double axxxx = a - axx.method_23321();
+         double axxxxx = a - axx.method_23318() - 1.2;
+         double axxxxxx = Math.sqrt(axxx * axxx + axxxx * axxxx);
+         float axxxxxxx = (float)(Math.atan2(axxxx, axxx) * 180.0 / (float) Math.PI - 90.0);
+         float axxxxxxxx = (float)(-(Math.atan2(axxxxx, axxxxxx) * 180.0 / (float) Math.PI));
+         return new float[]{axxxxxxx, axxxxxxxx};
+      }
    }
 
    private void fuf() {

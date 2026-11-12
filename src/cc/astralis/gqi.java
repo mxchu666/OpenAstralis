@@ -70,7 +70,9 @@ public class gqi extends brc {
       var11[1] = a.dsg;
       var11[2] = var8[1];
       var11[3] = a.agk;
-      var11[4] = var8[a<"x">(7382, 8634972646862700209L ^ a)];
+      var10008 = 7382;
+      var10009 = 8634972646862700209L ^ a;
+      var11[4] = var8[6];
       var11[5] = String.valueOf(a.acv);
       short var10006 = 1357;
       long var10007 = 5863596817538099001L ^ a;
@@ -374,39 +376,45 @@ public class gqi extends brc {
          char var10005 = var10001[var4];
          short var10008 = 18089;
          long var10009 = 2825716980920106926L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> {
-               short var15 = 593;
-               long var21 = 9153406339077045081L ^ var2;
-               yield 73;
-            }
-            case 1 -> {
-               short var14 = 27018;
-               long var20 = 3663967933246017675L ^ var2;
-               yield 116;
-            }
-            case 2 -> a<"x">(25694, 5950993263371918665L ^ var2);
-            case 3 -> {
-               short var13 = 14937;
-               long var19 = 2833509821990519642L ^ var2;
-               yield 74;
-            }
-            case 4 -> {
-               short var12 = 18089;
-               long var18 = 2825716980920106926L ^ var2;
-               yield 7;
-            }
-            case 5 -> {
-               short var11 = 22911;
-               long var17 = 8271324242943680635L ^ var2;
-               yield 14;
-            }
-            default -> {
-               short var10007 = 25850;
-               long var16 = 7272405050716364284L ^ var2;
-               yield 105;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 593;
+               long var23 = 9153406339077045081L ^ var2;
+               var10 = 73;
+               break;
+            case 1:
+               var10 = 27018;
+               long var22 = 3663967933246017675L ^ var2;
+               var10 = 116;
+               break;
+            case 2:
+               var10 = 25694;
+               long var21 = 5950993263371918665L ^ var2;
+               var10 = 30;
+               break;
+            case 3:
+               var10 = 14937;
+               long var20 = 2833509821990519642L ^ var2;
+               var10 = 74;
+               break;
+            case 4:
+               var10 = 18089;
+               long var19 = 2825716980920106926L ^ var2;
+               var10 = 7;
+               break;
+            case 5:
+               var10 = 22911;
+               long var18 = 8271324242943680635L ^ var2;
+               var10 = 14;
+               break;
+            default:
+               var10 = 25850;
+               long var17 = 7272405050716364284L ^ var2;
+               var10 = 105;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

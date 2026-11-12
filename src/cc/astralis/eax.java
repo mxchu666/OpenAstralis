@@ -1,5 +1,6 @@
 package cc.astralis;
 
+import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
@@ -48,8 +49,13 @@ class eax implements HttpHandler {
                var12 = true;
                HttpExchange var10000 = a;
                if (axx != null) {
-                  if (!a.getRequestMethod().equalsIgnoreCase(a<"i">(5686, 6084209368123752556L ^ ax))) {
-                     a.dat(a, a<"i">(10519, 4784016594927714119L ^ ax));
+                  String var21 = a.getRequestMethod();
+                  short var10001 = 5686;
+                  long var26 = 6084209368123752556L ^ ax;
+                  if (!var21.equalsIgnoreCase("GET")) {
+                     short var29 = 10519;
+                     long var32 = 4784016594927714119L ^ ax;
+                     a.dat(a, "<html><body><h3>Invalid request method.</h3></body></html>");
                      var12 = false;
                      break label137;
                   }
@@ -66,43 +72,54 @@ class eax implements HttpHandler {
                      return;
                   }
 
-                  String var21 = a<"i">(27754, 1633537872151886392L ^ ax);
+                  short var22 = 27754;
+                  long var25 = 1633537872151886392L ^ ax;
+                  String var23 = "code";
                   if (axx != null) {
-                     if (!var21.equals(axxxxx.getName())) {
+                     if (!"code".equals(axxxxx.getName())) {
                         continue;
                      }
 
-                     var21 = axxxxx.getValue();
+                     var23 = axxxxx.getValue();
                   }
 
-                  axxxx = var21;
+                  axxxx = var23;
                   break;
                }
 
                label118: {
-                  String var22 = axxxx;
+                  String var24 = axxxx;
                   if (axx != null) {
                      if (axxxx == null) {
                         break label118;
                      }
 
-                     var22 = axxxx;
+                     var24 = axxxx;
                   }
 
-                  if (!var22.isEmpty()) {
+                  if (!var24.isEmpty()) {
                      a.goa(axxxx, a.aci);
-                     a.dat(a, a<"i">(6764, 6692171457900006457L ^ ax));
+                     short var27 = 6764;
+                     long var30 = 6692171457900006457L ^ ax;
+                     a.dat(
+                        a,
+                        "<html>\n  <head><title>Authentication Success</title></head>\n  <body style=\"UIFont-family: sans-serif; text-align: center; padding-top: 100px;\">\n    <h2>Done!</h2>\n    <p>You may now close this page ;3.</p>\n    <script>window.close();</script>\n  </body>\n</html>\n"
+                     );
                      var12 = false;
                      break label138;
                   }
                }
 
-               a.dat(a, a<"i">(7640, 7898083051785091L ^ ax));
+               short var28 = 7640;
+               long var31 = 7898083051785091L ^ ax;
+               a.dat(a, "<html><body><h3>Authentication failed. No code provided.</h3></body></html>");
                var12 = false;
                break label138;
             } catch (Exception var13) {
                var13.printStackTrace();
-               a.dat(a, a<"i">(22522, 3444238444152193454L ^ ax));
+               short var10002 = 22522;
+               long var10003 = 3444238444152193454L ^ ax;
+               a.dat(a, "<html><body><h3>Unexpected error occurred.</h3></body></html>");
                var12 = false;
             } finally {
                if (var12) {
@@ -125,14 +142,22 @@ class eax implements HttpHandler {
       fhm ax;
       label20: {
          long axx = eax.a ^ 6394416772884L;
+         short var10000 = 20553;
+         long var10001 = 8974198722346819899L ^ axx;
+         short var10003 = 27580;
+         long var10004 = 3386098294238911180L ^ axx;
+         short var9 = 8749;
+         long var10005 = 6695207213825282902L ^ axx;
+         short var10 = 30916;
+         long var10006 = 408054166047426993L ^ axx;
          String axxx = hhl.grf(
-            a<"i">(20553, 8974198722346819899L ^ axx),
-            a<"i">(27580, 3386098294238911180L ^ axx) + a + a<"i">(8749, 6695207213825282902L ^ axx) + a + a<"i">(30916, 408054166047426993L ^ axx),
+            "https://login.live.com/oauth20_token.srf",
+            "client_id=" + a + "&code=" + a + "&grant_type=authorization_code&redirect_uri=http://localhost:8247",
             false
          );
-         int[] var10000 = dar.abu();
+         int[] var8 = dar.abu();
          ax = (fhm)gxg.djb.fromJson(axxx, fhm.class);
-         int[] axxxx = var10000;
+         int[] axxxx = var8;
          if (axxxx != null) {
             if (ax != null) {
                break label20;
@@ -152,7 +177,12 @@ class eax implements HttpHandler {
    private void dat(HttpExchange a, String a) throws IOException {
       long ax = eax.a ^ 36560835725293L;
       OutputStream axx = a.getResponseBody();
-      a.getResponseHeaders().add(a<"i">(23680, 8719002569688079629L ^ ax), a<"i">(24998, 6065118130400714789L ^ ax));
+      Headers var10000 = a.getResponseHeaders();
+      short var10001 = 23680;
+      long var10002 = 8719002569688079629L ^ ax;
+      short var6 = 24998;
+      long var10003 = 6065118130400714789L ^ ax;
+      var10000.add("Content-Type", "text/html; charset=utf-8");
       a.sendResponseHeaders((int)e, a.length());
       axx.write(a.getBytes(StandardCharsets.UTF_8));
       axx.flush();

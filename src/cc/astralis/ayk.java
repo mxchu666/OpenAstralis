@@ -47,9 +47,11 @@ class ayk {
          super();
          axxx = var13;
          int var14 = a.length;
-         int var10001 = a<"b">(4183, 930635842633262498L ^ ax);
+         short var10001 = 4183;
+         long var10002 = 930635842633262498L ^ ax;
+         short var18 = 32;
          if (axx != null) {
-            if (var14 != var10001) {
+            if (var14 != 32) {
                throw new IllegalArgumentException(ayk.a[0]);
             }
 
@@ -59,31 +61,31 @@ class ayk {
             }
 
             var14 = a.length;
-            short var18 = 7937;
-            long var10002 = 1956072786363345663L ^ ax;
-            var10001 = -1820814659;
+            var18 = 7937;
+            var10002 = 1956072786363345663L ^ ax;
+            var18 = 12;
          }
 
-         if (var14 != var10001) {
+         if (var14 != var18) {
             throw new IllegalArgumentException(ayk.a[2]);
          }
 
          a.cgf = a;
          a.cjc = 0L;
          ebf var16 = new ebf(a, a, 0);
-         short var19 = 20725;
-         long var21 = 6774380405721244935L ^ ax;
+         var18 = 20725;
+         var10002 = 6774380405721244935L ^ ax;
          var15 = var16.atf(new byte[64]);
       }
 
       byte[] axxxxx = var15;
       short var10004 = 25397;
       long var10005 = 1692387400377079497L ^ ax;
-      a.flt = new asz(Arrays.copyOf(axxxxx, -635405026));
+      a.flt = new asz(Arrays.copyOf(axxxxx, 32));
       a.amc = new ebf(a, a, 1);
       int var17 = a.length;
-      short var20 = 24574;
-      long var22 = 8778794921109694990L ^ ax;
+      short var21 = 24574;
+      long var24 = 8778794921109694990L ^ ax;
       byte[] axxxxxx = deo(var17, 16);
       byte[] axxxxxxx = new byte[a.length + axxxxxx.length];
       System.arraycopy(a, 0, axxxxxxx, 0, a.length);
@@ -260,13 +262,13 @@ class ayk {
                      long var39 = 7965407987050567723L ^ var20;
                      String var24 = var16;
                      int var26 = var16.length();
-                     int var23 = 1209621815;
+                     char var23 = 20;
                      int var22 = -1;
 
                      while (true) {
                         short var34 = 31205;
                         long var40 = 228607871803077160L ^ var20;
-                        String var49 = a(1062145195, a(var24.substring(++var22, var22 + var23)));
+                        String var49 = a(101, a(var24.substring(++var22, var22 + var23)));
                         var38 = -1;
                         var27[var25++] = var49;
                         if ((var22 += var23) >= var26) {
@@ -328,31 +330,35 @@ class ayk {
          char var10005 = var10001[var4];
          short var10008 = 16158;
          long var10009 = 6570847897074784269L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % -540432793) {
+         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
             case 0 -> {
-               short var14 = 32403;
-               long var19 = 3205355929690839429L ^ var2;
-               yield -1220770655;
+               short var15 = 32403;
+               long var21 = 3205355929690839429L ^ var2;
+               yield 89;
             }
             case 1 -> {
-               short var13 = 24407;
-               long var18 = 1726502303875643469L ^ var2;
+               short var14 = 24407;
+               long var20 = 1726502303875643469L ^ var2;
                yield 60;
             }
-            case 2 -> a<"b">(8058, 7068662042770929767L ^ var2);
+            case 2 -> {
+               short var13 = 8058;
+               long var19 = 7068662042770929767L ^ var2;
+               yield 94;
+            }
             case 3 -> {
                short var12 = 28508;
-               long var17 = 8512628439600171085L ^ var2;
-               yield 751935027;
+               long var18 = 8512628439600171085L ^ var2;
+               yield 34;
             }
             case 4 -> {
                short var11 = 4607;
-               long var16 = 5258693382109624047L ^ var2;
-               yield -853296479;
+               long var17 = 5258693382109624047L ^ var2;
+               yield 41;
             }
             case 5 -> {
                short var10 = 24574;
-               long var15 = 8778911155884439783L ^ var2;
+               long var16 = 8778911155884439783L ^ var2;
                yield 16;
             }
             default -> 2;

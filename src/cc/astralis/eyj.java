@@ -35,18 +35,20 @@ public class eyj {
    public static byte[] ere(byte[] data, byte[] key, byte[] aad) {
       long ax = b ^ 32817759257641L;
       int[] var10000 = dar.abu();
-      long axx = b<"x">(26606, 94864507093876089L ^ ax);
+      short var10001 = 26606;
+      long var10002 = 94864507093876089L ^ ax;
+      long axx = 39663199728497L;
       cdr[] axxx = fz.dtf();
       int[] axxxx = var10000;
       int var15 = a.length;
-      short var10001 = 27690;
-      long var10002 = 4445649265426780332L ^ ax;
+      var10001 = 27690;
+      var10002 = 4445649265426780332L ^ ax;
       if (var15 != 32) {
          throw new IllegalArgumentException(eyj.a[2]);
       } else {
          SecureRandom axxxxx = new SecureRandom();
          short var16 = 18958;
-         long var18 = 5478525291565053593L ^ ax;
+         long var19 = 5478525291565053593L ^ ax;
          byte[] axxxxxx = new byte[12];
          axxxxx.nextBytes(axxxxxx);
          ayk axxxxxxx = new ayk(a, axxxxxx, a);
@@ -72,12 +74,14 @@ public class eyj {
       label43: {
          ax = b ^ 61017601237987L;
          int[] var10000 = dar.abu();
-         long axxx = b<"x">(19555, 6272531962212233533L ^ ax);
+         short var10001 = 19555;
+         long var10002 = 6272531962212233533L ^ ax;
+         long axxx = 103815411965598L;
          axx = var10000;
          int var14 = a.length;
-         short var10001 = 27690;
-         long var10002 = 4445673875143735142L ^ ax;
-         short var17 = 32;
+         var10001 = 27690;
+         var10002 = 4445673875143735142L ^ ax;
+         short var18 = 32;
          if (axx != null) {
             if (var14 != 32) {
                throw new IllegalArgumentException(eyj.a[3]);
@@ -89,31 +93,31 @@ public class eyj {
             }
 
             var14 = a.length;
-            var17 = 5134;
+            var18 = 5134;
             var10002 = 5632226735327235905L ^ ax;
-            var17 = 28;
+            var18 = 28;
          }
 
-         if (var14 < var17) {
+         if (var14 < var18) {
             throw new IllegalArgumentException(eyj.a[0]);
          }
 
-         short var22 = 23782;
+         short var24 = 23782;
          long var10003 = 2955801729960347582L ^ ax;
          var15 = Arrays.copyOfRange(a, 0, 12);
       }
 
       byte[] axxxx = var15;
-      int var19 = 18958;
-      long var23 = 5478500440572825939L ^ ax;
-      int var24 = a.length;
-      short var26 = 1922;
+      int var20 = 18958;
+      long var25 = 5478500440572825939L ^ ax;
+      int var26 = a.length;
+      short var28 = 1922;
       long var10004 = 529720263864638666L ^ ax;
-      byte[] axxxxx = Arrays.copyOfRange(a, 12, var24 - 16);
-      var19 = a.length;
-      short var25 = 1922;
-      long var27 = 529720263864638666L ^ ax;
-      byte[] axxxxxx = Arrays.copyOfRange(a, var19 - 16, a.length);
+      byte[] axxxxx = Arrays.copyOfRange(a, 12, var26 - 16);
+      var20 = a.length;
+      short var27 = 1922;
+      long var29 = 529720263864638666L ^ ax;
+      byte[] axxxxxx = Arrays.copyOfRange(a, var20 - 16, a.length);
       ayk axxxxxxx = new ayk(a, axxxx, a);
       byte[] axxxxxxxx = axxxxxxx.fcr(axxxxx);
       byte[] axxxxxxxxx = axxxxxxx.arj();
@@ -182,10 +186,10 @@ public class eyj {
 
          while (true) {
             byte[] var30 = var23.doFinal(var54.getBytes("ISO-8859-1"));
-            String var86 = a(var30).intern();
+            String var88 = a(var30).intern();
             switch (var10001) {
                case 0:
-                  var22[var28++] = var86;
+                  var22[var28++] = var88;
                   if ((var50 += var26) >= var29) {
                      e = new HashMap(13);
                      Cipher var11;
@@ -212,7 +216,7 @@ public class eyj {
                         byte[] var18 = var15.substring(var10001, var13).getBytes("ISO-8859-1");
                         long[] var57 = var17;
                         var10001 = var14++;
-                        long var90 = (var18[0] & 255L) << 56
+                        long var92 = (var18[0] & 255L) << 56
                            | (var18[1] & 255L) << 48
                            | (var18[2] & 255L) << 40
                            | (var18[3] & 255L) << 32
@@ -220,10 +224,10 @@ public class eyj {
                            | (var18[5] & 255L) << 16
                            | (var18[6] & 255L) << 8
                            | var18[7] & 255L;
-                        byte var118 = -1;
+                        byte var122 = -1;
 
                         while (true) {
-                           long var19 = var90;
+                           long var19 = var92;
                            byte[] var21 = var11.doFinal(
                               new byte[]{
                                  (byte)(var19 >>> 56),
@@ -236,7 +240,7 @@ public class eyj {
                                  (byte)var19
                               }
                            );
-                           long var138 = (var21[0] & 255L) << 56
+                           long var159 = (var21[0] & 255L) << 56
                               | (var21[1] & 255L) << 48
                               | (var21[2] & 255L) << 40
                               | (var21[3] & 255L) << 32
@@ -244,9 +248,9 @@ public class eyj {
                               | (var21[5] & 255L) << 16
                               | (var21[6] & 255L) << 8
                               | var21[7] & 255L;
-                           switch (var118) {
+                           switch (var122) {
                               case 0:
-                                 var57[var10001] = var138;
+                                 var57[var10001] = var159;
                                  if (var13 >= var16) {
                                     c = var17;
                                     d = new Integer[33];
@@ -269,12 +273,12 @@ public class eyj {
 
                                     label87:
                                     while (true) {
-                                       int var73 = var2;
+                                       int var74 = var2;
                                        var2 += 8;
-                                       byte[] var7 = var4.substring(var73, var2).getBytes("ISO-8859-1");
+                                       byte[] var7 = var4.substring(var74, var2).getBytes("ISO-8859-1");
                                        long[] var59 = var6;
-                                       var73 = var3++;
-                                       long var93 = (var7[0] & 255L) << 56
+                                       var74 = var3++;
+                                       long var95 = (var7[0] & 255L) << 56
                                           | (var7[1] & 255L) << 48
                                           | (var7[2] & 255L) << 40
                                           | (var7[3] & 255L) << 32
@@ -282,10 +286,10 @@ public class eyj {
                                           | (var7[5] & 255L) << 16
                                           | (var7[6] & 255L) << 8
                                           | var7[7] & 255L;
-                                       byte var121 = -1;
+                                       byte var125 = -1;
 
                                        while (true) {
-                                          long var8 = var93;
+                                          long var8 = var95;
                                           byte[] var10 = var0.doFinal(
                                              new byte[]{
                                                 (byte)(var8 >>> 56),
@@ -298,7 +302,7 @@ public class eyj {
                                                 (byte)var8
                                              }
                                           );
-                                          var138 = (var10[0] & 255L) << 56
+                                          var159 = (var10[0] & 255L) << 56
                                              | (var10[1] & 255L) << 48
                                              | (var10[2] & 255L) << 40
                                              | (var10[3] & 255L) << 32
@@ -306,20 +310,20 @@ public class eyj {
                                              | (var10[5] & 255L) << 16
                                              | (var10[6] & 255L) << 8
                                              | var10[7] & 255L;
-                                          switch (var121) {
+                                          switch (var125) {
                                              case 0:
-                                                var59[var73] = var138;
+                                                var59[var74] = var159;
                                                 if (var2 >= var5) {
                                                    f = var6;
                                                    g = new Long[5];
                                                    String[] var46 = new String[4];
                                                    short var60 = 23883;
                                                    int var44 = 0;
-                                                   long var76 = 187693645871639566L ^ var31;
+                                                   long var77 = 187693645871639566L ^ var31;
                                                    String var43;
                                                    int var45 = (var43 = var22[3]).length();
-                                                   short var77 = 819;
-                                                   long var95 = 8270077634656383585L ^ var31;
+                                                   short var78 = 819;
+                                                   long var97 = 8270077634656383585L ^ var31;
                                                    char var42 = 14;
                                                    int var53 = -1;
                                                    btm(99);
@@ -327,19 +331,21 @@ public class eyj {
                                                    label77:
                                                    while (true) {
                                                       short var61 = 2196;
-                                                      long var78 = 759552652796049877L ^ var31;
+                                                      long var79 = 759552652796049877L ^ var31;
                                                       byte var62 = 49;
-                                                      String var79 = var43.substring(++var53, var53 + var42);
-                                                      byte var96 = -1;
+                                                      String var80 = var43.substring(++var53, var53 + var42);
+                                                      byte var98 = -1;
 
                                                       while (true) {
-                                                         String var63 = a(var62, a(var79));
-                                                         switch (var96) {
+                                                         String var63 = a(var62, a(var80));
+                                                         switch (var98) {
                                                             case 0:
                                                                var46[var44++] = var63;
                                                                if ((var53 += var42) >= var45) {
                                                                   a = var46;
-                                                                  long var34 = b<"x">(1555, 8996788490322612575L ^ var31);
+                                                                  short var66 = 1555;
+                                                                  long var83 = 8996788490322612575L ^ var31;
+                                                                  long var34 = 83412247915482L;
                                                                   long[] var33 = new long[4];
                                                                   int var37 = 0;
                                                                   String var38;
@@ -348,50 +354,75 @@ public class eyj {
 
                                                                   label65:
                                                                   while (true) {
-                                                                     int var82 = var36;
+                                                                     int var84 = var36;
                                                                      var36 += 8;
-                                                                     byte[] var40 = var38.substring(var82, var36).getBytes(var22[2]);
-                                                                     long[] var66 = var33;
-                                                                     var82 = var37++;
-                                                                     long var99 = var40[0] & b<"x">(32465, 412039183104633240L ^ var31);
-                                                                     short var123 = 32088;
-                                                                     var138 = 2073061184486886411L ^ var31;
-                                                                     long var100 = var99 << 56;
-                                                                     long var124 = var40[1] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     short var142 = 32455;
-                                                                     long var10005 = 7487980780483596171L ^ var31;
-                                                                     long var101 = var100 | var124 << 48;
-                                                                     long var125 = var40[2] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     short var143 = 8696;
+                                                                     byte[] var40 = var38.substring(var84, var36).getBytes(var22[2]);
+                                                                     long[] var67 = var33;
+                                                                     var84 = var37++;
+                                                                     long var101 = var40[0];
+                                                                     short var127 = 32465;
+                                                                     var159 = 412039183104633240L ^ var31;
+                                                                     long var102 = var101 & 255L;
+                                                                     short var128 = 32088;
+                                                                     var159 = 2073061184486886411L ^ var31;
+                                                                     long var103 = var102 << 56;
+                                                                     long var129 = var40[1];
+                                                                     short var164 = 523;
+                                                                     long var10005 = 2123954221876548929L ^ var31;
+                                                                     long var130 = var129 & 255L;
+                                                                     short var165 = 32455;
+                                                                     var10005 = 7487980780483596171L ^ var31;
+                                                                     long var104 = var103 | var130 << 48;
+                                                                     long var131 = var40[2];
+                                                                     short var166 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var132 = var131 & 255L;
+                                                                     short var167 = 8696;
                                                                      var10005 = 1946576384652480695L ^ var31;
-                                                                     long var102 = var101 | var125 << 40;
-                                                                     long var126 = var40[3] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     short var144 = 25318;
+                                                                     long var105 = var104 | var132 << 40;
+                                                                     long var133 = var40[3];
+                                                                     short var168 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var134 = var133 & 255L;
+                                                                     short var169 = 25318;
                                                                      var10005 = 5917516071802753981L ^ var31;
-                                                                     long var103 = var102 | var126 << 32;
-                                                                     long var127 = var40[4] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     short var145 = 18218;
+                                                                     long var106 = var105 | var134 << 32;
+                                                                     long var135 = var40[4];
+                                                                     short var170 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var136 = var135 & 255L;
+                                                                     short var171 = 18218;
                                                                      var10005 = 2497456839895250530L ^ var31;
-                                                                     long var104 = var103 | var127 << 24;
-                                                                     long var128 = var40[5] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     short var146 = 12657;
+                                                                     long var107 = var106 | var136 << 24;
+                                                                     long var137 = var40[5];
+                                                                     short var172 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var138 = var137 & 255L;
+                                                                     short var173 = 12657;
                                                                      var10005 = 8566598667261116475L ^ var31;
-                                                                     long var105 = var104 | var128 << 16;
-                                                                     short var147 = 24007;
+                                                                     long var108 = var107 | var138 << 16;
+                                                                     short var174 = 24007;
                                                                      var10005 = 4449466405632044186L ^ var31;
-                                                                     long var106 = var105
-                                                                        | (var40[6] & b<"x">(523, 2123954221876548929L ^ var31))
-                                                                           << a<"m">(6875, 340781299861597105L ^ var31);
-                                                                     short var148 = 29270;
+                                                                     long var139 = var40[6];
+                                                                     short var175 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var140 = var139 & 255L;
+                                                                     short var176 = 6875;
+                                                                     var10005 = 340781299861597105L ^ var31;
+                                                                     long var109 = var108 | var140 << 8;
+                                                                     short var177 = 29270;
                                                                      var10005 = 468409036160779029L ^ var31;
-                                                                     long var107 = var106 | var40[7] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                     byte var129 = -1;
+                                                                     long var141 = var40[7];
+                                                                     short var178 = 523;
+                                                                     var10005 = 2123954221876548929L ^ var31;
+                                                                     long var110 = var109 | var141 & 255L;
+                                                                     byte var142 = -1;
 
                                                                      while (true) {
-                                                                        var138 = var107 ^ var34;
-                                                                        switch (var129) {
+                                                                        var159 = var110 ^ var34;
+                                                                        switch (var142) {
                                                                            case 0:
-                                                                              var66[var82] = var138;
+                                                                              var67[var84] = var159;
                                                                               if (var36 >= var39) {
                                                                                  fzm = (int)var33[1];
                                                                                  brr = (int)var33[3];
@@ -401,7 +432,7 @@ public class eyj {
                                                                               }
                                                                               break;
                                                                            default:
-                                                                              var66[var82] = var138;
+                                                                              var67[var84] = var159;
                                                                               if (var36 < var39) {
                                                                                  continue label65;
                                                                               }
@@ -410,45 +441,69 @@ public class eyj {
                                                                               var36 = 0;
                                                                         }
 
-                                                                        byte var84 = var36;
+                                                                        byte var86 = var36;
                                                                         var36 += 8;
-                                                                        var40 = var38.substring(var84, var36).getBytes(var22[1]);
-                                                                        var66 = var33;
-                                                                        var82 = var37++;
-                                                                        long var109 = var40[0] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var131 = 5088;
-                                                                        var138 = 3717377508304691892L ^ var31;
-                                                                        long var110 = var109 << 56;
-                                                                        long var132 = var40[1] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var152 = 32455;
+                                                                        var40 = var38.substring(var86, var36).getBytes(var22[1]);
+                                                                        var67 = var33;
+                                                                        var84 = var37++;
+                                                                        long var112 = var40[0];
+                                                                        short var144 = 523;
+                                                                        var159 = 2123954221876548929L ^ var31;
+                                                                        long var113 = var112 & 255L;
+                                                                        short var145 = 5088;
+                                                                        var159 = 3717377508304691892L ^ var31;
+                                                                        long var114 = var113 << 56;
+                                                                        long var146 = var40[1];
+                                                                        short var183 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var147 = var146 & 255L;
+                                                                        short var184 = 32455;
                                                                         var10005 = 7487980780483596171L ^ var31;
-                                                                        long var111 = var110 | var132 << 48;
-                                                                        long var133 = var40[2] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var153 = 21110;
+                                                                        long var115 = var114 | var147 << 48;
+                                                                        long var148 = var40[2];
+                                                                        short var185 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var149 = var148 & 255L;
+                                                                        short var186 = 21110;
                                                                         var10005 = 2382517511976837934L ^ var31;
-                                                                        long var112 = var111 | var133 << 40;
-                                                                        long var134 = var40[3] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var154 = 27690;
+                                                                        long var116 = var115 | var149 << 40;
+                                                                        long var150 = var40[3];
+                                                                        short var187 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var151 = var150 & 255L;
+                                                                        short var188 = 27690;
                                                                         var10005 = 4445641022204697968L ^ var31;
-                                                                        long var113 = var112 | var134 << 32;
-                                                                        long var135 = var40[4] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var155 = 18218;
+                                                                        long var117 = var116 | var151 << 32;
+                                                                        long var152 = var40[4];
+                                                                        short var189 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var153 = var152 & 255L;
+                                                                        short var190 = 18218;
                                                                         var10005 = 2497456839895250530L ^ var31;
-                                                                        long var114 = var113 | var135 << 24;
-                                                                        long var136 = var40[5] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var156 = 1922;
+                                                                        long var118 = var117 | var153 << 24;
+                                                                        long var154 = var40[5];
+                                                                        short var191 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var155 = var154 & 255L;
+                                                                        short var192 = 1922;
                                                                         var10005 = 529687409709627100L ^ var31;
-                                                                        long var115 = var114 | var136 << 16;
-                                                                        short var157 = 18998;
+                                                                        long var119 = var118 | var155 << 16;
+                                                                        short var193 = 18998;
                                                                         var10005 = 2658505270407428978L ^ var31;
-                                                                        long var137 = var40[6] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        short var158 = 16625;
+                                                                        long var156 = var40[6];
+                                                                        short var194 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        long var157 = var156 & 255L;
+                                                                        short var195 = 16625;
                                                                         var10005 = 5122046421115597230L ^ var31;
-                                                                        long var116 = var115 | var137 << 8;
-                                                                        short var159 = 29270;
+                                                                        long var120 = var119 | var157 << 8;
+                                                                        short var196 = 29270;
                                                                         var10005 = 468409036160779029L ^ var31;
-                                                                        var107 = var116 | var40[7] & b<"x">(523, 2123954221876548929L ^ var31);
-                                                                        var129 = 0;
+                                                                        long var158 = var40[7];
+                                                                        short var197 = 523;
+                                                                        var10005 = 2123954221876548929L ^ var31;
+                                                                        var110 = var120 | var158 & 255L;
+                                                                        var142 = 0;
                                                                      }
                                                                   }
                                                                }
@@ -464,22 +519,22 @@ public class eyj {
 
                                                                var45 = (var43 = var22[5]).length();
                                                                short var64 = 28743;
-                                                               long var80 = 2889829350399361303L ^ var31;
+                                                               long var81 = 2889829350399361303L ^ var31;
                                                                var42 = 25;
                                                                var53 = -1;
                                                          }
 
                                                          short var65 = 19017;
-                                                         long var81 = 2351748291599072000L ^ var31;
+                                                         long var82 = 2351748291599072000L ^ var31;
                                                          var62 = 24;
-                                                         var79 = var43.substring(++var53, var53 + var42);
-                                                         var96 = 0;
+                                                         var80 = var43.substring(++var53, var53 + var42);
+                                                         var98 = 0;
                                                       }
                                                    }
                                                 }
                                                 break;
                                              default:
-                                                var59[var73] = var138;
+                                                var59[var74] = var159;
                                                 if (var2 < var5) {
                                                    continue label87;
                                                 }
@@ -489,12 +544,12 @@ public class eyj {
                                                 var2 = 0;
                                           }
 
-                                          byte var75 = var2;
+                                          byte var76 = var2;
                                           var2 += 8;
-                                          var7 = var4.substring(var75, var2).getBytes("ISO-8859-1");
+                                          var7 = var4.substring(var76, var2).getBytes("ISO-8859-1");
                                           var59 = var6;
-                                          var73 = var3++;
-                                          var93 = (var7[0] & 255L) << 56
+                                          var74 = var3++;
+                                          var95 = (var7[0] & 255L) << 56
                                              | (var7[1] & 255L) << 48
                                              | (var7[2] & 255L) << 40
                                              | (var7[3] & 255L) << 32
@@ -502,13 +557,13 @@ public class eyj {
                                              | (var7[5] & 255L) << 16
                                              | (var7[6] & 255L) << 8
                                              | var7[7] & 255L;
-                                          var121 = 0;
+                                          var125 = 0;
                                        }
                                     }
                                  }
                                  break;
                               default:
-                                 var57[var10001] = var138;
+                                 var57[var10001] = var159;
                                  if (var13 < var16) {
                                     continue label103;
                                  }
@@ -518,12 +573,12 @@ public class eyj {
                                  var13 = 0;
                            }
 
-                           byte var72 = var13;
+                           byte var73 = var13;
                            var13 += 8;
-                           var18 = var15.substring(var72, var13).getBytes("ISO-8859-1");
+                           var18 = var15.substring(var73, var13).getBytes("ISO-8859-1");
                            var57 = var17;
                            var10001 = var14++;
-                           var90 = (var18[0] & 255L) << 56
+                           var92 = (var18[0] & 255L) << 56
                               | (var18[1] & 255L) << 48
                               | (var18[2] & 255L) << 40
                               | (var18[3] & 255L) << 32
@@ -531,7 +586,7 @@ public class eyj {
                               | (var18[5] & 255L) << 16
                               | (var18[6] & 255L) << 8
                               | var18[7] & 255L;
-                           var118 = 0;
+                           var122 = 0;
                         }
                      }
                   }
@@ -539,7 +594,7 @@ public class eyj {
                   var26 = var27.charAt(var50);
                   break;
                default:
-                  var22[var28++] = var86;
+                  var22[var28++] = var88;
                   if ((var50 += var26) < var29) {
                      var26 = var27.charAt(var50);
                      continue label121;
@@ -582,39 +637,45 @@ public class eyj {
          char var10005 = var10001[var4];
          short var10008 = 20726;
          long var10009 = 8080306047715102309L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> a<"m">(32255, 8210007303128048507L ^ var2);
-            case 1 -> {
-               short var15 = 3364;
-               long var21 = 1868044255950771106L ^ var2;
-               yield 70;
-            }
-            case 2 -> {
-               short var14 = 23340;
-               long var20 = 3398831615060559275L ^ var2;
-               yield 48;
-            }
-            case 3 -> {
-               short var13 = 18543;
-               long var19 = 5580076419487946494L ^ var2;
-               yield 33;
-            }
-            case 4 -> {
-               short var12 = 28618;
-               long var18 = 2402252901379338588L ^ var2;
-               yield 110;
-            }
-            case 5 -> {
-               short var11 = 9710;
-               long var17 = 2814572074637638499L ^ var2;
-               yield 47;
-            }
-            default -> {
-               short var10007 = 24028;
-               long var16 = 7211053002585981771L ^ var2;
-               yield 87;
-            }
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 32255;
+               long var23 = 8210007303128048507L ^ var2;
+               var10 = 82;
+               break;
+            case 1:
+               var10 = 3364;
+               long var22 = 1868044255950771106L ^ var2;
+               var10 = 70;
+               break;
+            case 2:
+               var10 = 23340;
+               long var21 = 3398831615060559275L ^ var2;
+               var10 = 48;
+               break;
+            case 3:
+               var10 = 18543;
+               long var20 = 5580076419487946494L ^ var2;
+               var10 = 33;
+               break;
+            case 4:
+               var10 = 28618;
+               long var19 = 2402252901379338588L ^ var2;
+               var10 = 110;
+               break;
+            case 5:
+               var10 = 9710;
+               long var18 = 2814572074637638499L ^ var2;
+               var10 = 47;
+               break;
+            default:
+               var10 = 24028;
+               long var17 = 7211053002585981771L ^ var2;
+               var10 = 87;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

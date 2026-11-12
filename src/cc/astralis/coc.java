@@ -298,9 +298,9 @@ public class coc extends class_437 {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var13 = var11.doFinal("Sf-Bold".getBytes("ISO-8859-1"));
-      String var30 = a(var13).intern();
+      String var34 = a(var13).intern();
       int var10001 = -1;
-      b = var30;
+      b = var34;
       e = new HashMap(13);
       Cipher var0;
       var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -326,7 +326,7 @@ public class coc extends class_437 {
          byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
          long[] var18 = var6;
          var10001 = var3++;
-         long var32 = (var7[0] & 255L) << 56
+         long var36 = (var7[0] & 255L) << 56
             | (var7[1] & 255L) << 48
             | (var7[2] & 255L) << 40
             | (var7[3] & 255L) << 32
@@ -334,10 +334,10 @@ public class coc extends class_437 {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var37 = -1;
+         byte var41 = -1;
 
          while (true) {
-            long var8 = var32;
+            long var8 = var36;
             byte[] var10 = var0.doFinal(
                new byte[]{
                   (byte)(var8 >>> 56),
@@ -350,7 +350,7 @@ public class coc extends class_437 {
                   (byte)var8
                }
             );
-            long var43 = (var10[0] & 255L) << 56
+            long var47 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -358,38 +358,42 @@ public class coc extends class_437 {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var37) {
+            switch (var41) {
                case 0:
-                  var18[var10001] = var43;
+                  var18[var10001] = var47;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[17];
                      short var19 = 27460;
-                     long var26 = var14 ^ 8144178352657287143L;
+                     long var28 = var14 ^ 8144178352657287143L;
                      ejc = 5;
-                     fgr = a<"b">(20435, var14 ^ 6738575292218205033L);
-                     short var20 = 25727;
-                     long var27 = var14 ^ 3870467266380974294L;
+                     short var20 = 20435;
+                     long var29 = var14 ^ 6738575292218205033L;
+                     fgr = 35;
+                     short var21 = 25727;
+                     long var30 = var14 ^ 3870467266380974294L;
                      ciq = 21;
-                     short var21 = 27552;
-                     long var28 = var14 ^ 4238762823526467340L;
+                     short var22 = 27552;
+                     long var31 = var14 ^ 4238762823526467340L;
                      fzw = 218;
-                     short var22 = 16084;
-                     long var29 = var14 ^ 5618140980324569715L;
+                     short var23 = 16084;
+                     long var32 = var14 ^ 5618140980324569715L;
                      bpx = 7;
-                     gsj = a<"b">(11664, var14 ^ 2534670748621701429L);
-                     short var34 = 11392;
-                     long var39 = 4658603601223188518L ^ var14;
-                     short var40 = 17041;
-                     var43 = 4975100582038990389L ^ var14;
-                     short var45 = 17041;
+                     short var24 = 11664;
+                     long var33 = var14 ^ 2534670748621701429L;
+                     gsj = 360;
+                     short var38 = 11392;
+                     long var43 = 4658603601223188518L ^ var14;
+                     short var44 = 17041;
+                     var47 = 4975100582038990389L ^ var14;
+                     short var49 = 17041;
                      long var10005 = 4975100582038990389L ^ var14;
                      bbw = new Color(25, 25, 25);
-                     short var35 = 26839;
-                     long var41 = 6991707214490059893L ^ var14;
-                     short var42 = 17977;
-                     var43 = 4125661018832267929L ^ var14;
-                     short var47 = 17977;
+                     short var39 = 26839;
+                     long var45 = 6991707214490059893L ^ var14;
+                     short var46 = 17977;
+                     var47 = 4125661018832267929L ^ var14;
+                     short var51 = 17977;
                      var10005 = 4125661018832267929L ^ var14;
                      egi = new Color(30, 30, 30);
                      csi = axb.afp(() -> {
@@ -401,7 +405,7 @@ public class coc extends class_437 {
                   }
                   break;
                default:
-                  var18[var10001] = var43;
+                  var18[var10001] = var47;
                   if (var2 < var5) {
                      continue label29;
                   }
@@ -411,12 +415,12 @@ public class coc extends class_437 {
                   var2 = 0;
             }
 
-            byte var25 = var2;
+            byte var27 = var2;
             var2 += 8;
-            var7 = var4.substring(var25, var2).getBytes("ISO-8859-1");
+            var7 = var4.substring(var27, var2).getBytes("ISO-8859-1");
             var18 = var6;
             var10001 = var3++;
-            var32 = (var7[0] & 255L) << 56
+            var36 = (var7[0] & 255L) << 56
                | (var7[1] & 255L) << 48
                | (var7[2] & 255L) << 40
                | (var7[3] & 255L) << 32
@@ -424,7 +428,7 @@ public class coc extends class_437 {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var37 = 0;
+            var41 = 0;
          }
       }
    }

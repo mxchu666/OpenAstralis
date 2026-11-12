@@ -106,16 +106,20 @@ public class fuv extends cdr implements dlc {
       Color var10004 = new Color(20, 20, 20);
       short var3 = 22316;
       var10008 = 3744988011433809610L ^ var0;
-      dmp.dyl(
-         0.0F, 0.0F, var10002, var10003, var10004, new Color(50, b<"b">(10661, 6198190784085567558L ^ var0), b<"b">(10661, 6198190784085567558L ^ var0)), false
-      );
+      short var6 = 10661;
+      var10009 = 6198190784085567558L ^ var0;
+      short var8 = 10661;
+      long var10010 = 6198190784085567558L ^ var0;
+      dmp.dyl(0.0F, 0.0F, var10002, var10003, var10004, new Color(50, 50, 50), false);
    }
 
    public static int awv(HKEYByReference hKey) {
       long ax = fuv.a ^ 99564293824809L;
       short var10002 = 17700;
       long var10003 = 8065731846701860054L ^ ax;
-      return Advapi32.INSTANCE.RegOpenKeyEx(WinReg.HKEY_CURRENT_USER, "Control Panel\\Desktop", 0, b<"b">(17285, 2213599364454491941L ^ ax), a);
+      short var10004 = 17285;
+      long var10005 = 2213599364454491941L ^ ax;
+      return Advapi32.INSTANCE.RegOpenKeyEx(WinReg.HKEY_CURRENT_USER, "Control Panel\\Desktop", 0, 131097, a);
    }
 
    public static void dgg(int registryAccessResult) {

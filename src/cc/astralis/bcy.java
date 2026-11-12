@@ -53,25 +53,27 @@ public class bcy extends brc {
    public void etg(JsonObject json) {
       long ax = b ^ 110965370690911L;
       int[] var10000 = dar.abu();
-      long axx = c<"a">(3869, 3207665762407189255L ^ ax);
-      String[] var10001 = drn();
+      short var10001 = 3869;
+      long var10002 = 3207665762407189255L ^ ax;
+      long axx = 32630151548704L;
+      String[] var18 = drn();
       a.cps(a);
-      String[] axxx = var10001;
+      String[] axxx = var18;
       int[] axxxx = var10000;
       JsonObject var15 = a;
       String[] var12 = c;
-      String var18 = var12[5];
+      String var19 = var12[5];
       if (axxxx != null) {
-         if (!a.has(var18)) {
+         if (!a.has(var19)) {
             return;
          }
 
          var15 = a;
          var12 = c;
-         var18 = var12[4];
+         var19 = var12[4];
       }
 
-      JsonArray axxxxx = var15.getAsJsonArray(var18);
+      JsonArray axxxxx = var15.getAsJsonArray(var19);
       JsonArray var16 = axxxxx;
       if (axxxx != null) {
          if (axxxxx == null) {
@@ -99,21 +101,24 @@ public class bcy extends brc {
    @Override
    public String cql() {
       long a = b ^ 24001319222129L;
-      long ax = c<"a">(4732, 9009245970698940489L ^ a);
-      int[] var10000 = dar.abu();
-      String[] var10001 = drn();
+      short var10000 = 4732;
+      long var10001 = 9009245970698940489L ^ a;
+      long ax = 30288795586497L;
+      int[] var16 = dar.abu();
+      String[] var21 = drn();
       JsonObject axx = a.fdo();
-      String[] axxx = var10001;
-      int[] axxxx = var10000;
+      String[] axxx = var21;
+      int[] axxxx = var16;
       JsonArray axxxxx = new JsonArray();
       Iterator var9 = a.ftv.iterator();
 
       label41:
       while (true) {
+         Object var17;
          if (var9.hasNext()) {
-            var10000 = (int[])var9.next();
+            var17 = var9.next();
          } else {
-            var10000 = (int[])axx;
+            var17 = axx;
             String[] var12 = c;
             if (axxxx != null) {
                axx.add(fz.dsg(var12[4], a.fkm, a.cis), axxxxx);
@@ -123,7 +128,7 @@ public class bcy extends brc {
 
          String[] var14;
          do {
-            fse axxxxxx = (fse)var10000;
+            fse axxxxxx = (fse)var17;
             JsonObject axxxxxxx = new JsonObject();
             Object[] var10002 = new Object[4];
             var14 = c;
@@ -135,20 +140,20 @@ public class bcy extends brc {
             var10002[3] = axxxxxx.fno();
             a.eqw(axxxxxxx, var10002);
             axxxxx.add(axxxxxxx);
-            String[] var17 = axxx;
+            String[] var18 = axxx;
             if (axxxx != null) {
                if (axxx == null) {
                   break label41;
                }
 
-               var17 = axxx;
+               var18 = axxx;
             }
 
-            if (var17 != null) {
+            if (var18 != null) {
                continue label41;
             }
 
-            var10000 = (int[])axx;
+            var17 = axx;
             var14 = c;
          } while (axxxx == null);
 
@@ -156,20 +161,20 @@ public class bcy extends brc {
          break;
       }
 
-      String var18 = axx.toString();
+      String var19 = axx.toString();
       String[] var15 = c;
-      String var19 = fz.dvr(var18, cni.fsi(var15[2]), cni.fsi(var15[0]));
-      var10001 = cdr.haa();
+      String var20 = fz.dvr(var19, cni.fsi(var15[2]), cni.fsi(var15[0]));
+      String[] var22 = cdr.haa();
       if (axxxx != null) {
-         if (var10001 != null) {
-            return var19;
+         if (var22 != null) {
+            return var20;
          }
 
-         var10001 = new String[1];
+         var22 = new String[1];
       }
 
-      ebr(var10001);
-      return var19;
+      ebr(var22);
+      return var20;
    }
 
    public List<fse> blg() {
@@ -206,9 +211,9 @@ public class bcy extends brc {
 
       while (true) {
          byte[] var30 = var23.doFinal(var27.substring(++var25, var25 + var26).getBytes("ISO-8859-1"));
-         String var64 = b(var30).intern();
+         String var65 = b(var30).intern();
          int var10001 = -1;
-         var22[var28++] = var64;
+         var22[var28++] = var65;
          if ((var25 += var26) >= var29) {
             i = new HashMap(13);
             Cipher var11;
@@ -235,7 +240,7 @@ public class bcy extends brc {
                byte[] var18 = var15.substring(var10001, var13).getBytes("ISO-8859-1");
                long[] var44 = var17;
                var10001 = var14++;
-               long var67 = (var18[0] & 255L) << 56
+               long var68 = (var18[0] & 255L) << 56
                   | (var18[1] & 255L) << 48
                   | (var18[2] & 255L) << 40
                   | (var18[3] & 255L) << 32
@@ -243,10 +248,10 @@ public class bcy extends brc {
                   | (var18[5] & 255L) << 16
                   | (var18[6] & 255L) << 8
                   | var18[7] & 255L;
-               byte var74 = -1;
+               byte var76 = -1;
 
                while (true) {
-                  long var19 = var67;
+                  long var19 = var68;
                   byte[] var21 = var11.doFinal(
                      new byte[]{
                         (byte)(var19 >>> 56),
@@ -259,7 +264,7 @@ public class bcy extends brc {
                         (byte)var19
                      }
                   );
-                  long var78 = (var21[0] & 255L) << 56
+                  long var80 = (var21[0] & 255L) << 56
                      | (var21[1] & 255L) << 48
                      | (var21[2] & 255L) << 40
                      | (var21[3] & 255L) << 32
@@ -267,9 +272,9 @@ public class bcy extends brc {
                      | (var21[5] & 255L) << 16
                      | (var21[6] & 255L) << 8
                      | var21[7] & 255L;
-                  switch (var74) {
+                  switch (var76) {
                      case 0:
-                        var44[var10001] = var78;
+                        var44[var10001] = var80;
                         if (var13 >= var16) {
                            g = var17;
                            h = new Integer[17];
@@ -315,7 +320,7 @@ public class bcy extends brc {
                                     (byte)var8
                                  }
                               );
-                              var78 = (var10[0] & 255L) << 56
+                              var80 = (var10[0] & 255L) << 56
                                  | (var10[1] & 255L) << 48
                                  | (var10[2] & 255L) << 40
                                  | (var10[3] & 255L) << 32
@@ -323,8 +328,8 @@ public class bcy extends brc {
                                  | (var10[5] & 255L) << 16
                                  | (var10[6] & 255L) << 8
                                  | var10[7] & 255L;
-                              byte var77 = -1;
-                              var6[var57] = var78;
+                              byte var79 = -1;
+                              var6[var57] = var80;
                            } while (var2 < var5);
 
                            m = var6;
@@ -336,21 +341,23 @@ public class bcy extends brc {
                            int var36 = 0;
                            String var35;
                            int var37 = (var35 = var22[0]).length();
-                           int var34 = a<"c">(24238, 1187098678573155595L ^ var31);
+                           short var60 = 24238;
+                           long var71 = 1187098678573155595L ^ var31;
+                           char var34 = '`';
                            int var42 = -1;
                            ebr(var47);
 
                            label52:
                            while (true) {
                               short var48 = 18408;
-                              long var60 = 8585371194049027167L ^ var31;
+                              long var61 = 8585371194049027167L ^ var31;
                               byte var49 = 106;
-                              String var61 = var35.substring(++var42, var42 + var34);
-                              byte var70 = -1;
+                              String var62 = var35.substring(++var42, var42 + var34);
+                              byte var72 = -1;
 
                               while (true) {
-                                 String var50 = b(var49, b(var61));
-                                 switch (var70) {
+                                 String var50 = b(var49, b(var62));
+                                 switch (var72) {
                                     case 0:
                                        var38[var36++] = var50;
                                        if ((var42 += var34) >= var37) {
@@ -369,22 +376,22 @@ public class bcy extends brc {
 
                                        var37 = (var35 = var22[1]).length();
                                        short var51 = 3848;
-                                       long var62 = 3556154868536284347L ^ var31;
+                                       long var63 = 3556154868536284347L ^ var31;
                                        var34 = 11;
                                        var42 = -1;
                                  }
 
                                  short var52 = 12290;
-                                 long var63 = 8151299133805898681L ^ var31;
+                                 long var64 = 8151299133805898681L ^ var31;
                                  var49 = 69;
-                                 var61 = var35.substring(++var42, var42 + var34);
-                                 var70 = 0;
+                                 var62 = var35.substring(++var42, var42 + var34);
+                                 var72 = 0;
                               }
                            }
                         }
                         break;
                      default:
-                        var44[var10001] = var78;
+                        var44[var10001] = var80;
                         if (var13 < var16) {
                            continue label73;
                         }
@@ -399,7 +406,7 @@ public class bcy extends brc {
                   var18 = var15.substring(var56, var13).getBytes("ISO-8859-1");
                   var44 = var17;
                   var10001 = var14++;
-                  var67 = (var18[0] & 255L) << 56
+                  var68 = (var18[0] & 255L) << 56
                      | (var18[1] & 255L) << 48
                      | (var18[2] & 255L) << 40
                      | (var18[3] & 255L) << 32
@@ -407,7 +414,7 @@ public class bcy extends brc {
                      | (var18[5] & 255L) << 16
                      | (var18[6] & 255L) << 8
                      | var18[7] & 255L;
-                  var74 = 0;
+                  var76 = 0;
                }
             }
          }
@@ -438,41 +445,43 @@ public class bcy extends brc {
 
       for (int var4 = 0; var10000 > var4; var4++) {
          char var10005 = var10001[var4];
+         short var10008 = 10473;
+         long var10009 = 2688455813244262040L ^ var2;
          byte var10;
-         switch (var4 % a<"c">(10473, 2688455813244262040L ^ var2)) {
+         switch (var4 % 7) {
             case 0:
                var10 = 13548;
-               long var22 = 4786104930593147542L ^ var2;
+               long var23 = 4786104930593147542L ^ var2;
                var10 = 93;
                break;
             case 1:
                var10 = 17886;
-               long var21 = 4360236686207679397L ^ var2;
+               long var22 = 4360236686207679397L ^ var2;
                var10 = 12;
                break;
             case 2:
                var10 = 28098;
-               long var20 = 5862883726025675702L ^ var2;
+               long var21 = 5862883726025675702L ^ var2;
                var10 = 55;
                break;
             case 3:
                var10 = 7420;
-               long var19 = 3975596160968204931L ^ var2;
+               long var20 = 3975596160968204931L ^ var2;
                var10 = 40;
                break;
             case 4:
                var10 = 6418;
-               long var18 = 1873032786956953441L ^ var2;
+               long var19 = 1873032786956953441L ^ var2;
                var10 = 26;
                break;
             case 5:
                var10 = 1241;
-               long var17 = 5789342409583278752L ^ var2;
+               long var18 = 5789342409583278752L ^ var2;
                var10 = 112;
                break;
             default:
                var10 = 15178;
-               long var10008 = 2800710407101351231L ^ var2;
+               long var17 = 2800710407101351231L ^ var2;
                var10 = 90;
          }
 

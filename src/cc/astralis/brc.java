@@ -210,8 +210,10 @@ public abstract class brc implements cdw {
          long var10005 = 4366100768637403584L ^ a;
          String var9 = fz.dvr(var8, var11, cni.fsi(brc.a[13]));
          String var12 = String.valueOf(a.cis);
-         byte[] var14 = cni.fsi(brc.a[b<"a">(14037, 8588510998687277746L ^ a)]);
-         short var15 = 15989;
+         var10004 = 14037;
+         var10005 = 8588510998687277746L ^ a;
+         byte[] var14 = cni.fsi(brc.a[7]);
+         short var17 = 15989;
          long var10006 = 4620473943644629564L ^ a;
          axxx.addProperty(var9, fz.dvr(var12, var14, cni.fsi(brc.a[8])));
       }
@@ -350,7 +352,7 @@ public abstract class brc implements cdw {
                            | (var18[5] & 255L) << 16
                            | (var18[6] & 255L) << 8
                            | var18[7] & 255L;
-                        byte var121 = -1;
+                        byte var123 = -1;
 
                         while (true) {
                            long var19 = var95;
@@ -366,7 +368,7 @@ public abstract class brc implements cdw {
                                  (byte)var19
                               }
                            );
-                           long var142 = (var21[0] & 255L) << 56
+                           long var144 = (var21[0] & 255L) << 56
                               | (var21[1] & 255L) << 48
                               | (var21[2] & 255L) << 40
                               | (var21[3] & 255L) << 32
@@ -374,9 +376,9 @@ public abstract class brc implements cdw {
                               | (var21[5] & 255L) << 16
                               | (var21[6] & 255L) << 8
                               | var21[7] & 255L;
-                           switch (var121) {
+                           switch (var123) {
                               case 0:
-                                 var57[var10001] = var142;
+                                 var57[var10001] = var144;
                                  if (var13 >= var16) {
                                     j = var17;
                                     k = new Integer[48];
@@ -413,7 +415,7 @@ public abstract class brc implements cdw {
                                           | (var7[5] & 255L) << 16
                                           | (var7[6] & 255L) << 8
                                           | var7[7] & 255L;
-                                       byte var124 = -1;
+                                       byte var126 = -1;
 
                                        while (true) {
                                           long var8 = var98;
@@ -429,7 +431,7 @@ public abstract class brc implements cdw {
                                                 (byte)var8
                                              }
                                           );
-                                          var142 = (var10[0] & 255L) << 56
+                                          var144 = (var10[0] & 255L) << 56
                                              | (var10[1] & 255L) << 48
                                              | (var10[2] & 255L) << 40
                                              | (var10[3] & 255L) << 32
@@ -437,9 +439,9 @@ public abstract class brc implements cdw {
                                              | (var10[5] & 255L) << 16
                                              | (var10[6] & 255L) << 8
                                              | var10[7] & 255L;
-                                          switch (var124) {
+                                          switch (var126) {
                                              case 0:
-                                                var59[var76] = var142;
+                                                var59[var76] = var144;
                                                 if (var2 >= var5) {
                                                    p = var6;
                                                    q = new Long[16];
@@ -488,45 +490,45 @@ public abstract class brc implements cdw {
                                                                      long[] var68 = var39;
                                                                      var86 = var36++;
                                                                      long var104 = var40[0] & d<"s">(95, 8974252773453545284L ^ var31);
-                                                                     short var126 = 25907;
-                                                                     var142 = 5198717590105279599L ^ var31;
+                                                                     short var128 = 25907;
+                                                                     var144 = 5198717590105279599L ^ var31;
                                                                      long var105 = var104 << 56;
-                                                                     long var127 = var40[1] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var146 = 9055;
+                                                                     long var129 = var40[1] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var148 = 9055;
                                                                      long var10005 = 2571977288923187742L ^ var31;
-                                                                     long var106 = var105 | var127 << 48;
-                                                                     long var128 = var40[2] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var147 = 5923;
+                                                                     long var106 = var105 | var129 << 48;
+                                                                     long var130 = var40[2] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var149 = 5923;
                                                                      var10005 = 1852211006141841007L ^ var31;
-                                                                     long var107 = var106 | var128 << 40;
-                                                                     long var129 = var40[3] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var148 = 17214;
+                                                                     long var107 = var106 | var130 << 40;
+                                                                     long var131 = var40[3] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var150 = 17214;
                                                                      var10005 = 670189832062724726L ^ var31;
-                                                                     long var108 = var107 | var129 << 32;
-                                                                     long var130 = var40[4] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var149 = 16889;
+                                                                     long var108 = var107 | var131 << 32;
+                                                                     long var132 = var40[4] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var151 = 16889;
                                                                      var10005 = 3483920234122864831L ^ var31;
-                                                                     long var109 = var108 | var130 << 24;
-                                                                     long var131 = var40[5] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var150 = 18265;
+                                                                     long var109 = var108 | var132 << 24;
+                                                                     long var133 = var40[5] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var152 = 18265;
                                                                      var10005 = 8267453067577880082L ^ var31;
-                                                                     long var110 = var109 | var131 << 16;
-                                                                     short var151 = 12274;
+                                                                     long var110 = var109 | var133 << 16;
+                                                                     short var153 = 12274;
                                                                      var10005 = 7796386902145140384L ^ var31;
-                                                                     long var132 = var40[6] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     short var152 = 15989;
+                                                                     long var134 = var40[6] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     short var154 = 15989;
                                                                      var10005 = 4620495295056975679L ^ var31;
-                                                                     long var111 = var110
-                                                                        | var132 << 8
-                                                                        | var40[b<"a">(14037, 8588635313366409137L ^ var31)]
-                                                                           & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                     byte var133 = -1;
+                                                                     long var111 = var110 | var134 << 8;
+                                                                     short var155 = 14037;
+                                                                     var10005 = 8588635313366409137L ^ var31;
+                                                                     long var112 = var111 | var40[7] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                     byte var135 = -1;
 
                                                                      while (true) {
-                                                                        var142 = var111 ^ var33;
-                                                                        switch (var133) {
+                                                                        var144 = var112 ^ var33;
+                                                                        switch (var135) {
                                                                            case 0:
-                                                                              var68[var86] = var142;
+                                                                              var68[var86] = var144;
                                                                               if (var35 >= var38) {
                                                                                  d = var39;
                                                                                  short var69 = 15989;
@@ -536,7 +538,7 @@ public abstract class brc implements cdw {
                                                                               }
                                                                               break;
                                                                            default:
-                                                                              var68[var86] = var142;
+                                                                              var68[var86] = var144;
                                                                               if (var35 < var38) {
                                                                                  continue label65;
                                                                               }
@@ -550,40 +552,40 @@ public abstract class brc implements cdw {
                                                                         var40 = var37.substring(var88, var35).getBytes(var22[2]);
                                                                         var68 = var39;
                                                                         var86 = var36++;
-                                                                        long var113 = var40[0] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var135 = 29928;
-                                                                        var142 = 235775882534903228L ^ var31;
-                                                                        long var114 = var113 << 56;
-                                                                        long var136 = var40[1] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var156 = 8128;
+                                                                        long var114 = var40[0] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var137 = 29928;
+                                                                        var144 = 235775882534903228L ^ var31;
+                                                                        long var115 = var114 << 56;
+                                                                        long var138 = var40[1] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var159 = 8128;
                                                                         var10005 = 4774315336913204907L ^ var31;
-                                                                        long var115 = var114 | var136 << 48;
-                                                                        long var137 = var40[2] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var157 = 20393;
+                                                                        long var116 = var115 | var138 << 48;
+                                                                        long var139 = var40[2] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var160 = 20393;
                                                                         var10005 = 6782224634449356542L ^ var31;
-                                                                        long var116 = var115 | var137 << 40;
-                                                                        long var138 = var40[3] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var158 = 2468;
+                                                                        long var117 = var116 | var139 << 40;
+                                                                        long var140 = var40[3] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var161 = 2468;
                                                                         var10005 = 5555448489969524942L ^ var31;
-                                                                        long var117 = var116 | var138 << 32;
-                                                                        long var139 = var40[4] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var159 = 2769;
+                                                                        long var118 = var117 | var140 << 32;
+                                                                        long var141 = var40[4] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var162 = 2769;
                                                                         var10005 = 399697484270052233L ^ var31;
-                                                                        long var118 = var117 | var139 << 24;
-                                                                        long var140 = var40[5] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var160 = 9853;
+                                                                        long var119 = var118 | var141 << 24;
+                                                                        long var142 = var40[5] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var163 = 9853;
                                                                         var10005 = 2257071279948140350L ^ var31;
-                                                                        long var119 = var118 | var140 << 16;
-                                                                        short var161 = 6960;
+                                                                        long var120 = var119 | var142 << 16;
+                                                                        short var164 = 6960;
                                                                         var10005 = 1306994481774768741L ^ var31;
-                                                                        long var141 = var40[6] & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        short var162 = 15989;
+                                                                        long var143 = var40[6] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        short var165 = 15989;
                                                                         var10005 = 4620495295056975679L ^ var31;
-                                                                        var111 = var119
-                                                                           | var141 << 8
-                                                                           | var40[b<"a">(14037, 8588635313366409137L ^ var31)]
-                                                                              & d<"s">(31053, 1240594016998573648L ^ var31);
-                                                                        var133 = 0;
+                                                                        long var121 = var120 | var143 << 8;
+                                                                        short var166 = 14037;
+                                                                        var10005 = 8588635313366409137L ^ var31;
+                                                                        var112 = var121 | var40[7] & d<"s">(31053, 1240594016998573648L ^ var31);
+                                                                        var135 = 0;
                                                                      }
                                                                   }
                                                                }
@@ -614,7 +616,7 @@ public abstract class brc implements cdw {
                                                 }
                                                 break;
                                              default:
-                                                var59[var76] = var142;
+                                                var59[var76] = var144;
                                                 if (var2 < var5) {
                                                    continue label87;
                                                 }
@@ -637,13 +639,13 @@ public abstract class brc implements cdw {
                                              | (var7[5] & 255L) << 16
                                              | (var7[6] & 255L) << 8
                                              | var7[7] & 255L;
-                                          var124 = 0;
+                                          var126 = 0;
                                        }
                                     }
                                  }
                                  break;
                               default:
-                                 var57[var10001] = var142;
+                                 var57[var10001] = var144;
                                  if (var13 < var16) {
                                     continue label103;
                                  }
@@ -666,7 +668,7 @@ public abstract class brc implements cdw {
                               | (var18[5] & 255L) << 16
                               | (var18[6] & 255L) << 8
                               | var18[7] & 255L;
-                           var121 = 0;
+                           var123 = 0;
                         }
                      }
                   }
@@ -717,35 +719,45 @@ public abstract class brc implements cdw {
          char var10005 = var10001[var4];
          short var10008 = 5360;
          long var10009 = 2993829047808837843L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> b<"a">(14037, 8588571182351182532L ^ var2);
-            case 1 -> {
-               short var14 = 20989;
-               long var19 = 6788041059924807111L ^ var2;
-               yield 51;
-            }
-            case 2 -> {
-               short var13 = 2272;
-               long var18 = 7823442287044941000L ^ var2;
-               yield 54;
-            }
-            case 3 -> {
-               short var12 = 10185;
-               long var17 = 2089630849728150480L ^ var2;
-               yield 82;
-            }
-            case 4 -> {
-               short var11 = 8089;
-               long var16 = 6349018760795603881L ^ var2;
-               yield 117;
-            }
-            case 5 -> {
-               short var10 = 12653;
-               long var15 = 7926735262950911322L ^ var2;
-               yield 20;
-            }
-            default -> b<"a">(16324, 5982873725061850068L ^ var2);
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 14037;
+               long var23 = 8588571182351182532L ^ var2;
+               var10 = 7;
+               break;
+            case 1:
+               var10 = 20989;
+               long var22 = 6788041059924807111L ^ var2;
+               var10 = 51;
+               break;
+            case 2:
+               var10 = 2272;
+               long var21 = 7823442287044941000L ^ var2;
+               var10 = 54;
+               break;
+            case 3:
+               var10 = 10185;
+               long var20 = 2089630849728150480L ^ var2;
+               var10 = 82;
+               break;
+            case 4:
+               var10 = 8089;
+               long var19 = 6349018760795603881L ^ var2;
+               var10 = 117;
+               break;
+            case 5:
+               var10 = 12653;
+               long var18 = 7926735262950911322L ^ var2;
+               var10 = 20;
+               break;
+            default:
+               var10 = 16324;
+               long var17 = 5982873725061850068L ^ var2;
+               var10 = 12;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

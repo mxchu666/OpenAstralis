@@ -52,6 +52,7 @@ import net.minecraft.class_2924;
 import net.minecraft.class_3966;
 import net.minecraft.class_5890;
 import net.minecraft.class_5891;
+import net.minecraft.class_634;
 import net.minecraft.class_6373;
 import net.minecraft.class_6682;
 import net.minecraft.class_742;
@@ -154,7 +155,9 @@ public class bqe extends hcr {
       short var20 = 12645;
       var10004 = 7088163015709074361L ^ ax;
       var4[9] = a.bka;
-      var4[b<"y">(11494, 2049622811185626685L ^ ax)] = a.cir;
+      short var21 = 11494;
+      var10004 = 2049622811185626685L ^ ax;
+      var4[10] = a.cir;
       a.dxe(var4);
    }
 
@@ -424,8 +427,11 @@ public class bqe extends hcr {
                      }
 
                      if (var10) {
-                        chi.method_1562()
-                           .method_52787(new class_2868((chi.field_1724.method_31548().method_67532() + 1) % b<"y">(597, 1220324703165440081L ^ ax)));
+                        class_634 var15 = chi.method_1562();
+                        int var10003 = chi.field_1724.method_31548().method_67532() + 1;
+                        short var10004 = 597;
+                        long var10005 = 1220324703165440081L ^ ax;
+                        var15.method_52787(new class_2868(var10003 % 9));
                         chi.method_1562().method_52787(new class_2868(chi.field_1724.method_31548().method_67532()));
                      }
 
@@ -444,7 +450,7 @@ public class bqe extends hcr {
                }
             }
 
-            var15 = a;
+            var16 = a;
             if (axx == null) {
                break label128;
             }
@@ -456,10 +462,10 @@ public class bqe extends hcr {
             return;
          }
 
-         var15 = a;
+         var16 = a;
       }
 
-      var15.ffc = false;
+      var16.ffc = false;
    }
 
    @gdz

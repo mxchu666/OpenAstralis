@@ -95,12 +95,12 @@ public class dhd extends hcr {
    public void bjm(eih event) {
       long ax = dhd.a ^ 257300566753L;
       int[] var4 = dar.abu();
-      double var14;
-      int var10000 = (var14 = chi.field_1724.field_6017 - 2.0) == 0.0 ? 0 : (var14 < 0.0 ? -1 : 1);
+      double var21;
+      int var10000 = (var21 = chi.field_1724.field_6017 - 2.0) == 0.0 ? 0 : (var21 < 0.0 ? -1 : 1);
       if (var4 != null) {
          if (var10000 > 0) {
             short var10 = 9602;
-            long var13 = 2509324787992222630L ^ ax;
+            long var16 = 2509324787992222630L ^ ax;
             bpa.bez("returning");
             a.bbc = false;
             return;
@@ -117,16 +117,24 @@ public class dhd extends hcr {
                break label118;
             }
 
-            int var10001 = 18064;
+            short var10001 = 18064;
             long var10002 = 7970135963408507945L ^ ax;
             if (hjr > 6) {
                var10000 = hjr;
-               var10001 = a.dtm.dnp();
+               short var11 = a.dtm.dnp();
                if (var4 != null) {
-                  var10001 = var10001 == 0 ? b<"v">(7965, 1156506804215971238L ^ ax) : b<"v">(14958, 7772505167693895892L ^ ax);
+                  if (var11 == 0) {
+                     var11 = 7965;
+                     var10002 = 1156506804215971238L ^ ax;
+                     var11 = 16;
+                  } else {
+                     var11 = 14958;
+                     var10002 = 7772505167693895892L ^ ax;
+                     var11 = 20;
+                  }
                }
 
-               if (var10000 < var10001) {
+               if (var10000 < var11) {
                   label122: {
                      var10000 = chi.field_1724.field_6012 % 3;
                      if (var4 != null) {
@@ -168,15 +176,19 @@ public class dhd extends hcr {
 
       if (var10000 != 0) {
          class_304 var8 = chi.field_1690.field_1903;
-         boolean var12 = a.bow.fsc(d<"v">(12925, 176474913801848730L ^ ax));
+         short var19 = 12925;
+         long var10003 = 176474913801848730L ^ ax;
+         short var14 = a.bow.fsc(500L);
          if (var4 != null) {
-            var12 = !var12;
+            var14 = !var14;
          }
 
-         var8.method_23481(var12);
+         var8.method_23481((boolean)var14);
          cbm var9 = a.bow;
          if (var4 != null) {
-            if (!a.bow.fsc(d<"v">(339, 3280056923267200181L ^ ax))) {
+            var14 = 339;
+            long var20 = 3280056923267200181L ^ ax;
+            if (!a.bow.fsc(1000L)) {
                return;
             }
 

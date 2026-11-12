@@ -46,44 +46,45 @@ public class der extends guu {
       super(bfm.VISUAL);
       short var10003 = 594;
       long var10004 = 8202393272308847833L ^ a;
-      short var12 = 16655;
+      short var13 = 16655;
       long var10005 = 1924092404768151455L ^ a;
-      short var21 = 17904;
+      short var23 = 17904;
       long var10006 = 4888670143474169709L ^ a;
-      String[] var22 = new String[9];
+      String[] var24 = new String[9];
       short var10008 = 10652;
       long var10009 = 3146712035735994140L ^ a;
-      var22[0] = "Product Sans Regular";
+      var24[0] = "Product Sans Regular";
       var10008 = 27381;
       var10009 = 789517440437075065L ^ a;
-      var22[1] = "Product Sans Bold";
+      var24[1] = "Product Sans Bold";
       var10008 = 8938;
       var10009 = 167736360851272813L ^ a;
-      var22[2] = "JetBrains-Regular";
+      var24[2] = "JetBrains-Regular";
       var10008 = 27740;
       var10009 = 7397281211146222301L ^ a;
-      var22[3] = "JetBrains-Bold";
+      var24[3] = "JetBrains-Bold";
       var10008 = 1408;
       var10009 = 4742534046867116814L ^ a;
-      var22[4] = "Poppins-Regular";
+      var24[4] = "Poppins-Regular";
       var10008 = 9949;
       var10009 = 5895107413476110421L ^ a;
-      var22[5] = "Poppins-Bold";
-      int var10007 = 5006;
-      long var30 = 8415853406848950546L ^ a;
+      var24[5] = "Poppins-Bold";
+      short var10007 = 5006;
+      long var32 = 8415853406848950546L ^ a;
       var10008 = 11335;
       var10009 = 6124567891092601540L ^ a;
-      var22[6] = "Sf-Regular";
-      var10007 = e<"t">(24793, 6314581829626745410L ^ a);
+      var24[6] = "Sf-Regular";
+      var10007 = 24793;
+      long var34 = 6314581829626745410L ^ a;
       var10008 = 22357;
       var10009 = 8440569293560119770L ^ a;
-      var22[var10007] = "Sf-Bold";
-      short var24 = 23016;
-      long var33 = 1518589552073403249L ^ a;
+      var24[7] = "Sf-Bold";
+      var10007 = 23016;
+      long var36 = 1518589552073403249L ^ a;
       var10008 = 733;
       var10009 = 7700161758414033999L ^ a;
-      var22[8] = "Tahoma";
-      a.gco = new adu("Font", "Product Sans Regular", var22);
+      var24[8] = "Tahoma";
+      a.gco = new adu("Font", "Product Sans Regular", var24);
       var10003 = 3876;
       var10004 = 4517214158943148454L ^ a;
       a.dk = new gbp("Text Shadow", true);
@@ -98,7 +99,7 @@ public class der extends guu {
       a.chs = new acn("Text Color", Color.WHITE);
       var10003 = 26178;
       var10004 = 3808487343831855311L ^ a;
-      short var43 = 30710;
+      short var46 = 30710;
       long var10010 = 3353493486050559342L ^ a;
       a.eok = new acn("Background Color", new Color(0, 0, 0, 150));
       var10003 = 7607;
@@ -113,7 +114,9 @@ public class der extends guu {
       var10003 = 12601;
       var10004 = 924028140932531107L ^ a;
       var3[6] = a.aih;
-      var3[e<"t">(21668, 7062375412798154288L ^ a)] = a.ait;
+      var10003 = 21668;
+      var10004 = 7062375412798154288L ^ a;
+      var3[7] = a.ait;
       a.bfi(var3);
    }
 
@@ -259,7 +262,9 @@ public class der extends guu {
             short var10002 = 12601;
             long var10003 = 923957247204485151L ^ ax;
             var48[6] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1322, axxxxxxxxx.field_1324);
-            var48[e<"t">(21668, 7062446375143968140L ^ ax)] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1325, axxxxxxxxx.field_1324);
+            var10002 = 21668;
+            var10003 = 7062446375143968140L ^ ax;
+            var48[7] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1325, axxxxxxxxx.field_1324);
             class_243[] axxxxxxxxxx = var48;
             axxxx = null;
             class_243[] axxxxxxxxxxx = axxxxxxxxxx;
@@ -274,8 +279,8 @@ public class der extends guu {
                class_243 axxxxxxxxxxxxxx = axxxxxxxxxxx[axxxxxxxxxxxxx];
                class_243 axxxxxxxxxxxxxxx = guf.at(axxxxxxxxxxxxxx);
                if (axx != null) {
-                  double var60;
-                  var42 = (var60 = axxxxxxxxxxxxxxx.field_1350 - 0.0) == 0.0 ? 0 : (var60 < 0.0 ? -1 : 1);
+                  double var62;
+                  var42 = (var62 = axxxxxxxxxxxxxxx.field_1350 - 0.0) == 0.0 ? 0 : (var62 < 0.0 ? -1 : 1);
                   if (axx == null) {
                      break;
                   }
@@ -321,7 +326,7 @@ public class der extends guu {
             float axxxxxxxxx = (float)axxxx.w;
             String var51 = a.gco.dnp();
             short var54 = 29637;
-            long var57 = 1877102437158234855L ^ ax;
+            long var58 = 1877102437158234855L ^ ax;
             fll axxxxxxxxxx = bxc.emc(var51, 9);
             float axxxxxxxxxxx = (axxxxxx + axxxxxxxx) / 2.0F;
             float axxxxxxxxxxxx = axxxxxxx - 10.0F;
@@ -333,7 +338,7 @@ public class der extends guu {
                class_124 axxxxxxxxxxxxxxxxxxx = a.dak(axxxxxxxxxxxxxxxxxx);
                StringBuilder var52 = axxxxxxxxxxxxxxxx.append(axxxxxxxxxxxxxxxxxxx);
                var54 = 6745;
-               var57 = 47410651065198432L ^ ax;
+               var58 = 47410651065198432L ^ ax;
                var52.append(String.format(" %.1f", axxxxxxxxxxxxxxxxx));
             }
 
@@ -342,7 +347,7 @@ public class der extends guu {
             label149: {
                axxxxxxxxxxxxxxxxx = axxxxxxxxxx.eq(axxxxxxxxxxxxxxxx.toString());
                var54 = 8080;
-               var57 = 4855583524764426920L ^ ax;
+               var58 = 4855583524764426920L ^ ax;
                axxxxxxxxxxxxxxxxxx = axxxxxxxxxx.biu("Ay");
                float axxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxx + a.ait.dnp().intValue() * 4;
                float axxxxxxxxxxxxxxxxxxxx = axxxxxxxxxxxxxxxxxx + a.ait.dnp().intValue() * 2;

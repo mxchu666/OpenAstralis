@@ -282,9 +282,9 @@ public class MixinMinecraftClient implements dlc {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var14 = var12.doFinal("®\u0012\u008c²«¤å@\u009bØÂ\u0099f\u0018Ü3éaR\u0096\u001fI7¯Bs5~À&öï".getBytes("ISO-8859-1"));
-      String var34 = a(var14).intern();
+      String var36 = a(var14).intern();
       int var10001 = -1;
-      String var11 = var34;
+      String var11 = var36;
       e = new HashMap(13);
       Cipher var0;
       var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -310,7 +310,7 @@ public class MixinMinecraftClient implements dlc {
          byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
          long[] var26 = var6;
          var10001 = var3++;
-         long var36 = (var7[0] & 255L) << 56
+         long var38 = (var7[0] & 255L) << 56
             | (var7[1] & 255L) << 48
             | (var7[2] & 255L) << 40
             | (var7[3] & 255L) << 32
@@ -318,10 +318,10 @@ public class MixinMinecraftClient implements dlc {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var41 = -1;
+         byte var43 = -1;
 
          while (true) {
-            long var8 = var36;
+            long var8 = var38;
             byte[] var10 = var0.doFinal(
                new byte[]{
                   (byte)(var8 >>> 56),
@@ -334,7 +334,7 @@ public class MixinMinecraftClient implements dlc {
                   (byte)var8
                }
             );
-            long var43 = (var10[0] & 255L) << 56
+            long var45 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -342,24 +342,27 @@ public class MixinMinecraftClient implements dlc {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var41) {
+            switch (var43) {
                case 0:
-                  var26[var10001] = var43;
+                  var26[var10001] = var45;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[11];
                      String[] var22 = new String[3];
+                     short var27 = 2572;
                      int var20 = 0;
-                     long var31 = 8567582312742115005L ^ var15;
+                     long var32 = 8567582312742115005L ^ var15;
                      String var19 = var11;
                      int var21 = var11.length();
-                     int var18 = a<"e">(2572, var31);
+                     char var18 = 20;
                      int var17 = -1;
 
                      while (true) {
-                        String var38 = a(a<"e">(17175, 5422982059636924325L ^ var15), a(var19.substring(++var17, var17 + var18)));
-                        byte var32 = -1;
-                        var22[var20++] = var38;
+                        short var28 = 17175;
+                        long var33 = 5422982059636924325L ^ var15;
+                        String var40 = a(30, a(var19.substring(++var17, var17 + var18)));
+                        byte var34 = -1;
+                        var22[var20++] = var40;
                         if ((var17 += var18) >= var21) {
                            a = var22;
                            return;
@@ -370,7 +373,7 @@ public class MixinMinecraftClient implements dlc {
                   }
                   break;
                default:
-                  var26[var10001] = var43;
+                  var26[var10001] = var45;
                   if (var2 < var5) {
                      continue label40;
                   }
@@ -380,12 +383,12 @@ public class MixinMinecraftClient implements dlc {
                   var2 = 0;
             }
 
-            byte var30 = var2;
+            byte var31 = var2;
             var2 += 8;
-            var7 = var4.substring(var30, var2).getBytes("ISO-8859-1");
+            var7 = var4.substring(var31, var2).getBytes("ISO-8859-1");
             var26 = var6;
             var10001 = var3++;
-            var36 = (var7[0] & 255L) << 56
+            var38 = (var7[0] & 255L) << 56
                | (var7[1] & 255L) << 48
                | (var7[2] & 255L) << 40
                | (var7[3] & 255L) << 32
@@ -393,7 +396,7 @@ public class MixinMinecraftClient implements dlc {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var41 = 0;
+            var43 = 0;
          }
       }
    }
@@ -405,7 +408,7 @@ public class MixinMinecraftClient implements dlc {
          char var10003 = var10000[0];
          short var10004 = 10861;
          long var10005 = 4873099594159038820L ^ var1;
-         var10000[0] = (char)(var10003 ^ -211873448);
+         var10000[0] = (char)(var10003 ^ 'N');
       }
 
       return var10000;
@@ -422,42 +425,42 @@ public class MixinMinecraftClient implements dlc {
          char var10005 = var10001[var4];
          short var10008 = 23422;
          long var10009 = 4854242228639816079L ^ var2;
-         int var10;
+         byte var10;
          switch (var4 % 7) {
             case 0:
-               short var16 = 31517;
+               var10 = 31517;
                long var23 = 6156418384615766499L ^ var2;
                var10 = 56;
                break;
             case 1:
-               short var15 = 7983;
+               var10 = 7983;
                long var22 = 774448056870051293L ^ var2;
                var10 = 91;
                break;
             case 2:
-               short var14 = 11842;
+               var10 = 11842;
                long var21 = 4483751090282802358L ^ var2;
-               var10 = 1943274939;
+               var10 = 107;
                break;
             case 3:
-               short var13 = 22103;
+               var10 = 22103;
                long var20 = 6445612879106495652L ^ var2;
                var10 = 14;
                break;
             case 4:
-               short var12 = 9412;
+               var10 = 9412;
                long var19 = 5831988916384671283L ^ var2;
-               var10 = 300995963;
+               var10 = 82;
                break;
             case 5:
-               short var11 = 22328;
+               var10 = 22328;
                long var18 = 3633077934430705096L ^ var2;
                var10 = 72;
                break;
             default:
-               short var10007 = 3229;
+               var10 = 3229;
                long var17 = 4117806273565986408L ^ var2;
-               var10 = 670517255;
+               var10 = 78;
          }
 
          var10001[var4] = (char)(var10005 ^ var10002 ^ var10);

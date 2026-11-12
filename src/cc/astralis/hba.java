@@ -227,13 +227,13 @@ public class hba extends guu {
          axx = axxxxxx.field_1343;
          axxx = chi.field_1724.method_36454();
          axxxxx = var10000;
-         float var23;
-         var14 = (var23 = ax - 0.0F) == 0.0F ? 0 : (var23 < 0.0F ? -1 : 1);
+         float var27;
+         var14 = (var27 = ax - 0.0F) == 0.0F ? 0 : (var27 < 0.0F ? -1 : 1);
          label98:
          if (axxxxx != null) {
             if (!var14) {
-               float var24;
-               var14 = (var24 = axx - 0.0F) == 0.0F ? 0 : (var24 < 0.0F ? -1 : 1);
+               float var28;
+               var14 = (var28 = axx - 0.0F) == 0.0F ? 0 : (var28 < 0.0F ? -1 : 1);
                if (axxxxx == null) {
                   break label98;
                }
@@ -249,27 +249,29 @@ public class hba extends guu {
                break label108;
             }
 
-            float var25;
-            var14 = (var25 = ax - 0.0F) == 0.0F ? 0 : (var25 < 0.0F ? -1 : 1);
+            float var29;
+            var14 = (var29 = ax - 0.0F) == 0.0F ? 0 : (var29 < 0.0F ? -1 : 1);
          }
 
          if (var14) {
             label86: {
                label104: {
                   label105: {
-                     float var26;
-                     var16 = (var26 = axx - 0.0F) == 0.0F ? 0 : (var26 < 0.0F ? -1 : 1);
+                     float var30;
+                     var16 = (var30 = axx - 0.0F) == 0.0F ? 0 : (var30 < 0.0F ? -1 : 1);
                      if (axxxxx != null) {
                         if (var16 > 0) {
-                           float var27;
-                           int var18 = (var27 = ax - 0.0F) == 0.0F ? 0 : (var27 < 0.0F ? -1 : 1);
+                           float var31;
+                           int var18 = (var31 = ax - 0.0F) == 0.0F ? 0 : (var31 < 0.0F ? -1 : 1);
                            if (axxxxx != null) {
                               if (var18 > 0) {
                                  short var19 = 30265;
                                  long var10002 = 8175003037628520949L ^ axxxx;
                                  var18 = -45;
                               } else {
-                                 var18 = e<"r">(27860, 5756842712019714842L ^ axxxx);
+                                 short var20 = 27860;
+                                 long var24 = 5756842712019714842L ^ axxxx;
+                                 var18 = 45;
                               }
                            }
 
@@ -279,8 +281,8 @@ public class hba extends guu {
                            }
                         }
 
-                        float var28;
-                        var16 = (var28 = axx - 0.0F) == 0.0F ? 0 : (var28 < 0.0F ? -1 : 1);
+                        float var32;
+                        var16 = (var32 = axx - 0.0F) == 0.0F ? 0 : (var32 < 0.0F ? -1 : 1);
                      }
 
                      if (axxxxx == null) {
@@ -288,19 +290,21 @@ public class hba extends guu {
                      }
 
                      if (var16 < 0) {
-                        float var29;
-                        int var20 = (var29 = ax - 0.0F) == 0.0F ? 0 : (var29 < 0.0F ? -1 : 1);
+                        float var33;
+                        int var21 = (var33 = ax - 0.0F) == 0.0F ? 0 : (var33 < 0.0F ? -1 : 1);
                         if (axxxxx != null) {
-                           if (var20 > 0) {
-                              short var21 = 18134;
-                              long var22 = 4423536969941641499L ^ axxxx;
-                              var20 = 45;
+                           if (var21 > 0) {
+                              short var22 = 18134;
+                              long var25 = 4423536969941641499L ^ axxxx;
+                              var21 = 45;
                            } else {
-                              var20 = e<"r">(27914, 6374836723052036805L ^ axxxx);
+                              short var23 = 27914;
+                              long var26 = 6374836723052036805L ^ axxxx;
+                              var21 = -45;
                            }
                         }
 
-                        axxx += var20;
+                        axxx += var21;
                      }
                   }
 
@@ -310,8 +314,8 @@ public class hba extends guu {
                      break label86;
                   }
 
-                  float var30;
-                  var16 = (var30 = ax - 0.0F) == 0.0F ? 0 : (var30 < 0.0F ? -1 : 1);
+                  float var34;
+                  var16 = (var34 = ax - 0.0F) == 0.0F ? 0 : (var34 < 0.0F ? -1 : 1);
                }
 
                var15 = var16 > 0 ? 1.0F : -1.0F;
@@ -570,281 +574,54 @@ public class hba extends guu {
       }
    }
 
-   private static int e(int param0, long param1) {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.OutOfMemoryError: Java heap space
-      //   at org.jetbrains.java.decompiler.util.collections.SFormsFastMapDirect.getCopy(SFormsFastMapDirect.java:57)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.VarMapHolder.ofNormal(VarMapHolder.java:34)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.ssaStatements(SFormsConstructor.java:110)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SFormsConstructor.splitVariables(SFormsConstructor.java:94)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.sforms.SSAUConstructorSparseEx.splitVariables(SSAUConstructorSparseEx.java:43)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.StackVarsProcessor.simplifyStackVars(StackVarsProcessor.java:65)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.StackVarsProcessor.simplifyStackVars(StackVarsProcessor.java:40)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:231)
-      //
-      // Bytecode:
-      // 000: iload 0
-      // 001: lload 1
-      // 002: ldc2_w 32767
-      // 005: land
-      // 006: l2i
-      // 007: ixor
-      // 008: sipush 6148
-      // 00b: ixor
-      // 00c: istore 3
-      // 00d: getstatic cc/astralis/hba.q [Ljava/lang/Integer;
-      // 010: iload 3
-      // 011: aaload
-      // 012: ifnonnull 199
-      // 015: bipush 8
-      // 017: newarray 8
-      // 019: dup
-      // 01a: bipush 0
-      // 01b: lload 1
-      // 01c: bipush 56
-      // 01e: lushr
-      // 01f: l2i
-      // 020: i2b
-      // 021: bastore
-      // 022: dup
-      // 023: bipush 1
-      // 024: lload 1
-      // 025: bipush 48
-      // 027: lushr
-      // 028: l2i
-      // 029: i2b
-      // 02a: bastore
-      // 02b: dup
-      // 02c: bipush 2
-      // 02d: lload 1
-      // 02e: bipush 40
-      // 030: lushr
-      // 031: l2i
-      // 032: i2b
-      // 033: bastore
-      // 034: dup
-      // 035: bipush 3
-      // 036: lload 1
-      // 037: bipush 32
-      // 039: lushr
-      // 03a: l2i
-      // 03b: i2b
-      // 03c: bastore
-      // 03d: dup
-      // 03e: bipush 4
-      // 03f: lload 1
-      // 040: bipush 24
-      // 042: lushr
-      // 043: l2i
-      // 044: i2b
-      // 045: bastore
-      // 046: dup
-      // 047: bipush 5
-      // 048: lload 1
-      // 049: bipush 16
-      // 04b: lushr
-      // 04c: l2i
-      // 04d: i2b
-      // 04e: bastore
-      // 04f: dup
-      // 050: bipush 6
-      // 052: lload 1
-      // 053: bipush 8
-      // 055: lushr
-      // 056: l2i
-      // 057: i2b
-      // 058: bastore
-      // 059: dup
-      // 05a: bipush 7
-      // 05c: lload 1
-      // 05d: l2i
-      // 05e: i2b
-      // 05f: bastore
-      // 060: astore 4
-      // 062: getstatic cc/astralis/hba.p [J
-      // 065: iload 3
-      // 066: laload
-      // 067: lstore 5
-      // 069: bipush 8
-      // 06b: newarray 8
-      // 06d: dup
-      // 06e: bipush 0
-      // 06f: lload 5
-      // 071: bipush 56
-      // 073: lushr
-      // 074: l2i
-      // 075: i2b
-      // 076: bastore
-      // 077: dup
-      // 078: bipush 1
-      // 079: lload 5
-      // 07b: bipush 48
-      // 07d: lushr
-      // 07e: l2i
-      // 07f: i2b
-      // 080: bastore
-      // 081: dup
-      // 082: bipush 2
-      // 083: lload 5
-      // 085: bipush 40
-      // 087: lushr
-      // 088: l2i
-      // 089: i2b
-      // 08a: bastore
-      // 08b: dup
-      // 08c: bipush 3
-      // 08d: lload 5
-      // 08f: bipush 32
-      // 091: lushr
-      // 092: l2i
-      // 093: i2b
-      // 094: bastore
-      // 095: dup
-      // 096: bipush 4
-      // 097: lload 5
-      // 099: bipush 24
-      // 09b: lushr
-      // 09c: l2i
-      // 09d: i2b
-      // 09e: bastore
-      // 09f: dup
-      // 0a0: bipush 5
-      // 0a1: lload 5
-      // 0a3: bipush 16
-      // 0a5: lushr
-      // 0a6: l2i
-      // 0a7: i2b
-      // 0a8: bastore
-      // 0a9: dup
-      // 0aa: bipush 6
-      // 0ac: lload 5
-      // 0ae: bipush 8
-      // 0b0: lushr
-      // 0b1: l2i
-      // 0b2: i2b
-      // 0b3: bastore
-      // 0b4: dup
-      // 0b5: bipush 7
-      // 0b7: lload 5
-      // 0b9: l2i
-      // 0ba: i2b
-      // 0bb: bastore
-      // 0bc: astore 7
-      // 0be: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
-      // 0c1: invokevirtual java/lang/Thread.threadId ()J
-      // 0c4: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 0c7: astore 8
-      // 0c9: getstatic cc/astralis/hba.r Ljava/util/Map;
-      // 0cc: aload 8
-      // 0ce: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 0d3: checkcast [Ljava/lang/Object;
-      // 0d6: astore 9
-      // 0d8: aload 9
-      // 0da: ifnonnull 113
-      // 0dd: bipush 3
-      // 0de: anewarray 469
-      // 0e1: astore 9
-      // 0e3: aload 9
-      // 0e5: bipush 0
-      // 0e6: ldc_w "DES/CBC/NoPadding"
-      // 0e9: invokestatic javax/crypto/Cipher.getInstance (Ljava/lang/String;)Ljavax/crypto/Cipher;
-      // 0ec: aastore
-      // 0ed: aload 9
-      // 0ef: bipush 1
-      // 0f0: ldc_w "DES"
-      // 0f3: invokestatic javax/crypto/SecretKeyFactory.getInstance (Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
-      // 0f6: aastore
-      // 0f7: aload 9
-      // 0f9: bipush 2
-      // 0fa: new javax/crypto/spec/IvParameterSpec
-      // 0fd: dup
-      // 0fe: bipush 8
-      // 100: newarray 8
-      // 102: invokespecial javax/crypto/spec/IvParameterSpec.<init> ([B)V
-      // 105: aastore
-      // 106: getstatic cc/astralis/hba.r Ljava/util/Map;
-      // 109: aload 8
-      // 10b: aload 9
-      // 10d: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 112: pop
-      // 113: new javax/crypto/spec/DESKeySpec
-      // 116: dup
-      // 117: aload 4
-      // 119: invokespecial javax/crypto/spec/DESKeySpec.<init> ([B)V
-      // 11c: astore 11
-      // 11e: aload 9
-      // 120: bipush 1
-      // 121: aaload
-      // 122: checkcast javax/crypto/SecretKeyFactory
-      // 125: aload 11
-      // 127: invokevirtual javax/crypto/SecretKeyFactory.generateSecret (Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
-      // 12a: astore 12
-      // 12c: aload 9
-      // 12e: bipush 0
-      // 12f: aaload
-      // 130: checkcast javax/crypto/Cipher
-      // 133: astore 13
-      // 135: aload 13
-      // 137: bipush 2
-      // 138: aload 12
-      // 13a: aload 9
-      // 13c: bipush 2
-      // 13d: aaload
-      // 13e: checkcast javax/crypto/spec/IvParameterSpec
-      // 141: invokevirtual javax/crypto/Cipher.init (ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
-      // 144: aload 13
-      // 146: aload 7
-      // 148: invokevirtual javax/crypto/Cipher.doFinal ([B)[B
-      // 14b: astore 10
-      // 14d: goto 15f
-      // 150: astore 11
-      // 152: new java/lang/RuntimeException
-      // 155: dup
-      // 156: ldc_w "cc/astralis/hba"
-      // 159: aload 11
-      // 15b: invokespecial java/lang/RuntimeException.<init> (Ljava/lang/String;Ljava/lang/Throwable;)V
-      // 15e: athrow
-      // 15f: aload 10
-      // 161: bipush 4
-      // 162: baload
-      // 163: sipush 255
-      // 166: iand
-      // 167: bipush 24
-      // 169: ishl
-      // 16a: aload 10
-      // 16c: bipush 5
-      // 16d: baload
-      // 16e: sipush 255
-      // 171: iand
-      // 172: bipush 16
-      // 174: ishl
-      // 175: ior
-      // 176: aload 10
-      // 178: bipush 6
-      // 17a: baload
-      // 17b: sipush 255
-      // 17e: iand
-      // 17f: bipush 8
-      // 181: ishl
-      // 182: ior
-      // 183: aload 10
-      // 185: bipush 7
-      // 187: baload
-      // 188: sipush 255
-      // 18b: iand
-      // 18c: ior
-      // 18d: istore 11
-      // 18f: getstatic cc/astralis/hba.q [Ljava/lang/Integer;
-      // 192: iload 3
-      // 193: iload 11
-      // 195: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 198: aastore
-      // 199: getstatic cc/astralis/hba.q [Ljava/lang/Integer;
-      // 19c: iload 3
-      // 19d: aaload
-      // 19e: invokevirtual java/lang/Integer.intValue ()I
-      // 1a1: ireturn
+   private static int e(int var0, long var1) {
+      int var3 = var0 ^ (int)(var1 & 32767L) ^ 6148;
+      if (q[var3] == null) {
+         byte[] var4 = new byte[]{
+            (byte)(var1 >>> 56),
+            (byte)(var1 >>> 48),
+            (byte)(var1 >>> 40),
+            (byte)(var1 >>> 32),
+            (byte)(var1 >>> 24),
+            (byte)(var1 >>> 16),
+            (byte)(var1 >>> 8),
+            (byte)var1
+         };
+         long var5 = p[var3];
+         byte[] var7 = new byte[]{
+            (byte)(var5 >>> 56),
+            (byte)(var5 >>> 48),
+            (byte)(var5 >>> 40),
+            (byte)(var5 >>> 32),
+            (byte)(var5 >>> 24),
+            (byte)(var5 >>> 16),
+            (byte)(var5 >>> 8),
+            (byte)var5
+         };
+         Long var8 = Thread.currentThread().threadId();
+         Object[] var9 = (Object[])r.get(var8);
+
+         byte[] var10;
+         try {
+            if (var9 == null) {
+               var9 = new Object[]{Cipher.getInstance("DES/CBC/NoPadding"), SecretKeyFactory.getInstance("DES"), new IvParameterSpec(new byte[8])};
+               r.put(var8, var9);
+            }
+
+            DESKeySpec var11 = new DESKeySpec(var4);
+            SecretKey var12 = ((SecretKeyFactory)var9[1]).generateSecret(var11);
+            Cipher var13 = (Cipher)var9[0];
+            var13.init(2, var12, (IvParameterSpec)var9[2]);
+            var10 = var13.doFinal(var7);
+         } catch (Exception var14) {
+            throw new RuntimeException("cc/astralis/hba", var14);
+         }
+
+         int var15 = (var10[4] & 255) << 24 | (var10[5] & 255) << 16 | (var10[6] & 255) << 8 | var10[7] & 255;
+         q[var3] = var15;
+      }
+
+      return q[var3];
    }
 
    private static int e(Lookup var0, MutableCallSite var1, String var2, Object[] var3) {

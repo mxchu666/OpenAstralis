@@ -1,5 +1,6 @@
 package cc.astralis;
 
+import imgui.type.ImFloat;
 import java.lang.invoke.CallSite;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -74,118 +75,70 @@ public class hia extends guu {
 
    @gdz
    public void arr(fxx event) {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      //
-      // Bytecode:
-      // 000: getstatic cc/astralis/hia.a J
-      // 003: ldc2_w 16277571241027
-      // 006: lxor
-      // 007: lstore 2
-      // 008: invokestatic cc/astralis/dar.abu ()[I
-      // 00b: aload 0
-      // 00c: getfield cc/astralis/hia.ata Lcc/astralis/adu;
-      // 00f: invokevirtual cc/astralis/adu.dnp ()Ljava/lang/Object;
-      // 012: checkcast java/lang/String
-      // 015: astore 5
-      // 017: bipush -1
-      // 018: istore 6
-      // 01a: astore 4
-      // 01c: aload 5
-      // 01e: invokevirtual java/lang/String.hashCode ()I
-      // 021: aload 4
-      // 023: ifnull 09f
-      // 026: lookupswitch 119 2 -1955878649 30 2029746065 77
-      // 040: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 043: athrow
-      // 044: aload 5
-      // 046: sipush 9937
-      // 049: ldc2_w 4955445762010504194
-      // 04c: lload 2
-      // 04d: lxor
-      // 04e: pop2
-      // 04f: pop
-      // 050: ldc "Normal"
-      // 052: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 055: aload 4
-      // 057: ifnull 09f
-      // 05a: goto 061
-      // 05d: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 060: athrow
-      // 061: ifeq 09d
-      // 064: goto 06b
-      // 067: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 06a: athrow
-      // 06b: bipush 0
-      // 06c: istore 6
-      // 06e: aload 4
-      // 070: ifnonnull 09d
-      // 073: aload 5
-      // 075: sipush 15357
-      // 078: ldc2_w 5047487045264326959
-      // 07b: lload 2
-      // 07c: lxor
-      // 07d: pop2
-      // 07e: pop
-      // 07f: ldc "Custom"
-      // 081: invokevirtual java/lang/String.equals (Ljava/lang/Object;)Z
-      // 084: aload 4
-      // 086: ifnull 09f
-      // 089: goto 090
-      // 08c: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 08f: athrow
-      // 090: ifeq 09d
-      // 093: goto 09a
-      // 096: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 099: athrow
-      // 09a: bipush 1
-      // 09b: istore 6
-      // 09d: iload 6
-      // 09f: lookupswitch 135 2 0 25 1 53
-      // 0b8: aload 0
-      // 0b9: getfield cc/astralis/hia.dik Lcc/astralis/bes;
-      // 0bc: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 0bf: checkcast imgui/type/ImFloat
-      // 0c2: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 0c5: putstatic cc/astralis/cdr.aal F
-      // 0c8: aload 4
-      // 0ca: ifnonnull 126
-      // 0cd: goto 0d4
-      // 0d0: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0d3: athrow
-      // 0d4: getstatic cc/astralis/hia.chi Lnet/minecraft/class_310;
-      // 0d7: getfield net/minecraft/class_310.field_1724 Lnet/minecraft/class_746;
-      // 0da: aload 4
-      // 0dc: ifnull 11d
-      // 0df: goto 0e6
-      // 0e2: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0e5: athrow
-      // 0e6: invokevirtual net/minecraft/class_746.method_24828 ()Z
-      // 0e9: ifeq 10f
-      // 0ec: goto 0f3
-      // 0ef: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 0f2: athrow
-      // 0f3: aload 0
-      // 0f4: getfield cc/astralis/hia.gas Lcc/astralis/bes;
-      // 0f7: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 0fa: checkcast imgui/type/ImFloat
-      // 0fd: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 100: putstatic cc/astralis/cdr.aal F
-      // 103: aload 4
-      // 105: ifnonnull 126
-      // 108: goto 10f
-      // 10b: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 10e: athrow
-      // 10f: aload 0
-      // 110: getfield cc/astralis/hia.asq Lcc/astralis/bes;
-      // 113: invokevirtual cc/astralis/bes.dnp ()Ljava/lang/Object;
-      // 116: goto 11d
-      // 119: invokestatic cc/astralis/hia.a (Ljava/lang/MatchException;)Ljava/lang/MatchException;
-      // 11c: athrow
-      // 11d: checkcast imgui/type/ImFloat
-      // 120: invokevirtual imgui/type/ImFloat.floatValue ()F
-      // 123: putstatic cc/astralis/cdr.aal F
-      // 126: return
+      int[] ax;
+      int var7;
+      long axx = hia.a ^ 16277571241027L;
+      int[] var10000 = dar.abu();
+      String var5 = a.ata.dnp();
+      byte var6 = -1;
+      ax = var10000;
+      var7 = var5.hashCode();
+      label63:
+      if (ax != null) {
+         switch (var7) {
+            case -1955878649:
+               short var10001 = 9937;
+               long var10002 = 4955445762010504194L ^ axx;
+               var7 = var5.equals("Normal");
+               if (ax == null) {
+                  break label63;
+               }
+
+               if (var7 == 0) {
+                  break;
+               }
+
+               var6 = 0;
+               if (ax != null) {
+                  break;
+               }
+            case 2029746065:
+               short var9 = 15357;
+               long var10 = 5047487045264326959L ^ axx;
+               var7 = var5.equals("Custom");
+               if (ax == null) {
+                  break label63;
+               }
+
+               if (var7 != 0) {
+                  var6 = 1;
+               }
+         }
+
+         var7 = var6;
+      }
+
+      switch (var7) {
+         case 0:
+            cdr.aal = a.dik.dnp().floatValue();
+            if (ax != null) {
+               break;
+            }
+         case 1:
+            Object var8 = chi.field_1724;
+            if (ax != null) {
+               if (chi.field_1724.method_24828()) {
+                  cdr.aal = a.gas.dnp().floatValue();
+                  if (ax != null) {
+                     return;
+                  }
+               }
+
+               var8 = a.asq.dnp();
+            }
+
+            cdr.aal = ((ImFloat)var8).floatValue();
+      }
    }
 
    static {

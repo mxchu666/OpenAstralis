@@ -920,15 +920,17 @@ public class ehh extends guu {
          int axxxxx = 0;
 
          while (true) {
-            if (axxxxx < e<"f">(10841, 4218699521653630580L ^ ax)) {
-               float var10;
+            short var10001 = 10841;
+            long var10002 = 4218699521653630580L ^ ax;
+            if (axxxxx < 9) {
+               float var11;
                var8 = (
-                        var10 = chi.field_1724.method_31548().method_5438(axxxxx).method_7924(axxxx)
+                        var11 = chi.field_1724.method_31548().method_5438(axxxxx).method_7924(axxxx)
                            - chi.field_1724.method_31548().method_5438(axxx).method_7924(axxxx)
                      )
                      == 0.0F
                   ? 0
-                  : (var10 < 0.0F ? -1 : 1);
+                  : (var11 < 0.0F ? -1 : 1);
                if (axx == null) {
                   break;
                }
@@ -957,9 +959,9 @@ public class ehh extends guu {
 
          label52: {
             label79: {
-               int var10001 = chi.field_1724.method_31548().method_67532();
+               int var10 = chi.field_1724.method_31548().method_67532();
                if (axx != null) {
-                  if (var8 == var10001) {
+                  if (var8 == var10) {
                      return;
                   }
 
@@ -969,10 +971,10 @@ public class ehh extends guu {
                   }
 
                   var8 = a.gdd.dyk;
-                  var10001 = -1;
+                  var10 = -1;
                }
 
-               if (var8 != var10001) {
+               if (var8 != var10) {
                   break label52;
                }
 

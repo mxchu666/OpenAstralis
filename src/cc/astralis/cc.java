@@ -96,7 +96,7 @@ public class cc extends guu {
       a.gmw = new gbp("Fill Image", false);
       var10003 = 30803;
       var10004 = 7368985817083366237L ^ a;
-      short var47 = 1816;
+      short var48 = 1816;
       long var10005 = 668105688258229251L ^ a;
       a.bwb = new epo("Fill Image Path", "astralis/dancing-random.gif");
       var10003 = 27822;
@@ -158,7 +158,9 @@ public class cc extends guu {
       var10003 = 27055;
       var10004 = 1189271623001675777L ^ a;
       var3[6] = a.hhu.bih(a.gsw::dnp);
-      var3[e<"j">(2119, 4661292237662419453L ^ a)] = a.gaq.bih(a.gsw::dnp);
+      var10003 = 2119;
+      var10004 = 4661292237662419453L ^ a;
+      var3[7] = a.gaq.bih(a.gsw::dnp);
       var10003 = 1266;
       var10004 = 5392591739691595103L ^ a;
       var3[8] = a.fvg.bih(a.gsw::dnp);
@@ -334,7 +336,9 @@ public class cc extends guu {
                short var10002 = 793;
                long var10003 = 7253201396078628258L ^ ax;
                var41[6] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1322, axxxxxxxxx.field_1324);
-               var41[e<"j">(24016, 6537317155599553399L ^ ax)] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1325, axxxxxxxxx.field_1324);
+               var10002 = 24016;
+               var10003 = 6537317155599553399L ^ ax;
+               var41[7] = new class_243(axxxxxxxxx.field_1320, axxxxxxxxx.field_1325, axxxxxxxxx.field_1324);
                class_243[] axxxxxxxxxx = var41;
                axxxx = null;
                class_243[] axxxxxxxxxxx = axxxxxxxxxx;
@@ -349,8 +353,8 @@ public class cc extends guu {
                   class_243 axxxxxxxxxxxxxx = axxxxxxxxxxx[axxxxxxxxxxxxx];
                   class_243 axxxxxxxxxxxxxxx = guf.at(axxxxxxxxxxxxxx);
                   if (axx != null) {
-                     double var49;
-                     var35 = (var49 = axxxxxxxxxxxxxxx.field_1350 - 0.0) == 0.0 ? 0 : (var49 < 0.0 ? -1 : 1);
+                     double var51;
+                     var35 = (var51 = axxxxxxxxxxxxxxx.field_1350 - 0.0) == 0.0 ? 0 : (var51 < 0.0 ? -1 : 1);
                      if (axx == null) {
                         break;
                      }

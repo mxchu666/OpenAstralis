@@ -153,7 +153,7 @@ public enum bdq {
                         (byte)var13
                      }
                   );
-                  long var73 = (var15[0] & 255L) << 56
+                  long var74 = (var15[0] & 255L) << 56
                      | (var15[1] & 255L) << 48
                      | (var15[2] & 255L) << 40
                      | (var15[3] & 255L) << 32
@@ -163,7 +163,7 @@ public enum bdq {
                      | var15[7] & 255L;
                   switch (var70) {
                      case 0:
-                        var39[var10001] = var73;
+                        var39[var10001] = var74;
                         if (var7 >= var10) {
                            c = var11;
                            d = new Integer[15];
@@ -228,6 +228,8 @@ public enum bdq {
                                        if ((var36 += var28) >= var31) {
                                           a = var32;
                                           String[] var37 = a;
+                                          short var73 = 28465;
+                                          var74 = 7321861352567464022L ^ var25;
                                           WEEKLY = new bdq(var37[1]);
                                           MONTHLY = new bdq(var37[5]);
                                           LIFETIME = new bdq(var37[0]);
@@ -260,7 +262,7 @@ public enum bdq {
                         }
                         break;
                      default:
-                        var39[var10001] = var73;
+                        var39[var10001] = var74;
                         if (var7 < var10) {
                            continue label66;
                         }
@@ -307,7 +309,9 @@ public enum bdq {
       int var10000 = var3;
       if (var2 != null) {
          if (var3 == 0) {
-            return a<"f">(15742, 4971473586202909355L ^ var0);
+            short var4 = 15742;
+            long var10001 = 4971473586202909355L ^ var0;
+            return 98;
          }
 
          var10000 = 0;

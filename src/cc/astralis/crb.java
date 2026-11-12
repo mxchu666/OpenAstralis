@@ -62,7 +62,9 @@ public class crb extends bmd {
       long var10009 = 4201407861938241848L ^ ax;
       byte var17 = 4;
       long var10010 = 4201407861938241848L ^ ax;
-      dmp.cpp(var14, var10001, 8.0F, 8.0F, 4.0F, new Color(255, 255, 255, a<"i">(10044, 6906433462177621510L ^ ax)));
+      short var18 = 10044;
+      long var10011 = 6906433462177621510L ^ ax;
+      dmp.cpp(var14, var10001, 8.0F, 8.0F, 4.0F, new Color(255, 255, 255, 200));
       float axxxxxxx = axxxxx + 80.0F + 4.0F;
       dxy(axxxx, axxxxxxx, 80.0F, 10.0F);
       float axxxxxxxx = axxxx + a.csw * 80.0F;
@@ -225,9 +227,9 @@ public class crb extends bmd {
 
       var10000.init(2, var10002.generateSecret(new DESKeySpec(var10003)), new IvParameterSpec(new byte[8]));
       byte[] var15 = var13.doFinal("Sf-Ui".getBytes("ISO-8859-1"));
-      String var26 = a(var15).intern();
+      String var28 = a(var15).intern();
       int var10001 = -1;
-      b = var26;
+      b = var28;
       e = new HashMap(13);
       Cipher var0;
       var10000 = var0 = Cipher.getInstance("DES/CBC/NoPadding");
@@ -252,7 +254,7 @@ public class crb extends bmd {
          byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
          long[] var18 = var6;
          var10001 = var3++;
-         long var28 = (var7[0] & 255L) << 56
+         long var30 = (var7[0] & 255L) << 56
             | (var7[1] & 255L) << 48
             | (var7[2] & 255L) << 40
             | (var7[3] & 255L) << 32
@@ -260,10 +262,10 @@ public class crb extends bmd {
             | (var7[5] & 255L) << 16
             | (var7[6] & 255L) << 8
             | var7[7] & 255L;
-         byte var31 = -1;
+         byte var33 = -1;
 
          while (true) {
-            long var8 = var28;
+            long var8 = var30;
             byte[] var10 = var0.doFinal(
                new byte[]{
                   (byte)(var8 >>> 56),
@@ -276,7 +278,7 @@ public class crb extends bmd {
                   (byte)var8
                }
             );
-            long var33 = (var10[0] & 255L) << 56
+            long var35 = (var10[0] & 255L) << 56
                | (var10[1] & 255L) << 48
                | (var10[2] & 255L) << 40
                | (var10[3] & 255L) << 32
@@ -284,24 +286,26 @@ public class crb extends bmd {
                | (var10[5] & 255L) << 16
                | (var10[6] & 255L) << 8
                | var10[7] & 255L;
-            switch (var31) {
+            switch (var33) {
                case 0:
-                  var18[var10001] = var33;
+                  var18[var10001] = var35;
                   if (var2 >= var5) {
                      c = var6;
                      d = new Integer[7];
-                     arq = a<"i">(937, var11 ^ 5009026131473406966L);
-                     short var19 = 31932;
-                     long var24 = var11 ^ 7117201529858974948L;
+                     short var19 = 937;
+                     long var25 = var11 ^ 5009026131473406966L;
+                     arq = 10;
+                     short var20 = 31932;
+                     long var26 = var11 ^ 7117201529858974948L;
                      ex = 3;
-                     short var20 = 30657;
-                     long var25 = var11 ^ 881515052834746266L;
+                     short var21 = 30657;
+                     long var27 = var11 ^ 881515052834746266L;
                      esx = 80;
                      return;
                   }
                   break;
                default:
-                  var18[var10001] = var33;
+                  var18[var10001] = var35;
                   if (var2 < var5) {
                      continue label29;
                   }
@@ -311,12 +315,12 @@ public class crb extends bmd {
                   var2 = 0;
             }
 
-            byte var23 = var2;
+            byte var24 = var2;
             var2 += 8;
-            var7 = var4.substring(var23, var2).getBytes("ISO-8859-1");
+            var7 = var4.substring(var24, var2).getBytes("ISO-8859-1");
             var18 = var6;
             var10001 = var3++;
-            var28 = (var7[0] & 255L) << 56
+            var30 = (var7[0] & 255L) << 56
                | (var7[1] & 255L) << 48
                | (var7[2] & 255L) << 40
                | (var7[3] & 255L) << 32
@@ -324,7 +328,7 @@ public class crb extends bmd {
                | (var7[5] & 255L) << 16
                | (var7[6] & 255L) << 8
                | var7[7] & 255L;
-            var31 = 0;
+            var33 = 0;
          }
       }
    }

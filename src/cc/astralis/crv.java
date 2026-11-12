@@ -167,15 +167,16 @@ public class crv extends class_437 implements dlc {
             float axxxxx = a.field_22790 - 40;
             short var10008 = 19671;
             long var10009 = 6016872477733897442L ^ ax;
-            int var23 = b<"e">(11686, 4109043965796984213L ^ ax);
-            short var10010 = 17353;
+            short var23 = 11686;
+            long var10010 = 4109043965796984213L ^ ax;
+            short var24 = 17353;
             long var10011 = 5566710258423483385L ^ ax;
-            Color var10006 = new Color(60, var23, 67);
-            var10010 = 9722;
+            Color var10006 = new Color(60, 60, 67);
+            short var25 = 9722;
             var10011 = 6941679026610089408L ^ ax;
-            short var26 = 9722;
+            short var27 = 9722;
             long var10012 = 6941679026610089408L ^ ax;
-            short var27 = 10884;
+            short var28 = 10884;
             long var10013 = 3224632020238279350L ^ ax;
             dmp.dnc(axx, axxx, axxxx, axxxxx, 8.0F, var10006, 2.0F, new Color(100, 100, 110));
             float axxxxxx = 135.0F;
@@ -239,7 +240,9 @@ public class crv extends class_437 implements dlc {
       short var10001 = 29219;
       long var10002 = 7802769860491991190L ^ ax;
       float axxx = a.field_22789 - 140;
-      float axxxx = a.field_22790 - b<"e">(12094, 2845563394047542682L ^ ax);
+      var10001 = 12094;
+      var10002 = 2845563394047542682L ^ ax;
+      float axxxx = a.field_22790 - 40;
       float axxxxx = 135.0F;
       int[] var10000 = dar.abu();
       float axxxxxx = 30.0F;
@@ -256,8 +259,8 @@ public class crv extends class_437 implements dlc {
             int axxxxxxxxxxxxxx = axxxxxxxxxx / axxxxxxxxxxxx;
             float axxxxxxxxxxxxxxx = 135.0F + axxxxxxxxxxxxx * 160.0F;
             float axxxxxxxxxxxxxxxx = 30.0F + axxxxxxxxxxxxxx * 60.0F;
-            float var21;
-            var20 = (var21 = axxxxxxxxxxxxxxxx + 50.0F - (axx + axxxx - 10.0F)) == 0.0F ? 0 : (var21 < 0.0F ? -1 : 1);
+            float var23;
+            var20 = (var23 = axxxxxxxxxxxxxxxx + 50.0F - (axx + axxxx - 10.0F)) == 0.0F ? 0 : (var23 < 0.0F ? -1 : 1);
             if (axxxxxxx == null) {
                break;
             }

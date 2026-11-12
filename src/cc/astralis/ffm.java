@@ -73,9 +73,11 @@ public class ffm {
    private ffm() {
       long a = ffm.a ^ 64426455088262L;
       super();
-      a.awm = b<"h">(25, 2464828684615244586L ^ a);
-      int var10001 = 15108;
-      long var10002 = 7597388775349870604L ^ a;
+      int var10001 = 25;
+      long var10002 = 2464828684615244586L ^ a;
+      a.awm = 700;
+      var10001 = (short)15108;
+      var10002 = 7597388775349870604L ^ a;
       a.gt = 400;
       var10001 = (short)7971;
       var10002 = 8507550924585649174L ^ a;
@@ -90,12 +92,16 @@ public class ffm {
       a.gqe = 0;
       a.dyv = "";
       a.avw = "";
-      a.dtn = new erp(dtw.EASE_IN_OUT_SINE, c<"c">(26543, 2748837448778086515L ^ a));
-      a.gnm = new erp(dtw.EASE_IN_OUT_SINE, c<"c">(13980, 1918036290853218625L ^ a));
+      short var10004 = 26543;
+      long var10005 = 2748837448778086515L ^ a;
+      a.dtn = new erp(dtw.EASE_IN_OUT_SINE, 500L);
+      var10004 = 13980;
+      var10005 = 1918036290853218625L ^ a;
+      a.gnm = new erp(dtw.EASE_IN_OUT_SINE, 300L);
       a.aku = class_310.method_1551();
       a.gfo = a.aku.method_22683().method_4486();
       var10001 = a.aku.method_22683().method_4502();
-      short var8 = 15108;
+      short var10 = 15108;
       long var10003 = 7597388775349870604L ^ a;
       a.dwq = (var10001 - 400) / 2;
    }
@@ -571,8 +577,8 @@ public class ffm {
             label97: {
                label96: {
                   String axxxxxxxx = var22;
-                  float var27;
-                  int var23 = (var27 = amh.ety.eq(axxxxxxxx) - a) == 0.0F ? 0 : (var27 < 0.0F ? -1 : 1);
+                  float var28;
+                  int var23 = (var28 = amh.ety.eq(axxxxxxxx) - a) == 0.0F ? 0 : (var28 < 0.0F ? -1 : 1);
                   if (axxxxxx != null) {
                      if (var23 <= 0) {
                         break label96;
@@ -599,9 +605,12 @@ public class ffm {
                                  }
 
                                  if (var24 == 0) {
-                                    String var25 = axxxxxxxxx.substring(0, Math.min(axxxxxxxxx.length(), b<"h">(30898, 8003161297943747343L ^ ax)));
+                                    int var10002 = axxxxxxxxx.length();
+                                    short var10003 = 30898;
+                                    long var10004 = 8003161297943747343L ^ ax;
+                                    String var25 = axxxxxxxxx.substring(0, Math.min(var10002, 30));
                                     var10001 = 31906;
-                                    long var10002 = 2203240078759764798L ^ ax;
+                                    long var27 = 2203240078759764798L ^ ax;
                                     axxxxxxxxx = var25 + "...";
                                  }
                               }

@@ -205,7 +205,7 @@ public enum cfg {
                      while (true) {
                         short var34 = 12392;
                         long var40 = 6400587531921481743L ^ var20;
-                        String var50 = a(687261480, a(var24.substring(++var22, var22 + var23)));
+                        String var50 = a(85, a(var24.substring(++var22, var22 + var23)));
                         var38 = -1;
                         var27[var25++] = var50;
                         if ((var22 += var23) >= var26) {
@@ -262,7 +262,7 @@ public enum cfg {
          char var10003 = var10000[0];
          short var10004 = 31767;
          long var10005 = 8639592207148267294L ^ var1;
-         var10000[0] = (char)(var10003 ^ 948404332);
+         var10000[0] = (char)(var10003 ^ '0');
       }
 
       return var10000;
@@ -279,35 +279,45 @@ public enum cfg {
          char var10005 = var10001[var4];
          short var10008 = 12978;
          long var10009 = 5478481308983724661L ^ var2;
-         var10001[var4] = (char)(var10005 ^ var10002 ^ switch (var4 % 7) {
-            case 0 -> a<"k">(11597, 4217626868104992139L ^ var2);
-            case 1 -> {
-               short var14 = 26553;
-               long var19 = 1177126824176443252L ^ var2;
-               yield 736914202;
-            }
-            case 2 -> {
-               short var13 = 3473;
-               long var18 = 8773215490636133723L ^ var2;
-               yield 66;
-            }
-            case 3 -> {
-               short var12 = 29816;
-               long var17 = 987260915417107639L ^ var2;
-               yield -1778051061;
-            }
-            case 4 -> {
-               short var11 = 15825;
-               long var16 = 4371738985074689306L ^ var2;
-               yield 34;
-            }
-            case 5 -> {
-               short var10 = 9980;
-               long var15 = 7589692151907262004L ^ var2;
-               yield 22;
-            }
-            default -> a<"k">(31141, 8221877394622038368L ^ var2);
-         });
+         byte var10;
+         switch (var4 % 7) {
+            case 0:
+               var10 = 11597;
+               long var23 = 4217626868104992139L ^ var2;
+               var10 = 115;
+               break;
+            case 1:
+               var10 = 26553;
+               long var22 = 1177126824176443252L ^ var2;
+               var10 = 24;
+               break;
+            case 2:
+               var10 = 3473;
+               long var21 = 8773215490636133723L ^ var2;
+               var10 = 66;
+               break;
+            case 3:
+               var10 = 29816;
+               long var20 = 987260915417107639L ^ var2;
+               var10 = 23;
+               break;
+            case 4:
+               var10 = 15825;
+               long var19 = 4371738985074689306L ^ var2;
+               var10 = 34;
+               break;
+            case 5:
+               var10 = 9980;
+               long var18 = 7589692151907262004L ^ var2;
+               var10 = 22;
+               break;
+            default:
+               var10 = 31141;
+               long var17 = 8221877394622038368L ^ var2;
+               var10 = 48;
+         }
+
+         var10001[var4] = (char)(var10005 ^ var10002 ^ var10);
       }
 
       return new String(var10001).intern();

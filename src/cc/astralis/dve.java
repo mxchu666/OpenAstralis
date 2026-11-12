@@ -81,9 +81,9 @@ public class dve extends brc {
 
       while (true) {
          byte[] var19 = var12.doFinal(var16.substring(++var14, var14 + var15).getBytes("ISO-8859-1"));
-         String var47 = b(var19).intern();
+         String var49 = b(var19).intern();
          int var10001 = -1;
-         var11[var17++] = var47;
+         var11[var17++] = var49;
          if ((var14 += var15) >= var18) {
             i = new HashMap(13);
             Cipher var0;
@@ -110,7 +110,7 @@ public class dve extends brc {
                byte[] var7 = var4.substring(var10001, var2).getBytes("ISO-8859-1");
                long[] var33 = var6;
                var10001 = var3++;
-               long var50 = (var7[0] & 255L) << 56
+               long var52 = (var7[0] & 255L) << 56
                   | (var7[1] & 255L) << 48
                   | (var7[2] & 255L) << 40
                   | (var7[3] & 255L) << 32
@@ -118,10 +118,10 @@ public class dve extends brc {
                   | (var7[5] & 255L) << 16
                   | (var7[6] & 255L) << 8
                   | var7[7] & 255L;
-               byte var57 = -1;
+               byte var59 = -1;
 
                while (true) {
-                  long var8 = var50;
+                  long var8 = var52;
                   byte[] var10 = var0.doFinal(
                      new byte[]{
                         (byte)(var8 >>> 56),
@@ -134,7 +134,7 @@ public class dve extends brc {
                         (byte)var8
                      }
                   );
-                  long var59 = (var10[0] & 255L) << 56
+                  long var61 = (var10[0] & 255L) << 56
                      | (var10[1] & 255L) << 48
                      | (var10[2] & 255L) << 40
                      | (var10[3] & 255L) << 32
@@ -142,9 +142,9 @@ public class dve extends brc {
                      | (var10[5] & 255L) << 16
                      | (var10[6] & 255L) << 8
                      | var10[7] & 255L;
-                  switch (var57) {
+                  switch (var59) {
                      case 0:
-                        var33[var10001] = var59;
+                        var33[var10001] = var61;
                         if (var2 >= var5) {
                            g = var6;
                            h = new Integer[12];
@@ -153,8 +153,8 @@ public class dve extends brc {
                            String var24;
                            int var26 = (var24 = var11[2]).length();
                            String var34 = var11[0];
-                           short var43 = 28021;
-                           long var52 = 8669087061252932639L ^ var20;
+                           short var44 = 28021;
+                           long var54 = 8669087061252932639L ^ var20;
                            char var23 = 7;
                            hby(var34);
                            int var31 = -1;
@@ -162,14 +162,14 @@ public class dve extends brc {
                            label44:
                            while (true) {
                               short var35 = 11256;
-                              long var44 = 3878209119543640720L ^ var20;
-                              int var36 = 35;
-                              String var45 = var24.substring(++var31, var31 + var23);
-                              byte var53 = -1;
+                              long var45 = 3878209119543640720L ^ var20;
+                              byte var36 = 35;
+                              String var46 = var24.substring(++var31, var31 + var23);
+                              byte var55 = -1;
 
                               while (true) {
-                                 String var37 = b(var36, b(var45));
-                                 switch (var53) {
+                                 String var37 = b(var36, b(var46));
+                                 switch (var55) {
                                     case 0:
                                        var27[var25++] = var37;
                                        if ((var31 += var23) >= var26) {
@@ -188,20 +188,22 @@ public class dve extends brc {
 
                                        var26 = (var24 = var11[1]).length();
                                        short var38 = 28021;
-                                       long var46 = 8669087061252932639L ^ var20;
+                                       long var47 = 8669087061252932639L ^ var20;
                                        var23 = 7;
                                        var31 = -1;
                                  }
 
-                                 var36 = a<"c">(25021, 4534385526265055454L ^ var20);
-                                 var45 = var24.substring(++var31, var31 + var23);
-                                 var53 = 0;
+                                 short var39 = 25021;
+                                 long var48 = 4534385526265055454L ^ var20;
+                                 var36 = 117;
+                                 var46 = var24.substring(++var31, var31 + var23);
+                                 var55 = 0;
                               }
                            }
                         }
                         break;
                      default:
-                        var33[var10001] = var59;
+                        var33[var10001] = var61;
                         if (var2 < var5) {
                            continue label54;
                         }
@@ -211,12 +213,12 @@ public class dve extends brc {
                         var2 = 0;
                   }
 
-                  byte var42 = var2;
+                  byte var43 = var2;
                   var2 += 8;
-                  var7 = var4.substring(var42, var2).getBytes("ISO-8859-1");
+                  var7 = var4.substring(var43, var2).getBytes("ISO-8859-1");
                   var33 = var6;
                   var10001 = var3++;
-                  var50 = (var7[0] & 255L) << 56
+                  var52 = (var7[0] & 255L) << 56
                      | (var7[1] & 255L) << 48
                      | (var7[2] & 255L) << 40
                      | (var7[3] & 255L) << 32
@@ -224,7 +226,7 @@ public class dve extends brc {
                      | (var7[5] & 255L) << 16
                      | (var7[6] & 255L) << 8
                      | var7[7] & 255L;
-                  var57 = 0;
+                  var59 = 0;
                }
             }
          }
@@ -255,41 +257,43 @@ public class dve extends brc {
 
       for (int var4 = 0; var10000 > var4; var4++) {
          char var10005 = var10001[var4];
+         short var10008 = 28953;
+         long var10009 = 114372906967990390L ^ var2;
          byte var10;
-         switch (var4 % a<"c">(28953, 114372906967990390L ^ var2)) {
+         switch (var4 % 7) {
             case 0:
                var10 = 31262;
-               long var22 = 8683991967802788722L ^ var2;
+               long var23 = 8683991967802788722L ^ var2;
                var10 = 122;
                break;
             case 1:
                var10 = 9730;
-               long var21 = 4827814375576819552L ^ var2;
+               long var22 = 4827814375576819552L ^ var2;
                var10 = 82;
                break;
             case 2:
                var10 = 8149;
-               long var20 = 5137345472656043700L ^ var2;
+               long var21 = 5137345472656043700L ^ var2;
                var10 = 110;
                break;
             case 3:
                var10 = 6575;
-               long var19 = 8573600832900753609L ^ var2;
+               long var20 = 8573600832900753609L ^ var2;
                var10 = 29;
                break;
             case 4:
                var10 = 26885;
-               long var18 = 4144495003474794593L ^ var2;
+               long var19 = 4144495003474794593L ^ var2;
                var10 = 106;
                break;
             case 5:
                var10 = 32513;
-               long var17 = 4494295205021847137L ^ var2;
+               long var18 = 4494295205021847137L ^ var2;
                var10 = 63;
                break;
             default:
                var10 = 18502;
-               long var10008 = 3087629367617272101L ^ var2;
+               long var17 = 3087629367617272101L ^ var2;
                var10 = 84;
          }
 

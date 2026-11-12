@@ -61,99 +61,101 @@ public class cdo extends guu {
       var10004 = 2818260313785645877L ^ a;
       short var17 = 21622;
       long var10005 = 2403615018414285401L ^ a;
-      String[] var26 = new String[e<"w">(31879, 380465023115508883L ^ a)];
+      short var26 = 31879;
+      long var10006 = 380465023115508883L ^ a;
+      String[] var27 = new String[6];
       short var10008 = 17610;
       long var10009 = 7814069474392290046L ^ a;
-      var26[0] = "Vanilla";
+      var27[0] = "Vanilla";
       var10008 = 22616;
       var10009 = 1230789603910168160L ^ a;
-      var26[1] = "Watchdog";
+      var27[1] = "Watchdog";
       var10008 = 31490;
       var10009 = 1910881018891537721L ^ a;
-      var26[2] = "Old Watchdog";
+      var27[2] = "Old Watchdog";
       var10008 = 16775;
       var10009 = 2453581343718913976L ^ a;
-      var26[3] = "No Cheat Plus";
+      var27[3] = "No Cheat Plus";
       var10008 = 32711;
       var10009 = 3263373070103022073L ^ a;
-      var26[4] = "Old Intave";
+      var27[4] = "Old Intave";
       var10008 = 9044;
       var10009 = 108810655704208750L ^ a;
-      var26[5] = "Intave";
-      a.cna = new adu("Sword Method", "Vanilla", var26);
+      var27[5] = "Intave";
+      a.cna = new adu("Sword Method", "Vanilla", var27);
       var10003 = 22568;
       var10004 = 7771874118648278552L ^ a;
       short var19 = 17610;
       var10005 = 7814069474392290046L ^ a;
-      short var28 = 6144;
-      long var10006 = 4561190852717795345L ^ a;
-      String[] var29 = new String[6];
+      short var29 = 6144;
+      var10006 = 4561190852717795345L ^ a;
+      String[] var30 = new String[6];
       var10008 = 17610;
       var10009 = 7814069474392290046L ^ a;
-      var29[0] = "Vanilla";
+      var30[0] = "Vanilla";
       var10008 = 22616;
       var10009 = 1230789603910168160L ^ a;
-      var29[1] = "Watchdog";
+      var30[1] = "Watchdog";
       var10008 = 31490;
       var10009 = 1910881018891537721L ^ a;
-      var29[2] = "Old Watchdog";
+      var30[2] = "Old Watchdog";
       var10008 = 3788;
       var10009 = 5935845792980236537L ^ a;
-      var29[3] = "No Cheat Plus";
+      var30[3] = "No Cheat Plus";
       var10008 = 22327;
       var10009 = 6195165464779039003L ^ a;
-      var29[4] = "Old Intave";
+      var30[4] = "Old Intave";
       var10008 = 9044;
       var10009 = 108810655704208750L ^ a;
-      var29[5] = "Intave";
-      a.cdx = new adu("Food Method", "Vanilla", var29);
+      var30[5] = "Intave";
+      a.cdx = new adu("Food Method", "Vanilla", var30);
       var10003 = 21953;
       var10004 = 6547438826432570359L ^ a;
       short var21 = 17610;
       var10005 = 7814069474392290046L ^ a;
-      String[] var31 = new String[5];
+      String[] var32 = new String[5];
       var10008 = 17610;
       var10009 = 7814069474392290046L ^ a;
-      var31[0] = "Vanilla";
+      var32[0] = "Vanilla";
       var10008 = 22616;
       var10009 = 1230789603910168160L ^ a;
-      var31[1] = "Watchdog";
+      var32[1] = "Watchdog";
       var10008 = 31490;
       var10009 = 1910881018891537721L ^ a;
-      var31[2] = "Old Watchdog";
+      var32[2] = "Old Watchdog";
       var10008 = 3788;
       var10009 = 5935845792980236537L ^ a;
-      var31[3] = "No Cheat Plus";
+      var32[3] = "No Cheat Plus";
       var10008 = 22327;
       var10009 = 6195165464779039003L ^ a;
-      var31[4] = "Old Intave";
-      a.cfs = new adu("Potion Method", "Vanilla", var31);
+      var32[4] = "Old Intave";
+      a.cfs = new adu("Potion Method", "Vanilla", var32);
       var10003 = 21221;
       var10004 = 410947605026022616L ^ a;
       short var23 = 17610;
       var10005 = 7814069474392290046L ^ a;
-      short var33 = 6144;
+      short var34 = 6144;
       var10006 = 4561190852717795345L ^ a;
-      String[] var34 = new String[6];
+      String[] var35 = new String[6];
       var10008 = 17610;
       var10009 = 7814069474392290046L ^ a;
-      var34[0] = "Vanilla";
+      var35[0] = "Vanilla";
       var10008 = 22616;
       var10009 = 1230789603910168160L ^ a;
-      var34[1] = "Watchdog";
+      var35[1] = "Watchdog";
       var10008 = 31490;
       var10009 = 1910881018891537721L ^ a;
-      var34[2] = "Old Watchdog";
+      var35[2] = "Old Watchdog";
       var10008 = 3788;
       var10009 = 5935845792980236537L ^ a;
-      var34[3] = "No Cheat Plus";
+      var35[3] = "No Cheat Plus";
       var10008 = 22327;
       var10009 = 6195165464779039003L ^ a;
-      var34[4] = "Old Intave";
+      var35[4] = "Old Intave";
       var10008 = 9044;
       var10009 = 108810655704208750L ^ a;
-      var34[5] = "Intave";
-      a.djx = new adu("Bow Method", "Vanilla", var34);
+      var35[5] = "Intave";
+      a.djx = new adu("Bow Method", "Vanilla", var35);
       a.cbc = false;
       short var10001 = 15372;
       long var10002 = 8888174062860172316L ^ a;
@@ -187,7 +189,7 @@ public class cdo extends guu {
                }
 
                short var15 = 13049;
-               long var21 = 8255025353184040587L ^ ax;
+               long var22 = 8255025353184040587L ^ ax;
                gxk.dfh("use");
             }
 
@@ -262,7 +264,7 @@ public class cdo extends guu {
                }
             case 1239695398:
                short var16 = 7159;
-               long var22 = 8934748476034678686L ^ ax;
+               long var23 = 8934748476034678686L ^ ax;
                var9 = var6.equals("Old Watchdog");
                if (axxx == null) {
                   break label180;
@@ -278,7 +280,7 @@ public class cdo extends guu {
                }
             case -2099899231:
                short var17 = 16402;
-               long var23 = 6159235864915747962L ^ ax;
+               long var24 = 6159235864915747962L ^ ax;
                var9 = var6.equals("Intave");
                if (axxx == null) {
                   break label180;
@@ -309,8 +311,10 @@ public class cdo extends guu {
             }
 
             if (axxx != null) {
+               short var18 = 30873;
+               long var25 = 6456385151241464534L ^ ax;
                label149:
-               if (var9 > e<"w">(30873, 6456385151241464534L ^ ax)) {
+               if (var9 > 12) {
                   label147: {
                      bhw var10 = axx;
                      if (axxx != null) {
@@ -323,7 +327,7 @@ public class cdo extends guu {
 
                      var10.ckv();
                      short var11 = 10440;
-                     long var18 = 4836100097701104824L ^ ax;
+                     long var19 = 4836100097701104824L ^ ax;
                      gxk.fcv("use");
                      a.cbc = false;
                      if (axxx != null) {
@@ -332,7 +336,7 @@ public class cdo extends guu {
                   }
 
                   short var12 = 10440;
-                  long var19 = 4836100097701104824L ^ ax;
+                  long var20 = 4836100097701104824L ^ ax;
                   gxk.gbu("use", a.bb / 30.0F);
                }
 
@@ -370,7 +374,7 @@ public class cdo extends guu {
 
             var13.fxn();
             short var14 = 10440;
-            long var20 = 4836100097701104824L ^ ax;
+            long var21 = 4836100097701104824L ^ ax;
             gxk.dfh("use");
             a.cbc = true;
             if (axxx != null) {

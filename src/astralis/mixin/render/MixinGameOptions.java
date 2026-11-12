@@ -56,7 +56,7 @@ public class MixinGameOptions {
          class_7303 var10004 = (axxx, axxxx) -> class_2561.method_43469(MixinGameOptions.a[2], new Object[]{axxx, axxxx});
          short var10008 = 32003;
          long var10009 = 6773462802065946361L ^ ax;
-         return new class_7172(var10002, var10003, var10004, new class_7174(0, -1977042048), axx.fcg.dnp().intValue(), axxx -> {});
+         return new class_7172(var10002, var10003, var10004, new class_7174(0, 20), axx.fcg.dnp().intValue(), axxx -> {});
       } else {
          return a.field_49476;
       }
@@ -150,13 +150,13 @@ public class MixinGameOptions {
                      long var32 = 232090450398494880L ^ var15;
                      String var19 = var11;
                      int var21 = var11.length();
-                     int var18 = -688022612;
+                     char var18 = '*';
                      int var17 = -1;
 
                      while (true) {
                         short var28 = 18031;
                         long var33 = 6589687097203574761L ^ var15;
-                        String var40 = a(2064683529, a(var19.substring(++var17, var17 + var18)));
+                        String var40 = a(112, a(var19.substring(++var17, var17 + var18)));
                         byte var34 = -1;
                         var22[var20++] = var40;
                         if ((var17 += var18) >= var21) {
@@ -204,7 +204,7 @@ public class MixinGameOptions {
          char var10003 = var10000[0];
          short var10004 = 6064;
          long var10005 = 1912985187921456496L ^ var1;
-         var10000[0] = (char)(var10003 ^ -874332345);
+         var10000[0] = (char)(var10003 ^ 's');
       }
 
       return var10000;
@@ -221,42 +221,42 @@ public class MixinGameOptions {
          char var10005 = var10001[var4];
          short var10008 = 11355;
          long var10009 = 3354158841931051946L ^ var2;
-         int var10;
-         switch (var4 % 1521109174) {
+         byte var10;
+         switch (var4 % 7) {
             case 0:
-               short var16 = 15695;
+               var10 = 15695;
                long var23 = 7872878489667674812L ^ var2;
-               var10 = 943403739;
+               var10 = 20;
                break;
             case 1:
-               short var15 = 32052;
+               var10 = 32052;
                long var22 = 3340564281563538112L ^ var2;
-               var10 = -1046253888;
+               var10 = 116;
                break;
             case 2:
-               short var14 = 10116;
+               var10 = 10116;
                long var21 = 5667755048925280371L ^ var2;
-               var10 = -1476034972;
+               var10 = 30;
                break;
             case 3:
-               short var13 = 11777;
+               var10 = 11777;
                long var20 = 5307574295366709755L ^ var2;
-               var10 = -1614076170;
+               var10 = 75;
                break;
             case 4:
-               short var12 = 19637;
+               var10 = 19637;
                long var19 = 1159645929280885580L ^ var2;
-               var10 = -1402510270;
+               var10 = 43;
                break;
             case 5:
-               short var11 = 5858;
+               var10 = 5858;
                long var18 = 4607587144897497360L ^ var2;
-               var10 = -1686443436;
+               var10 = 127;
                break;
             default:
-               short var10007 = 18505;
+               var10 = 18505;
                long var17 = 2881755187877140415L ^ var2;
-               var10 = 566100006;
+               var10 = 115;
          }
 
          var10001[var4] = (char)(var10005 ^ var10002 ^ var10);

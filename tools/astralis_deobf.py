@@ -119,60 +119,35 @@ def _mutf8(payload: bytes) -> str:
 
 def raw_strings(cf: ClassFile) -> list[str]:
     """every CONSTANT_String literal, decoded byte-exactly (no mojibake)."""
-    d = cf.data
-    n = struct.unpack_from(">H", d, 8)[0]
-    i, k = 10, 1
-    utf8: dict[int, bytes] = {}
-    sref: list[int] = []
-    while k < n:
-        tag = d[i]; i += 1
-        if tag == 1:
-            ln = struct.unpack_from(">H", d, i)[0]
-            utf8[k] = d[i + 2:i + 2 + ln]
-            i += 2 + ln
-        elif tag in (3, 4):
-            i += 4
-        elif tag in (5, 6):
-            i += 8; k += 1
-        elif tag in (7, 8, 16, 19, 20):
-            if tag == 8:
-                sref.append(struct.unpack_from(">H", d, i)[0])
-            i += 2
-        elif tag in (9, 10, 11, 12, 17, 18):
-            i += 4
-        elif tag == 15:
-            i += 3
-        else:
-            break
-        k += 1
-    return [_mutf8(utf8[r]) for r in sref if r in utf8]
+    return [_mutf8(b) for b in raw_literals(cf)]
 
 
-def walk_blob(blob: str, key: int, start: int = 24) -> list[bytes] | None:
+def walk_blob(blob, key: int, start: int = 24) -> list[bytes] | None:
     """replicate the <clinit> walk: [n chars ciphertext][1 char next length]...
 
-    the trailing char after each chunk carries the byte length of the chunk
-    that follows, so the table is length-prefixed, not fixed-stride.
+    `substring`/`charAt` run on the constant-pool String, so offsets and
+    lengths are char counts, not byte counts: a UTF-8 literal whose chars
+    include U+0080..U+07FF decodes to fewer chars than CP bytes.
     """
-    raw = blob.encode("latin-1", "replace")
-    n = len(raw)
+    s = blob if isinstance(blob, str) else _mutf8(blob)
+    n = len(s)
     out: list[bytes] = []
     pos, ln = -1, start
     while True:
         pos += 1
         if pos + ln > n:
             return None
-        chunk = raw[pos:pos + ln]
+        raw = s[pos:pos + ln].encode("latin-1", "replace")
         # entries are themselves ciphertext for the call-site decrypt, so the
         # only oracle available here is a valid PKCS5 pad.
-        stage1 = des_decrypt(chunk, key)
+        stage1 = des_decrypt(raw, key)
         if stage1 is None:
             return None
         out.append(cesu8_decode(stage1).encode("latin-1", "replace"))
         pos += ln
         if pos >= n:
             return out
-        ln = raw[pos]
+        ln = ord(s[pos])
         if ln == 0:
             return None
 
@@ -181,11 +156,12 @@ def string_table(cf: ClassFile, key: int):
     """the b[] ciphertext table: every <clinit> blob walked in order, concatenated."""
     out: list[bytes] = []
     for s in raw_strings(cf):
-        raw = s.encode("latin-1", "replace")
-        if len(raw) < 24:
+        if len(s) < 24:
             continue
         best = None
-        for start in range(8, 129, 8):
+        # first-chunk length is a sipush in <clinit> (208 in one class), so the
+        # fixed 8..128 stride misses whole tables; scan the char range instead.
+        for start in range(1, 2049):
             chunks = walk_blob(s, key, start)
             if chunks and (best is None or len(chunks) > len(best)):
                 best = chunks
@@ -194,15 +170,29 @@ def string_table(cf: ClassFile, key: int):
     return out or None
 
 
+def _mask_xor(code: bytes) -> int | None:
+    """constant after the `arg1 & 0x7fff` idiom: land, l2i, ixor, K."""
+    ins = list(iter_insns(code))
+    for i in range(len(ins) - 2):
+        if ins[i][1] != 0x88 or ins[i + 1][1] != 0x82:  # l2i, ixor
+            continue
+        op2, ops2 = ins[i + 2][1], ins[i + 2][2]
+        if op2 == 0x10 and len(ops2) == 1:  # bipush
+            return struct.unpack(">b", ops2)[0]
+        if op2 == 0x11 and len(ops2) == 2:  # sipush
+            return struct.unpack(">h", ops2)[0]
+    return None
+
+
 def string_indy_xor(cf: ClassFile) -> int | None:
     for m in cf.methods:
         if m["desc"] == "(IJ)Ljava/lang/String;" and (m["acc"] & 0x0008):
             code = code_of(cf, m)
             if not code:
                 continue
-            for _off, op, ops in iter_insns(code):
-                if op == 0x11:
-                    return struct.unpack(">h", ops)[0]
+            v = _mask_xor(code)
+            if v is not None:
+                return v
     return None
 
 
@@ -228,6 +218,139 @@ def arrays_for(cf: ClassFile, key: int) -> list[list[int]]:
             arrs.append([int.from_bytes(plain[i:i + 8], "big")
                          for i in range(0, len(plain), 8)])
     return arrs
+
+
+def helper_desc(cf: ClassFile):
+    """(xor salt, table field) for each constant helper descriptor present in the class."""
+    out = {}
+    for desc in ("(IJ)I", "(IJ)J"):
+        for m in cf.methods:
+            if m["desc"] != desc or not (m["acc"] & 0x0008):
+                continue
+            code = code_of(cf, m)
+            if not code:
+                continue
+            salt = _mask_xor(code)
+            field = None
+            for _off, op, ops in iter_insns(code):
+                if op == 0x11 and salt is None:          # sipush
+                    salt = struct.unpack(">h", ops)[0]
+                elif op == 0xB2 and field is None:      # getstatic
+                    f = field_at(cf, struct.unpack_from(">H", ops)[0])
+                    if f and f[2] == "[J":
+                        field = f[1]
+            if salt is not None and field is not None:
+                out[desc] = (salt, field)
+                break
+    return out
+
+
+def string_payloads_bytes(cf: ClassFile) -> dict[int, bytes]:
+    """CONSTANT_String index -> raw payload bytes (no decode, no loss)."""
+    d = cf.data
+    n = struct.unpack_from(">H", d, 8)[0]
+    i, k = 10, 1
+    utf8: dict[int, bytes] = {}
+    refs: dict[int, int] = {}
+    while k < n:
+        tag = d[i]; i += 1
+        if tag == 1:
+            ln = struct.unpack_from(">H", d, i)[0]
+            utf8[k] = d[i + 2:i + 2 + ln]
+            i += 2 + ln
+        elif tag in (3, 4):
+            i += 4
+        elif tag in (5, 6):
+            i += 8; k += 1
+        elif tag in (7, 8, 16, 19, 20):
+            if tag == 8:
+                refs[k] = struct.unpack_from(">H", d, i)[0]
+            i += 2
+        elif tag in (9, 10, 11, 12, 17, 18):
+            i += 4
+        elif tag == 15:
+            i += 3
+        else:
+            break
+        k += 1
+    return {k: utf8[r] for k, r in refs.items() if r in utf8}
+
+
+def string_payloads(cf: ClassFile) -> dict[int, str]:
+    """CONSTANT_String index -> payload, decoded byte-exactly."""
+    return {k: _mutf8(v) for k, v in string_payloads_bytes(cf).items()}
+
+
+def raw_literals(cf: ClassFile) -> list[bytes]:
+    """raw bytes of every CONSTANT_String literal, in constant-pool order."""
+    return list(string_payloads_bytes(cf).values())
+
+
+def field_tables(cf: ClassFile, key: int):
+    """per-field `long[]` tables, taken from the literals of each <clinit> fill block.
+
+    Each array is built as `new long[N]`, filled from one or more string
+    literals, then assigned with putstatic, so the literals between the
+    `newarray long` and that putstatic are exactly the ones that belong to it.
+    A class may own several long[] tables (one for int constants, one for long
+    constants); lumping them together misindexes everything past the first.
+    """
+    clinit = next((m for m in cf.methods if m["name"] == "<clinit>"), None)
+    if clinit is None:
+        return {}, True
+    code = code_of(cf, clinit)
+    if not code:
+        return {}, True
+    payloads = string_payloads(cf)
+    tables: dict[str, list[int]] = {}
+    declared: dict[str, int] = {}
+    cur_size, cur_vals = None, []
+    push = None
+    ok = True
+    consts = {0x03: 0, 0x04: 1, 0x05: 2, 0x06: 3, 0x07: 4, 0x08: 5}
+    for _off, op, ops in iter_insns(code):
+        if op in consts:
+            push = consts[op]
+            continue
+        if op == 0x10:                                  # bipush
+            push = struct.unpack(">b", ops)[0]
+            continue
+        if op == 0x11:                                  # sipush
+            push = struct.unpack(">h", ops)[0]
+            continue
+        if op == 0xBC and ops[0] == 0x0B:               # newarray long
+            cur_size, cur_vals = push, []
+            push = None
+            continue
+        if op in (0x12, 0x13):                          # ldc / ldc_w
+            if op == 0x12:
+                idx = ops[0] if ops else None
+            else:
+                idx = struct.unpack_from(">H", ops)[0] if len(ops) >= 2 else None
+            s = payloads.get(idx) if idx is not None else None
+            if s and cur_size is not None:
+                raw = s.encode("latin-1", "replace")
+                if len(raw) >= 8 and len(raw) % 8 == 0:
+                    plain = b"".join(des_nopad(raw[i:i + 8], key)
+                                     for i in range(0, len(raw), 8))
+                    cur_vals.extend(int.from_bytes(plain[i:i + 8], "big")
+                                    for i in range(0, len(plain), 8))
+            push = None
+            continue
+        if op == 0xB3:                                  # putstatic
+            f = field_at(cf, struct.unpack_from(">H", ops)[0]) if len(ops) >= 2 else None
+            if f and f[2] == "[J" and cur_size is not None:
+                tables[f[1]] = cur_vals
+                declared[f[1]] = cur_size
+                if len(cur_vals) != cur_size:
+                    ok = False
+                cur_size, cur_vals = None, []
+            push = None
+            continue
+        push = None
+    if not tables:
+        return {}, True
+    return tables, ok
 
 
 def class_strings(cf: ClassFile, key: int) -> dict[str, str]:
@@ -273,12 +396,22 @@ def main() -> int:
             txt.append(f"\n== {rel}")
             field, a, key = secrets
             dec = class_strings(cf, key)
+            helpers = helper_desc(cf)
             lines.append(f"F {field}")
-            lines.append(f"X {indy_xor(cf)}")
+            if "(IJ)I" in helpers:
+                lines.append(f"X {helpers['(IJ)I'][0]} {helpers['(IJ)I'][1]}")
+            else:
+                lines.append(f"X {indy_xor(cf)}")
+            if "(IJ)J" in helpers:
+                lines.append(f"Z {helpers['(IJ)J'][0]} {helpers['(IJ)J'][1]}")
             lines.append(f"A {a & 0xFFFFFFFFFFFFFFFF:016x}")
             lines.append(f"K {key & 0xFFFFFFFFFFFFFFFF:016x}")
-            for arr in arrays_for(cf, key):
-                lines.append("B " + ",".join(f"{v & 0xFFFFFFFFFFFFFFFF:016x}" for v in arr))
+            tables, ok = field_tables(cf, key)
+            if not ok:
+                txt.append(f"   TABLES unaligned, using flat fallback")
+            for fname, arr in tables.items():
+                lines.append("B " + fname + " "
+                             + ",".join(f"{v & 0xFFFFFFFFFFFFFFFF:016x}" for v in arr))
             for enc, plain in dec.items():
                 n_str += 1
                 lines.append("S " + base64.b64encode(enc.encode("utf-8", "surrogatepass")).decode()

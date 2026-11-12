@@ -34,8 +34,12 @@ class fyp {
       a.fgu = a;
       a.afs = dar.gqy().deo();
       a.frs = dar.gqy().cxj();
-      a.apg = new erp(dtw.EASE_OUT_BACK, a<"h">(13100, 6372972534865142963L ^ ax));
-      a.fjf = new erp(dtw.EASE_IN_OUT_QUAD, a<"h">(14253, 5872098799670108211L ^ ax));
+      short var10004 = 13100;
+      long var10005 = 6372972534865142963L ^ ax;
+      a.apg = new erp(dtw.EASE_OUT_BACK, 800L);
+      var10004 = 14253;
+      var10005 = 5872098799670108211L ^ ax;
+      a.fjf = new erp(dtw.EASE_IN_OUT_QUAD, 800L);
       a.apg.bpt(0.0);
       a.apg.gbi(10.0);
       a.apg.enr(0.0);

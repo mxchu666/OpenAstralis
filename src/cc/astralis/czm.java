@@ -42,19 +42,19 @@ public class czm extends guu {
       super(bfm.COMBAT);
       short var10003 = 9076;
       long var10004 = 5356549808580439478L ^ a;
-      short var8 = 6642;
+      short var9 = 6642;
       long var10005 = 6446341466144216884L ^ a;
-      String[] var14 = new String[3];
+      String[] var15 = new String[3];
       short var10008 = 6642;
       long var10009 = 6446341466144216884L ^ a;
-      var14[0] = "Off";
+      var15[0] = "Off";
       var10008 = 628;
       var10009 = 7791546791348636861L ^ a;
-      var14[1] = "Normal";
+      var15[1] = "Normal";
       var10008 = 28690;
       var10009 = 6350117597079535315L ^ a;
-      var14[2] = "Force";
-      a.efl = new adu("Wait for Crit", "Off", var14);
+      var15[2] = "Force";
+      a.efl = new adu("Wait for Crit", "Off", var15);
       var10003 = 22458;
       var10004 = 8532009439681370481L ^ a;
       a.hex = new bes("Percentage", 0.95F, 0.1F, 1.0F, 0.01F);
@@ -70,15 +70,17 @@ public class czm extends guu {
       var10003 = 12211;
       var10004 = 7407302441493930355L ^ a;
       a.glx = new gbp("Ignore Teammates", false);
-      a.ezv = e<"r">(3134, 4021388828736521324L ^ a);
-      ffn[] var10001 = new ffn[(int)p];
-      var10001[0] = a.efl;
-      var10001[1] = a.hex;
-      var10001[2] = a.coh;
-      var10001[3] = a.hiy;
-      var10001[4] = a.cri;
-      var10001[5] = a.glx;
-      a.bfi(var10001);
+      short var10001 = 3134;
+      long var10002 = 4021388828736521324L ^ a;
+      a.ezv = -1L;
+      ffn[] var3 = new ffn[(int)p];
+      var3[0] = a.efl;
+      var3[1] = a.hex;
+      var3[2] = a.coh;
+      var3[3] = a.hiy;
+      var3[4] = a.cri;
+      var3[5] = a.glx;
+      a.bfi(var3);
    }
 
    @gdz
@@ -109,15 +111,17 @@ public class czm extends guu {
 
             if (a.cdw(axxxx)) {
                long axxxxx = System.currentTimeMillis();
-               long var13;
-               int var11 = (var13 = a.ezv - e<"r">(21220, 6586477740099184087L ^ ax)) == 0L ? 0 : (var13 < 0L ? -1 : 1);
+               short var10001 = 21220;
+               long var10002 = 6586477740099184087L ^ ax;
+               long var19;
+               int var11 = (var19 = a.ezv - -1L) == 0L ? 0 : (var19 < 0L ? -1 : 1);
                if (axxx != null) {
                   if (var11 == 0) {
                      a.ezv = axxxxx;
                   }
 
-                  long var14;
-                  var11 = (var14 = axxxxx - a.ezv - a.coh.dnp().intValue()) == 0L ? 0 : (var14 < 0L ? -1 : 1);
+                  long var20;
+                  var11 = (var20 = axxxxx - a.ezv - a.coh.dnp().intValue()) == 0L ? 0 : (var20 < 0L ? -1 : 1);
                }
 
                if (axxx != null) {
@@ -125,8 +129,8 @@ public class czm extends guu {
                      return;
                   }
 
-                  float var15;
-                  var11 = (var15 = chi.field_1724.method_7261(0.0F) - a.hex.dnp().floatValue()) == 0.0F ? 0 : (var15 < 0.0F ? -1 : 1);
+                  float var21;
+                  var11 = (var21 = chi.field_1724.method_7261(0.0F) - a.hex.dnp().floatValue()) == 0.0F ? 0 : (var21 < 0.0F ? -1 : 1);
                }
 
                if (axxx != null) {
@@ -142,15 +146,17 @@ public class czm extends guu {
                      return;
                   }
 
-                  double var16;
-                  var11 = (var16 = Math.random() - a.hiy.dnp().floatValue()) == 0.0 ? 0 : (var16 < 0.0 ? -1 : 1);
+                  double var22;
+                  var11 = (var22 = Math.random() - a.hiy.dnp().floatValue()) == 0.0 ? 0 : (var22 < 0.0 ? -1 : 1);
                }
 
                label99: {
                   if (axxx != null) {
                      if (var11 < 0) {
                         chi.field_1724.method_6104(class_1268.field_5808);
-                        a.ezv = e<"r">(3134, 4021358633315203852L ^ ax);
+                        var10001 = 3134;
+                        var10002 = 4021358633315203852L ^ ax;
+                        a.ezv = -1L;
                         return;
                      }
 
@@ -172,7 +178,9 @@ public class czm extends guu {
                   var10 = a;
                }
 
-               var10.ezv = e<"r">(3134, 4021358633315203852L ^ ax);
+               var10001 = 3134;
+               var10002 = 4021358633315203852L ^ ax;
+               var10.ezv = -1L;
                return;
             }
          }
@@ -180,7 +188,9 @@ public class czm extends guu {
          var10 = a;
       }
 
-      var10.ezv = e<"r">(3134, 4021358633315203852L ^ ax);
+      short var15 = 3134;
+      long var18 = 4021358633315203852L ^ ax;
+      var10.ezv = -1L;
    }
 
    private boolean cdw(class_3966 a) {

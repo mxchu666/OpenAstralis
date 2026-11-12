@@ -61,22 +61,26 @@ public class cqh extends hcr {
       }
 
       long axxx;
-      int var10000;
-      axxx = b<"i">(16270, 4631530608790685457L ^ ax);
-      long axxxx = b<"i">(18891, 8521970728362488149L ^ ax);
+      int var11;
+      short var10000 = 16270;
+      long var10001 = 4631530608790685457L ^ ax;
+      axxx = 1000L;
+      var10000 = 18891;
+      var10001 = 8521970728362488149L ^ ax;
+      long axxxx = 100L;
       float axxxxx = 1.0F;
-      var10000 = chi.field_1724.field_6235;
+      var11 = chi.field_1724.field_6235;
       label93:
       if (axx != null) {
          if (chi.field_1724.field_6235 != 0) {
-            var10000 = a.cfp;
+            var11 = a.cfp;
             if (axx == null) {
                break label93;
             }
 
             if (a.cfp < 2) {
                label87: {
-                  cqh var10 = a;
+                  cqh var12 = a;
                   if (axx != null) {
                      if (a.dhc) {
                         break label87;
@@ -84,62 +88,62 @@ public class cqh extends hcr {
 
                      a.dhc = true;
                      a.grb.glr();
-                     short var10001 = 17236;
+                     short var15 = 17236;
                      long var10002 = 659449135008699947L ^ ax;
-                     short var13 = 24942;
+                     short var17 = 24942;
                      long var10003 = 8806725647716971542L ^ ax;
                      bpa.bez("Took damage, waiting " + axxx + "ms...");
-                     var10 = a;
+                     var12 = a;
                   }
 
-                  var10.cfp++;
+                  var12.cfp++;
                }
 
-               short var11 = 20285;
-               long var12 = 9062784463150307905L ^ ax;
+               var10000 = 20285;
+               var10001 = 9062784463150307905L ^ ax;
                bpa.bez("boost");
                evd.dek(0.5);
                bav.fym(0.5);
             }
          }
 
-         var10000 = a.dhc;
+         var11 = a.dhc;
       }
 
       if (axx != null) {
-         if (var10000 == 0) {
+         if (var11 == 0) {
             return;
          }
 
-         var10000 = a.grb.fsc(axxx);
+         var11 = a.grb.fsc(axxx);
       }
 
       if (axx != null) {
-         if (var10000 == 0) {
+         if (var11 == 0) {
             return;
          }
 
-         var10000 = chi.field_1724.method_24828();
+         var11 = chi.field_1724.method_24828();
       }
 
       if (axx != null) {
-         if (var10000 != 0) {
+         if (var11 != 0) {
             return;
          }
 
-         double var14;
-         var10000 = (var14 = chi.field_1724.field_6017 - 2.0) == 0.0 ? 0 : (var14 < 0.0 ? -1 : 1);
+         double var18;
+         var11 = (var18 = chi.field_1724.field_6017 - 2.0) == 0.0 ? 0 : (var18 < 0.0 ? -1 : 1);
       }
 
       if (axx != null) {
-         if (var10000 > 0) {
+         if (var11 > 0) {
             chi.field_1724.field_6017 = 0.0;
          }
 
-         var10000 = chi.field_1724.field_6012 % 5;
+         var11 = chi.field_1724.field_6012 % 5;
       }
 
-      if (var10000 == 0) {
+      if (var11 == 0) {
          bav.fym(0.0);
       }
 

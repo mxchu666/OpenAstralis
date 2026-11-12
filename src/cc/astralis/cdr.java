@@ -170,8 +170,9 @@ public abstract class cdr {
                                     String var29 = var11[2];
                                     hjr = 0;
                                     adf(var29);
-                                    int var47 = c<"r">(15040, 8260500375291495672L ^ var20);
-                                    cdr[] var10005 = new cdr[3];
+                                    short var47 = 15040;
+                                    long var10005 = 8260500375291495672L ^ var20;
+                                    cdr[] var48 = new cdr[3];
                                     String[] var10006 = new String[3];
                                     String var10007 = var11[3];
                                     short var10011 = 6453;
@@ -204,9 +205,9 @@ public abstract class cdr {
                                     apm(var10026);
                                     fuw(null);
                                     gwo(56);
-                                    String[] var48 = new String[4];
+                                    String[] var49 = new String[4];
                                     bna = new cbm();
-                                    fom(var48);
+                                    fom(var49);
                                     hbe(0);
                                     egh(null);
                                     dji(false);
@@ -226,8 +227,8 @@ public abstract class cdr {
                                     blz(null);
                                     arw(var10007);
                                     bur(var10006);
-                                    gii(var10005);
-                                    cqg(var47);
+                                    gii(var48);
+                                    cqg(40);
                                     fpd(null);
                                     fsz(0);
                                     hek(null);
@@ -316,7 +317,9 @@ public abstract class cdr {
       int var10000 = var3;
       if (var2 != null) {
          if (var3 == 0) {
-            return c<"r">(21448, 7013959633889909121L ^ var0);
+            short var4 = 21448;
+            long var10001 = 7013959633889909121L ^ var0;
+            return 119;
          }
 
          var10000 = 0;

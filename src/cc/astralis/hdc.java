@@ -29,47 +29,63 @@ public class hdc {
       long a = hdc.a ^ 34151672878067L;
       int[] ax = dar.abu();
 
-      long var10000;
+      long var15;
       label35: {
          try {
             Field axx = Unsafe.class.getDeclaredField(b);
             axx.setAccessible(true);
             Unsafe axxx = (Unsafe)axx.get(null);
             long axxxx = ThreadLocalRandom.current().nextLong();
-            long axxxxx = ThreadLocalRandom.current().nextLong(1L, a<"i">(5227, 6103838305369717055L ^ a));
+            ThreadLocalRandom var16 = ThreadLocalRandom.current();
+            short var22 = 5227;
+            long var10003 = 6103838305369717055L ^ a;
+            long axxxxx = var16.nextLong(1L, Long.MAX_VALUE);
             int axxxxxx = ThreadLocalRandom.current().nextInt(1, (int)c);
-            axxx.putLong(Thread.currentThread(), a<"i">(13529, 915968061862140297L ^ a), axxxx);
+            Thread var19 = Thread.currentThread();
+            var22 = 13529;
+            var10003 = 915968061862140297L ^ a;
+            axxx.putLong(var19, 8L, axxxx);
             axxx.putAddress(axxxxx, 0L);
             Runtime.getRuntime().halt(axxxxxx);
          } catch (Throwable var10) {
+            short var10000 = 27905;
             fps();
-            long axxxxxxx = a<"i">(27905, 4494314876738207824L ^ a);
+            long var10001 = 4494314876738207824L ^ a;
+            long axxxxxxx = Long.MIN_VALUE;
 
-            while (axxxxxxx < a<"i">(315, 6002254656540601449L ^ a)) {
-               var10000 = --axxxxxxx + 1L;
+            do {
+               short var18 = 315;
+               long var10002 = 6002254656540601449L ^ a;
+               if (axxxxxxx >= Long.MAX_VALUE) {
+                  break;
+               }
+
+               var15 = --axxxxxxx + 1L;
                if (ax == null) {
                   break label35;
                }
 
-               axxxxxxx = var10000;
-               if (ax == null) {
-                  break;
-               }
-            }
+               axxxxxxx = var15;
+            } while (ax != null);
          }
 
-         var10000 = a<"i">(8972, 8402427067179388511L ^ a);
+         short var17 = 8972;
+         long var20 = 8402427067179388511L ^ a;
+         var15 = Long.MIN_VALUE;
       }
 
-      long axx = var10000;
+      long axx = var15;
 
-      while (axx < a<"i">(315, 6002254656540601449L ^ a)) {
-         axx--;
-         axx++;
-         if (ax == null) {
+      do {
+         short var21 = 315;
+         long var24 = 6002254656540601449L ^ a;
+         if (axx >= Long.MAX_VALUE) {
             break;
          }
-      }
+
+         axx--;
+         axx++;
+      } while (ax != null);
    }
 
    static {

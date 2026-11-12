@@ -474,7 +474,9 @@ public final class bad {
       long ax = bad.a ^ 99729440478594L;
       Paint axx = a.makeClone();
       axx.setShader(null);
-      axx.setColor(a | b<"e">(25074, 4782366622734744662L ^ ax));
+      short var10002 = 25074;
+      long var10003 = 4782366622734744662L ^ ax;
+      axx.setColor(a | 0xFF000000);
       return axx;
    }
 
@@ -593,7 +595,9 @@ public final class bad {
                                  if (var2 >= var5) {
                                     e = var6;
                                     f = new Integer[6];
-                                    cwr = ImageFilter.makeDropShadow(1.0F, 1.0F, 0.5F, 0.5F, b<"e">(21067, 7711825137536956735L ^ var20), null, null);
+                                    short var46 = 21067;
+                                    long var10005 = 7711825137536956735L ^ var20;
+                                    cwr = ImageFilter.makeDropShadow(1.0F, 1.0F, 0.5F, 0.5F, -16777216, null, null);
                                     return;
                                  }
                                  break;
