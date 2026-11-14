@@ -33,7 +33,7 @@ public class cnx extends cec {
    public void bbv(ctt event) {
       long ax = cnx.a ^ 135503268901991L;
       int[] axx = dar.abu();
-      int var10000 = dar.gqy().aws().diy(dtc.class).dsv();
+      int var10000 = ((dtc)dar.gqy().aws().diy(dtc.class)).dsv();
       if (axx != null) {
          if (var10000 == 0) {
             return;

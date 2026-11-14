@@ -154,8 +154,31 @@ en Recaf con `mapping/modules.proguard.txt`.
 python tools/astralis_deobf.py work/java work/deobf.map work/report.txt
 java -Dskips=work/skips.tsv -cp "build/openastralis-tools.jar;tools/lib/*" \
      AstralisDeobf work/java work/java_fold work/deobf.map work/sites.tsv
-java -jar tools/vineflower.jar work/java_fold work/src
-java -jar tools/cfr.jar work/java_fold/cc/astralis/ehy.class --outputdir work/src
-java -jar tools/cfr.jar work/java_fold/cc/astralis/hcu.class --outputdir work/src
+java -cp "build/openastralis-tools.jar;tools/lib/*" \
+     Remap work/java_fold.jar work/java_deobf.jar mapping/modules.proguard.txt
+java -jar tools/vineflower.jar work/java_deobf work/src
+java -jar tools/cfr.jar work/java_deobf/cc/astralis/ehy.class --outputdir work/src
+java -jar tools/cfr.jar work/java_deobf/cc/astralis/hcu.class --outputdir work/src
+python tools/redact.py work/src
 python tools/build_offsets.py work/deobf.map work/sites.tsv mapping/offsets.json
 ```
+
+---
+
+## 9. Renombrar: qué queda probado y qué no
+
+`tools/Remap.java` aplica `mapping/modules.proguard.txt` a los class files con
+ASM `ClassRemapper`, de modo que las referencias entre clases se reescriben
+junto con las declaraciones: `src/cc/astralis/KillAura.java` y sus 73 hermanos
+llevan su nombre real de módulo y el resto del árbol los nombra igual.
+
+Las otras 444 clases se quedan con su nombre de dos letras. Los class files no
+llevan mapa de ProGuard, la imagen nativa solo conserva los tipos del cliente
+bajo `pub/astralis/client/A`, `A6`, `AA`… y el volcado de fuentes con nombres que
+circula al lado de esta build **no es el mismo programa**: 38 de los 74 nombres
+de módulo no existen en él (`ESP`, `Tracers`, `Chams`, `Freecam`, `NoFall`,
+`PacketMine`, `Session`…), y en las clases que sí aparecen la firma de miembros no
+coincide — `ekb` declara 70 campos y 21 métodos reales, su candidato en ese árbol
+declara 59 y 20. Emparejar por estructura sobre ese árbol acierta 10 de 74
+nombres ya conocidos, así que no se usa para nombrar: preferimos 74 nombres
+probados a 449 inventados.

@@ -2,6 +2,10 @@
  * Decompiled with CFR 0.152.
  * 
  * Could not load the following classes:
+ *  cc.astralis.agz
+ *  cc.astralis.cmq
+ *  cc.astralis.dar
+ *  cc.astralis.ekh
  *  io.github.humbleui.skija.ColorType
  *  io.github.humbleui.skija.DirectContext
  *  io.github.humbleui.skija.Image

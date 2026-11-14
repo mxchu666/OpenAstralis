@@ -59,7 +59,7 @@ public class ffr extends hcr {
             return;
          }
 
-         var10000 = dar.gqy().aws().diy(fhd.class).dsv();
+         var10000 = ((fhd)dar.gqy().aws().diy(fhd.class)).dsv();
       }
 
       if (var4 != null) {

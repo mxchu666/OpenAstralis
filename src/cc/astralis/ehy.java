@@ -2,6 +2,16 @@
  * Decompiled with CFR 0.152.
  * 
  * Could not load the following classes:
+ *  astralis.mixin.accessor.MinecraftClientSessionAccessor
+ *  cc.astralis.cni
+ *  cc.astralis.crv
+ *  cc.astralis.dar
+ *  cc.astralis.dkw
+ *  cc.astralis.dlc
+ *  cc.astralis.dlk
+ *  cc.astralis.fqw
+ *  cc.astralis.gfv
+ *  cc.astralis.hhl
  *  com.google.gson.Gson
  *  com.google.gson.JsonObject
  *  com.google.gson.JsonParser
@@ -340,7 +350,7 @@ lbl55:
                 long cfr_ignored_1 = 0xDA477B5777402E7L ^ a2;
                 return -1L;
             }
-            String a4 = new String(cni.fsi(a3[1]), StandardCharsets.UTF_8);
+            String a4 = new String(cni.fsi((String)a3[1]), StandardCharsets.UTF_8);
             JsonObject a5 = JsonParser.parseString((String)a4).getAsJsonObject();
             long cfr_ignored_2 = 0x7308C43167F8C232L ^ a2;
             return a5.get("exp").getAsLong();
@@ -577,7 +587,7 @@ lbl16:
                         a = v6.split(v7)[1];
                         ehy.aob(a);
                         5842419413295024563L ^ a;
-                        a = new String(cni.fsi(a), StandardCharsets.UTF_8).split("\"rp://api.minecraftservices.com/\",")[1];
+                        a = new String(cni.fsi((String)a), StandardCharsets.UTF_8).split("\"rp://api.minecraftservices.com/\",")[1];
                         4619121067399926707L ^ a;
                         a = a.split("\"Token\":\"")[1].split("\"")[0];
                         7511758583411357341L ^ a;
@@ -588,19 +598,18 @@ lbl16:
                         1361356556778740141L ^ a;
                         7710946016247287703L ^ a;
                         3081575862954352378L ^ a;
-                        a = (fqw)new Gson().fromJson(hhl.axf("https://api.minecraftservices.com/authentication/login_with_xbox", "{\"identityToken\":\"" + a + "\",\"ensureLegacyEnabled\":true}"), fqw.class);
-                        v8 = a;
+                        v8 /* !! */  = a = (fqw)new Gson().fromJson(hhl.axf((String)"https://api.minecraftservices.com/authentication/login_with_xbox", (String)("{\"identityToken\":\"" + a + "\",\"ensureLegacyEnabled\":true}")), fqw.class);
                         if (a != null) {
-                            if (v8 == null) {
+                            if (v8 /* !! */  == null) {
                                 5506852092222664520L ^ a;
                                 dar.ecj.error("Failed to authenticate with Xbox Live");
                                 ehy.aob(a);
                                 break block36;
                             }
                             3877425650173150976L ^ a;
-                            v8 = new Gson().fromJson(hhl.alb("https://api.minecraftservices.com/minecraft/profile", a.dzg), dlk.class);
+                            v8 /* !! */  = new Gson().fromJson(hhl.alb((String)"https://api.minecraftservices.com/minecraft/profile", (String)a.dzg), dlk.class);
                         }
-                        v9 = a = (dlk)v8;
+                        v9 = a = (dlk)v8 /* !! */ ;
                         if (a != null) {
                             if (v9 == null) {
                                 2103922429749291626L ^ a;

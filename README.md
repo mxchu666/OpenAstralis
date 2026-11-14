@@ -355,6 +355,19 @@ that says `KillAura`, because the module name lives in the user config, not in
 the class file. `docs/modules.md` is the readable version and
 `mapping/modules.proguard.txt` imports the 74 identified renames into Recaf.
 
+Those 74 renames are applied to the shipped tree: `tools/Remap.java` rewrites the
+class files with ASM, so every reference follows the new name, and `src/` holds
+`cc/astralis/KillAura.java` and its 73 siblings instead of `ekb.java` and its
+siblings. The other 444 classes keep their two-letter names because nothing in
+the build proves a name for them: the class files carry no ProGuard map, and the
+named source dump that circulates beside this build is *not* the same program -
+38 of the 74 module names (`ESP`, `Tracers`, `Chams`, `Freecam`, `NoFall`, ...)
+do not exist in it at all, and the member lists of the classes that do appear
+disagree. Folding also turns encrypted literals back into plaintext, so
+`tools/redact.py` sweeps the tree for credential shapes before it is published -
+the build hard-codes a Discord bot token in `dle`, and that one ships as
+`<redacted:discord-bot-token>`.
+
 The native component
 (`dev/opalV2/x64-windows.dll`, 1,148,928 bytes) is a small JVM bytecode
 interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
@@ -371,6 +384,8 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/astralis_deobf.py` | recover DES keys, per-field tables, string blobs and indy salts from the Java layer |
 | `tools/deobf.py` | class-file code walker, DES helper and CESU-8 decoder shared by the Python tools |
 | `tools/AstralisDeobf.java` | ASM rewriter that folds every `invokedynamic` site to `LDC` |
+| `tools/Remap.java` | ASM class renamer; applies `mapping/modules.proguard.txt` and rewrites every reference |
+| `tools/redact.py` | sweep the folded tree for credential shapes and mark them before publishing |
 | `tools/vineflower.jar` | vendored Vineflower, the last step of the Java-layer pipeline |
 | `tools/indy_scan.py` | list every `invokedynamic` descriptor and its bootstrap method |
 | `tools/jarscan.py`, `tools/rebuild_jar.py` | archive-level inventory and rebuild |
@@ -395,7 +410,7 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, `iat_sites.tsv`, the decoded `.vmp0` table |
 | `native/decompiled/` | 328 Hex-Rays functions: client entry points, JDK JNI, hot runtime, samples, `.vmp0` chunks |
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
-| `src/` | 518 decompiled classes |
+| `src/` | 518 decompiled classes, 74 under their real module name |
 | `reconstruct/26.2/scripting/` | 55 files of the 2.2.6 scripting API, the only bytecode in the image |
 | `reconstruct/26.2/native/` | the DLL side of the 26.2 tree: 328 pseudocode files, call graph, import sites, the 294,735-chunk `.vmp0` index |
 | `docs/modules.md` | the module map, category by category |
@@ -741,6 +756,19 @@ vive en la config del usuario, no en el class file. `docs/modules.md` es la
 versión legible y `mapping/modules.proguard.txt` importa los 74 renombrados
 identificados en Recaf.
 
+Esos 74 nombres están aplicados al árbol publicado: `tools/Remap.java` reescribe
+los `.class` con ASM, así que cada referencia sigue el nombre nuevo, y `src/`
+tiene `cc/astralis/KillAura.java` y sus 73 hermanos en lugar de `ekb.java`. Las
+otras 444 clases conservan su nombre de dos letras porque nada en el build prueba
+un nombre para ellas: los class files no llevan mapa de ProGuard, y el volcado de
+fuentes con nombres que circula junto a esta build **no es el mismo programa** —
+38 de los 74 nombres de módulo (`ESP`, `Tracers`, `Chams`, `Freecam`, `NoFall`,
+…) no existen ahí, y las listas de miembros de las clases que sí aparecen no
+coinciden. Plegar también devuelve literales cifrados a texto plano, así que
+`tools/redact.py` barre el árbol buscando formas de credencial antes de
+publicarlo: el build lleva un token de bot de Discord hardcodeado en `dle` y ese
+sale como `<redacted:discord-bot-token>`.
+
 ## Estructura
 
 | Ruta | Contenido |
@@ -750,6 +778,8 @@ identificados en Recaf.
 | `tools/astralis_deobf.py` | recupera claves DES, tablas por campo, blobs y sales de indy |
 | `tools/deobf.py` | recorrido de bytecode, DES y decodificador CESU-8 compartido por las herramientas |
 | `tools/AstralisDeobf.java` | reescritor ASM que pliega cada `invokedynamic` a `LDC` |
+| `tools/Remap.java` | renombrador de clases ASM; aplica `mapping/modules.proguard.txt` y reescribe todas las referencias |
+| `tools/redact.py` | barre el árbol plegado buscando formas de credencial y las marca antes de publicar |
 | `tools/vineflower.jar` | Vineflower incluido, último paso del pipeline de la capa Java |
 | `tools/indy_scan.py` | lista descriptores `invokedynamic` y su bootstrap |
 | `mapping/offsets.json` | 3.897 constantes plegadas |
@@ -770,7 +800,7 @@ identificados en Recaf.
 | `native/devirt/` | `callgraph_top.tsv`, `import_calls.tsv`, `iat_sites.tsv`, la tabla de `.vmp0` decodificada |
 | `native/decompiled/` | 328 funciones de Hex-Rays: entradas del cliente, JNI del JDK, runtime caliente, muestras y fragmentos de `.vmp0` |
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
-| `src/` | 518 clases descompiladas |
+| `src/` | 518 clases descompiladas, 74 con su nombre real de módulo |
 | `reconstruct/26.2/scripting/` | 55 ficheros de la API de scripting 2.2.6, el único bytecode de la imagen |
 | `reconstruct/26.2/native/` | la parte DLL del árbol 26.2: 328 ficheros de pseudocódigo, grafo de llamadas, sitios de import y el índice de los 294.735 fragmentos de `.vmp0` |
 | `docs/modules.md` | el mapa de módulos, categoría por categoría |

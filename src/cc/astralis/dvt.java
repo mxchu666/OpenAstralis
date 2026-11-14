@@ -3,7 +3,6 @@ package cc.astralis;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -54,7 +53,7 @@ public class dvt implements dlc {
       }
    }
 
-   public static Font fio(class_2960 fontIdentifier) {
+   public static java.awt.Font fio(class_2960 fontIdentifier) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.code.cfg.ExceptionRangeCFG.isCircular()" because "range" is null
@@ -151,12 +150,12 @@ public class dvt implements dlc {
       }
    }
 
-   public static class_2960 dld(Font[] fonts, char from, char to, float size) {
+   public static class_2960 dld(java.awt.Font[] fonts, char from, char to, float size) {
       String ax = Arrays.stream(a).map(axx -> axx.getName() + axx.getStyle() + axx.getSize()).collect(Collectors.joining()) + a + a + a;
       return gxc.computeIfAbsent(ax, axx -> fkp(a, a, a, a));
    }
 
-   public static class_2960 fkp(Font[] fonts, char from, char to, float size) {
+   public static class_2960 fkp(java.awt.Font[] fonts, char from, char to, float size) {
       long ax = dvt.a ^ 5640651317154L;
       String axx = Arrays.stream(a).map(axxx -> axxx.getName() + axxx.getStyle() + axxx.getSize()).collect(Collectors.joining());
       String var10000 = ek.bf(axx);
@@ -289,7 +288,7 @@ public class dvt implements dlc {
             }
 
             try {
-               Font axxxxxx = Font.createFont(var16, axxxx);
+               java.awt.Font axxxxxx = java.awt.Font.createFont(var16, axxxx);
                a.add(new fv(axxxxxx.getFontName(), axxxx.getAbsolutePath()));
             } catch (Exception var12) {
             }

@@ -17,7 +17,7 @@ public class alj extends cec {
       long ax = alj.a ^ 120591131727489L;
       int[] var4 = dar.abu();
       if (a.cud() != gpy.SEND) {
-         boolean var10000 = dar.gqy().aws().diy(eky.class).dsv();
+         boolean var10000 = ((eky)dar.gqy().aws().diy(eky.class)).dsv();
          if (var4 != null) {
             if (!var10000) {
                return;
@@ -27,7 +27,7 @@ public class alj extends cec {
          }
 
          if (var10000) {
-            dar.gqy().aws().diy(eky.class).gxo();
+            ((eky)dar.gqy().aws().diy(eky.class)).gxo();
             a.ag = true;
             a.dyi.glr();
          }

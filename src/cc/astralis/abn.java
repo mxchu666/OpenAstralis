@@ -272,7 +272,7 @@ public class abn extends hcr {
             var41 = 15277;
             long var49 = 1091747651038787127L ^ ax;
             bpa.bez("Flag. Wait a bit before flying again.");
-            dar.gqy().aws().diy(eky.class).fga(false);
+            ((eky)dar.gqy().aws().diy(eky.class)).fga(false);
             dar.gqy().aws().diy(bni.class).fga(false);
          }
 

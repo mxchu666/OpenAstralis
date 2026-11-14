@@ -23,7 +23,7 @@ public abstract class MixinMobEntity extends class_1309 {
       cancellable = true
    )
    private void HookEnityControleSaddel(CallbackInfoReturnable<Boolean> a) {
-      if (dar.gqy().aws().diy(giw.class).dsv()) {
+      if (((giw)dar.gqy().aws().diy(giw.class)).dsv()) {
          a.setReturnValue(true);
       }
    }

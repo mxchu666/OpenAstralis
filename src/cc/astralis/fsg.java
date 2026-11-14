@@ -68,7 +68,7 @@ public class fsg extends hcr {
                   break label123;
                }
 
-               var14 = dar.gqy().aws().diy(dtd.class).dsv();
+               var14 = ((dtd)dar.gqy().aws().diy(dtd.class)).dsv();
             }
 
             if (axx != null) {
@@ -76,7 +76,7 @@ public class fsg extends hcr {
                   break label123;
                }
 
-               var14 = dar.gqy().aws().diy(dtd.class).dsv();
+               var14 = ((dtd)dar.gqy().aws().diy(dtd.class)).dsv();
             }
 
             if (axx != null) {
@@ -168,7 +168,7 @@ public class fsg extends hcr {
                   break label118;
                }
 
-               var9 = dar.gqy().aws().diy(dtd.class).dsv();
+               var9 = ((dtd)dar.gqy().aws().diy(dtd.class)).dsv();
             }
 
             if (axx != null) {
@@ -176,7 +176,7 @@ public class fsg extends hcr {
                   break label118;
                }
 
-               var9 = dar.gqy().aws().diy(dtd.class).dsv();
+               var9 = ((dtd)dar.gqy().aws().diy(dtd.class)).dsv();
             }
 
             if (var9 != 0) {

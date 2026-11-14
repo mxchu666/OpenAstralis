@@ -371,7 +371,7 @@ public final class fbr {
 
             if (!var20) {
                if (dar.gqy().aws() != null && dar.gqy().aws().diy(dvw.class) != null) {
-                  dar.gqy().aws().diy(dvw.class).enu();
+                  ((dvw)dar.gqy().aws().diy(dvw.class)).enu();
                }
 
                return a;

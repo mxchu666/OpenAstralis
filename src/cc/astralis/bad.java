@@ -1,7 +1,6 @@
 package cc.astralis;
 
 import io.github.humbleui.skija.Canvas;
-import io.github.humbleui.skija.Font;
 import io.github.humbleui.skija.FontMetrics;
 import io.github.humbleui.skija.ImageFilter;
 import io.github.humbleui.skija.Paint;
@@ -31,7 +30,7 @@ public final class bad {
    private final String bmh;
    private final float eak;
    private final Typeface ezr;
-   private final Font eax;
+   private final io.github.humbleui.skija.Font eax;
    private final fll ckr;
    private final Paint hel;
    private final ImageFilter gqt;
@@ -225,7 +224,7 @@ public final class bad {
       // 15f: return
    }
 
-   public Font bvg() {
+   public io.github.humbleui.skija.Font bvg() {
       return a.eax;
    }
 

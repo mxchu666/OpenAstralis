@@ -104,7 +104,7 @@ public class dqq extends cec {
                return;
             }
 
-            var10000 = dar.gqy().aws().diy(eky.class).dsv();
+            var10000 = ((eky)dar.gqy().aws().diy(eky.class)).dsv();
          }
 
          if (var4 != null) {

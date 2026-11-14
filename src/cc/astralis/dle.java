@@ -38,7 +38,7 @@ public class dle {
       int[] var10000 = dar.abu();
       short var10001 = 27970;
       long var10002 = 3580083014314543230L ^ a;
-      String ax = "<redacted-discord-bot-token>"; // live bot token, redacted from this repo
+      String ax = "<redacted:discord-bot-token>";
       int[] axx = var10000;
       short var22 = 14845;
       long var27 = 5314707247802227918L ^ a;

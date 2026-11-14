@@ -134,7 +134,7 @@ public class MixinInGameHud {
          short var10002 = 19234;
          long var10003 = 902945074178817887L ^ ax;
          int axxxxxxxxxxxxx = var10000 - axxxxxxxxxx * 9;
-         dar.gqy().aws().diy(foz.class).beb(new czo(axxxxxxxxxxxx, axxxxxxxxxxxxx, axxxxxxx, axxxxxxxxxxx));
+         ((foz)dar.gqy().aws().diy(foz.class)).beb(new czo(axxxxxxxxxxxx, axxxxxxxxxxxxx, axxxxxxx, axxxxxxxxxxx));
       }
    }
 

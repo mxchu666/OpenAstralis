@@ -200,7 +200,7 @@ public class guu extends cdr implements dlc, amh {
             label114:
             if (axx != null) {
                if (var22 != null) {
-                  var22 = dar.gqy().aws().diy(dtc.class);
+                  var22 = (dtc)dar.gqy().aws().diy(dtc.class);
                   if (axx == null) {
                      break label114;
                   }
@@ -232,7 +232,7 @@ public class guu extends cdr implements dlc, amh {
       label102:
       if (axx != null) {
          if (var22 != null) {
-            var22 = dar.gqy().aws().diy(dtc.class);
+            var22 = (dtc)dar.gqy().aws().diy(dtc.class);
             if (axx == null) {
                break label102;
             }

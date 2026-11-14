@@ -143,7 +143,7 @@ public class apm extends hcr {
          label179: {
             ax = apm.a ^ 97459270558745L;
             axx = dar.abu();
-            boolean var10000 = dar.gqy().aws().diy(fhd.class).dsv();
+            boolean var10000 = ((fhd)dar.gqy().aws().diy(fhd.class)).dsv();
             if (axx != null) {
                if (!var10000) {
                   break label179;
@@ -490,7 +490,7 @@ public class apm extends hcr {
                      break label201;
                   }
 
-                  var10000 = dar.gqy().aws().diy(efx.class).dsv();
+                  var10000 = ((efx)dar.gqy().aws().diy(efx.class)).dsv();
                   if (ax == null) {
                      break label188;
                   }
@@ -594,7 +594,7 @@ public class apm extends hcr {
                   }
 
                   if (var10000 == 0) {
-                     var10000 = dar.gqy().aws().diy(fhd.class).dsv();
+                     var10000 = ((fhd)dar.gqy().aws().diy(fhd.class)).dsv();
                      if (ax == null) {
                         break label206;
                      }

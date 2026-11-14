@@ -91,7 +91,7 @@ public class apt extends hcr {
                            return;
                         }
 
-                        var9 = dar.gqy().aws().diy(dtd.class).dsv();
+                        var9 = ((dtd)dar.gqy().aws().diy(dtd.class)).dsv();
                      }
 
                      if (axx != null) {

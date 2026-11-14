@@ -37,7 +37,7 @@ public abstract class MixinLivingEntityRenderer<T extends class_1309, S extends 
       if (a == chi.field_1724) {
          a.setReturnValue(true);
       } else {
-         a.setReturnValue(!dar.gqy().aws().diy(der.class).dsv() && dar.gqy().aws().diy(der.class) != null);
+         a.setReturnValue(!((der)dar.gqy().aws().diy((Class<T>)der.class)).dsv() && dar.gqy().aws().diy((Class<T>)der.class) != null);
       }
    }
 

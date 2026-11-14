@@ -76,12 +76,12 @@ public class ble extends hcr {
                      break label52;
                   }
 
-                  var6 = dar.gqy().aws().diy(eky.class);
+                  var6 = (eky)dar.gqy().aws().diy(eky.class);
                   if (ax == null) {
                      break label79;
                   }
 
-                  var10000 = ((eky)var6).dsv();
+                  var10000 = var6.dsv();
                }
 
                if (var10000) {
@@ -162,7 +162,7 @@ public class ble extends hcr {
                );
          }
 
-         var10000 = dar.gqy().aws().diy(eky.class).dsv();
+         var10000 = ((eky)dar.gqy().aws().diy(eky.class)).dsv();
       }
 
       if (axx != null) {

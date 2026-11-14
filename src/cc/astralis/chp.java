@@ -19,7 +19,7 @@ public class chp extends hcr {
       long ax = chp.a ^ 89008528240173L;
       int[] var4 = dar.abu();
       if (var4 != null) {
-         if (dar.gqy().aws().diy(fhd.class).dsv()) {
+         if (((fhd)dar.gqy().aws().diy(fhd.class)).dsv()) {
             return;
          }
 

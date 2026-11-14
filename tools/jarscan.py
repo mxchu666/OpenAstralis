@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 jarscan.py - static JAR/class/PE malware triage. No code execution.
 
@@ -42,6 +42,7 @@ class ClassFile:
         self.field_refs: list[tuple[str, str, str]] = []
         self.strings: list[str] = []
         self.methods: list[dict] = []
+        self.fields: list[dict] = []
         self._parse()
 
     def utf8(self, idx: int) -> str:
@@ -87,12 +88,17 @@ class ClassFile:
         i += 6
         nif = struct.unpack_from(">H", d, i)[0]; i += 2 + 2 * nif
 
-        # fields: skip
         nf = struct.unpack_from(">H", d, i)[0]; i += 2
         for _ in range(nf):
+            acc, name_i, desc_i = struct.unpack_from(">HHH", d, i)
             i += 6
             na = struct.unpack_from(">H", d, i)[0]; i += 2
             i = self._skip_attrs(i, na)
+            self.fields.append({
+                "name": self.utf8(name_i),
+                "desc": self.utf8(desc_i),
+                "acc": acc,
+            })
 
         nm = struct.unpack_from(">H", d, i)[0]; i += 2
         for _ in range(nm):

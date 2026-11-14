@@ -72,7 +72,7 @@ public class cek extends hcr {
       if (axx != null) {
          if (var9 != 0) {
             label75: {
-               boolean var10 = dar.gqy().aws().diy(eky.class).dsv();
+               boolean var10 = ((eky)dar.gqy().aws().diy(eky.class)).dsv();
                if (axx != null) {
                   if (!var10) {
                      break label75;
@@ -97,7 +97,7 @@ public class cek extends hcr {
             }
          }
 
-         var9 = dar.gqy().aws().diy(eky.class).dsv();
+         var9 = ((eky)dar.gqy().aws().diy(eky.class)).dsv();
       }
 
       label64: {

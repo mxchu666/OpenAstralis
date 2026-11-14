@@ -56,7 +56,7 @@ public class frr extends hcr {
    @gdz
    public void bql(fxx event) {
       long ax = frr.a ^ 22351178312639L;
-      if (dar.gqy().aws().diy(efx.class).dsv()) {
+      if (((efx)dar.gqy().aws().diy(efx.class)).dsv()) {
          ;
       }
    }
