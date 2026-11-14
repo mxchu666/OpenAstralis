@@ -1,0 +1,5 @@
+chunks 294735, decoded 289649, undecodable 5086
+decode ends on declared length 80080, stops early 209569
+terminators next 274087, call 5650, jmp 4254, jcc 4004, ret 1654
+immediate branch targets: chunk start 4312, elsewhere 8539
+chunks whose written registers are read inside the chunk: 52469 live, 237180 dead-only

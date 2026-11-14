@@ -185,6 +185,32 @@ filas con `rva`, longitud, sección, tipo de inicio y los primeros 8 bytes, más
 bytes descritos, 74,7 % del cinturón). La misma copia vive en
 `reconstruct/26.2/native/`.
 
+### Decodificar los 294.735 fragmentos
+
+`tools/analyze_vmp0.py` decodifica cada fragmento desde su propio inicio con
+capstone y mide si el resultado se sostiene:
+
+| medida | resultado |
+|---|---|
+| fragmentos decodificados | 289.649 de 294.735 (98,3 %) |
+| consumen exactamente su longitud | 80.080 |
+| se cortan antes del final | 209.569 |
+| sin terminador (la decodificación se agota) | 274.087 |
+| escriben solo registros que no leen | **237.180 (81,9 %)** |
+| saltos inmediatos que caen en otro inicio | 4.312 de 12.851 (33,5 %) |
+
+Las tres comprobaciones de direccionamiento cierran el diagnóstico: **cero**
+referencias `lea`/`movabs` desde `.text` al cinturón (de 4.588 + 14.358 sitios),
+**cero** exportaciones con RVA dentro de `.vmp0` (de 534), y 150 qwords del heap
+que apuntan al cinturón frente a 9.914 que apuntan a inicios de función de
+`.text` — el 150 es ruido, no una tabla de métodos. Las aperturas de 8 bytes más
+repetidas del cinturón no aparecen ni una vez en `.text`.
+
+Con eso, "deshacer" no es cuestión de leer mejor: no hay motor de mutación
+alcanzable dentro de la imagen que la sección alimente. Los artefactos que sí
+salen son el índice por fragmento, la decodificación con su veredicto y 200
+listados completos en `native/devirt/vmp0_listings.txt`.
+
 Las **103 entradas de `.pdata` dentro de `.vmp0` son señuelos**: su `unwind RVA`
 apunta a valores como `0x52250` o `0x112980`, que caen dentro de `.vmp0` y no en
 `.pdata` (que empieza en `0x13592000`). Windows no las usa; un desensamblador
@@ -300,6 +326,7 @@ offset y no una tabla por clase.
 python tools/dump_native.py    work/exe/Runtime/astralis.dll native
 python tools/devirt_native.py  work/exe/Runtime/astralis.dll native
 python tools/dump_vmp0_table.py work/exe/Runtime/astralis.dll native/devirt
+python tools/analyze_vmp0.py     work/exe/Runtime/astralis.dll native/devirt
 python tools/dump_heap_members.py work/exe/Runtime/astralis.dll mapping/image26 \
        --check reconstruct/26.2/scripting
 

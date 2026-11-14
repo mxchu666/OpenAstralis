@@ -296,7 +296,12 @@ that all decompile to a `JUMPOUT` five bytes into themselves.
 the middle of instructions. Its 103 `.pdata` entries are decoys whose unwind RVA
 points back into `.vmp0`. There is no dispatch table to undo, so the repository
 ships the decoded table, the mnemonic histogram, the resolved edges and the
-`JUMPOUT` bodies, not an invented listing. The numbers are in
+`JUMPOUT` bodies, not an invented listing. Decoding all 294,735 chunks settles
+the question: 289,649 decode, only 80,080 consume their declared length, 81.9%
+write only registers they never read, and 4,312 of 12,851 immediate branches land
+on another chunk start. Nothing in the image addresses the section — 0
+`lea`/`movabs` from `.text`, 0 of 534 exports, 150 heap qwords against the 9,914
+that point at `.text` function starts. The numbers are in
 `docs/analysis/NATIVE_DUMP.md`.
 
 ---
@@ -378,6 +383,7 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `tools/dump_heap_members.py` | member names and descriptors from `.svm_hea`, with the failed-binding check |
 | `tools/carve_window.py` | cut `.text`/`.vmp0` windows as flat binaries for a decompiler, with per-window `.pdata` starts |
 | `tools/decompile_native.py` | sort Hex-Rays output into `entry/`, `jdk/`, `runtime/`, `samples/`, `vmp0/` |
+| `tools/analyze_vmp0.py` | decode all 294,735 `.vmp0` chunks, measure terminators, targets and dead registers |
 | `mapping/offsets.json` | 3,897 folded constants |
 | `mapping/modules.tsv` | 91 module classes: category, settings, inferred feature |
 | `mapping/modules.proguard.txt` | the 74 identified renames, importable into Recaf |
@@ -690,7 +696,13 @@ en `[rsp+0x10]`, saltos a mitad de instrucción. Sus 103 entradas de `.pdata` so
 señuelos cuyo `unwind RVA` apunta de vuelta a `.vmp0`. No hay tabla de despacho
 que deshacer, así que el repositorio entrega la tabla decodificada, el histograma
 de mnemónicos, las aristas resueltas y los cuerpos `JUMPOUT`, no un listado
-inventado. Los números están en `docs/analysis/NATIVE_DUMP.md`.
+inventado. Decodificar los 294.735 fragmentos cierra la pregunta: 289.649
+decodifican, solo 80.080 consumen su longitud declarada, el 81,9 % escribe
+únicamente registros que no lee, y solo 4.312 de 12.851 saltos inmediatos caen
+en otro inicio de fragmento. Nada en la imagen direcciona la sección: 0
+`lea`/`movabs` desde `.text`, 0 de 534 exportaciones, 150 qwords del heap frente
+a los 9.914 que apuntan a inicios de función de `.text`. Los números están en
+`docs/analysis/NATIVE_DUMP.md`.
 
 ## La capa Java
 
@@ -751,6 +763,7 @@ identificados en Recaf.
 | `tools/dump_heap_members.py` | nombres de miembro y descriptores de `.svm_hea`, con la comprobación de binding |
 | `tools/carve_window.py` | corta ventanas de `.text`/`.vmp0` como binario plano, con los inicios de `.pdata` de cada ventana |
 | `tools/decompile_native.py` | ordena la salida de Hex-Rays en `entry/`, `jdk/`, `runtime/`, `samples/`, `vmp0/` |
+| `tools/analyze_vmp0.py` | decodifica los 294.735 fragmentos de `.vmp0` y mide terminadores, destinos y registros muertos |
 | `mapping/image_inventory.json` | inventario de tipos y recursos de `astralis.dll` |
 | `mapping/image26/` | volcado 26.2: 16.263 tipos de MC, 1.483 del cliente, 593 hooks, 85 manifiestos, 202.366 nombres, 105.012 descriptores |
 | `native/dump/` | `pe.txt`, `exports.tsv`, `imports.tsv`, recuentos de funciones |

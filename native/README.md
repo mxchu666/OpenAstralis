@@ -26,6 +26,9 @@ at `0x1e43d00` and `0x1e440e0` — the client's own isolate entry points.
 | `iat_sites.tsv` | every import call site: `dll`, `function`, `caller`, `caller_name`, `site` |
 | `vmp0_records.tsv.gz` | all 294,735 `.vmp0` chunks: `rva`, `length`, `section`, `kind`, first 8 bytes |
 | `vmp0_records_summary.txt` | chunk count, 6.6 MB span, 74.7% coverage, length and start-kind histograms |
+| `vmp0_chunks.tsv.gz` | per chunk: insns, bytes consumed, terminator, immediate target, live/dead registers |
+| `vmp0_chunks_summary.txt` | 289,649 decoded, 237,180 dead-write chunks, 4,312 branch targets on chunk starts |
+| `vmp0_listings.txt` | 200 decoded chunks in full, the ones with a real branch target or a 96+ byte body |
 | `hot_functions.tsv` | the 60 functions with the highest in-degree |
 | `vmp0_summary.txt` | `.vmp0` decoded: 294,735 records, table extent, length histogram, mnemonic histogram |
 | `vmp0_chunk_sigs.tsv` | the 500 most common chunk openings, as `first_insn` + 8 raw bytes |
