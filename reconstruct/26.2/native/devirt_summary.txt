@@ -1,0 +1,10 @@
+functions          342822
+scan sites         .text:call 4850262, .text:iat 2061, .text:jmp 3693099, .vmp0:call 113798, .vmp0:iat 643, .vmp0:jmp 121583
+unresolved         unresolved_call 1570527, unresolved_jmp 3814475
+iat calls          1628 sites over 404 imports
+edges              1684622
+callers            342417
+.vmp0 records      294735
+.vmp0 chunk kinds  insn 277882, prologue 16853
+.vmp0 branches     0 resolved
+sites with no owner 0

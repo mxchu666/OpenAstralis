@@ -24,6 +24,8 @@ at `0x1e43d00` and `0x1e440e0` — the client's own isolate entry points.
 | `callgraph_top.tsv` | the 20,000 most frequent caller→callee edges |
 | `import_calls.tsv` | the 404 imports ranked by number of call sites |
 | `iat_sites.tsv` | every import call site: `dll`, `function`, `caller`, `caller_name`, `site` |
+| `vmp0_records.tsv.gz` | all 294,735 `.vmp0` chunks: `rva`, `length`, `section`, `kind`, first 8 bytes |
+| `vmp0_records_summary.txt` | chunk count, 6.6 MB span, 74.7% coverage, length and start-kind histograms |
 | `hot_functions.tsv` | the 60 functions with the highest in-degree |
 | `vmp0_summary.txt` | `.vmp0` decoded: 294,735 records, table extent, length histogram, mnemonic histogram |
 | `vmp0_chunk_sigs.tsv` | the 500 most common chunk openings, as `first_insn` + 8 raw bytes |

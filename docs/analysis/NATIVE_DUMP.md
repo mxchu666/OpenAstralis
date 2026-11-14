@@ -179,6 +179,12 @@ flujo, no leyendo una tabla. Por eso este repositorio entrega el mapa del
 cinturón, el histograma y las aristas resueltas, y no un "decompilado" de
 `.vmp0` que sería inventado.
 
+El índice por fragmento está en `native/devirt/vmp0_records.tsv.gz`: 294.735
+filas con `rva`, longitud, sección, tipo de inicio y los primeros 8 bytes, más
+`vmp0_records_summary.txt` con el recuento, el tramo y la cobertura (4.921.400
+bytes descritos, 74,7 % del cinturón). La misma copia vive en
+`reconstruct/26.2/native/`.
+
 Las **103 entradas de `.pdata` dentro de `.vmp0` son señuelos**: su `unwind RVA`
 apunta a valores como `0x52250` o `0x112980`, que caen dentro de `.vmp0` y no en
 `.pdata` (que empieza en `0x13592000`). Windows no las usa; un desensamblador
@@ -293,6 +299,7 @@ offset y no una tabla por clase.
 ```bash
 python tools/dump_native.py    work/exe/Runtime/astralis.dll native
 python tools/devirt_native.py  work/exe/Runtime/astralis.dll native
+python tools/dump_vmp0_table.py work/exe/Runtime/astralis.dll native/devirt
 python tools/dump_heap_members.py work/exe/Runtime/astralis.dll mapping/image26 \
        --check reconstruct/26.2/scripting
 

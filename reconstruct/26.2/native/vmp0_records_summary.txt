@@ -1,0 +1,5 @@
+section .vmp0 rva 0x71e12000 size 23191552
+records 294735, span 0x728715c1..0x72eb96dd, 4921400 bytes described (74.7% of span)
+every record target lands inside .vmp0
+lengths 8:127293, 16:84540, 24:44384, 32:21526, 40:9859, 48:3958, 56:1679, 64:689, 72:258, 80:154, 88:93, 96:79, 104:64, 112:44, 120:33, 128:24, 136:19, 144:12, 152:11, 160:9, 168:5, 176:1, 184:1
+start kinds insn:xor:58657, insn:mov:47694, insn:lea:38535, prologue:16853, insn:not:15414, insn:neg:14551, insn:rol:13223, insn:adc:12180, insn:ror:11741, insn:add:10174, insn:movsxd:10158, insn:movzx:8477, insn:inc:8198, insn:dec:7157, insn:bswap:6817, insn:sbb:5448, insn:sub:4728, insn:or:1910, insn:and:1102, insn:shr:683, insn:shl:255, insn:sal:223, insn:shrd:190, insn:shld:190, insn:popfq:83, insn:imul:50, insn:xchg:14, insn:cmp:11, insn:rep movsb:9, insn:cld:5, insn:movabs:4, insn:pop:1

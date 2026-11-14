@@ -391,6 +391,7 @@ interpreter that fills in the `native` methods of `dqq`, `evd`, `fz` and `hdl`;
 | `native/bodies/`, `native/registry/` | 16 devirtualized bodies, symbol tables |
 | `src/` | 518 decompiled classes |
 | `reconstruct/26.2/scripting/` | 55 files of the 2.2.6 scripting API, the only bytecode in the image |
+| `reconstruct/26.2/native/` | the DLL side of the 26.2 tree: 328 pseudocode files, call graph, import sites, the 294,735-chunk `.vmp0` index |
 | `docs/modules.md` | the module map, category by category |
 | `docs/analysis/` | detailed reports (Spanish) |
 | `build.sh`, `build.ps1` | offline build of the tooling |
@@ -758,6 +759,7 @@ identificados en Recaf.
 | `native/bodies/`, `native/registry/` | 16 cuerpos devirtualizados y tablas de símbolos |
 | `src/` | 518 clases descompiladas |
 | `reconstruct/26.2/scripting/` | 55 ficheros de la API de scripting 2.2.6, el único bytecode de la imagen |
+| `reconstruct/26.2/native/` | la parte DLL del árbol 26.2: 328 ficheros de pseudocódigo, grafo de llamadas, sitios de import y el índice de los 294.735 fragmentos de `.vmp0` |
 | `docs/modules.md` | el mapa de módulos, categoría por categoría |
 | `docs/analysis/` | informes detallados |
 | `build.sh`, `build.ps1` | build sin red |

@@ -28,24 +28,31 @@ TargetHudRenderer)`, `Modules.exists(String)`, `Client`, `Inventory`, `Keybinds`
 `ScriptEvents` with its cancellable subtypes. Compare against `src/cc/astralis`
 for the older intermediary build to see what the scripting layer gained.
 
+## `native/`
+
+The DLL side: `pseudocode/` (328 Hex-Rays functions), the call graph tables, the
+1,628 import call sites, and `vmp0_records.tsv.gz` - all 294,735 `.vmp0` chunks
+with their span, length and start kind. `native/README.md` states what
+devirtualisation and deobfuscation can and cannot produce here.
+
 ## Everything else
 
 | file | contents |
 |---|---|
-| `../mapping/image26/mc_types.txt` | 16,263 Minecraft types, Mojang official names |
-| `../mapping/image26/client_types.txt` | 1,483 client types (`pub/astralis`, `com/astralis`) |
-| `../mapping/image26/mixin_hooks.tsv` | 593 Mixin handlers; 87 belong to `astralis-recode` |
-| `../mapping/image26/mods.jsonl` | 85 `fabric.mod.json`, parsed and sorted |
-| `../mapping/image26/resources.txt` | 43,324 asset/data/META-INF paths |
-| `../mapping/image26/member_names.tsv` | 202,366 member-name records with heap offsets |
-| `../mapping/image26/descriptors.tsv` | 105,008 distinct method descriptors with occurrence counts |
-| `../mapping/image26/member_summary.txt` | counts plus the negative result that scoring runs against the jar gives |
-| `../mapping/image26/summary.txt` | counts, so you can see the size before opening anything |
+| `../../mapping/image26/mc_types.txt` | 16,263 Minecraft types, Mojang official names |
+| `../../mapping/image26/client_types.txt` | 1,483 client types (`pub/astralis`, `com/astralis`) |
+| `../../mapping/image26/mixin_hooks.tsv` | 593 Mixin handlers; 87 belong to `astralis-recode` |
+| `../../mapping/image26/mods.jsonl` | 85 `fabric.mod.json`, parsed and sorted |
+| `../../mapping/image26/resources.txt` | 43,324 asset/data/META-INF paths |
+| `../../mapping/image26/member_names.tsv` | 202,366 member-name records with heap offsets |
+| `../../mapping/image26/descriptors.tsv` | 105,008 distinct method descriptors with occurrence counts |
+| `../../mapping/image26/member_summary.txt` | counts plus the negative result that scoring runs against the jar gives |
+| `../../mapping/image26/summary.txt` | counts, so you can see the size before opening anything |
 
 The code side of the image — 342,822 functions, the call graph and the decoded
-`.vmp0` table — is in `../native/` and `../docs/analysis/NATIVE_DUMP.md`.
+`.vmp0` table — is in `native/` and `../../docs/analysis/NATIVE_DUMP.md`.
 
-The report that ties it together is `../docs/analysis/IMAGE_26_2.md`.
+The report that ties it together is `../../docs/analysis/IMAGE_26_2.md`.
 
 Regenerate with:
 
